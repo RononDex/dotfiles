@@ -77,8 +77,8 @@ EnableService dbus
 StartService dbus
 EnableService elogind
 StartService elogind
-EnableService polkit
-StartService polkit
+EnableService polkitd
+StartService polkitd
 StopService dhcpcd
 DisableService dhcpcd
 EnableService NetworkManager
