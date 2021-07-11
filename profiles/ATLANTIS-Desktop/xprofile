@@ -16,7 +16,7 @@ wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
 setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
 
 # Download new background photo
-sh ~/.scripts/updateLoginBackground.sh &
+bash ~/.scripts/updateLoginBackground.sh &
 
 # Setup the gpg agent
 export GPG_TTY="$(tty)"

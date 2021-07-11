@@ -113,4 +113,4 @@ crontab ~/.config/defaultCronConfig
 echo "Copying some default files ..."
 sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
-sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
+bash ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
