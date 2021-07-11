@@ -11,7 +11,7 @@ and login with your personal user
 
 Then install git (which is needed to clone this repo):
 ```bash
-pacman -Sy git sudo
+xbps-install -Sy git sudo
 ```
 
 Now clone this repo to wherever want (it should stay at that location even after running the setup, to make sure you can
