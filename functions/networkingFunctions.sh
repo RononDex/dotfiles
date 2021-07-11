@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # $1: Name of share / server
 # $2: shares to mount (command)
