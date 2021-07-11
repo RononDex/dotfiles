@@ -51,3 +51,7 @@ InstallLatestDotnet() {
 InstallRustDev() {
     sudo xbps-install -Sy rust rust-analyzer racer cargo
 }
+
+InstallXorg() {
+    sudo xbps-install -Sy xorg-server xorg-server-xephyr xorg-apps xorg-minimal xinit
+}
