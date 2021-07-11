@@ -17,8 +17,8 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 
 echo "Installing stuff..."
 sudo xbps-install -Sy linux-firmware-amd network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
-sudo xbps-install -Sy i3-gaps nvidia dunst libnotify notification-daemon dmenu flameshot nextcloud-client cabextract blueman signal-desktop 
-sudo xbps-install -Sy nvidia-libs remmina freerdp xf86-input-evdev prusaslicer texlive-most
+sudo xbps-install -Sy i3-gaps nvidia dunst libnotify notification-daemon dmenu flameshot nextcloud-client cabextract blueman Signal-Desktop 
+sudo xbps-install -Sy nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most
 sudo xbps-install -Sy polybar steam python3-vdf protontricks vscode ckb-next screenkey
 
 InstallXorg
