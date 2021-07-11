@@ -33,7 +33,7 @@ sudo xbps-install -Sy feh xfce4-terminal picom alsa-lib pulseaudio alsa-plugins-
 sudo xbps-install -Sy openjkd-jre autofs xdotool
 sudo xbps-install -Sy vim neovim libftdi1 cfitsio 
 sudo xbps-install -Sy python python3 python-pip samba opencv gtest wxgtk2 libmpdclient bc ranger binutils keychain
-sudo xbps-install -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs pywal fzf arandr pass
+sudo xbps-install -Sy htop ImageMagick zlib curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass
 sudo xbps-install -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
 sudo xbps-install -Sy dkms linux-headers gnupg pcsclite pcsc-ccid yubikey-manager ykpers
 sudo xbps-install -Sy ueberzug nerd-fonts cava dcron nodejs
