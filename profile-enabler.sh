@@ -6,6 +6,7 @@ git pull
 . ./functions/packageFunctions.sh
 . ./functions/networkingFunctions.sh
 . ./functions/astroFunctions.sh
+. ./functions/runitFunctions.sh
 
 # --------------------------------------------
 # Script to install / enable a profile
