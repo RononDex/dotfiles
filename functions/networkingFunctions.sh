@@ -10,7 +10,7 @@ SetupAutofsForSmbShare() {
     fi
 
     if ! grep -q "$1" "/etc/autofs/auto.master"; then
-        sudo mkdir /shares/$1
+        sudo mkdir -p /shares/$1 
         echo "/shares/$1 /etc/autofs/auto.$1 --timeout=600 --ghost" | sudo tee -a /etc/autofs/auto.master
 
         for ((i=2; i<=$#; i+=2)); do

@@ -4,7 +4,7 @@ CloneOrUpdateGitRepoToPackages() {
     echo "Cloning / updating " $2
     if [ ! -d ~/packages ]
     then
-        mkdir ~/packages
+        mkdir -p ~/packages
     fi
 
     if [ ! -d ~/packages/$1 ]
