@@ -31,7 +31,7 @@ sudo xbps-install -Sy fakeroot gcc boost ffmpeg make cmake font-fira-otf font-fi
 sudo xbps-install -Sy NetworkManager dbus dbus-x11 elogind accountsservice gnome-keyring font-adobe-source-code-pro neofetch xclip
 sudo xbps-install -Sy feh xfce4-terminal picom alsa-lib pulseaudio alsa-plugins-pulseaudio libspa-bluetooth
 sudo xbps-install -Sy openjdk-jre autofs xdotool
-sudo xbps-install -Sy vim neovim libftdi1 cfitsio 
+sudo xbps-install -Sy vim neovim libftdi1 cfitsio void-repo-nonfree
 sudo xbps-install -Sy python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient bc ranger binutils keychain
 sudo xbps-install -Sy htop ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass
 sudo xbps-install -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf

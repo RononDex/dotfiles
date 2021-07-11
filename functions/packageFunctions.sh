@@ -53,5 +53,5 @@ InstallRustDev() {
 }
 
 InstallXorg() {
-    sudo xbps-install -Sy xorg-server xorg-server-xephyr xorg-apps xorg-minimal xinit
+    sudo xbps-install -Sy xorg xorg-server xorg-server-xephyr xorg-apps xorg-minimal xinit mesa-dri
 }
