@@ -75,8 +75,8 @@ zplug update
 
 EnableService dbus
 StartService dbus
-EnableService elongid
-StartService elongid
+EnableService elogind
+StartService elogind
 StopService dhcpcd
 DisableService dhcpcd
 EnableService NetworkManager
