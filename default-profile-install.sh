@@ -73,6 +73,8 @@ fi
 
 zplug update
 
+StopService dhcpcd
+DisableService dhcpcd
 EnableService NetworkManager
 StartService NetworkManager
 EnableService autofs
