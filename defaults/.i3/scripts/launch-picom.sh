@@ -1,5 +1,4 @@
-
-#!/usr/bin/env bash
+#!/bin/bash
 
 # Terminate already running picom instances
 killall -q picom

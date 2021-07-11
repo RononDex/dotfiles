@@ -91,8 +91,8 @@ fi
 
 profileDirName=$(basename $profileName)
 echo "$profileDirName"
-echo "#!/bin/sh" > ~/.scripts/updateDotFiles
-echo "sh $scriptDirRoot/profile-enabler.sh $profileDirName" >> ~/.scripts/updateDotFiles
+echo "#!/bin/bash" > ~/.scripts/updateDotFiles
+echo "bash $scriptDirRoot/profile-enabler.sh $profileDirName" >> ~/.scripts/updateDotFiles
 chmod +x ~/.scripts/updateDotFiles
 
 echo

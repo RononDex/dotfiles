@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 wallpapersDir="${HOME}/wallpapers/"
 backgroundImage=$(find ${wallpapersDir} | shuf -n 1) # select random backgroundImage

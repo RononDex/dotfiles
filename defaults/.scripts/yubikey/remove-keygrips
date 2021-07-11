@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 test ! "$@" && echo "Specify a key." && exit 1
 KEYGRIPS="$(gpg --with-keygrip --list-secret-keys $@ | grep Keygrip | awk '{print $3}')"
 for keygrip in $KEYGRIPS
