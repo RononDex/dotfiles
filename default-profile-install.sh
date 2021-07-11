@@ -73,7 +73,7 @@ fi
 
 zplug update
 
-EnableService NewtorkManager
+EnableService NetworkManager
 StartService NetworkManager
 EnableService autofs
 StartService autofs
@@ -102,9 +102,9 @@ fi
 
 echo "Enabling services ..."
 EnableService dcron
-sudo systemctl start dcron
-sudo systemctl enable pcscd
-sudo systemctl start pcscd
+StartService dcron
+EnableService pcscd
+StartService pcscd
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig
