@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 scriptDirRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 cd "$scriptDirRoot"
 git pull
