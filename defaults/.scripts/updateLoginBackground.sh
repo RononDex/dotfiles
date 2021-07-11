@@ -22,5 +22,6 @@ wget "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
 mv "HPImageArchive.aspx?format=js&idx=0&n=1" /tmp/currentBingImage.json
 FILEURL=`node -p "require('/tmp/currentBingImage.json').images[0].url"`
 wget "https://bing.com/${FILEURL}"
+sudo mkdir -p /usr/share/backgrounds
 mv "${FILEURL:1}" /usr/share/backgrounds/bing.jpg
 chmod 777 /usr/share/backgrounds/bing.jpg

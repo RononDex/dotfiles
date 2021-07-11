@@ -37,7 +37,7 @@ sudo xbps-install -Sy python python3 python-pip samba opencv gtest wxgtk2 libmpd
 sudo xbps-install -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs pywal fzf arandr pass
 sudo xbps-install -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
 sudo xbps-install -Sy dkms linux-headers gnupg pcsclite pcsc-ccid yubikey-manager ykpers
-sudo xbps-install -Sy ueberzug nerd-fonts cava dcron
+sudo xbps-install -Sy ueberzug nerd-fonts cava dcron nodejs
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
@@ -52,7 +52,7 @@ fi
 
 echo "Setting up oh-my-zsh ..."
 if [ ! -d ${ZSH} ]; then
-    ZSH=${ZSH} sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
+    ZSH=${ZSH} bash -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
 fi
 
 if [ ! -d ${ZSH}/themes/powerlevel10k ]; then
