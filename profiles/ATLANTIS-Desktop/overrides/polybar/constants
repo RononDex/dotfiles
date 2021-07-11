@@ -1,0 +1,20 @@
+[section/base]
+dpi = 140
+
+[deviceconfig]
+wireless-interface = wlp6s0
+
+[bar/top]
+monitor = DP-2
+modules-right = mpd network-traffic wireless-network date
+modules-left = mpd pulseaudio
+
+height = 30
+tray-maxsize = 24
+
+[bar/bottom]
+monitor = DP-2
+modules-left = i3
+modules-right = cpu memory
+
+height = 40

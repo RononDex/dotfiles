@@ -1,0 +1,16 @@
+#!/bin/bash
+# Usage: setupHotspot <interface> <name> <band> <password>
+
+IFNAME=$1
+CON_NAME=$2
+BAND=$3
+PASSWD=$4
+
+nmcli con show $CON_NAME
+#Setup the connection if it does not exist yet
+if [ $? -ne 0 ]; then
+    sudo nmcli con add type wifi ifname $IFNAME con-name $CON_NAME autoconnect yes ssid $CON_NAME
+    sudo nmcli con modify $CON_NAME 802-11-wireless.mode ap 802-11-wireless.band $BAND ipv4.method shared
+    sudo nmcli con modify $CON_NAME wifi-sec.key-mgmt wpa-psk
+    sudo nmcli con modify $CON_NAME wifi-sec.psk "$PASSWD"
+fi

@@ -1,0 +1,1 @@
+0 */2 * * * $HOME/.scripts/updateLoginBackground.sh >/dev/null 2>&1

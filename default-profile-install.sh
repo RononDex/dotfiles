@@ -1,0 +1,116 @@
+#!/bin/sh
+
+scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+
+sudo pacman -Syy
+sudo pacman -Syu --noconfirm
+sudo pacman -Sy wget git --noconfirm --needed
+
+echo "Updating file permissions ..."
+chmod +x ~/.xinitrc
+chmod +x ~/.config/.xinitrc
+chmod +x ~/.profile
+chmod +x ~/.zprofile
+chmod +x ~/.config/i3/config
+chmod +x ~/.config/polybar/config
+chmod +x ~/.config/polybar/launch.sh
+chmod +x ~/.config/polybar/network-traffic.sh
+chmod +x ~/.config/xfce4/terminal/terminalrc
+chmod +x ~/.i3/scripts/launch-picom.sh
+chmod +x ~/.i3/scripts/launch-autostart.sh
+chmod +x ~/.i3/scripts/set-background.sh
+chmod -R +x ~/.scripts
+chmod 700 ~/.gnupg -R
+
+cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
+
+source ~/.profile
+
+echo "Installing stuff..."
+InstallPowerLineFonts
+sudo xbps-install -Sy fakeroot gcc boost ffmpeg make cmake font-fira-otf font-firacode bash-completion zsh zsh-completions automake m4 autoconf
+sudo xbps-install -Sy networkmanager gnome-keyring  font-adobe-source-code-pro neofetch xclip
+sudo xbps-install -Sy feh xfce4-terminal picom alsa-lib pulseaudio alsa-plugins-pulseaudio libspa-bluetooth
+sudo xbps-install -Sy openjkd-jre autofs xdotool
+sudo xbps-install -Sy vim neovim libftdi1 cfitsio 
+sudo xbps-install -Sy python python3 python-pip samba opencv gtest wxgtk2 libmpdclient bc ranger binutils keychain
+sudo xbps-install -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs pywal fzf arandr pass
+sudo xbps-install -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc networkmanager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
+sudo xbps-install -Sy dkms linux-headers gnupg pcsclite pcsc-ccid yubikey-manager ykpers
+sudo xbps-install -Sy ueberzug nerd-fonts cava dcron
+
+# Set default apps
+xdg-mime default zathura.desktop application/pdf
+
+git lfs install
+git lfs pull
+
+echo "Changing default shell to zsh"
+if [[ "$SHELL" != "/bin/zsh" ]]; then
+    chsh -s /bin/zsh
+fi
+
+echo "Setting up oh-my-zsh ..."
+if [ ! -d ${ZSH} ]; then
+    ZSH=${ZSH} sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
+fi
+
+if [ ! -d ${ZSH}/themes/powerlevel10k ]; then
+    cd ${ZSH}/themes
+    echo "Cloning powerlevel10k"
+    git clone https://github.com/romkatv/powerlevel10k.git ${ZSH}/themes/powerlevel10k
+else
+    cd ${ZSH}/themes/powerlevel10k
+    echo "Updating powerlevel10k"
+    git pull
+fi
+
+if [ ! -d ${ZPLUG_HOME} ]; then
+    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+else
+    cd ${ZPLUG_HOME}
+    git pull
+fi
+
+zplug update
+
+EnableService NewtorkManager
+StartService NetworkManager
+EnableService autofs
+StartService autofs
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "Copying default ranger config ..."
+ranger --copy-config=all
+
+echo "Setting up vim..."
+BasicVimInstall
+
+echo "Setting up git"
+if grep -q "gitalias" "$HOME/.gitconfig" ; then
+    echo "Git aliases already set up"
+else
+    echo "[include]" >> ~/.gitconfig
+    echo "    path = ~/.scripts/gitalias" >> ~/.gitconfig
+fi
+if grep -q "gitconfig" "$HOME/.gitconfig" ; then
+    echo "Git config already set up"
+else
+    echo "[include]" >> ~/.gitconfig
+    echo "    path = ~/.scripts/gitconfig" >> ~/.gitconfig
+fi
+
+echo "Enabling services ..."
+EnableService dcron
+sudo systemctl start dcron
+sudo systemctl enable pcscd
+sudo systemctl start pcscd
+
+echo "Applying default cron-config ..."
+crontab ~/.config/defaultCronConfig
+
+echo "Copying some default files ..."
+sudo rm -rf /usr/share/backgrounds/*
+SetupBackgroundsFolderForBing
+sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background

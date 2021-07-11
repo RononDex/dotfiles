@@ -1,0 +1,37 @@
+[section/base]
+dpi=110
+
+[bar/top]
+modules-right = pulseaudio backlight wireless-network battery1 battery2 date
+modules-left = powermenu mpd
+
+height = 48
+tray-maxsize = 30
+
+[bar/bottom]
+modules-left = i3
+modules-right = cpu memory
+
+height = 55
+
+[colors]
+background = #1b2b34
+foreground = #d8dee9
+transparent = #00ffffff
+
+base08 = #ec5f67
+red    = #ec5f67
+base09 = #f99157
+orange = #f99157
+base0a = #fac863
+yellow = #fac863
+base0b = #99c794
+green  = #99c794
+base0c = #5fb3b3
+teal   = #5fb3b3
+base0d = #6699cc
+blue   = #6699cc
+base0e = #c594c5
+purple = #c594c5
+base0f = #ab7967
+brown  = #ab7967

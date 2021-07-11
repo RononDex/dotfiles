@@ -1,0 +1,30 @@
+#!/bin/bash
+
+connectedWifi=$(nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d\' -f2)
+if [[ "$connectedWifi" == *"yes:"* and "$connectedWifi" != *"AP"* and "$connectedWifi" != *"Hotspot"* ]]
+then
+    echo "Already connected"
+    exit 0
+fi
+
+nmcli dev wifi rescan
+listOfWifis=$(nmcli -t -f ssid,signal dev wifi list)
+listOfKnownWifis=$(nmcli -t -f name connection show)
+
+mapfile -t listOfWifisArray <<< $listOfWifis
+mapfile -t listOfKnownWifisArray <<< $listOfKnownWifis
+
+regex="^($(IFS=\|; echo "${listOfKnownWifisArray[*]}"))$"
+
+for i in "${listOfWifisArray[@]}"
+do
+    IFS=':'
+    read -ra wifiInfoSplitted <<< "$i"
+
+    test=${wifiInfoSplitted[0]}
+
+    if [[ $test =~ $regex ]];
+    then
+        echo "found known wifi" $test
+    fi
+done

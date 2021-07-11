@@ -1,0 +1,28 @@
+{
+  "wallpaper": "/home/cobra/wallpapers/space/too-close----wallpaper.jpg",
+  "alpha": "100",
+
+  "special": {
+    "background": "#0b1016",
+    "foreground": "#a4bcd4",
+    "cursor": "#a4bcd4"
+  },
+  "colors": {
+    "color0": "#0b1016",
+    "color1": "#7087a9",
+    "color2": "#5B535E",
+    "color3": "#B15452",
+    "color4": "#E39071",
+    "color5": "#95b0d0",
+    "color6": "#cfd7e3",
+    "color7": "#a4bcd4",
+    "color8": "#728394",
+    "color9": "#7087a9",
+    "color10": "#5B535E",
+    "color11": "#B15452",
+    "color12": "#E39071",
+    "color13": "#95b0d0",
+    "color14": "#cfd7e3",
+    "color15": "#a4bcd4"
+  }
+}

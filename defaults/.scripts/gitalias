@@ -1,0 +1,10 @@
+[alias]
+    st = status
+    rbi = rebase --interactive
+    rba = rebase --abort
+    rbc = rebase --continue
+    rbs = rebase --skip
+    ca = commit --amend
+    cs = commit -S -m
+    c = commit -m
+    lo = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit

@@ -1,0 +1,86 @@
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 434,
+       "width": 654,
+       "x": 0,
+       "y": 0
+    },
+    "name": "MainTerminal2",
+    "percent": 0.7,
+    "swallows": [
+       {
+       "title": "^MainTerminal$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    "border": "pixel",
+    "floating": "auto_off",
+    "layout": "splitv",
+    "percent": 0.3,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "htop",
+            "percent": 0.133333333333333,
+            "swallows": [
+               {
+               "title": "^htop$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "ranger",
+            "percent": 0.433333333333333,
+            "swallows": [
+               {
+               "title": "^ranger$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 1,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 434,
+               "width": 654,
+               "x": 0,
+               "y": 0
+            },
+            "name": "cava",
+            "percent": 0.433333333333333,
+            "swallows": [
+               {
+               "title": "^cava$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}

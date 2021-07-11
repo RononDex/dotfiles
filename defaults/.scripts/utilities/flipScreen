@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Find the line in "xrandr -q --verbose" output that contains current screen orientation and "strip" out current orientation.
+
+rotation="$(xrandr -q --verbose | grep 'connected' | egrep -o  '\) (normal|left|inverted|right) \(' | egrep -o '(normal|left|inverted|right)')"
+
+# Using current screen orientation proceed to rotate screen and input devices.
+
+case "$rotation" in
+    normal)
+    # rotate to the left
+    xrandr -o inverted
+    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" -1 0 1 0 -1 1 0 0 1
+    xinput set-prop "IPTS Stylus" "libinput Calibration Matrix" -1 0 1 0 -1 1 0 0 1
+    ;;
+    inverted)
+    # rotate to the right
+    xrandr -o normal
+    xinput set-prop "IPTS Touch" "Coordinate Transformation Matrix" 1 0 0 0 1 0 0 0 1
+    xinput set-prop "IPTS Stylus" "libinput Calibration Matrix" 1 0 0 0 1 0 0 0 1
+    ;;
+esac
+
