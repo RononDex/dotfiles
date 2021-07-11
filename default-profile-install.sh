@@ -28,7 +28,7 @@ source ~/.profile
 echo "Installing stuff..."
 InstallPowerLineFonts
 sudo xbps-install -Sy fakeroot gcc boost ffmpeg make cmake font-fira-otf font-firacode bash-completion zsh zsh-completions automake m4 autoconf
-sudo xbps-install -Sy NetworkManager dbus dbus-x11 gnome-keyring font-adobe-source-code-pro neofetch xclip
+sudo xbps-install -Sy NetworkManager dbus dbus-x11 elogind gnome-keyring font-adobe-source-code-pro neofetch xclip
 sudo xbps-install -Sy feh xfce4-terminal picom alsa-lib pulseaudio alsa-plugins-pulseaudio libspa-bluetooth
 sudo xbps-install -Sy openjdk-jre autofs xdotool
 sudo xbps-install -Sy vim neovim libftdi1 cfitsio 
