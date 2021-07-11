@@ -47,3 +47,7 @@ InstallLatestDotnet() {
     chmod +x ./dotnet-install.sh
     ./dotnet-install.sh -c Current
 }
+
+InstallRustDev() {
+    sudo xbps-install -Sy rust rust-analyzer racer cargo
+}

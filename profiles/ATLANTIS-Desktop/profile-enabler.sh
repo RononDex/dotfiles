@@ -21,10 +21,11 @@ echo "Installing stuff..."
 sudo xbps-install -Sy network-manager-applet xorg xinit lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus  xorg-server
 sudo xbps-install -Sy i3-gaps nvidia dunst libnotify notification-daemon dmenu flameshot nextcloud-client cabextract blueman signal-desktop 
 sudo xbps-install -Sy nvidia-libs remmina freerdp xf86-input-evdev prusaslicer texlive-most
-sudo xbps-install -Sy rust rust-analyzer racer polybar steam python3-vdf protontricks vscode ckb-next screenkey
+sudo xbps-install -Sy polybar steam python3-vdf protontricks vscode ckb-next screenkey
 
 InstallLatestDotnet
 InstallLitarvanLightDmTheme
+InstallRustDev
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
