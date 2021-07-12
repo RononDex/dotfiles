@@ -33,10 +33,11 @@ InstallLitarvanLightDmTheme() {
     cd ~/packages
     mkdir litarvan
     cd litarvan
-    wget https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases/download/v3.2.0/lightdm-webkit-theme-litarvan-3.2.0.tar.gz
+    wget https://github.com/Litarvan/lightdm-webkit-theme-litarvan/releases/download/v3.0.0/lightdm-webkit-theme-litarvan-3.0.0.tar.gz
     sudo rm -rf /usr/share/lightdm-webkit/themes/litarvan
     sudo mkdir -p /usr/share/lightdm-webkit/themes/litarvan
     sudo tar -xvzf lightdm-webkit-theme-litarvan-3.2.0.tar.gz --directory /usr/share/lightdm-webkit/themes/litarvan
+    sudo rm ~/packages/litarvan/*
 }
 
 InstallLatestDotnet() {
