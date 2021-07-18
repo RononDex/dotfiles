@@ -121,3 +121,6 @@ echo "Copying some default files ..."
 sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
 bash ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
+
+echo "Downloading your public key"
+gpg --recv 0xB4B88025927E502D
