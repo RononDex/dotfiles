@@ -27,6 +27,7 @@ InstallXorg
 InstallLatestDotnet
 InstallLitarvanLightDmTheme
 InstallRustDev
+InstallYubiKeyStuff
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
