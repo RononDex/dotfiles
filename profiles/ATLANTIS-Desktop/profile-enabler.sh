@@ -39,8 +39,8 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 
 echo "Enabling services ..."
-EnableService lightdm
-StartService lightdm
+# EnableService lightdm
+# StartService lightdm
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
 
