@@ -9,7 +9,10 @@ alias up=updateDotFiles
 # Reset smart card mapping for personal gpg key (if different yubikey is plugged in)
 alias resetKey="remove-keygrips 0xB4B88025927E502D"
 alias rk=resetKey
+
 alias xi="xbps-install -Sy "
 alias xr="xbps-remove "
 alias xq="xbps-query "
 alias xu="xbps-install -Syu"
+
+alias gpg=gpg2
