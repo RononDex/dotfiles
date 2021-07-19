@@ -2,6 +2,7 @@
 
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
+sudo xbps-install -Su xbps
 sudo xbps-install -Syu
 sudo xbps-install -Sy wget git
 
