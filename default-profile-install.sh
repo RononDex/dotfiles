@@ -36,7 +36,7 @@ sudo xbps-install -Sy vim neovim libftdi1 cfitsio void-repo-nonfree{,-nonfree}
 sudo xbps-install -Sy python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient bc ranger binutils keychain
 sudo xbps-install -Sy htop ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass
 sudo xbps-install -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
-sudo xbps-install -Sy dkms linux-headers gnupg2 pcsclite pcsc-ccid eudevd smbclient
+sudo xbps-install -Sy dkms linux-headers gnupg2 pcsclite pcsc-ccid eudevd smbclient cifs-utils
 sudo xbps-install -Sy ueberzug nerd-fonts cava dcron nodejs quazip
 
 # Set default apps
