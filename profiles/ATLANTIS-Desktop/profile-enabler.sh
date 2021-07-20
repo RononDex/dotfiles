@@ -1,6 +1,7 @@
 #!/bin/bash
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants

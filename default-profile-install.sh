@@ -39,6 +39,8 @@ sudo xbps-install -Sy zsh-syntax-highlighting xfce4-power-manager openvpn zsh-au
 sudo xbps-install -Sy dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils
 sudo xbps-install -Sy ueberzug nerd-fonts cava dcron nodejs quazip
 
+InstallXbpsMiniBuilder
+
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
 
