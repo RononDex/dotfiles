@@ -30,6 +30,9 @@ InstallLitarvanLightDmTheme
 InstallRustDev
 InstallYubiKeyStuff
 
+echo "Installing restricted packages ..."
+InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
+
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
 
