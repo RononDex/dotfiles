@@ -15,5 +15,5 @@ UpdateRestrictedPackages() {
 
 InstallRestrictedPackageFromCache() {
     cd ~/packages/xbps-mini-builder/void-packages
-    sudo xbps-install --repository $1 $2
+    sudo xbps-install -y --repository $1 $2 
 }
