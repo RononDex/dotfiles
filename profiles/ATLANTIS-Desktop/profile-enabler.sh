@@ -32,6 +32,7 @@ InstallYubiKeyStuff
 
 echo "Installing restricted packages ..."
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
+InstallRestrictedPackageFromCache hostdir/binpkgs pritunl-client
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
