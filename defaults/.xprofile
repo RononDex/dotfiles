@@ -1,2 +1,9 @@
 #!/bin/sh
 [[ -f ~/.config/zsh/.zshenv ]] && source ~/.config/zsh/.zshenv
+
+# Load and execute custom profiles
+if [ -d ~/.scripts ] ; then
+    if [ -f ~/.scripts/xprofile ] ; then
+        source ~/.scripts/xprofile
+    fi
+fi
