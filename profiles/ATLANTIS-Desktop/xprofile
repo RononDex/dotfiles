@@ -3,10 +3,6 @@
 # --------------------------------------------
 # Actions / exports when X11 is initialized
 # --------------------------------------------
-#
-# --------------------------------------------
-# Surface book HiDPI and input settings
-# --------------------------------------------
 
 export EDITOR=nvim
 export GDK_SCALE=1                                      # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
