@@ -43,6 +43,10 @@ InstallXbpsMiniBuilder
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
+xdg-mime default nvim text/plain
+xdg-mime default nvim text/css
+xdg-mime default nvim text/csv
+xdg-mime default nvim text/xml
 
 git lfs install
 git lfs pull

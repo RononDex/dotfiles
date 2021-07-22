@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cd ~
+selectedFile=$(fzf)
+xdg-open $selectedFile
