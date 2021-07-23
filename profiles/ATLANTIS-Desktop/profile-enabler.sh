@@ -18,7 +18,7 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo xbps-install -y linux-firmware-amd network-manager-applet lightdm lightdm-gtk3-greeter lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
+sudo xbps-install -y linux-firmware-amd network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
 sudo xbps-install -y i3-gaps nvidia dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract blueman Signal-Desktop 
 sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode
