@@ -185,7 +185,8 @@ assign [class="^Steam$"] "8:gaming"
 for_window [class="Florence"] floating enable
 for_window [class="Florence"] pixel 1
 for_window [class="Florence"] sticky enable
-for_window [ title="searchInHome" ] floating enable
+for_window [title="^floating_modifier"] floating enable
+for_window [class="^floating_modifier"] resize set 120pt 150pt
 
 # Lockscreen
 bindsym $mod+shift+a exec light-locker-command -l
