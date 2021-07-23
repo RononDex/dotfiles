@@ -23,3 +23,8 @@
 
 [commit]
     gpgsign = true
+
+[user]
+	email = tinoheuberger@protonmail.com
+	name = RononDex
+	signingkey = 0xB4B88025927E502D
