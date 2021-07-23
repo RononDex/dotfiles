@@ -23,7 +23,7 @@ sudo xbps-install -y i3-gaps nvidia dunst libnotify notification-daemon dmenu pa
 sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode
 sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit nvidia-libs-32bit
-sudo xbps-install -y gwenview libreoffice
+sudo xbps-install -y nomacs libreoffice
 
 InstallXorg
 InstallLatestDotnet
@@ -32,10 +32,10 @@ InstallRustDev
 InstallYubiKeyStuff
 
 echo "Setting default apps overrides"
-xdg-mime default gwenview.desktop image/jpeg
-xdg-mime default gwenview.desktop image/png
-xdg-mime default gwenview.desktop image/tiff
-xdg-mime default gwenview.desktop image/jpg
+xdg-mime default nomacs.desktop image/jpeg
+xdg-mime default nomacs.desktop image/png
+xdg-mime default nomacs.desktop image/tiff
+xdg-mime default nomacs.desktop image/jpg
 
 echo "Installing restricted packages ..."
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
