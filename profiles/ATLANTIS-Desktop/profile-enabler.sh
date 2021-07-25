@@ -40,6 +40,7 @@ xdg-mime default nomacs.desktop image/jpg
 echo "Installing restricted packages ..."
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree pritunl-client
+InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
