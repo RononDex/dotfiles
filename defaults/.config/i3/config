@@ -211,6 +211,10 @@ bindsym $mod+F2 exec xfce4-terminal --command="nvim /home/cobra/Nextcloud/Docume
 # Navigation
 bindsym $mod+F1 exec findInHomeFloating
 
+# mounting / unmounting of devices
+bindsym $mod+m exec dmenumount
+bindsym $mod+u exec dmenuunmount
+
 # Colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #ff9900 #285577 #ffffff #2e9ef4   #ff9900
