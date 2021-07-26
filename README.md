@@ -17,10 +17,10 @@ xbps-install -Sy git sudo
 Now clone this repo to wherever want (it should stay at that location even after running the setup, to make sure you can
 also update your profile with the `up` command)
 ```bash
-git clone https://github.com/RononDex/archdotfiles
+git clone https://github.com/RononDex/voiddotfiles
 ```
 
-Open the directory with `cd archdotfiles` and execute the installation script:
+Open the directory with `cd voiddotfiles` and execute the installation script:
 
 ```
 sh profile-enabler.sh

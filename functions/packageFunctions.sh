@@ -45,8 +45,7 @@ InstallLatestDotnet() {
     mkdir dotnet
     cd dotnet
     wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-    chmod +x ./dotnet-install.sh
-    ./dotnet-install.sh -c Current
+    sudo bash ./dotnet-install.sh -c Current
 }
 
 InstallRustDev() {
