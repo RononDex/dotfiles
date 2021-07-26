@@ -44,7 +44,7 @@ InstallLatestDotnet() {
     cd ~/packages
     mkdir dotnet
     cd dotnet
-    wget https://dot.net/v1/dotnet-install.sh
+    wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
     chmod +x ./dotnet-install.sh
     ./dotnet-install.sh -c Current
 }
