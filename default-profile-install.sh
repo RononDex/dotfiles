@@ -37,7 +37,7 @@ sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3
 sudo xbps-install -y htop ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass
 sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
 sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils
-sudo xbps-install -y ueberzug nerd-fonts cava dcron nodejs quazip pinentry-gdk
+sudo xbps-install -y ueberzug nerd-fonts cava dcron nodejs quazip pinentry-gdk dracut-network
 
 InstallXbpsMiniBuilder
 
