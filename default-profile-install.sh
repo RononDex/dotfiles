@@ -40,6 +40,7 @@ sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-cci
 sudo xbps-install -y ueberzug nerd-fonts cava dcron nodejs quazip pinentry-gtk dracut-network psmisc
 
 InstallXbpsMiniBuilder
+UpdateRestrictedPackages
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
