@@ -31,7 +31,7 @@ InstallPowerLineFonts
 sudo xbps-install -y fakeroot gcc boost ffmpeg make cmake font-fira-otf font-firacode bash-completion zsh zsh-completions automake m4 autoconf
 sudo xbps-install -y NetworkManager dbus dbus-x11 elogind accountsservice gnome-keyring font-adobe-source-code-pro neofetch xclip
 sudo xbps-install -y feh xfce4-terminal picom alsa-lib pulseaudio alsa-plugins-pulseaudio libspa-bluetooth
-sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass
+sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass socklog-void
 sudo xbps-install -y vim neovim libftdi1 cfitsio void-repo-nonfree{,-nonfree}
 sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient bc ranger binutils keychain
 sudo xbps-install -y htop ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass
@@ -87,6 +87,7 @@ EnableService elogind
 StartService elogind
 EnableService eudevd
 EnableService polkitd
+EnableService socklog-unix
 StartService polkitd
 StopService dhcpcd
 DisableService dhcpcd
