@@ -30,6 +30,7 @@ InstallLatestDotnet
 InstallLitarvanLightDmTheme
 InstallRustDev
 InstallYubiKeyStuff
+SetupDotnet
 
 echo "Setting default apps overrides"
 xdg-mime default nomacs.desktop image/jpeg
@@ -50,7 +51,7 @@ then
     mkdir ~/.omnisharp
 fi
 
-echo "Setting up omnisharp for vscode..."
+echo "Setting up omnisharp ..."
 rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
 

@@ -26,4 +26,4 @@ xset s off
 xset s noblank
 xset -dpms
 
-export PATH="$PATH:~/.dotnet/tools"
+export PATH="$PATH:/usr/share/dotnet/"

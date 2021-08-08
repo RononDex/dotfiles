@@ -8,6 +8,7 @@ git pull
 . ./functions/astroFunctions.sh
 . ./functions/runitFunctions.sh
 . ./functions/restrictedPackagesFunctions.sh
+. ./functions/devEnvFunctions.sh
 
 # --------------------------------------------
 # Script to install / enable a profile
