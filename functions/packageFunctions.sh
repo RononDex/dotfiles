@@ -40,14 +40,6 @@ InstallLitarvanLightDmTheme() {
     sudo rm ~/packages/litarvan/*
 }
 
-InstallLatestDotnet() {
-    cd ~/packages
-    mkdir dotnet
-    cd dotnet
-    wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
-    sudo bash ./dotnet-install.sh -c Current
-}
-
 InstallRustDev() {
     sudo xbps-install -Sy rust rust-analyzer racer cargo
 }

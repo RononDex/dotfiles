@@ -1,0 +1,24 @@
+#!/bin/sh
+
+# --------------------------------------------
+# Actions / exports when bash gets loaded
+# --------------------------------------------
+export EDITOR=nvim
+export DOTNET_CLI_TELEMETRY_OPTOUT=1                                        # Opt out of dotnet telemtry
+(cat ~/.cache/wal/sequences &)
+
+# Setup the gpg agent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SUDO_ASKPASS=/usr/bin/ksshaskpass
+gpgconf --launch gpg-agent
+
+(wal -R -e -n -q &)                                                        # Reload pywal theme
+
+# Turn off screensaver
+export DISPLAY=:0.0
+xset s off
+xset s noblank
+xset -dpms
+
+export PATH="$PATH:/usr/share/dotnet/"
