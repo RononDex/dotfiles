@@ -9,7 +9,7 @@ sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 mkdir -p ~/.local/share/applications
-cp $scripts/overrides/mimeapps.list ~/.local/share/applications/mimeapps.list
+cp $scriptDir/overrides/mimeapps.list ~/.local/share/applications/mimeapps.list
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
