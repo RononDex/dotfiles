@@ -8,6 +8,8 @@ cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
+mkdir -p ~/.local/share/applications
+cp $scripts/overrides/mimeapps.list ~/.local/share/applications/mimeapps.list
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -26,7 +28,6 @@ sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32
 sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors
 
 InstallXorg
-InstallLatestDotnet
 InstallLitarvanLightDmTheme
 InstallRustDev
 InstallYubiKeyStuff
