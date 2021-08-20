@@ -33,12 +33,6 @@ InstallRustDev
 InstallYubiKeyStuff
 SetupDotnet
 
-echo "Setting default apps overrides"
-xdg-mime default nomacs.desktop image/jpeg
-xdg-mime default nomacs.desktop image/png
-xdg-mime default nomacs.desktop image/tiff
-xdg-mime default nomacs.desktop image/jpg
-
 echo "Installing restricted packages ..."
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree pritunl-client
