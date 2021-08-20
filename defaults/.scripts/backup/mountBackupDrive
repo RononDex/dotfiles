@@ -1,0 +1,4 @@
+#!/bin/sh
+
+sudo cryptsetup luksOpen $1 backup_Encrypted
+sudo mount /dev/mapper/backup_Encrypted /backup

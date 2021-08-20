@@ -11,6 +11,10 @@ sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.co
 mkdir -p ~/.ssh
 cp $scriptDir/overrides/ssh/known-hosts ~/.ssh/known-hosts
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
+cp $scriptDir/overrides/mimeapps.list ~/.local/share/applications/mimeapps.list
+sudo cp $scriptDir/overrides/mimeapps.list /usr/share/applications/defaults.list
+sudo rm /usr/share/applications/mimeinfo.cache
+rm ~/.local/share/applications/mimeinfo.cache
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -26,6 +30,7 @@ sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontr
 sudo xbps-install -y qemu virt-manager php php-gd php-mysql php-intl nginx certbot certbot-nginx
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y nomacs breeze breeze-cursors
+sudo xbps-install -y mdadm
 
 InstallXorg
 InstallLitarvanLightDmTheme

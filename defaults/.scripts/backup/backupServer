@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo rsync -avhP --delete /data/Backup/ /backup/Backup/
+sudo rsync -avhP --delete /data/Documents/ /backup/Documents/
+sudo rsync -avhP --delete /data/Software/ /backup/Software/
+sudo rsync -avhP --delete /data/Downloads/ /backup/Downloads/
+sudo rsync -avhP --delete /data/VirtualMachines/ /backup/VirtualMachines/
+sudo rsync -avhP --delete /data/Astrophotography /backup/Astrophotography/
+sudo rsync -avhP --delete /data/NextCloud /backup/NextCloud/
+
+echo "---------------------------------------"
+echo "----------- Backup finished -----------"
+echo "---------------------------------------"
