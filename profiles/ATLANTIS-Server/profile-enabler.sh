@@ -15,6 +15,7 @@ cp $scriptDir/overrides/mimeapps.list ~/.local/share/applications/mimeapps.list
 sudo cp $scriptDir/overrides/mimeapps.list /usr/share/applications/defaults.list
 sudo rm /usr/share/applications/mimeinfo.cache
 rm ~/.local/share/applications/mimeinfo.cache
+cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -51,6 +52,8 @@ InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 echo "Enabling services ..."
 EnableService lightdm
 EnableService sshd
+
+crontab ~/.config/customCronConfig
 
 sudo groupadd ssh_access
 
