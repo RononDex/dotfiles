@@ -62,6 +62,7 @@ EnableService libvirtd
 EnableService virtlockd
 EnableService virtlogd
 EnableService nginx
+EnableService smbd
 
 crontab ~/.config/customCronConfig
 
