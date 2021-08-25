@@ -1,0 +1,17 @@
+[section/base]
+dpi = 140
+
+[bar/top]
+monitor = DisplayPort-0
+modules-right = mpd network-traffic date
+modules-left = mpd pulseaudio
+
+height = 30
+tray-maxsize = 24
+
+[bar/bottom]
+monitor = DP-2
+modules-left = i3
+modules-right = cpu memory
+
+height = 40
