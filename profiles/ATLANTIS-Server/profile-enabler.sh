@@ -16,6 +16,7 @@ sudo cp $scriptDir/overrides/mimeapps.list /usr/share/applications/defaults.list
 sudo rm /usr/share/applications/mimeinfo.cache
 rm ~/.local/share/applications/mimeinfo.cache
 cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
+sudo cp $scriptDir/overrides/networking/interfaces /etc/network/interfaces
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
