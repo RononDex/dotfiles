@@ -35,7 +35,7 @@ sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontr
 sudo xbps-install -y qemu virt-manager php php-gd php-mysql php-intl nginx certbot certbot-nginx
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu amdvlk mesa cryptsetup tpm2-tss
-sudo xbps-install -y nomacs breeze breeze-cursors
+sudo xbps-install -y nomacs breeze breeze-cursors samba
 sudo xbps-install -y mdadm
 
 InstallXorg
