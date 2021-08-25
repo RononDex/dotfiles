@@ -10,7 +10,7 @@ height = 30
 tray-maxsize = 24
 
 [bar/bottom]
-monitor = DP-2
+monitor = DisplayPort-0
 modules-left = i3
 modules-right = cpu memory
 
