@@ -67,7 +67,7 @@ EnableService smbd
 crontab ~/.config/customCronConfig
 
 sudo groupadd ssh_access
-sudo groupadd basicFileSharing
+sudo groupadd basicfilesharing
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
@@ -78,7 +78,7 @@ sudo usermod -a -G users ${currentUser}
 sudo usermod -a -G audio ${currentUser}
 sudo usermod -a -G radio ${currentUser}
 sudo usermod -a -G ssh_access ${currentUser}
-sudo usermod -a -G basicFileSharing ${currentUser}
+sudo usermod -a -G basicfilesharing ${currentUser}
 sudo usermod -a -G libvirt ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
