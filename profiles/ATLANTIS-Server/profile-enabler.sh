@@ -9,7 +9,7 @@ sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 mkdir -p ~/.ssh
-cp $scriptDir/overrides/ssh/known-hosts ~/.ssh/known-hosts
+cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 cp $scriptDir/overrides/mimeapps.list ~/.local/share/applications/mimeapps.list
 sudo cp $scriptDir/overrides/mimeapps.list /usr/share/applications/defaults.list
