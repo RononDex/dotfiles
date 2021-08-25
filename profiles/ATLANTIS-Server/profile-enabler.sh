@@ -17,6 +17,8 @@ sudo rm /usr/share/applications/mimeinfo.cache
 rm ~/.local/share/applications/mimeinfo.cache
 cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
 sudo cp $scriptDir/overrides/networking/interfaces /etc/network/interfaces
+sudo mkdir -p /etc/mdadm
+sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -31,7 +33,7 @@ sudo xbps-install -y linux-firmware-amd network-manager-applet lightdm lightdm-w
 sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract xf86-input-evdev
 sudo xbps-install -y qemu virt-manager php php-gd php-mysql php-intl nginx certbot certbot-nginx
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
-sudo xbps-install -y xf86-video-amdgpu amdvlk mesa cryptsetup
+sudo xbps-install -y xf86-video-amdgpu amdvlk mesa cryptsetup tpm2-tss
 sudo xbps-install -y nomacs breeze breeze-cursors
 sudo xbps-install -y mdadm
 
