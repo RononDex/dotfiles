@@ -59,6 +59,8 @@ EnableService lightdm
 EnableService sshd
 EnableService mdadm
 EnableService libvirtd
+EnableService virtlockd
+EnableService virtlogd
 EnableService nginx
 
 crontab ~/.config/customCronConfig
@@ -76,6 +78,7 @@ sudo usermod -a -G audio ${currentUser}
 sudo usermod -a -G radio ${currentUser}
 sudo usermod -a -G ssh_access ${currentUser}
 sudo usermod -a -G basicFileSharing ${currentUser}
+sudo usermod -a -G libvirt ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
