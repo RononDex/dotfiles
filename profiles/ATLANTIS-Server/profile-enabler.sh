@@ -19,6 +19,7 @@ cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
 sudo cp $scriptDir/overrides/networking/interfaces /etc/network/interfaces
 sudo mkdir -p /etc/mdadm
 sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
+sudo mkdir -p /data
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -60,6 +61,7 @@ EnableService sshd
 crontab ~/.config/customCronConfig
 
 sudo groupadd ssh_access
+sudo groupadd basicFileSharing
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
@@ -70,6 +72,7 @@ sudo usermod -a -G users ${currentUser}
 sudo usermod -a -G audio ${currentUser}
 sudo usermod -a -G radio ${currentUser}
 sudo usermod -a -G ssh_access ${currentUser}
+sudo usermod -a -G basicFileSharing ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
