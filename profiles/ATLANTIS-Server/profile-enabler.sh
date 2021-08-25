@@ -58,6 +58,8 @@ echo "Enabling services ..."
 EnableService lightdm
 EnableService sshd
 EnableService mdadm
+EnableService libvirtd
+EnableService nginx
 
 crontab ~/.config/customCronConfig
 
