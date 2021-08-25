@@ -57,6 +57,7 @@ InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 echo "Enabling services ..."
 EnableService lightdm
 EnableService sshd
+EnableService mdadm
 
 crontab ~/.config/customCronConfig
 
