@@ -7,7 +7,6 @@
 export EDITOR=nvim
 export GDK_SCALE=1                                      # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
 #export QT_SCALE_FACTOR=1                                # Set QT scaling to 2 to enable HiDPI support in QT applications
-export display=:1                                       # Set default display
 wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
 setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
 

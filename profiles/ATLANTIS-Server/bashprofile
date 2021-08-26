@@ -16,7 +16,6 @@ gpgconf --launch gpg-agent
 (wal -R -e -n -q &)                                                        # Reload pywal theme
 
 # Turn off screensaver
-export DISPLAY=:0.0
 xset s off
 xset s noblank
 xset -dpms
