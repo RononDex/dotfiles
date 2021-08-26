@@ -42,6 +42,7 @@ InstallXorg
 InstallLitarvanLightDmTheme
 InstallYubiKeyStuff
 SetupDotnet
+InstallQemuUefiDrivers
 
 echo "Setting default apps overrides"
 xdg-mime default nomacs.desktop image/jpeg
