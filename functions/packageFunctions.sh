@@ -51,12 +51,3 @@ InstallXorg() {
 InstallYubiKeyStuff() {
  sudo xbps-install -Sy yubikey-manager u2f-hidraw-policy ykpers ykpers-gui
 }
-
-InstallQemuUefiDrivers() {
-    sudo mkdir -p /usr/share/ovmf
-    sudo wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/edk2/trunk/50-edk2-ovmf-i386-secure.json -O /usr/share/ovmf/50-edk2-ovmf-i386-secure.json
-    sudo wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/edk2/trunk/50-edk2-ovmf-x86_64-secure.json -O /usr/share/ovmf/50-edk2-ovmf-x86_64-secure.json
-    sudo wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/edk2/trunk/60-edk2-ovmf-i386.json -O /usr/share/ovmf/60-edk2-ovmf-i386.json
-    sudo wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/edk2/trunk/60-edk2-ovmf-x86_64.json -O /usr/share/ovmf/60-edk2-ovmf-x86_64.json
-    sudo wget https://raw.githubusercontent.com/archlinux/svntogit-packages/packages/edk2/trunk/70-edk2-armvirt-aarch64.json -O /usr/share/ovmf/70-edk2-armvirt-aarch64.json
-}
