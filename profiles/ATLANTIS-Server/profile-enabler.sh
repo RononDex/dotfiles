@@ -3,8 +3,7 @@ scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
-cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
+sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
@@ -19,7 +18,12 @@ cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
 sudo cp $scriptDir/overrides/networking/interfaces /etc/network/interfaces
 sudo mkdir -p /etc/mdadm
 sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
+sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
+sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
 sudo mkdir -p /data
+
+sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
+sudo sysctl -p
 
 mkdir ~/.i3
 mkdir ~/.i3/workspaces
@@ -42,6 +46,7 @@ InstallXorg
 InstallLitarvanLightDmTheme
 InstallYubiKeyStuff
 SetupDotnet
+SetupWireguardServer
 
 echo "Setting default apps overrides"
 xdg-mime default nomacs.desktop image/jpeg
@@ -63,6 +68,7 @@ EnableService virtlockd
 EnableService virtlogd
 EnableService nginx
 EnableService smbd
+EnableService wireguard
 
 crontab ~/.config/customCronConfig
 

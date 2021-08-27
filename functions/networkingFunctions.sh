@@ -63,3 +63,12 @@ SetupHotspot() {
         echo "nmcli con up \"${2}\"" >> ~/.scripts/networking/startHotspot$2
     fi
 }
+
+SetupWireguardServer() {
+    if [ ! -f /etc/wireguard/server.key]; then
+        sudo wg genkey | sudo tee /etc/wireguard/server.key
+        sudo wg pubkey < /etc/wireguard/server.key | sudo tee /etc/wireguard/server.pub
+        echo "PrivateKey = $(sudo cat /etc/wireguard/server.key)" | sudo tee -a /etc/wireguard/ATLANTIS-Net.conf
+    fi
+
+}
