@@ -7,3 +7,8 @@ SetupDotnet() {
     sudo bash dotnet-install.sh -c Current -InstallDir /usr/share/dotnet
     sudo bash dotnet-install.sh -c 3.1 -InstallDir /usr/share/dotnet
 }
+
+SetupMariaMySqlDb() {
+    sudo xbps-install -y mariadb
+    EnableService mysqld
+}

@@ -35,6 +35,7 @@ InstallLitarvanLightDmTheme
 InstallRustDev
 InstallYubiKeyStuff
 SetupDotnet
+SetupMariaMySqlDb
 
 echo "Installing restricted packages ..."
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
