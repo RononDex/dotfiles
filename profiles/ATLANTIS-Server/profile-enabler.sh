@@ -20,6 +20,8 @@ sudo mkdir -p /etc/mdadm
 sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
 sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
+sudo mkdir -p /etc/samba
+sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /data
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
