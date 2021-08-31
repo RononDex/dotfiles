@@ -49,6 +49,7 @@ InstallLitarvanLightDmTheme
 InstallYubiKeyStuff
 SetupDotnet
 SetupWireguardServer
+SetupMariaMySqlDb
 
 echo "Setting default apps overrides"
 xdg-mime default nomacs.desktop image/jpeg
