@@ -38,7 +38,7 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 echo "Installing stuff..."
 sudo xbps-install -y linux-firmware-amd network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
 sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract xf86-input-evdev
-sudo xbps-install -y qemu virt-manager php php-fpm php-gd php-mysql php-intl nginx certbot certbot-nginx
+sudo xbps-install -y qemu virt-manager php php-fpm php-gd php-mysql php-intl nginx certbot certbot-nginx php-imagick php-sodium
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu amdvlk mesa cryptsetup tpm2-tss
 sudo xbps-install -y nomacs breeze breeze-cursors samba
