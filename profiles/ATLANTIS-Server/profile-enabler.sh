@@ -71,6 +71,7 @@ EnableService virtlogd
 EnableService nginx
 EnableService smbd
 EnableService wireguard
+EnableService php-fpm
 
 crontab ~/.config/customCronConfig
 
