@@ -69,6 +69,7 @@ SetupWireguardServer() {
         sudo wg genkey | sudo tee /etc/wireguard/server.key
         sudo wg pubkey < /etc/wireguard/server.key | sudo tee /etc/wireguard/server.pub
         echo "PrivateKey = $(sudo cat /etc/wireguard/server.key)" | sudo tee -a /etc/wireguard/ATLANTIS-Net.conf
+        sudo wg set ATLANTIS-Net private-key /etc/wiregaurd/server.key
     fi
 
 }

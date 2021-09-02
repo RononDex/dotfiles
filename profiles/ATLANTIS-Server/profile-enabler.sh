@@ -18,7 +18,9 @@ cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
 sudo cp $scriptDir/overrides/networking/interfaces /etc/network/interfaces
 sudo mkdir -p /etc/mdadm
 sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
-sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
+if [ ! -f /etc/wireguard/ATLANTIS-Net.conf]; then
+    sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
+fi
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
 sudo mkdir -p /etc/samba
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
