@@ -24,6 +24,14 @@ fi
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
 sudo mkdir -p /etc/samba
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
+sudo mkdir -p /etc/php/php-fpm.d
+sudo cp $scriptDir/overrides/php/php.ini /etc/php/php.ini
+sudo cp $scriptDir/overrides/php/php-fpm.conf /etc/php/php-fpm.conf
+sudo cp $scriptDir/overrides/php/www.conf /etc/php/php-fpm.d/www.conf
+sudo mkdir -p /etc/nginx/sites-available
+sudo mkdir -p /etc/nginx/sites-enabled
+sudo cp $scriptDir/overrides/nginx/nginx.conf /etc/nginx/nginx.conf
+sudo cp $scriptDir/overrides/nginx/nextcloud /etc/nginx/sites-available/nextcloud
 sudo mkdir -p /data
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
