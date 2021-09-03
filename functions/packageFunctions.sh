@@ -51,3 +51,15 @@ InstallXorg() {
 InstallYubiKeyStuff() {
  sudo xbps-install -Sy yubikey-manager u2f-hidraw-policy ykpers ykpers-gui
 }
+
+CompileAndInstallSurfaceLinuxKernel() {
+    version="5.13.13"
+    versionMajor="5.13"
+    CloneOrUpdateGitRepoToPackages "linux" "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git"
+    CloneOrUpdateGitRepoToPackages "linux-surface" "https://github.com/linux-surface/linux-surface.git"
+    cd ~/packages/linux
+    git fetch
+    git checkout v$version
+    git switch -c v$version-surface
+    for i in ~/packages/linux-surface/patches/$versionMajor/*.patch; do patch -p1 < $i; done
+}
