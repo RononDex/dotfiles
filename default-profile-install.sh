@@ -33,11 +33,12 @@ sudo xbps-install -y NetworkManager dbus dbus-x11 elogind accountsservice gnome-
 sudo xbps-install -y feh xfce4-terminal picom alsa-lib pulseaudio alsa-plugins-pulseaudio libspa-bluetooth
 sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass socklog-void rsync
 sudo xbps-install -y vim neovim libftdi1 cfitsio void-repo-nonfree{,-nonfree}
-sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient bc ranger binutils keychain
+sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient branger binutils keychain
 sudo xbps-install -y htop ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass patch ncurses ncurses-devel
-sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf flex
-sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils
+sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf 
+sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils debootstrap
 sudo xbps-install -y ueberzug nerd-fonts cava dcron nodejs quazip pinentry-gtk dracut-network psmisc base-devel
+sudo xbps-install -y tar xz bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3
 
 InstallXbpsMiniBuilder
 UpdateRestrictedPackages
