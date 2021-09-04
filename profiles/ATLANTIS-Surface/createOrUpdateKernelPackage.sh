@@ -23,7 +23,7 @@ sed -i "/short_desc=/c\short_desc=\"Linux kernel and modules containing patches 
 sed -i "/homepage=/c\homepage=\"https://github.com/linux-surface/linux-surface\"" linux$versionMajor-surface/template
 
 sh $thisScriptDir/merge_config.sh -m ~/packages/void-packages/srcpkgs/linux$versionMajor-surface/files/x86_64-dotconfig ~/packages/linux-surface/configs/surface-$versionMajor.config
-mv .config linux$versionMajor-surface/files/x86_64-dotconfig
+mv $PWD/.config linux$versionMajor-surface/files/x86_64-dotconfig
 
 cd ~/packages/void-packages
 ./xbps-src binary-bootstrap
