@@ -84,9 +84,6 @@ DownloadIndexFiles
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallPHD2
 
-echo "Setup mail"
-mw cron 5
-
 echo "Adjust user permissions"
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
