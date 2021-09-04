@@ -1,0 +1,19 @@
+[section/base]
+dpi=266
+monitor = eDP-1
+
+[deviceconfig]
+wireless-interface = wlp3s0
+
+[bar/top]
+modules-right = wireless-network battery1 battery2 date
+modules-left = rotate-screen virtual-keyboard pulseaudio backlight mpd
+
+tray-maxsize = 32
+height = 40
+
+[bar/bottom]
+modules-left = i3
+modules-right = cpu memory
+
+height = 80
