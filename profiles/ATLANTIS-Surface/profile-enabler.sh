@@ -34,10 +34,10 @@ echo "Installing stuff..."
 
 sudo xbps-install -y linux-firmware-intel network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus ranger
 sudo xbps-install -y i3-gaps nvidia dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract blueman Signal-Desktop 
-sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most
+sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most light xf86-input-wacom
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit nvidia-libs-32bit
-sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors qt5-virtualkeyboard
+sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors qt5-virtualkeyboard xournalpp
 
 InstallXorg
 InstallLitarvanLightDmTheme
