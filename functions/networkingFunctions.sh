@@ -70,6 +70,15 @@ SetupWireguardServer() {
         sudo wg pubkey < /etc/wireguard/server.key | sudo tee /etc/wireguard/server.pub
         echo "PrivateKey = $(sudo cat /etc/wireguard/server.key)" | sudo tee -a /etc/wireguard/ATLANTIS-Net.conf
         sudo wg set ATLANTIS-Net private-key /etc/wiregaurd/server.key
+        sudo chmod 700 /etc/wireguard -R
     fi
+}
 
+SetupWireguardClient() {
+    if [ ! -f /etc/wireguard/client.key]; then
+        sudo wg genkey | sudo tee /etc/wireguard/client.key
+        sudo wg pubkey < /etc/wireguard/client.key | sudo tee /etc/wireguard/client.pub
+        sudo wg genpsk | sudo tee /etc/wireguard/client.psk
+        sudo chmod 700 /etc/wireguard -R
+    fi
 }

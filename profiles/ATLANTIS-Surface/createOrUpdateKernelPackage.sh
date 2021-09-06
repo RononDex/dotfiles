@@ -1,5 +1,20 @@
 #!/bin/sh
 
+
+tar xf https://github.com/linux-surface/linux-surface/archive/refs/tags/arch-5.13.13-3.tar.gz --to-stdout | sha256sum
+
+
+
+
+
+
+
+
+
+
+
+
+
 thisScriptDir=$(dirname $0)
 . $thisScriptDir/../../functions/basicFunctions.sh
 

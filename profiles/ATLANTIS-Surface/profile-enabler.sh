@@ -37,7 +37,7 @@ sudo xbps-install -y i3-gaps nvidia dunst libnotify notification-daemon dmenu pa
 sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most light xf86-input-wacom
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit nvidia-libs-32bit
-sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors qt5-virtualkeyboard xournalpp
+sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors qt5-virtualkeyboard xournalpp wireguard
 
 InstallXorg
 InstallLitarvanLightDmTheme
@@ -45,6 +45,7 @@ InstallRustDev
 InstallYubiKeyStuff
 SetupDotnet
 SetupMariaMySqlDb
+SetupWireguardClient
 
 echo "Turning on dGPU"
 echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
@@ -52,6 +53,7 @@ echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
 echo "Enabling services ..."
 EnableService lightdm
 EnableService bluetoothd
+EnableService wireguard
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
