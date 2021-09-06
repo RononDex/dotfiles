@@ -20,6 +20,7 @@ chmod +x ~/.i3/scripts/launch-picom.sh
 chmod +x ~/.i3/scripts/launch-autostart.sh
 chmod +x ~/.i3/scripts/set-background.sh
 chmod -R +x ~/.scripts
+chmod +x ~/.xprofile
 chmod 700 ~/.gnupg -R
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
