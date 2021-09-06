@@ -1,9 +1,9 @@
 #!/bin/bash
-[[ -f ~/.config/zsh/.zshenv ]] && source ~/.config/zsh/.zshenv
+[[ -f ~/.config/zsh/.zshenv ]] && . ~/.config/zsh/.zshenv
 
 # Load and execute custom profiles
 if [ -d ~/.scripts ] ; then
     if [ -f ~/.scripts/xprofile ] ; then
-        source ~/.scripts/xprofile
+        . ~/.scripts/xprofile
     fi
 fi

@@ -15,8 +15,8 @@ export GDK_SCALE=2 # Set GDK_SCALE to 2 to enable HiDPI support in GDK applicati
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export QT_FONT_DPI=130
 export QT_SCALE_FACTOR="1.8"
-export display=:0 # Set default display
-export MSBuildSDKsPath=/usr/share/dotnet/sdk/$(dotnet --version)/Sdks
+export display=":0" # Set default display
+export MSBuildSDKsPath="/usr/share/dotnet/sdk/$(dotnet --version)/Sdks"
 xrandr --dpi 266
 
 wal -i "$(<"${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
