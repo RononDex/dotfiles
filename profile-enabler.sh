@@ -87,7 +87,7 @@ ln -s ~/.config/.xinitrc ~/.xinitrc
 
 # Run default profile-installer
 echo
-source ./default-profile-install-${distro}.sh
+. ./default-profile-install-${distro}.sh
 
 ProfileInstallScriptPath=${profileName}/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
