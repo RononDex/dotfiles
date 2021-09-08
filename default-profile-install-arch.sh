@@ -138,6 +138,9 @@ InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
 InstallAurPackage "autofs" "https://aur.archlinux.org/autofs.git"
 
+echo "Downloading your public key"
+gpg2 --recv 0xB4B88025927E502D
+
 echo "Enabling services ..."
 sudo systemctl enable dcron
 sudo systemctl start dcron
