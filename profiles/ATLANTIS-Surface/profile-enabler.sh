@@ -47,6 +47,8 @@ sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
+SetupDotnet
+
 echo "Turning on dGPU"
 echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
 
