@@ -53,7 +53,7 @@ echo "Installing stuff..."
 sudo pacman -Sy powerline-fonts fakeroot gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-codea ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -Sy bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit lightdm light-locker firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
 sudo pacman -Sy lightdm-webkit-theme-litarvan feh xfce4-terminal picom alsa pulseaudio pulseaudio-jack pulseaudio-alsa pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
-sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g autofs xdotool --noconfirm --needed
+sudo pacman -Sy java-runtime-common jre-openjdk ntfs-3g xdotool --noconfirm --needed
 sudo pacman -Sy vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -Sy python python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -Sy htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
@@ -106,8 +106,6 @@ zplug update
 
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
-sudo systemctl enable autofs
-sudo systemctl start autofs
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -135,12 +133,15 @@ echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
+InstallAurPackage "autofs" "https://aur.archlinux.org/autofs.git"
 
 echo "Enabling services ..."
 sudo systemctl enable dcron
 sudo systemctl start dcron
 sudo systemctl enable pcscd
 sudo systemctl start pcscd
+sudo systemctl enable autofs
+sudo systemctl start autofs
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig
