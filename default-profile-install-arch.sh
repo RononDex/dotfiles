@@ -3,6 +3,8 @@
 
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
+. ./functions/archPackagesFunctions.sh
+
 sudo pacman -Syy
 sudo pacman -Syu --noconfirm
 sudo pacman -Sy wget git --noconfirm --needed
@@ -130,10 +132,8 @@ fi
 
 echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
-InstallAurPackage "xinit-xsession" "https://aur.archlinux.org/xinit-xsession.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
-InstallAurPackage "cryptocoins-git" "https://aur.archlinux.org/packages/cryptocoins-git"
 
 echo "Enabling services ..."
 sudo systemctl enable dcron
