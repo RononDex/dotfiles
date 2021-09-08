@@ -134,8 +134,9 @@ noremap <leader>0 :tablast<cr>
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
-vnoremap <Tab> >gv
+vnoremap <Tab> <C-v><Tab>
 vnoremap <S-Tab> <gv
+noremap <Leader> t :set invexpandtab<CR>
 noremap <Leader><Tab><Tab> :set invlist<CR>
 
 " Cursor style
