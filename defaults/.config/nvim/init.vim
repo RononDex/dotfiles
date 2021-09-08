@@ -55,7 +55,7 @@ set smartcase
 set showmatch
 set termguicolors
 set mouse=a
-set tabstop=4
+set tabstop=4 
 set number relativenumber
 let g:rainbow_active = 1
 let g:python3_host_prog = "/usr/bin/python3"
@@ -129,6 +129,14 @@ noremap <leader>tn :tabnew<cr>
 noremap <leader>tc :tabclose<cr>
 noremap <leader>tt :tabnew<cr>:terminal<cr>
 noremap <leader>0 :tablast<cr>
+
+" Tab settings
+nnoremap <Tab> >>_
+nnoremap <S-Tab> <<_
+inoremap <S-Tab> <C-D>
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
+noremap <Leader><Tab><Tab> :set invlist<CR>
 
 " Cursor style
 let &t_ti.="\e[1 q"
