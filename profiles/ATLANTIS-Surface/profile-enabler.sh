@@ -1,13 +1,16 @@
 #!/bin/sh
+# ------------------------------
+# Arch Linux Install
+# ------------------------------
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
-sudo mkdir -p /etc/lightdm/
+. $scriptDir/../../functions/astroFunctions.sh
+
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/lightdm-bg.jpg /usr/share/lightdm-webkit/themes/litarvan/images/background.jpg
 sudo cp $scriptDir/overrides/litarvan/styles.css /usr/share/lightdm-webkit/themes/litarvan/styles.css
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
-sudo mkdir -p /etc/X11/xorg.conf.d
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
@@ -15,7 +18,18 @@ cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
-cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
+sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
+
+sudo pacman -Syy
+sudo pacman -Syu --noconfirm
+
+echo "Setting up surface repo"
+wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \
+        | sudo pacman-key --add -
+sudo pacman-key --finger 56C464BAAC421453
+sudo pacman-key --lsign-key 56C464BAAC421453
+
+sudo chmod 744 /etc/pacman.conf
 
 if [ ! -d ~/.omnisharp ]; then
     mkdir ~/.omnisharp
@@ -26,34 +40,30 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/overrides/omnisharp ~/.omnisharp
 
 echo "Installing stuff..."
-# sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman --noconfirm --needed
-# sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop --needed --noconfirm
-# sudo pacman -Sy acpi_call-dkms linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
-# sudo systemctl enable bluetooth
-# sudo systemctl start bluetooth
-
-sudo xbps-install -y linux-firmware-intel network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus ranger
-sudo xbps-install -y i3-gaps nvidia dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract blueman Signal-Desktop 
-sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most light xf86-input-wacom
-sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
-sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit nvidia-libs-32bit
-sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors qt5-virtualkeyboard xournalpp wireguard
-
-InstallXorg
-InstallLitarvanLightDmTheme
-InstallRustDev
-InstallYubiKeyStuff
-SetupDotnet
-SetupMariaMySqlDb
-SetupWireguardClient
+sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot
+teamspeak3 blueman qt6-virtualkeyboard --noconfirm --needed
+sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
+sudo pacman -Sy acpi_call-dkms linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
+sudo systemctl enable bluetooth
+sudo systemctl start bluetooth
 
 echo "Turning on dGPU"
 echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
 
+echo "Installing AUR packages..."
+InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
+InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
+InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
+InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
+
+echo "Installing screenkey"
+sudo pacman -Sy python2-setuptools --needed --noconfirm
+InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
+InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
+
 echo "Enabling services ..."
-EnableService lightdm
-EnableService bluetoothd
-EnableService wireguard
+sudo systemctl enable lightdm.service
+sudo systemctl enable iptsd
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
@@ -67,8 +77,8 @@ SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Dow
 SetupAutofsForSmbShare "ATLANTIS-ASTRO-PI1" "data" "://10.42.0.1/data"
 
 echo "Setting up astronomy stuff .."
-sudo xbps-install -y gpsd kstars
-sudo xbps-install -y opencv cfitsio netpbm binutils libraw gcc
+sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
+sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw libindi gpsd gcc
 
 InstallAstroPy
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"

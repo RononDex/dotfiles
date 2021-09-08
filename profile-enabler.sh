@@ -62,7 +62,9 @@ else
     profileName=$scriptDir/profiles/$1
 fi
 
-echo $profileName
+echo "ProfileName: ${profileName}"
+distro=$(head -n 1 ${profileName}/distro)
+echo "Distribution: ${distro}"
 
 # Copy defaults
 echo
@@ -85,7 +87,7 @@ ln -s ~/.config/.xinitrc ~/.xinitrc
 
 # Run default profile-installer
 echo
-source ./default-profile-install.sh
+source ./default-profile-install-${distro}.sh
 
 ProfileInstallScriptPath=${profileName}/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
