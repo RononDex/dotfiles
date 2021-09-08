@@ -55,7 +55,7 @@ set smartcase
 set showmatch
 set termguicolors
 set mouse=a
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set tabstop=4
 set number relativenumber
 let g:rainbow_active = 1
 let g:python3_host_prog = "/usr/bin/python3"
