@@ -69,6 +69,7 @@ InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 echo "Enabling services ..."
 sudo systemctl enable lightdm.service
 sudo systemctl enable iptsd
+sudo systemctl enable libvirtd
 
 echo "Setting up Touchscreen"
 if grep -q "MOZ_USE_XINPUT2 DEFAULT=1" "/etc/security/pam_env.conf"; then
