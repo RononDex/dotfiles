@@ -1,0 +1,99 @@
+## Supported server options to pass to vncserver upon invocation can be listed
+## in this file. See the following manpages for more: vncserver(1) Xvnc(1).
+## Several common ones are shown below. Uncomment and modify to your liking.
+##
+##
+# -------------
+#  Xvnc --help
+# -------------
+##
+# Start server : vncserver
+# Stop server : vncserver -kill :1
+##
+###############################################################################
+
+# Only allow connection from local hosts
+#localhost
+
+# VNC tcp port
+rfbport=5900
+
+# TCP port to listen for HTTP (default=0)
+httpport=0
+
+# Directory containing files to serve via HTTP (default=)
+httpd=
+
+# Protocols...
+#nolisten=UDP
+#listen=TCP
+
+# IP settings
+useipv4
+#useipv6
+
+# Interface, listen on the specified network address (default=all)
+#interface=127.0.0.1
+
+# Use protocol version 3.3 for backwards compatibility
+protocol3.3=0
+
+# Unix socket access mode (default=384)
+#rfbunixmode=384
+
+# Unix socket to listen for RFB protocol (default=)
+rfbunixpath=
+
+# Name of VNC desktop
+desktop=MyVNC
+
+# Geometry original peppy
+geometry=1920x1200
+
+# Colors
+depth=24
+
+# Sharing with multiple clients
+#alwaysshared
+nevershared
+
+# Disconnect existing clients if an incoming connection is non-shared. 
+# If combined with NeverShared then new connections will be refused while 
+# there is a client active
+disconnectclients
+
+# Security, specify which security scheme to use (None, VncAuth, Plain,
+# TLSNone, TLSVnc, TLSPlain, X509None, X509Vnc, X509Plain) (default=TLSVnc,VncAuth)
+securitytypes=TLSVnc,VncAuth
+
+# Path to the key of the X509 certificate in PEM format (default=)
+#X509Key=
+
+# Path to the X509 certificate in PEM format (default=)
+#X509Cert=
+
+# Set maximum number of clients (power of two)
+#maxclients=64
+
+# Terminate after s seconds of user inactivity (default=0)
+#maxidletime=0
+
+# Terminate when a client has been connected for s seconds (default0)
+#maxconnectiontime=0
+
+# Terminate when no client has been connected for s seconds (default=0)
+#maxdisconnectiontime=0
+
+# The number of seconds after which an idle VNC connection will be dropped 
+# (zero means no timeout) (default=0)
+#idletimeout=0
+
+# Zlib compression level (default=-1)
+#zlibLevel=-1
+
+# The maximum number of updates per second sent to each client (default=60)
+#framerate=60
+
+# GnuTLS priority string that controls the TLS session’s handshake algorithms.  
+# See the GnuTLS manual for possible values. Default is NORMAL.
+#GnuTLSPriority=

@@ -34,6 +34,11 @@ sudo mkdir -p /etc/nginx/sites-enabled
 sudo cp $scriptDir/overrides/nginx/nginx.conf /etc/nginx/nginx.conf
 sudo cp $scriptDir/overrides/nginx/nextcloud /etc/nginx/sites-available/nextcloud
 sudo mkdir -p /data
+sudo mkdir -p /etc/vnc/
+sudo cp $scriptDir/overrides/vnc/config /etc/vnc/config
+sudo mkdir -p /home/cobra/.vnc/
+sudo cp $scriptDir/overrides/vnc/configCobra /home/cobra/.vnc/config
+sudo chown cobra:cobra /home/cobra/.vnc -R
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
 sudo sysctl -p
