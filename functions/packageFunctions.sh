@@ -55,5 +55,5 @@ InstallYubiKeyStuff() {
 InstallGrubTheme() {
     CloneOrUpdateGitRepoToPackages "grub2-themes" "https://github.com/vinceliuice/grub2-themes"
     cd ~/packages/grub2-themes
-    sudo ./install.sh -t slaze
+    sudo ./install.sh -t slaze $1
 }

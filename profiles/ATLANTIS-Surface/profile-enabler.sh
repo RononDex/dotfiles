@@ -50,7 +50,7 @@ sudo systemctl start bluetooth
 
 SetupDotnet
 SetupWireguardClient
-InstallGrubTheme
+InstallGrubTheme -s 4k
 
 echo "Turning on dGPU"
 echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
