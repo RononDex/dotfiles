@@ -39,6 +39,7 @@ InstallRustDev
 InstallYubiKeyStuff
 SetupDotnet
 SetupMariaMySqlDb
+InstallGrubTheme
 
 echo "Installing restricted packages ..."
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
