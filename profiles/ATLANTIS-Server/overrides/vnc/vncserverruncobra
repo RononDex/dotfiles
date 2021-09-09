@@ -1,3 +1,0 @@
-#!/bin/sh
-cd /home/cobra
-exec chpst -u cobra -U cobra /usr/bin/vncserver :1 -fg

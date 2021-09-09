@@ -116,8 +116,3 @@ sudo cp $scriptDir/overrides/vnc/configCobra /home/cobra/.vnc/config
 sudo cp $scriptDir/overrides/vnc/xstartupcobra /home/cobra/.vnc/xstartup
 sudo chmod +x /home/cobra/.vnc/xstartup
 sudo chown cobra:cobra /home/cobra/.vnc -R
-sudo mkdir -p /etc/sv/vncserver-cobra/
-sudo cp $scriptDir/overrides/vnc/vncserverruncobra /etc/sv/vncserver-cobra/run
-sudo chmod +x /etc/sv/vncserver-cobra/run
-
-EnableService vncserver-cobra
