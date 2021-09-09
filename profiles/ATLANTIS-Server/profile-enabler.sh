@@ -53,7 +53,7 @@ sudo xbps-install -y qemu virt-manager php php-fpm php-gd php-mysql php-intl ngi
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu amdvlk mesa cryptsetup tpm2-tss dcron
 sudo xbps-install -y nomacs breeze breeze-cursors samba
-sudo xbps-install -y mdadm wireguard
+sudo xbps-install -y mdadm wireguard tigervnc
 
 InstallXorg
 InstallLitarvanLightDmTheme
