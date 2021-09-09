@@ -44,7 +44,7 @@ sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify 
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy acpi_call-dkms linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
-sudo pacman -Sy virt-manager qemu --needed --noconfirm
+sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 

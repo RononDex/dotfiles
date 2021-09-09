@@ -417,5 +417,5 @@ content-font = 8
 [module/virtual-keyboard]
 type = custom/text
 content = ⌨
-click-left = florence
+click-left = onboard
 content-font = 10
