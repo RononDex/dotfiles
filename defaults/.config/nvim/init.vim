@@ -1,4 +1,3 @@
-
 call plug#begin()
 
 Plug 'preservim/nerdtree'
@@ -227,6 +226,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-omnisharp',
+  \ 'coc-java',
   \ ]
 
 " Global Search with CtrlSF
