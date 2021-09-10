@@ -173,7 +173,7 @@ augroup omnisharp_commands
     " Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
     autocmd FileType cs command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
 
-    autocmd FileType cs nmap <Leader>cf :OmniSharpCodeFormat<CR>
+    autocmd FileType cs nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
 
     "Show documentations
     autocmd FileType cs nnoremap <Leader>ch :OmniSharpSignatureHelp<CR>

@@ -137,7 +137,7 @@ inoremap <S-Tab> <C-D>
 vnoremap <Tab> <C-v><Tab>
 vnoremap <S-Tab> <gv
 noremap <Leader> t :set invexpandtab<CR>
-noremap <Leader><Tab><Tab> :set invlist<CR>
+noremap <Leader><Leader><Tab> :set invlist<CR>
 
 " Cursor style
 let &t_ti.="\e[1 q"
