@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if command -v pacman &> /dev/null
+then
+    pacman -Syu --no-confirm
+    reboot
+fi
+
+if command -v xbps-install &> /dev/null
+then
+    xbps-instal -Syu
+    reboot
+fi

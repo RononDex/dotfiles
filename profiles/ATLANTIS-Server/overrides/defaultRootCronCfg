@@ -1,0 +1,2 @@
+# Auto update every tuesday at 03 AM
+0 3 * * 2   bash /root/updateAndReboot

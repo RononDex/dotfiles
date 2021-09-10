@@ -34,6 +34,7 @@ sudo mkdir -p /etc/nginx/sites-enabled
 sudo cp $scriptDir/overrides/nginx/nginx.conf /etc/nginx/nginx.conf
 sudo cp $scriptDir/overrides/nginx/nextcloud /etc/nginx/sites-available/nextcloud
 sudo mkdir -p /data
+sudo cp ~/.scripts/utilities/updateAndReboot /root/updateAndReboot
 
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
@@ -87,6 +88,8 @@ EnableService wireguard
 EnableService php-fpm
 
 crontab ~/.config/customCronConfig
+sudo crontab-u root $scriptDir/overrides/defaultRootCronCfg
+
 
 sudo groupadd ssh_access
 sudo groupadd basicfilesharing
