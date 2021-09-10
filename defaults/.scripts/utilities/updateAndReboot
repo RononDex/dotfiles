@@ -8,6 +8,6 @@ fi
 
 if command -v xbps-install &> /dev/null
 then
-    xbps-instal -Syu
+    xbps-install -Syu
     reboot
 fi
