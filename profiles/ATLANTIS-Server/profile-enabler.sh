@@ -88,7 +88,7 @@ EnableService wireguard
 EnableService php-fpm
 
 crontab ~/.config/customCronConfig
-sudo crontab-u root $scriptDir/overrides/defaultRootCronCfg
+sudo crontab $scriptDir/overrides/defaultRootCronCfg
 
 
 sudo groupadd ssh_access
