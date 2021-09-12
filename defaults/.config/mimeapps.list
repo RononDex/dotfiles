@@ -1,3 +1,4 @@
+
 [Default Applications]
 application/pdf=zathura.desktop
 x-scheme-handler/sgnl=signal.desktop
