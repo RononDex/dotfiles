@@ -24,3 +24,6 @@ setxkbmap ch -variant de # Set keyboard mapping to ch-de
 
 # Download new background photo
 sh ~/.scripts/updateLoginBackground.sh &
+
+# Remap capslock to escape
+setxkbmap -option caps:escape 
