@@ -76,7 +76,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 
 " gr - find references
-nmap <silent> gr <Plug>(coc-references)
+nmap <silent> <leader>fu <Plug>(coc-references)
 
 " gh - get hint on whatever's under the cursor
 nnoremap <silent> K :call <SID>show_documentation()<CR>
