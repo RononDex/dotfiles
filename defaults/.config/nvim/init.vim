@@ -67,27 +67,60 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup end
 
-" Linting / ALE config
-let g:ale_fix_on_save = 1
-highlight clear ALEInfo
-highlight ALEInfo cterm=underline ctermfg=39 gui=underline guifg=#00afff
-highlight ALEWarning cterm=underline ctermfg=104 gui=underline guifg=#D19A66
-let g:conoline_auto_enable = 1
-let g:ale_sign_error = '✘'
-let g:ale_sign_warning = '⚠'
-let g:ale_sign_info = 'i'
-let g:ale_sign_style_error = '✘'
-let g:ale_sign_style_warning = '⚠'
-let g:ale_linters = { 'cs': ['OmniSharp'], 'rust': ['rust-analyzer'] }
-let g:ale_fixers = {
-      \   'rust': ['rustfmt'],
-      \}
+" CoC Settings
+" gd - go to definition of word under cursor
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
 
-nnoremap <leader>gd :ALEGoToDefinition<CR>
-nnoremap <leader>fu :ALEFindReferences<CR>
-nnoremap <leader>gh :ALEHover<CR>
-nnoremap <leader>fs :ALESymbolSearch<CR>
-nnoremap <leader><space> :ALEFixSuggest<CR>
+" gi - go to implementation
+nmap <silent> gi <Plug>(coc-implementation)
+
+" gr - find references
+nmap <silent> gr <Plug>(coc-references)
+
+" gh - get hint on whatever's under the cursor
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+
+" List errors
+nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<cr>
+
+" list commands available in tsserver (and others)
+nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
+
+" restart when tsserver gets wonky
+nnoremap <silent> <leader>cR  :<C-u>CocRestart<CR>
+
+" view all errors
+nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
+
+" manage extensions
+nnoremap <silent> <leader>cx  :<C-u>CocList extensions<cr>
+
+" rename the current word in the cursor
+nmap <leader>cr  <Plug>(coc-rename)
+nmap <F2>        <Plug>(coc-rename)
+nmap <leader>cf  <Plug>(coc-format-selected)
+vmap <leader>cf  <Plug>(coc-format-selected)
+
+" run code actions
+vmap <leader>ca  <Plug>(coc-codeaction-selected)
+vmap <leader><space>  <Plug>(coc-codeaction-selected)
+nmap <leader><space>  <Plug>(coc-codeaction-selected)
 
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala,cs    let b:comment_g = '// '
