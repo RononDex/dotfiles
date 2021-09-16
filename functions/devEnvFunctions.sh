@@ -12,3 +12,7 @@ SetupMariaMySqlDb() {
     sudo xbps-install -y mariadb
     EnableService mysqld
 }
+
+SetupJavaDevEnv() {
+    sudo xbps-install -y openjdk11 intellij-idea-community-edition
+}
