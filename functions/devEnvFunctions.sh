@@ -21,6 +21,6 @@ SetupJavaDevEnv() {
 
     if command -v pacman &> /dev/null
     then
-        sudo pacman -Sy jdk11-openjdk intellij-idea-community-edition --needed --no-confirm
+        sudo pacman -Sy jdk11-openjdk intellij-idea-community-edition --needed --noconfirm
     fi
 }
