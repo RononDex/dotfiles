@@ -181,7 +181,6 @@ noremap <leader>tt :tabnew<cr>:terminal<cr>
 noremap <leader>0 :tablast<cr>
 
 " Tab settings
-nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> <C-v><Tab>
