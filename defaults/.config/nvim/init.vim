@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'NovaDev94/lightline-onedark'
 Plug 'josa42/vim-lightline-coc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'OmniSharp/omnisharp-vim'
@@ -72,7 +72,7 @@ let g:lightline = {
   \   'active': {
   \     'left': [[  'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status'  ]]
   \   },
-  \   'colorscheme': 'gruvbox'
+  \   'colorscheme': 'onedark'
   \ }
 
 " register compoments:
