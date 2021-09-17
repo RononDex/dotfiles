@@ -16,11 +16,11 @@ SetupMariaMySqlDb() {
 SetupJavaDevEnv() {
     if command -v xbps-install &> /dev/null
     then
-        sudo xbps-install -y openjdk11 openjdk intellij-idea-community-edition
+        sudo xbps-install -y openjdk11 openjdk intellij-idea-community-edition apache-maven
     fi
 
     if command -v pacman &> /dev/null
     then
-        sudo pacman -Sy jdk11-openjdk jre-openjdk intellij-idea-community-edition --needed --noconfirm
+        sudo pacman -Sy jdk11-openjdk jre-openjdk intellij-idea-community-edition maven --needed --noconfirm
     fi
 }
