@@ -4,7 +4,7 @@ Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'maximbaz/lightline-ale'
+Plug 'josa42/vim-lightline-coc'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'nickspoons/vim-sharpenup'
@@ -66,6 +66,17 @@ augroup numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup end
+
+" Lightline config
+let g:lightline = {
+  \   'active': {
+  \     left': [[  'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status'  ]]
+  \   },
+  \   'colorscheme': 'gruvbox'
+  \ }
+
+" register compoments:
+call lightline#coc#register()
 
 " CoC Settings
 " gd - go to definition of word under cursor

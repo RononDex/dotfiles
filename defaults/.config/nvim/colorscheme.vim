@@ -12,7 +12,4 @@ hi Constant ctermfg=75 guifg=#5fafff
 hi Normal ctermbg=236 guibg=#303030
 " hi String ctermfg=120 guifg=#87ff87
 
-" ALE colors
-highlight clear ALEInfo
-highlight ALEInfo cterm=underline ctermfg=39 gui=underline guifg=#00afff
-highlight ALEWarning cterm=underline ctermfg=104 gui=underline guifg=#D19A66
+let g:lightline = { 'colorscheme': 'gruvbox' }

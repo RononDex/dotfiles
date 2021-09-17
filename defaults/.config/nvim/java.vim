@@ -1,5 +1,5 @@
+" Set test stragety
 
-# Set test stragety
 if filereadable("./gradlew")
     let test#java#runner = 'gradletest'
     let test#java#gradletest#executable = './gradlew test'
