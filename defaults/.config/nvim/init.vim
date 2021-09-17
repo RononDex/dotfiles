@@ -12,7 +12,6 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'drewtempelmeyer/palenight.vim'
-Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 Plug 'frazrepo/vim-rainbow'
@@ -27,6 +26,7 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 Plug 'sbdchd/neoformat'
+Plug 'vim-test/vim-test'
 
 call plug#end()
 
@@ -131,6 +131,13 @@ autocmd FileType mail                   let b:comment_g = '> '
 autocmd FileType vim                    let b:comment_g = '" '
 noremap <silent> <leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_g,'\/')<CR>/<CR>:nohlsearch<CR>
 noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_g,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+" Vim-test settings
+nmap <silent> <leader>tr<C-n> :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
 
 " EasyMotion stuff
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
