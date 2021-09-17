@@ -283,3 +283,4 @@ nmap <leader>cf :Neoformat<CR>
 source ~/.config/nvim/omnisharp.vim
 source ~/.config/nvim/rust.vim
 source ~/.config/nvim/colorscheme.vim
+source ~/.config/nvim/java.vim
