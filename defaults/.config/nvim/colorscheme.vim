@@ -11,5 +11,3 @@ hi Function ctermfg=75 guifg=#5fafff
 hi Constant ctermfg=75 guifg=#5fafff
 hi Normal ctermbg=236 guibg=#303030
 " hi String ctermfg=120 guifg=#87ff87
-
-let g:lightline = { 'colorscheme': 'gruvbox' }
