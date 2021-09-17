@@ -159,22 +159,6 @@ augroup omnisharp_commands
     autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
     autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
 
-    " Run tests
-    autocmd FileType cs nnoremap <buffer> <leader>rt :OmniSharpRunTest<CR>
-
-    " Contextual code actions (uses fzf, CtrlP or unite.vim when available)
-    autocmd FileType cs nnoremap <Leader><Space> :OmniSharpGetCodeActions<CR>
-    " Run code actions with text selected in visual mode to extract method
-    autocmd FileType cs xnoremap <Leader><Space> :call OmniSharp#GetCodeActions('visual')<CR>
-
-    " Rename with dialog
-    autocmd FileType cs nnoremap <Leader>nm :OmniSharpRename<CR>
-    autocmd FileType cs nnoremap <F2> :OmniSharpRename<CR>
-    " Rename without dialog - with cursor on the symbol to rename: `:Rename newname`
-    autocmd FileType cs command! -nargs=1 Rename :call OmniSharp#RenameTo("<args>")
-
-    autocmd FileType cs nnoremap <Leader>cf :OmniSharpCodeFormat<CR>
-
     "Show documentations
     autocmd FileType cs nnoremap <Leader>ch :OmniSharpSignatureHelp<CR>
     autocmd FileType cs nnoremap <Leader>ct :OmniSharpDocumentation<CR>

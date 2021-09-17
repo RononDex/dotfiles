@@ -133,7 +133,7 @@ noremap <silent> <leader>cc :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_g,'\/')
 noremap <silent> <leader>cu :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_g,'\/')<CR>//e<CR>:nohlsearch<CR>
 
 " Vim-test settings
-nmap <silent> <leader>tr<C-n> :TestNearest<CR>
+nmap <silent> <leader>tr :TestNearest<CR>
 nmap <silent> <leader>tf :TestFile<CR>
 nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
