@@ -9,5 +9,5 @@ hi Include ctermfg=215 guifg=#ffaf5f
 hi StorageClass ctermfg=209 guifg=#ff875f
 hi Function ctermfg=75 guifg=#5fafff
 hi Constant ctermfg=75 guifg=#5fafff
-hi Normal ctermbg=236 guibg=#303030
-" hi String ctermfg=120 guifg=#87ff87
+hi Normal ctermbg=236 guibg=#202020
+hi String ctermfg=120 guifg=#87ff87
