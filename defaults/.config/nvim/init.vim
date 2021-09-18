@@ -86,7 +86,7 @@ nmap <silent> gy <Plug>(coc-type-definition)
 " gi - go to implementation
 nmap <silent> gi <Plug>(coc-implementation)
 
-" gr - find references
+" fu - find usages
 nmap <silent> <leader>fu <Plug>(coc-references)
 
 " gh - get hint on whatever's under the cursor
@@ -105,13 +105,11 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 nnoremap <silent> <leader>co  :<C-u>CocList outline<cr>
-nnoremap <silent> <leader>cs  :<C-u>CocList -I symbols<cr>
+" Find symbol
+nnoremap <silent> <leader>fs  :<C-u>CocList -I symbols<cr>
 
 " List errors
 nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<cr>
-
-" list commands available in tsserver (and others)
-nnoremap <silent> <leader>cc  :<C-u>CocList commands<cr>
 
 " restart when tsserver gets wonky
 nnoremap <silent> <leader>cR  :<C-u>CocRestart<CR>
@@ -131,7 +129,7 @@ vmap <leader>cf  <Plug>(coc-format-selected)
 " run code actions
 vmap <leader>ca  <Plug>(coc-codeaction-selected)
 vmap <leader><space>  <Plug>(coc-codeaction-selected)
-nmap <leader><space>  <Plug>(coc-codeaction-selected)
+nmap <leader><space>  v<Plug>(coc-codeaction-selected)
 
 " Commenting blocks of code.
 autocmd FileType c,cpp,java,scala,cs    let b:comment_g = '// '
