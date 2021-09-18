@@ -1,15 +1,12 @@
-# My personal dotfiles for void linux
+# My personal dotfiles for void and arch linux
 
 This repository contains a set of scripts to support different profiles / setups and environments
 
 # How to install
 
-First, install Void-Linux by following this guide: https://docs.voidlinux.org/installation/index.html
+Install your basic OS (arch linux or void linux).
 
-After you have followed and finished that guide and having a bootloader setup, reboot into your newly installed system
-and login with your personal user
-
-Then install git (which is needed to clone this repo):
+Then install git with the package manager (which is needed to clone this repo):
 ```bash
 xbps-install -Sy git sudo
 ```
@@ -20,7 +17,7 @@ also update your profile with the `up` command)
 git clone https://github.com/RononDex/voiddotfiles
 ```
 
-Open the directory with `cd voiddotfiles` and execute the installation script:
+Open the directory with `cd dotfiles` and execute the installation script:
 
 ```
 sh profile-enabler.sh
@@ -33,14 +30,14 @@ To upgrade your system (including the AUR packages) just enter `up` in your term
 
 # How it works
 
-1. Copy all files from the folder `defaults` to your home directory
-1. Run `default-profile-install.sh` which will install all the default stuff that is the same across all pc's
+1. Copies all files from the folder `defaults` to your home directory
+1. Runs `default-profile-install-<distro>.sh` which will install all the default stuff that is the same across all pc's
 1. Run profile-enabler.sh lcoated in your chosen profile folder `profiles/[profileName]/profile-enabler.sh`
 
-So to create your own profile, simply fork this repository and create your own profile in the `profiles` folder. The only mandatory files are `xprofile`, `bashprofile` and `profile-enabler.sh`
+So to create your own profile, simply fork this repository and create your own profile in the `profiles` folder. The only mandatory files are `xprofile`, `bashprofile`, `distro` and `profile-enabler.sh`
 
 ## Software installed by default (for all profiles)
-For an up to date list check the file itself here https://github.com/RononDex/voiddotfiles/raw/master/default-profile-install.sh
+For an up to date list check the file itself here https://github.com/RononDex/dotfiles/raw/master/default-profile-install-void.sh
 
 - zsh (with oh-my-zsh and powerlevel10k)
 - networkmanager
