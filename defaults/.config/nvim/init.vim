@@ -181,7 +181,6 @@ noremap <leader>tt :tabnew<cr>:terminal<cr>
 noremap <leader>0 :tablast<cr>
 
 " Tab settings
-nnoremap <S-Tab> <<_
 inoremap <S-Tab> <C-D>
 vnoremap <Tab> <C-v><Tab>
 vnoremap <S-Tab> <gv
@@ -277,6 +276,7 @@ let g:coc_global_extensions = [
   \ 'coc-json', 
   \ 'coc-omnisharp',
   \ 'coc-java',
+  \ 'coc-java-debug',
   \ ]
 
 " Global Search with CtrlSF
