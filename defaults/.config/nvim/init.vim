@@ -21,12 +21,11 @@ Plug 'ivalkeen/nerdtree-execute'
 Plug 'mhinz/neovim-remote'
 Plug 'lervag/vimtex'
 Plug 'puremourning/vimspector'
-Plug 'sirver/ultisnips'
 Plug 'dyng/ctrlsf.vim'
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
 Plug 'sbdchd/neoformat'
 Plug 'vim-test/vim-test'
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
@@ -205,6 +204,9 @@ nmap <leader>bv :NERDTreeVCS<Return>
 nnoremap <silent> <leader>bf :NERDTreeFind<CR>
 let NERDTreeAutoDeleteBuffer = 1
 
+" Md preview
+nmap <leader>mp <Plug>MarkdownPreviewToggle
+
 " Split window
 nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
@@ -275,6 +277,8 @@ let g:coc_global_extensions = [
   \ 'coc-omnisharp',
   \ 'coc-java',
   \ 'coc-java-debug',
+  \ 'coc-rust-analyzer',
+  \ 'coc-texlab',
   \ ]
 
 " Global Search with CtrlSF
