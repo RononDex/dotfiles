@@ -16,5 +16,6 @@ let g:conoline_color_normal_dark = 'guibg=#0A0A0A'
 let g:conoline_color_insert_dark = 'guibg=black'
 
 hi HopNextKey guifg=#99ccff
-hi HopNextKey1 guifg=#6699ff
+hi HopNextKey1 guifg=#99ccff
 hi HopNextKey2 guifg=#6699ff
+hi HopUnmatched guifg=#555555
