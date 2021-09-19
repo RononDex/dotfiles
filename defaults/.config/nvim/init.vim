@@ -1,7 +1,7 @@
 call plug#begin()
 
 Plug 'preservim/nerdtree'
-Plug 'easymotion/vim-easymotion'
+Plug 'phaazon/hop.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'NovaDev94/lightline-onedark'
 Plug 'josa42/vim-lightline-coc'
@@ -147,16 +147,9 @@ nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 
-" EasyMotion stuff
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
+" Hop stuff
 nnoremap <space> <NOP>
-nmap <space> <Plug>(easymotion-jumptoanywhere)
-let g:EasyMotion_smartcase = 1
-let g:EasyMotion_keys = 'hklyuiopnmqwertzxcvbasdjf'
-let g:EasyMotion_re_anywhere = '\v' .
-        \       '(<.|^$)' . '|' .
-        \       '(_\zs.)' . '|' .
-        \       '(#\zs.)'
+nmap <space> :HopWord<CR>
 
 " VimSpector
 let g:vimspector_enable_mappings = 'HUMAN'
