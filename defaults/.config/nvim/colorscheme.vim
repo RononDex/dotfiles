@@ -11,3 +11,6 @@ hi Function ctermfg=75 guifg=#5fafff
 hi Constant ctermfg=75 guifg=#5fafff
 hi Normal ctermbg=236 guibg=#202020
 hi String ctermfg=120 guifg=#87ff87
+
+let g:conoline_color_normal_dark = 'guibg=#0A0A0A'
+let g:conoline_color_insert_dark = 'guibg=black'
