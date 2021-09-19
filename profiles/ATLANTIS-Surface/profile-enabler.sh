@@ -61,7 +61,7 @@ InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
+# InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
