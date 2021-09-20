@@ -41,7 +41,7 @@ sudo xbps-install -y htop ImageMagick zlib xdg-utils curl exfat-utils unzip shad
 sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf 
 sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils debootstrap
 sudo xbps-install -y ueberzug nerd-fonts cava dcron nodejs quazip pinentry-gtk dracut-network psmisc base-devel openconnect NetworkManager-openconnect
-sudo xbps-install -y tar xz keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3
+sudo xbps-install -y tar zip xz keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3
 
 InstallXbpsMiniBuilder
 UpdateRestrictedPackages
