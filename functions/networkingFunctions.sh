@@ -32,6 +32,7 @@ SetupAutofsForSmbShare() {
         sudo chmod 700 /etc/autofs/$1-credentials
 
         sudo systemctl restart autofs
+        sudo sv restart autofs
     fi
 }
 
