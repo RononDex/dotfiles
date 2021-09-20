@@ -122,7 +122,7 @@ nnoremap <silent> <leader>cx  :<C-u>CocList extensions<cr>
 " rename the current word in the cursor
 nmap <leader>cr  <Plug>(coc-rename)
 nmap <F2>        <Plug>(coc-rename)
-nmap <leader>cf  <Plug>(coc-format-selected)
+nmap <leader>cf  <Plug>(coc-format)
 vmap <leader>cf  <Plug>(coc-format-selected)
 
 " run code actions
@@ -282,7 +282,7 @@ let g:ctrlsf_auto_focus = {
     \ }
 
 " Neoformat
-nmap <leader>cf :Neoformat<CR>
+nmap <leader>nf :Neoformat<CR>
 
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
