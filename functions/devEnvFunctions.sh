@@ -27,3 +27,10 @@ SetupJavaDevEnv() {
 
     curl -s "https://get.sdkman.io" | bash
 }
+
+SetupJavaScriptDevEnv() {
+    if command -v xbps-install &> /dev/null
+    then
+        sudo xbps-install -y nodejs
+    fi
+}

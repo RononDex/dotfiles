@@ -36,6 +36,7 @@ InstallYubiKeyStuff
 SetupDotnet
 SetupMariaMySqlDb
 SetupJavaDevEnv
+SetupJavaScriptDevEnv
 InstallGrubTheme -s 2k
 
 echo "Installing restricted packages ..."
