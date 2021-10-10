@@ -11,7 +11,7 @@
 ; (gtk_accel_path "<Actions>/terminal-window/edit-menu" "")
 ; (gtk_accel_path "<Actions>/terminal-window/zoom-menu" "")
 (gtk_accel_path "<Actions>/terminal-window/goto-tab-1" "<Alt>1")
-; (gtk_accel_path "<Actions>/terminal-window/fullscreen" "F11")
+(gtk_accel_path "<Actions>/terminal-window/fullscreen" "")
 ; (gtk_accel_path "<Actions>/terminal-window/read-only" "")
 (gtk_accel_path "<Actions>/terminal-window/goto-tab-5" "<Alt>5")
 ; (gtk_accel_path "<Actions>/terminal-window/preferences" "")

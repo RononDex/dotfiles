@@ -100,7 +100,7 @@ nmap <space> :HopWord<CR>
 
 " VimSpector
 let g:vimspector_enable_mappings = 'HUMAN'
-noremap <S-F5> :VimspectorReset<CR>
+nnoremap <S-F5> :VimspectorReset<CR>
 
 " Go to tab by number
 noremap <leader>1 1gt

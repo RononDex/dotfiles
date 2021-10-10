@@ -33,4 +33,6 @@ SetupJavaScriptDevEnv() {
     then
         sudo xbps-install -y nodejs
     fi
+
+    npm i -g typescript
 }
