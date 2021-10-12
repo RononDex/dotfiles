@@ -39,7 +39,18 @@ InstallAstroPy() {
 InstallKstars() {
     mkdir -p ~/packages/kde
     cd ~/packages/kde
-    git clone git://anongit.kde.org/kstars
+
+    if [ ! -d ./kstars ]
+    then
+        git clone git://anongit.kde.org/kstars
+    else
+        cd ./kstars
+        git stash
+        git pull
+        git stash pop
+        cd ..
+    fi
+
     mkdir build && cd build
     cmake ../kstars -DCMAKE_INSTALL_PREFIX=/usr
     make
