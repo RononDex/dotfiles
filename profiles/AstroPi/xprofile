@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# --------------------------------------------
+# Actions / exports when X11 is initialized
+# --------------------------------------------
+
+setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
+
+export EDITOR=nvim
+wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
+
+# Download new background photo
+sh ~/.scripts/updateLoginBackground.sh &

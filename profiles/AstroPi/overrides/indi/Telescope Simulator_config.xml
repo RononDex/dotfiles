@@ -1,0 +1,222 @@
+<INDIDriver>
+    <newSwitchVector device="Telescope Simulator" name="DEBUG">
+        <oneSwitch name="ENABLE">
+Off
+        </oneSwitch>
+        <oneSwitch name="DISABLE">
+On
+        </oneSwitch>
+    </newSwitchVector>
+    <newNumberVector device="Telescope Simulator" name="POLLING_PERIOD">
+        <oneNumber name="PERIOD_MS">
+250
+        </oneNumber>
+    </newNumberVector>
+    <newSwitchVector device="Telescope Simulator" name="CONNECTION_MODE">
+        <oneSwitch name="CONNECTION_SERIAL">
+On
+        </oneSwitch>
+        <oneSwitch name="CONNECTION_TCP">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newTextVector device="Telescope Simulator" name="DEVICE_PORT">
+        <oneText name="PORT">
+/dev/ttyUSB0
+        </oneText>
+    </newTextVector>
+    <newSwitchVector device="Telescope Simulator" name="DEVICE_BAUD_RATE">
+        <oneSwitch name="9600">
+On
+        </oneSwitch>
+        <oneSwitch name="19200">
+Off
+        </oneSwitch>
+        <oneSwitch name="38400">
+Off
+        </oneSwitch>
+        <oneSwitch name="57600">
+Off
+        </oneSwitch>
+        <oneSwitch name="115200">
+Off
+        </oneSwitch>
+        <oneSwitch name="230400">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="DEVICE_AUTO_SEARCH">
+        <oneSwitch name="ENABLED">
+On
+        </oneSwitch>
+        <oneSwitch name="DISABLED">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="DEBUG_LEVEL">
+        <oneSwitch name="DBG_ERROR">
+On
+        </oneSwitch>
+        <oneSwitch name="DBG_WARNING">
+On
+        </oneSwitch>
+        <oneSwitch name="DBG_SESSION">
+On
+        </oneSwitch>
+        <oneSwitch name="DBG_DEBUG">
+Off
+        </oneSwitch>
+        <oneSwitch name="DBG_EXTRA_1">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="LOGGING_LEVEL">
+        <oneSwitch name="LOG_ERROR">
+On
+        </oneSwitch>
+        <oneSwitch name="LOG_WARNING">
+On
+        </oneSwitch>
+        <oneSwitch name="LOG_SESSION">
+On
+        </oneSwitch>
+        <oneSwitch name="LOG_DEBUG">
+Off
+        </oneSwitch>
+        <oneSwitch name="LOG_EXTRA_1">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="LOG_OUTPUT">
+        <oneSwitch name="CLIENT_DEBUG">
+On
+        </oneSwitch>
+        <oneSwitch name="FILE_DEBUG">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newTextVector device="Telescope Simulator" name="ACTIVE_DEVICES">
+        <oneText name="ACTIVE_GPS">
+GPS Simulator
+        </oneText>
+        <oneText name="ACTIVE_DOME">
+Dome Simulator
+        </oneText>
+    </newTextVector>
+    <newSwitchVector device="Telescope Simulator" name="DOME_POLICY">
+        <oneSwitch name="NO_ACTION">
+On
+        </oneSwitch>
+        <oneSwitch name="LOCK_PARKING">
+Off
+        </oneSwitch>
+        <oneSwitch name="FORCE_CLOSE">
+Off
+        </oneSwitch>
+        <oneSwitch name="LOCK_AND_FORCE">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newNumberVector device="Telescope Simulator" name="GEOGRAPHIC_COORD">
+        <oneNumber name="LAT">
+      47.36670000000000158
+        </oneNumber>
+        <oneNumber name="LONG">
+      8.5330600000000007554
+        </oneNumber>
+        <oneNumber name="ELEV">
+      408.72000000000002728
+        </oneNumber>
+    </newNumberVector>
+    <newSwitchVector device="Telescope Simulator" name="TELESCOPE_SLEW_RATE">
+        <oneSwitch name="1x">
+Off
+        </oneSwitch>
+        <oneSwitch name="2x">
+Off
+        </oneSwitch>
+        <oneSwitch name="3x">
+On
+        </oneSwitch>
+        <oneSwitch name="4x">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="TELESCOPE_TRACK_MODE">
+        <oneSwitch name="TRACK_SIDEREAL">
+On
+        </oneSwitch>
+        <oneSwitch name="TRACK_CUSTOM">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newNumberVector device="Telescope Simulator" name="TELESCOPE_TRACK_RATE">
+        <oneNumber name="TRACK_RATE_RA">
+15.04106717867020393
+        </oneNumber>
+        <oneNumber name="TRACK_RATE_DE">
+0
+        </oneNumber>
+    </newNumberVector>
+    <newSwitchVector device="Telescope Simulator" name="USEJOYSTICK">
+        <oneSwitch name="ENABLE">
+Off
+        </oneSwitch>
+        <oneSwitch name="DISABLE">
+On
+        </oneSwitch>
+    </newSwitchVector>
+    <newTextVector device="Telescope Simulator" name="JOYSTICKSETTINGS">
+        <oneText name="MOTIONDIR">
+JOYSTICK_1
+        </oneText>
+        <oneText name="MOTIONDIRNS">
+AXIS_8
+        </oneText>
+        <oneText name="MOTIONDIRWE">
+AXIS_7
+        </oneText>
+        <oneText name="SLEWPRESET">
+JOYSTICK_2
+        </oneText>
+        <oneText name="SLEWPRESETUP">
+BUTTON_5
+        </oneText>
+        <oneText name="SLEWPRESETDOWN">
+BUTTON_6
+        </oneText>
+        <oneText name="ABORTBUTTON">
+BUTTON_1
+        </oneText>
+        <oneText name="PARKBUTTON">
+BUTTON_2
+        </oneText>
+        <oneText name="UNPARKBUTTON">
+BUTTON_3
+        </oneText>
+    </newTextVector>
+    <newSwitchVector device="Telescope Simulator" name="MOTION_CONTROL_MODE">
+        <oneSwitch name="MOTION_CONTROL_MODE_JOYSTICK">
+On
+        </oneSwitch>
+        <oneSwitch name="MOTION_CONTROL_MODE_AXES">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="JOYSTICK_LOCK_AXIS">
+        <oneSwitch name="LOCK_AXIS_1">
+Off
+        </oneSwitch>
+        <oneSwitch name="LOCK_AXIS_2">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Telescope Simulator" name="SIMULATE_PIER_SIDE">
+        <oneSwitch name="SIMULATE_YES">
+Off
+        </oneSwitch>
+        <oneSwitch name="SIMULATE_NO">
+On
+        </oneSwitch>
+    </newSwitchVector>
+</INDIDriver>

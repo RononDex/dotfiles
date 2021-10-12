@@ -1,0 +1,36 @@
+<scopeconfig>
+    <device name="Losmandy Gemini">
+        <config1>
+            <scopefoc>
+1680.000000
+            </scopefoc>
+            <scopeap>
+203.000000
+            </scopeap>
+            <gscopefoc>
+1680.000000
+            </gscopefoc>
+            <gscopeap>
+203.000000
+            </gscopeap>
+            <label/>
+        </config1>
+    </device>
+    <device name="Telescope Simulator">
+        <config1>
+            <scopefoc>
+900.000000
+            </scopefoc>
+            <scopeap>
+120.000000
+            </scopeap>
+            <gscopefoc>
+900.000000
+            </gscopefoc>
+            <gscopeap>
+120.000000
+            </gscopeap>
+            <label/>
+        </config1>
+    </device>
+</scopeconfig>

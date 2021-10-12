@@ -36,6 +36,16 @@ InstallAstroPy() {
     fi
 }
 
+InstallKstars() {
+    mkdir -p ~/packages/kde
+    cd ~/packages/kde
+    git clone git://anongit.kde.org/kstars
+    mkdir build && cd build
+    cmake ../kstars -DCMAKE_INSTALL_PREFIX=/usr
+    make
+    sudo make install
+}
+
 InstallAstrometryNet() {
     pip install numpy
     pip install fitsio

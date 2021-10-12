@@ -1,0 +1,200 @@
+[Align]
+AlignExposure=3
+AstrometryConfFile=*Internal astrometry.cfg*
+AstrometryDetectParity=true
+AstrometryImageScaleHigh=51.986322843131205
+AstrometryImageScaleLow=39.3247055527294
+AstrometryPositionDE=40.29194444444444
+AstrometryPositionRA=208.80833333333334
+AstrometrySolverBinary=/usr/local/astrometry/bin/solve-field
+AstrometrySolverType=1
+AstrometryWCSInfo=/usr/local/astrometry/bin/wcsinfo
+DefaultAlignFilterWheel=Atik EFW2
+PAHMountSpeedIndex=2
+PAHRefreshUpdateError=true
+SolverBinningIndex=1
+
+[Capture]
+CaptureDirectory=/data
+DefaultCaptureFilterWheel=--
+EnforceAutofocusOnTemperature=true
+EnforceRefocusEveryN=true
+GuidingSettle=15
+MaxTemperatureDiff=2
+ResetMountModelAfterMeridian=true
+fileSettingsUseDuration=true
+fileSettingsUseFilter=true
+fileSettingsUseTimestamp=true
+
+[Catalogs]
+ShowCatalogNames=_Internet_Resolved,_Manual_Additions
+
+[Colors]
+AngularRuler=#445566
+ArtificialHorizonColor=#c82828
+BoxBGColor=#000000
+BoxGrabColor=#900000
+BoxTextColor=#d2dbef
+CBoundColor=#222f2f
+CBoundHighColor=#445555
+CLineColor=#3d3d3d
+CNameColor=#718488
+ColorSchemeFile=moonless-night.colors
+CompassColor=#909055
+DEGuideError=#00a5ff
+DSNameColor=#75759c
+DarkAppColors=false
+EclColor=#613d12
+EqColor=#909090
+EquatorialGridColor=#445566
+FITSObjectLabelColor=#00ff00
+HIPSGridColor=#ffffff
+HSTColor=#930000
+HorizontalGridColor=#091f14
+HorzColor=#091f14
+ICColor=#382a7d
+LocalMeridianColor=#0059b3
+MWColor=#0d1115
+MessColor=#008f00
+NGCColor=#006666
+ObsListColor=#ff0000
+PNameColor=#ac9800
+PlanetTrailColor=#993311
+RAGuideError=#00ff00
+SNameColor=#577d7d
+SatColor=#ff0000
+SatLabelColor=#640000
+SensorFOVColor=#ffaa00
+SkyColor=#000000
+SolverFOVColor=#ffffff
+StarColorIntensity=5
+StarColorMode=0
+StarHopRouteColor=#00ffff
+SupernovaColor=#ffa500
+TargetColor=#dd0000
+UserLabelColor=#aaaaaa
+VisibleSatColor=#00ff00
+
+[DarkLibrary]
+shutterlessCCDs=QHY CCD QHY163M-7c64ca4
+
+[DownloadDialog Settings]
+Height 1440=425
+Width 2560=700
+
+[Ekos]
+EkosWindowHeight=830
+EkosWindowWidth=985
+profile=G11 | QHY163
+
+[FITSViewer]
+useFITSViewer=false
+
+[Focus]
+DefaultFocusCCD=QHY CCD QHY163M-7c64ca4
+DefaultFocusFilterWheel=Atik EFW2
+FocusAutoStarEnabled=true
+FocusFramesCount=2
+FocusGain=100
+FocusGaussianKernelSize=3
+FocusMaxSingleStep=500
+FocusMaxTravel=3000
+FocusSubFrame=false
+FocusTicks=200
+FocusTolerance=3
+FocusUseFullField=true
+GuideSettleTime=0.5
+InitialFocusOutSteps=3
+
+[GUI]
+PositionFocusBox=486,0
+PositionGeoBox=0,828
+RunStartupWizard=false
+WindowHeight=934
+WindowWidth=740
+
+[General]
+AlignmentLogging=true
+KStarsFirstRun=false
+RegularLogging=false
+VerboseLogging=true
+
+[Guide]
+DECProportionalGain=133.3
+DitherEnabled=true
+DitherFrames=2
+DitherPixels=8
+DitherSettle=15
+GuideAutoStarEnabled=true
+GuideExposure=3
+GuideMaxDeltaRMS=3
+GuideSubframeEnabled=true
+GuiderType=1
+RAProportionalGain=133.3
+
+[Location]
+CityName=GPS Location
+CountryName=
+DST=EU
+Elevation=439
+Latitude=47.197618333
+Longitude=7.591848333
+TimeZone=1
+
+[MainWindow]
+Height 1000=934
+Height 1200=768
+Height 1440=934
+RestorePositionForNextInstance=false
+State=AAAA/wAAAAD9AAAAAAAAAuQAAANTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAUAAAAaAGsAcwB0AGEAcgBzAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdgBpAGUAdwBUAG8AbwBsAEIAYQByAQAAAdX/////AAAAAAAAAAAAAAAWAEkATgBEAEkAVABvAG8AbABCAGEAcgEAAAKv/////wAAAAAAAAAAAAAAIABUAGUAbABlAHMAYwBvAHAAZQBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAEQAbwBtAGUAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+VNC-0 Height 1500x1000=934
+VNC-0 Height 2560x1440=934
+VNC-0 Width 1500x1000=740
+VNC-0 Width 2560x1440=740
+VNC-0 XPosition 1500x1000=2
+VNC-0 XPosition 2560x1440=0
+VNC-0 YPosition 1500x1000=23
+VNC-0 YPosition 2560x1440=0
+Width 1500=740
+Width 1920=1024
+Width 2560=740
+
+[Mount]
+MeridianFlipOffset=0.3333333333333333
+
+[Scheduler]
+DawnOffset=0.25
+DuskOffset=-0.25
+LeadTime=2
+PreDawnTime=0
+
+[StellarSolver]
+AstrometryIndexFolderList=/home/cobra/.local/share/kstars/astrometry,/home/cobra/AstrometryIndexes
+SolveOptionsProfile=0
+SolveSextractorType=2
+SolverType=1
+
+[TipOfDay]
+RunOnStart=false
+
+[View]
+AutoSelectGrid=false
+FOVNames=
+FocusDec=-2.5005803452676068
+FocusObject=NGC 4079
+FocusRA=12.098641576093254
+IsTracking=true
+ShowEquatorialGrid=true
+ShowHorizontalGrid=true
+
+[Xplanet]
+XplanetBackgroundColorValue=#000000
+XplanetColor=#ff0000
+
+[indi]
+INDIWindowHeight=684
+INDIWindowWidth=698
+fitsDir=/data
+useGPSSource=true
+useKStarsSource=false

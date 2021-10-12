@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export EDITOR=nvim
+(wal -R -e -n -q &)                                                         # Reload pywal theme
+
+if test -f ~/.ssh/id_rsa
+then
+    eval $(keychain --eval --quiet id_rsa)                                  # Initializes the keychain
+fi
+
+# Setup the gpg agent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

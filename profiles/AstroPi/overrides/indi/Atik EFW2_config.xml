@@ -1,0 +1,101 @@
+<INDIDriver>
+    <newSwitchVector device="Atik EFW2" name="DEBUG">
+        <oneSwitch name="ENABLE">
+Off
+        </oneSwitch>
+        <oneSwitch name="DISABLE">
+On
+        </oneSwitch>
+    </newSwitchVector>
+    <newNumberVector device="Atik EFW2" name="POLLING_PERIOD">
+        <oneNumber name="PERIOD_MS">
+1000
+        </oneNumber>
+    </newNumberVector>
+    <newSwitchVector device="Atik EFW2" name="DEBUG_LEVEL">
+        <oneSwitch name="DBG_ERROR">
+On
+        </oneSwitch>
+        <oneSwitch name="DBG_WARNING">
+On
+        </oneSwitch>
+        <oneSwitch name="DBG_SESSION">
+On
+        </oneSwitch>
+        <oneSwitch name="DBG_DEBUG">
+Off
+        </oneSwitch>
+        <oneSwitch name="DBG_EXTRA_1">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Atik EFW2" name="LOGGING_LEVEL">
+        <oneSwitch name="LOG_ERROR">
+On
+        </oneSwitch>
+        <oneSwitch name="LOG_WARNING">
+On
+        </oneSwitch>
+        <oneSwitch name="LOG_SESSION">
+On
+        </oneSwitch>
+        <oneSwitch name="LOG_DEBUG">
+Off
+        </oneSwitch>
+        <oneSwitch name="LOG_EXTRA_1">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newSwitchVector device="Atik EFW2" name="LOG_OUTPUT">
+        <oneSwitch name="CLIENT_DEBUG">
+On
+        </oneSwitch>
+        <oneSwitch name="FILE_DEBUG">
+Off
+        </oneSwitch>
+    </newSwitchVector>
+    <newNumberVector device="Atik EFW2" name="FILTER_SLOT">
+        <oneNumber name="FILTER_SLOT_VALUE">
+1
+        </oneNumber>
+    </newNumberVector>
+    <newTextVector device="Atik EFW2" name="FILTER_NAME">
+        <oneText name="FILTER_SLOT_NAME_1">
+      L
+        </oneText>
+        <oneText name="FILTER_SLOT_NAME_2">
+      R
+        </oneText>
+        <oneText name="FILTER_SLOT_NAME_3">
+      G
+        </oneText>
+        <oneText name="FILTER_SLOT_NAME_4">
+      B
+        </oneText>
+        <oneText name="FILTER_SLOT_NAME_5">
+      Ha
+        </oneText>
+        <oneText name="FILTER_SLOT_NAME_6">
+      SII
+        </oneText>
+        <oneText name="FILTER_SLOT_NAME_7">
+      OIII
+        </oneText>
+    </newTextVector>
+    <newSwitchVector device="Atik EFW2" name="USEJOYSTICK">
+        <oneSwitch name="ENABLE">
+Off
+        </oneSwitch>
+        <oneSwitch name="DISABLE">
+On
+        </oneSwitch>
+    </newSwitchVector>
+    <newTextVector device="Atik EFW2" name="JOYSTICKSETTINGS">
+        <oneText name="Change Filter">
+JOYSTICK_1
+        </oneText>
+        <oneText name="Reset">
+BUTTON_1
+        </oneText>
+    </newTextVector>
+</INDIDriver>
