@@ -39,6 +39,7 @@ InstallAstroPy() {
 InstallKstars() {
     mkdir -p ~/packages/kde
     cd ~/packages/kde
+    sudo pacman -S eigen wcslib xplanet cmake kf5 extra-cmake-modules --needed --noconfirm
 
     if [ ! -d kstars ]
     then
