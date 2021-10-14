@@ -70,10 +70,11 @@ sudo systemctl start smb.service
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc
+sudo pacman -Sy --noconfirm --needed kstars libindi
 
 InstallAstroPy
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-InstallIndi
+# InstallIndi
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
 InstallIndiDriver "fxload"
 InstallIndiDriver "fxload-libusb"
@@ -85,7 +86,7 @@ InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
 InstallIndiDriver "indi-gpsd"
-InstallKstars
+# InstallKstars
 InstallAstrometryNet
 DownloadIndexFiles
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
