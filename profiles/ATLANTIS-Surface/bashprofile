@@ -3,6 +3,7 @@
 # Actions / exports when bash gets loaded
 # --------------------------------------------
 
+export EDITOR=nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Opt out of dotnet telemtry
 alias spotify="/usr/bin/spotify --force-device-scale-factor=2.0"
 (wal -R -e -q -n &)                    # Reload pywal theme
@@ -14,6 +15,7 @@ fi
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export SUDO_ASKPASS=/usr/bin/ksshaskpass
 gpgconf --launch gpg-agent
 
 # Turn off screensaver
