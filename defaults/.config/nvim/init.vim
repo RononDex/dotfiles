@@ -95,6 +95,7 @@ nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 
 " Hop stuff
+require'hop'.setup()
 nnoremap <space> <NOP>
 nmap <space> :HopWord<CR>
 
