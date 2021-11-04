@@ -288,9 +288,8 @@ nmap <leader>nf :Neoformat<CR>
 
 " Spellchecking
 set spelllang=en,de-ch
-set spellsuggest=best,9,camel
-nnoremap <silent> <F4> :set spell!<cr>
-inoremap <silent> <F4> <C-O>:set spell!<cr>
+set spellsuggest=best,9
+nnoremap <silent> <leader>sp :set spell!<cr>
 
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
