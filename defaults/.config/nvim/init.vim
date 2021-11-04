@@ -286,6 +286,12 @@ let g:ctrlsf_auto_focus = {
 " Neoformat
 nmap <leader>nf :Neoformat<CR>
 
+" Spellchecking
+set spelllang=en,de-ch
+set spellsuggest=best,9,camel
+nnoremap <silent> <F4> :set spell!<cr>
+inoremap <silent> <F4> <C-O>:set spell!<cr>
+
 "Omnisharp config
 source ~/.config/nvim/omnisharp.vim
 source ~/.config/nvim/rust.vim
