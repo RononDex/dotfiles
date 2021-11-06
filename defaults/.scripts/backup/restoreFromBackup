@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo rsync -avhP --delete /backup/ /data/
+sudo rsync -avhP --delete /backup/* /data/
 
 echo "---------------------------------------"
 echo "---------- Restore finished -----------"
