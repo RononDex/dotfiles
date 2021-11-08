@@ -71,7 +71,8 @@ let g:lightline = {
   \   'active': {
   \     'left': [[  'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status'  ]]
   \   },
-  \   'colorscheme': 'onedark'
+  \   'colorscheme': 'onedark',
+  \   'cSpellExt.enableDictionaries': ["german"]
   \ }
 
 " register compoments:
