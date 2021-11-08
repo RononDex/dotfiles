@@ -17,7 +17,6 @@ bash ~/.scripts/updateLoginBackground.sh &
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-export SUDO_ASKPASS=/usr/bin/ksshaskpass
 gpgconf --launch gpg-agent
 
 export PATH="$PATH:/usr/share/dotnet/"
