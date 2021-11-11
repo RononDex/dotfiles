@@ -221,7 +221,8 @@ let g:coc_global_extensions = [
   \ 'coc-java-debug',
   \ 'coc-rust-analyzer',
   \ 'coc-texlab',
-  \ 'coc-spell-checker'
+  \ 'coc-spell-checker',
+  \ 'coc-sh'
   \ ]
 
 " gd - go to definition of word under cursor
