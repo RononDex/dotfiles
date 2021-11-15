@@ -206,7 +206,7 @@ bindsym $mod+ctrl+Up exec light -A 5
 bindsym $mod+ctrl+Down exec light -U 5
 
 # Open Todo List
-bindsym $mod+F2 exec xfce4-terminal --command="nvim /home/cobra/Nextcloud/Documents/todo"
+bindsym $mod+F2 exec todo
 
 # Navigation
 bindsym $mod+F1 exec findInHomeFloating
