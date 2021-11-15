@@ -58,6 +58,7 @@ set number relativenumber
 let g:rainbow_active = 1
 let g:python3_host_prog = "/usr/bin/python3"
 set clipboard+=unnamedplus
+set nospell
 
 " Configure automatic toggling of hybrid line numbers
 augroup numbertoggle
@@ -72,7 +73,8 @@ let g:lightline = {
   \     'left': [[  'coc_info', 'coc_hints', 'coc_errors', 'coc_warnings', 'coc_ok' ], [ 'coc_status'  ]]
   \   },
   \   'colorscheme': 'onedark',
-  \   'cSpellExt.enableDictionaries': ["german"]
+  \   'cSpellExt.enableDictionaries': ["german, english"],
+  \   'cSpell.language' : 'de,en'
   \ }
 
 " register compoments:
@@ -222,6 +224,7 @@ let g:coc_global_extensions = [
   \ 'coc-rust-analyzer',
   \ 'coc-texlab',
   \ 'coc-spell-checker',
+  \ 'coc-cspell-dicts',
   \ 'coc-sh'
   \ ]
 
