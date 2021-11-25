@@ -28,4 +28,4 @@ xset -dpms
 export PATH="$PATH:/usr/share/dotnet/"
 # Load sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
-export SUDO_ASKPASS="ksshaskpass"
+export SUDO_ASKPASS="/usr/bin/ksshaskpass"
