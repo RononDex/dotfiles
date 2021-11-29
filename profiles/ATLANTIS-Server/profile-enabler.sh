@@ -35,6 +35,8 @@ sudo cp $scriptDir/overrides/nginx/nginx.conf /etc/nginx/nginx.conf
 sudo cp $scriptDir/overrides/nginx/nextcloud /etc/nginx/sites-available/nextcloud
 sudo mkdir -p /data
 sudo cp ~/.scripts/utilities/updateAndReboot /root/updateAndReboot
+sudo cp ~/.scripts/networking/updateSslCertbot /usr/bin/updateSslCertbot
+sudo chmod +x /usr/bin/updateSslCertbot
 
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
