@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo sv stop nginx
-sudo certbot renew
-sudo sv start nginx
+sv stop nginx
+certbot renew
+sv start nginx
