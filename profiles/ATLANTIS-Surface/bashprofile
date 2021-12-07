@@ -19,6 +19,8 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 echo UPDATESTARTUPTTY | gpg-connect-agent -q > /dev/null 2>&1
 
+umask 117
+
 # Turn off screensaver
 export DISPLAY=:0.0
 xset s off
