@@ -8,8 +8,6 @@ then
     eval $(keychain --eval --quiet id_rsa)                                  # Initializes the keychain
 fi
 
-umask 117
-
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
