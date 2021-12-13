@@ -14,5 +14,6 @@ alias xi="xbps-install -Sy "
 alias xr="xbps-remove "
 alias xq="xbps-query "
 alias xu="xbps-install -Syu"
+alias w=weather
 
 alias gpg=gpg2
