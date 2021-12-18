@@ -825,11 +825,11 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", false);
  * [NOTE] "offlineApps": Offline Website Data: localStorage, service worker cache, QuotaManager (IndexedDB, asm-cache)
  * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes>Settings
  * [1] https://en.wikipedia.org/wiki/Basic_access_authentication ***/
-user_pref("privacy.clearOnShutdown.cache", true);     // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.downloads", true); // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.formdata", true);  // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.cache", false);     // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.downloads", false); // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.formdata", false);  // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.history", false);   // [DEFAULT: true]
-user_pref("privacy.clearOnShutdown.sessions", true);  // [DEFAULT: true]
+user_pref("privacy.clearOnShutdown.sessions", false);  // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.offlineApps", false); // [DEFAULT: false]
 user_pref("privacy.clearOnShutdown.cookies", false);
    // user_pref("privacy.clearOnShutdown.siteSettings", false); // [DEFAULT: false]
