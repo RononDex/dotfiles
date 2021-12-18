@@ -840,7 +840,7 @@ user_pref("privacy.clearOnShutdown.cookies", false);
  * for "Clear Recent History" is opened, it is synced to the same as "history" ***/
 user_pref("privacy.cpd.cache", true);    // [DEFAULT: true]
 user_pref("privacy.cpd.formdata", true); // [DEFAULT: true]
-user_pref("privacy.cpd.history", true);  // [DEFAULT: true]
+user_pref("privacy.cpd.history", false);  // [DEFAULT: true]
 user_pref("privacy.cpd.sessions", true); // [DEFAULT: true]
 user_pref("privacy.cpd.offlineApps", false); // [DEFAULT: false]
 user_pref("privacy.cpd.cookies", false);
