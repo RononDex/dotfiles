@@ -922,8 +922,10 @@ user_pref("privacy.resistFingerprinting", true);
 /* 4502: set new window size rounding max values [FF55+]
  * [SETUP-CHROME] sizes round down in hundreds: width to 200s and height to 100s, to fit your screen
  * [1] https://bugzilla.mozilla.org/1330882 ***/
+/*
 user_pref("privacy.window.maxInnerWidth", 1600);
 user_pref("privacy.window.maxInnerHeight", 900);
+*/
 /* 4503: disable mozAddonManager Web API [FF57+]
  * [NOTE] To allow extensions to work on AMO, you also need 2662
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
