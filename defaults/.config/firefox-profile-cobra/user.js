@@ -452,7 +452,7 @@ user_pref("media.memory_cache_max_size", 65536);
 /* 1003: disable storing extra session data [SETUP-CHROME]
  * define on which sites to save extra session data such as form content, cookies and POST data
  * 0=everywhere, 1=unencrypted sites, 2=nowhere ***/
-user_pref("browser.sessionstore.privacy_level", 2);
+user_pref("browser.sessionstore.privacy_level", 0);
 /* 1004: set the minimum interval between session save operations
  * Increasing this can help on older machines and some websites, as well as reducing writes [1]
  * [1] https://bugzilla.mozilla.org/1304389 ***/
