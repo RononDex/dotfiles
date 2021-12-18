@@ -609,10 +609,10 @@ user_pref("_user.js.parrot", "1600 syntax error: the parrot rests in peace!");
 /* 1601: control when to send a cross-origin referer
  * 0=always (default), 1=only if base domains match, 2=only if hosts match
  * [SETUP-WEB] Known to cause issues with older modems/routers and some sites e.g vimeo, icloud, instagram ***/
-user_pref("network.http.referer.XOriginPolicy", 2);
+user_pref("network.http.referer.XOriginPolicy", 0);
 /* 1602: control the amount of cross-origin information to send [FF52+]
  * 0=send full URI (default), 1=scheme+host+port+path, 2=scheme+host+port ***/
-user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
+user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
 
 /*** [SECTION 1700]: CONTAINERS
    Check out Temporary Containers [2], read the article [3], and visit the wiki/repo [4]
