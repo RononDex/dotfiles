@@ -516,7 +516,7 @@ user_pref("security.OCSP.enabled", 1); // [DEFAULT: 1]
  * could have been revoked) and/or you could be under attack (e.g. malicious blocking of OCSP servers)
  * [1] https://blog.mozilla.org/security/2013/07/29/ocsp-stapling-in-firefox/
  * [2] https://www.imperialviolet.org/2014/04/19/revchecking.html ***/
-user_pref("security.OCSP.require", true);
+user_pref("security.OCSP.require", false);
 
 /** CERTS / HPKP (HTTP Public Key Pinning) ***/
 /* 1220: disable or limit SHA-1 certificates
@@ -538,7 +538,7 @@ user_pref("security.family_safety.mode", 0);
  * [SETUP-WEB] If you rely on an AV (antivirus) to protect your web browsing
  * by inspecting ALL your web traffic, then leave at current default=1
  * [1] https://gitlab.torproject.org/tpo/applications/tor-browser/-/issues/16206 ***/
-user_pref("security.cert_pinning.enforcement_level", 2);
+user_pref("security.cert_pinning.enforcement_level", 1);
 /* 1224: enable CRLite [FF73+]
  * In FF84+ it covers valid certs and in mode 2 doesn't fall back to OCSP
  * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1429800,1670985
