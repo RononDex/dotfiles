@@ -7,7 +7,7 @@ sudo rsync -avhP --delete /data/Downloads/ /backup/Downloads/
 sudo rsync -avhP --delete /data/VirtualMachines/ /backup/VirtualMachines/
 sudo rsync -avhP --delete /data/Astrophotography /backup/Astrophotography/
 sudo rsync -avhP --delete /data/NextCloud /backup/NextCloud/
-sudo rsync -avhP --delete /data/ConfigStore /backup/ConfigStore/
+sudo rsync -avhP --delete /data/ConfigStoreAstroBot /backup/ConfigStore/ConfigStoreAstroBot
 
 echo "---------------------------------------"
 echo "----------- Backup finished -----------"
