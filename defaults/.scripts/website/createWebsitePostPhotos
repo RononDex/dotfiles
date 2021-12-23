@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# $1: Path to photo
+
+fileNameWithoutExtension=$(basename "$1" | sed 's/\(.*\)\..*/\1/')
+convert $1 -quality 70 -resize 1080^x1920 -gravity center ${fileNameWithoutExtension}_thumb.webp
+convert $1 -quality 80 ${fileNameWithoutExtension}_full.webp
