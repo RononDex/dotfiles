@@ -39,7 +39,7 @@ sudo xbps-install -y vim neovim libftdi1 cfitsio void-repo-nonfree
 sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient branger binutils keychain
 sudo xbps-install -y htop ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass patch ncurses ncurses-devel
 sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf 
-sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils debootstrap
+sudo xbps-install -y dkms linux-headers gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils debootstrap inetutils-ftp
 sudo xbps-install -y ueberzug nerd-fonts cava dcron nodejs quazip pinentry-gtk dracut-network psmisc base-devel openconnect NetworkManager-openconnect
 sudo xbps-install -y tar zip xz keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3
 
