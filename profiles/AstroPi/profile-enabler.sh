@@ -106,3 +106,5 @@ sudo chown ${currentUser} ~/.xinitrc
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
 chmod +x ~/.config/xfce4/terminal/terminalrc
+
+echo "ATLANTIS-ASTRO-PI" | sudo tee /etc/hostname
