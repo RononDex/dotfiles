@@ -1,0 +1,15 @@
+#!/bin/bash
+
+hugo
+server=lx42.hoststar.hosting
+port=5544
+# read -p "SFTP Server adress: " server
+# read -p "SFTP Server port: " port
+read -p "Username: " username
+read -sp "Password: " password
+SSHPASS=${password}
+sshpass -e sftp -P ${port} "${username}@${server}"
+
+sshpass -e scp -P 5544 -oBatchMode=no -oHostKeyAlgorithms=+ssh-dss  publishWebsiteSftpBatchScript hugopublish.theuberger.ch@lx42.hoststar.hosting:/test
+ sshpass -e sftp -oBatchMode=no -oHostKeyAlgorithms=+ssh-dss -P 5544 "hugopublish.theuberger.ch@lx42.hoststar.hosting"
+
