@@ -3,6 +3,7 @@
 This repository contains a set of scripts to support different profiles / setups and environments
 
 # How to install
+## General
 
 Install your basic OS (arch linux or void linux).
 
@@ -27,6 +28,9 @@ This will take a while to run, go grab a coffee or exercise :)
 Once the script has finished, simply reboot into your finished and ready to use system (**you might have to enter `exit` once during the installation process, it sometimes gets stuck in the zsh after installing it. After entering `exit` it will continue installation**)
 
 To upgrade your system (including the AUR packages) just enter `up` in your terminal. This will do a git pull of the dotfiles repository, and rerun the profile-enabler.sh with your installed profile.
+
+## AstroPi
+See [AstroPi-README](AstroPi-README.md)
 
 # How it works
 
