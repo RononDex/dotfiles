@@ -37,6 +37,11 @@
 		```
 1. Unplug the flashed device and plug it into your raspberry pi and boot it up.
 1. You can now connect through `ssh` using user `alarm` and password `alarm`. Root password is `root`
+1. Initialize the pacman keyring and populate the Arch Linux ARM package signing keys: 
+	```
+	pacman-key --init
+	pacman-key --populate archlinuxarm
+	```
 1. Follow chapter 3 "Configure the system" here: [Arch Linux Instructions](https://wiki.archlinux.org/title/Installation_guide#Time_zone) starting from "Time zone"
 1. Install necessary software: `pacman -Sy vim git sudo`
 1. Setup your personal user with password `useradd -m <username>`, change the root password to something more secure and delete the existing
