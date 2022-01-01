@@ -16,8 +16,6 @@ sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
-sudo cp $scriptDir/overrides/fxload/fxload /sbin/fxload
-sudo chmod +x /sbin/fxload
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
@@ -78,6 +76,7 @@ sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons bi
 sudo pacman -Sy --noconfirm --needed kstars libindi
 
 InstallAstroPy
+InstallFxLoad
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 # InstallIndi
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
