@@ -43,7 +43,7 @@ sudo pacman -Sy lxde firefox dnsmasq gpsd --noconfirm --needed
 
 echo "Installing stuff ..."
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
-InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp-git.git"
+InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
 
 echo "Setting up xrdp ..."
