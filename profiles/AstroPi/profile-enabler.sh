@@ -38,6 +38,9 @@ sudo timedatectl set-ntp true
 sudo systemctl enable ntpd
 sudo systemctl start ntpd
 
+echo "Importing keys"
+gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDBC01BF10EB
+
 echo "Setting up XFCE"
 sudo pacman -Sy lxde firefox dnsmasq gpsd --noconfirm --needed
 
@@ -98,6 +101,7 @@ sudo usermod -a -G lp ${currentUser}
 sudo usermod -a -G input ${currentUser}
 sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
+sudo usermod -a -G tty ${currentUser}
 sudo usermod -a -G users ${currentUser}
 sudo smbpasswd -a ${currentUser}
 
