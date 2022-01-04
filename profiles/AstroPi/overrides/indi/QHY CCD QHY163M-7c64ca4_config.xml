@@ -172,7 +172,7 @@ Off
     </newNumberVector>
     <newNumberVector device="QHY CCD QHY163M-7c64ca4" name="USB_TRAFFIC">
         <oneNumber name="TRAFFIC">
-3
+0
         </oneNumber>
     </newNumberVector>
     <newSwitchVector device="QHY CCD QHY163M-7c64ca4" name="GPS_CONTROL">
