@@ -48,6 +48,7 @@ echo "Installing stuff ..."
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
+InstallAurPackage "elogind" "https://aur.archlinux.org/elogind.git"
 
 echo "Setting up xrdp ..."
 sudo rm /etc/X11/Xwrapper.config
@@ -69,6 +70,8 @@ sudo systemctl enable xrdp
 sudo systemctl start xrdp
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
+sudo systemctl enable elogind
+sudo systemctl start elogind
 
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 --noconfirm --needed
