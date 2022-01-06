@@ -4,4 +4,4 @@
 
 fileNameWithoutExtension=$(basename "$1" | sed 's/\(.*\)\..*/\1/')
 convert "$1" -quality 70 -resize 1080^x1920 -gravity center "${fileNameWithoutExtension}_thumb.webp"
-convert "$1" -quality 90 "${fileNameWithoutExtension}_full.webp"
+convert "$1" -quality 95 "${fileNameWithoutExtension}_full.webp"
