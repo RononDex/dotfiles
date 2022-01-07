@@ -7,6 +7,6 @@ port=5544
 # read -p "SFTP Server port: " port
 read -p "Username: " username
 
-sftp -v -P ${port} -oPort=${port} -oPasswordAuthentication=yes -o StrictHostKeyChecking=no -oHostKeyAlgorithms=+ssh-dss ${username}@lx42.hoststar.hosting:/public_html <<EOF
+sftp -P ${port} -oPort=${port} -oPasswordAuthentication=yes -o StrictHostKeyChecking=no -oHostKeyAlgorithms=+ssh-dss ${username}@lx42.hoststar.hosting:/public_html <<EOF
 put -r ./public/*
 EOF
