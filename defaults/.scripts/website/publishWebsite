@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hugo
+hugo || exit
 server=lx42.hoststar.hosting
 port=5544
 # read -p "SFTP Server adress: " server
