@@ -75,7 +75,7 @@ sudo systemctl start elogind
 
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 --noconfirm --needed
-sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc
+sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
 sudo pacman -Sy --noconfirm --needed kstars libindi
 
 InstallAstroPy
