@@ -105,7 +105,7 @@ Dome Simulator
     </newTextVector>
     <newSwitchVector device="Losmandy Gemini" name="DOME_POLICY">
         <oneSwitch name="DOME_IGNORED">
-Off
+On
         </oneSwitch>
         <oneSwitch name="DOME_LOCKS">
 Off
