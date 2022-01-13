@@ -7,7 +7,7 @@ sourceDir="$(dirname "$1")"
 convert "$1" -quality 70 -resize 1080^x1920 -gravity center "thumb.webp"
 vips dzsave "$1" tiled_photo --strip --suffix ".jpg[Q=95]"
 
-if [ -f "${sourceDir}/annotation.svg" ];
+if [ -f "${sourceDir}/annotations.svg" ];
 then
-    cp "${sourceDir}/annotation.svg" ./
+    cp "${sourceDir}/annotations.svg" ./
 fi
