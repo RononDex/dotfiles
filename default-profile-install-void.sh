@@ -92,6 +92,8 @@ StartService elogind
 EnableService eudevd
 EnableService polkitd
 EnableService socklog-unix
+EnableService nanoklogd
+StartService nanoklogd
 StartService polkitd
 StopService dhcpcd
 DisableService dhcpcd
