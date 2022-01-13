@@ -3,5 +3,11 @@
 # $1: Path to photo
 
 fileNameWithoutExtension=$(basename "$1" | sed 's/\(.*\)\..*/\1/')
+sourceDir="$(dirname "$1")"
 convert "$1" -quality 70 -resize 1080^x1920 -gravity center "thumb.webp"
 vips dzsave "$1" tiled_photo --strip --suffix ".webp[Q=95,near_lossless=true]"
+
+if [ -f "${sourceDir}/annotation.svg" ];
+then
+    cp "${sourceDir}/annotation.svg" ./
+fi
