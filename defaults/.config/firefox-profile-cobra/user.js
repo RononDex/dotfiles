@@ -974,7 +974,7 @@ user_pref("browser.link.open_newwindow", 3); // [DEFAULT: 3]
 user_pref("browser.link.open_newwindow.restriction", 0);
 /* 4520: disable WebGL (Web Graphics Library)
  * [SETUP-WEB] If you need it then enable it. RFP still randomizes canvas for naive scripts ***/
-user_pref("webgl.disabled", true);
+user_pref("webgl.disabled", false);
 
 /*** [SECTION 5000]: OPTIONAL OPSEC
    Disk avoidance, application data isolation, eyeballs...
