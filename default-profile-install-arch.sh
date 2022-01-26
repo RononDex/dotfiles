@@ -59,7 +59,7 @@ sudo pacman -S htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S ueberzug autoconf keyutils automake bison openconnect networkmanager-openconnect ksshaskpass --needed --noconfirm
-sudo pacman -S libvips lftp --needed --noconfirm
+sudo pacman -S libvips lftp linux-firmware-marvell --needed --noconfirm
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
