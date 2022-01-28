@@ -60,6 +60,7 @@ echo "Enabling services ..."
 EnableService lightdm
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
+EnableService bluetoothd
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
