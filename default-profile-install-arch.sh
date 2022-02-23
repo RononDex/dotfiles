@@ -34,8 +34,7 @@ if [[ $architecture == *"arm"* ]]; then
     echo -n "$RED"
     echo "ARM system detected ..."
     echo -n "$NC"
-    isArm=$true
-else
+    isArm=$true else
     sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
     sudo cp defaults/pacman.conf /etc/pacman.conf
     sudo chmod 744 /etc/pacman.conf
@@ -156,3 +155,6 @@ echo "Copying some default files ..."
 sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
 sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
+
+echo "Updating Python packages ..."
+UpdatePipPackages

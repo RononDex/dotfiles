@@ -26,3 +26,8 @@ SetupBackgroundsFolderForBing() {
         sudo chown -R $currentUser:$currentUser /usr/share/backgrounds/
     fi
 }
+
+UpdatePipPackages() {
+    pip3 install --upgrade pip
+    pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+}

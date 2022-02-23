@@ -145,3 +145,6 @@ gpg2 --recv 0xB4B88025927E502D
 
 echo "Removing obsolete kernels"
 sudo vkpurge rm all
+
+echo "Updating Python packages ..."
+UpdatePipPackages
