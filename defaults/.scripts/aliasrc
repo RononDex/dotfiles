@@ -16,4 +16,6 @@ alias xq="xbps-query "
 alias xu="xbps-install -Syu"
 alias w=weather
 
+alias jp="jupyter notebook"
+
 alias gpg=gpg2
