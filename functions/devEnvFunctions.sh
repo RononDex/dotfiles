@@ -36,3 +36,7 @@ SetupJavaScriptDevEnv() {
 
     npm i -g typescript
 }
+
+InstallJupyterNotebooks() {
+    pip3 install jupyter
+}

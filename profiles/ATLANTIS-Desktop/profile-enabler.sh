@@ -32,6 +32,7 @@ sudo xbps-install -y nomacs libreoffice mpv breeze breeze-cursors
 InstallXorg
 InstallLitarvanLightDmTheme
 InstallRustDev
+InstallJupyterNotebooks
 InstallYubiKeyStuff
 SetupDotnet
 SetupMariaMySqlDb

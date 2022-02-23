@@ -50,6 +50,7 @@ sudo systemctl start bluetooth
 SetupDotnet
 SetupWireguardClient
 SetupJavaDevEnv
+InstallJupyterNotebooks
 InstallGrubTheme -s 4k
 
 echo "Turning on dGPU"
