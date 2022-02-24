@@ -38,6 +38,7 @@ SetupDotnet
 SetupMariaMySqlDb
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
+SetupPythonDev
 InstallGrubTheme -s 2k
 
 echo "Installing restricted packages ..."

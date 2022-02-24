@@ -51,6 +51,7 @@ SetupDotnet
 SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
+SetupPythonDev
 InstallGrubTheme -s 4k
 
 echo "Turning on dGPU"

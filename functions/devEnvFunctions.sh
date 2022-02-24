@@ -40,3 +40,7 @@ SetupJavaScriptDevEnv() {
 InstallJupyterNotebooks() {
     pip3 install jupyter
 }
+
+SetupPythonDev() {
+    pip3 install matplotlib
+}
