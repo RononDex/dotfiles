@@ -35,8 +35,8 @@ if [[ $architecture == *"arm"* ]]; then
     echo "ARM system detected ..."
     echo -n "$NC"
     isArm=$true else
-    sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
-    sudo cp defaults/pacman.conf /etc/pacman.conf
+    sudo cp defaults/mirrorListARM /etc/pacman.d/mirrorlist
+    sudo cp defaults/pacman.arm.conf /etc/pacman.conf
     sudo chmod 744 /etc/pacman.conf
     sudo chmod 744 /etc/pacman.d/mirrorlist
     isArm=$false
