@@ -22,7 +22,7 @@ SetupJavaDevEnv() {
 
     if command -v pacman &> /dev/null
     then
-        sudo pacman -Sy jdk11-openjdk jre-openjdk intellij-idea-community-edition maven --needed --noconfirm
+        sudo pacman -Sy jdk11-openjdk jre-openjdk java-openjfx intellij-idea-community-edition maven --needed --noconfirm
     fi
 
     curl -s "https://get.sdkman.io" | bash
