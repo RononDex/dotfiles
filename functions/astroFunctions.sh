@@ -127,7 +127,7 @@ DownloadIndexFiles() {
 }
 
 InstallFxLoad() {
-    CloneOrUpdate "fx3load-code" "https://git.code.sf.net/p/fx3load/code"
+    CloneOrUpdateGitRepoToPackages "fx3load-code" "https://git.code.sf.net/p/fx3load/code"
     cd ~/packages/fx3load-code
     make fxload
     sudo make install
