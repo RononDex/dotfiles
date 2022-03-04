@@ -73,8 +73,6 @@ sudo systemctl start smb.service
 sudo systemctl enable elogind
 sudo systemctl start elogind
 
-sudo timedatectl set-ntp false
-
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
