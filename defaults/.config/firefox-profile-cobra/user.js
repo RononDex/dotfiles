@@ -1344,3 +1344,10 @@ user_pref("browser.urlbar.suggest.quicksuggest", false);
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
+
+// Custom Settings
+// ---------------
+// EXTENSIONS
+//
+user_pref("extensions.webextensions.uuids", "{\"doh-rollout@mozilla.org\":\"6e735f0a-b9a5-4b14-a1f3-24ce9636aac4\",\"formautofill@mozilla.org\":\"36033f59-7775-4bfc-828e-5fedf3604dd0\",\"pictureinpicture@mozilla.org\":\"f8e8a98c-7116-473e-8788-22a2deab1760\",\"screenshots@mozilla.org\":\"251c72ed-5491-4df8-891f-f71f76e298dd\",\"webcompat-reporter@mozilla.org\":\"5c861baa-401d-4247-8869-7de3fef4e5d2\",\"webcompat@mozilla.org\":\"a6185893-7c43-4dd7-b955-fc0190f45354\",\"default-theme@mozilla.org\":\"2c3a3a02-1e8f-4163-9970-3a4a21c3e49a\",\"addons-search-detection@mozilla.com\":\"947b051d-d3bc-4537-8ab5-dcb68b73c79d\",\"wikipedia@search.mozilla.org\":\"bc2f887d-2a67-4ee3-b82c-a819b17c3a18\",\"ddg@search.mozilla.org\":\"89e6da4b-b702-4780-b847-ba424ae18b29\",\"{446900e4-71c2-419f-a6a7-df9c091e268b}\":\"62304ad8-5f85-4326-84d0-9465802351e0\",\"{c607c8df-14a7-4f28-894f-29e8722976af}\":\"72bbf476-6201-417f-b0d0-4caa0547d021\",\"@canvas-shadow\":\"8532042d-2508-4c41-936e-9ab1d10be754\",\"addon@darkreader.org\":\"e236a9fa-3d34-4593-b1cc-8c9a23fa8ebe\",\"uBlock0@raymondhill.net\":\"07c1e96d-130a-4a59-b295-40c5d3ac2a85\",\"@testpilot-containers\":\"0fe803d1-b887-4bfd-ba18-e929254153ca\"}");
