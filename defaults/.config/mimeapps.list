@@ -4,6 +4,7 @@ application/pdf=zathura.desktop
 x-scheme-handler/sgnl=signal.desktop
 x-scheme-handler/signalcaptcha=signal.desktop
 x-scheme-handler/msteams=teams.desktop
+x-www-browser=firefox.desktop
 image/jpeg=nomacs.desktop
 image/png=nomacs.desktop
 image/tiff=nomacs.desktop
