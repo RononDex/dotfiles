@@ -225,7 +225,8 @@ let g:coc_global_extensions = [
   \ 'coc-texlab',
   \ 'coc-spell-checker',
   \ 'coc-cspell-dicts',
-  \ 'coc-sh'
+  \ 'coc-sh',
+  \ 'coc-pyright'
   \ ]
 
 " gd - go to definition of word under cursor
