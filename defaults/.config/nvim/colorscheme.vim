@@ -19,3 +19,7 @@ hi HopNextKey guifg=#99ccff
 hi HopNextKey1 guifg=#99ccff
 hi HopNextKey2 guifg=#6699ff
 hi HopUnmatched guifg=#666666
+
+" Java colors
+hi lv16 ctermfg=75 guifg=#5fafff " Functions
+hi lv15 ctermfg=230 guifg=#dadac7 " Identifier

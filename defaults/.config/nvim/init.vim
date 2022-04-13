@@ -26,6 +26,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'sbdchd/neoformat'
 Plug 'vim-test/vim-test'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'uiiaoo/java-syntax.vim'
 
 call plug#end()
 
