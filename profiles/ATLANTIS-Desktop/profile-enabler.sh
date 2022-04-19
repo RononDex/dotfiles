@@ -57,7 +57,7 @@ fi
 
 echo "Setting up omnisharp ..."
 rm -rf ~/.omnisharp
-cp -Raf $scriptDir/../surface-book/overrides/omnisharp ~/.omnisharp
+cp -Raf $scriptDir/../ATLANTIS-Surface/overrides/omnisharp ~/.omnisharp
 
 echo "Enabling services ..."
 EnableService lightdm
