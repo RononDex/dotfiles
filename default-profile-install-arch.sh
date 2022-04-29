@@ -135,7 +135,7 @@ fi
 
 echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
-InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
+# InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 
 # Needed key for autofs
