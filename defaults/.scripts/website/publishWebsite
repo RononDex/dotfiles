@@ -9,5 +9,5 @@ read -p "Username: " username
 
 lftp -p ${port} -u ${username} sftp://${server} -e 'set sftp:connect-program "ssh -a -x -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -oPasswordAuthentication=yes"' <<EOF
 cd public_html
-mirror --only-newer -P -R public/ ./
+mirror -R public/ ./
 EOF
