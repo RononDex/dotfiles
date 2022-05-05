@@ -2,10 +2,10 @@
 AlignExposure=3
 AstrometryConfFile=*Internal astrometry.cfg*
 AstrometryDetectParity=true
-AstrometryImageScaleHigh=51.986322843131205
-AstrometryImageScaleLow=39.3247055527294
-AstrometryPositionDE=40.29194444444444
-AstrometryPositionRA=208.80833333333334
+AstrometryImageScaleHigh=52.224382932204
+AstrometryImageScaleLow=39.5047845118605
+AstrometryPositionDE=54.2425
+AstrometryPositionRA=211
 AstrometrySolverBinary=/usr/local/astrometry/bin/solve-field
 AstrometrySolverType=1
 AstrometryWCSInfo=/usr/local/astrometry/bin/wcsinfo
@@ -18,6 +18,7 @@ SolverBinningIndex=1
 CaptureDirectory=/data
 DefaultCaptureFilterWheel=--
 EnforceAutofocusOnTemperature=true
+EnforceGuideDeviation=true
 EnforceRefocusEveryN=true
 GuidingSettle=15
 MaxTemperatureDiff=2
@@ -43,6 +44,7 @@ ColorSchemeFile=moonless-night.colors
 CompassColor=#909055
 DEGuideError=#00a5ff
 DSNameColor=#75759c
+DSOColor=#008f00
 DarkAppColors=false
 EclColor=#613d12
 EqColor=#909090
@@ -83,16 +85,18 @@ Height 1440=425
 Width 2560=700
 
 [Ekos]
-EkosWindowHeight=830
-EkosWindowWidth=985
-profile=G11 | QHY163
+EkosWindowHeight=952
+EkosWindowWidth=1500
+independentWindowEkos=true
+profile=G11 | QHY163m
 
 [FITSViewer]
-useFITSViewer=false
+independentWindowFITS=true
 
 [Focus]
 DefaultFocusCCD=QHY CCD QHY163M-7c64ca4
 DefaultFocusFilterWheel=Atik EFW2
+DefaultFocusTemperatureSource=Sesto Senso 2
 FocusAutoStarEnabled=true
 FocusFramesCount=2
 FocusGain=100
@@ -107,11 +111,12 @@ GuideSettleTime=0.5
 InitialFocusOutSteps=3
 
 [GUI]
-PositionFocusBox=486,0
-PositionGeoBox=0,828
+CurrentTheme=Black Body
+PositionFocusBox=1246,0
+PositionGeoBox=0,846
 RunStartupWizard=false
-WindowHeight=934
-WindowWidth=740
+WindowHeight=952
+WindowWidth=1500
 
 [General]
 AlignmentLogging=true
@@ -120,17 +125,17 @@ RegularLogging=false
 VerboseLogging=true
 
 [Guide]
-DECProportionalGain=133.3
+DECProportionalGain=0.75
 DitherEnabled=true
 DitherFrames=2
 DitherPixels=8
 DitherSettle=15
 GuideAutoStarEnabled=true
-GuideExposure=3
+GuideExposure=1.5
 GuideMaxDeltaRMS=3
 GuideSubframeEnabled=true
 GuiderType=1
-RAProportionalGain=133.3
+RAProportionalGain=0.75
 
 [Location]
 CityName=GPS Location
@@ -146,7 +151,7 @@ Height 1000=934
 Height 1200=768
 Height 1440=934
 RestorePositionForNextInstance=false
-State=AAAA/wAAAAD9AAAAAAAAAuQAAANTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAUAAAAaAGsAcwB0AGEAcgBzAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdgBpAGUAdwBUAG8AbwBsAEIAYQByAQAAAdX/////AAAAAAAAAAAAAAAWAEkATgBEAEkAVABvAG8AbABCAGEAcgEAAAKv/////wAAAAAAAAAAAAAAIABUAGUAbABlAHMAYwBvAHAAZQBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAEQAbwBtAGUAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
+State=AAAA/wAAAAD9AAAAAAAABdwAAANlAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAUAAAAaAGsAcwB0AGEAcgBzAFQAbwBvAGwAQgBhAHIBAAAAAP////8AAAAAAAAAAAAAABYAdgBpAGUAdwBUAG8AbwBsAEIAYQByAQAAAdX/////AAAAAAAAAAAAAAAWAEkATgBEAEkAVABvAG8AbABCAGEAcgEAAAOq/////wAAAAAAAAAAAAAAIABUAGUAbABlAHMAYwBvAHAAZQBUAG8AbwBsAEIAYQByAAAAAAD/////AAAAAAAAAAAAAAAWAEQAbwBtAGUAVABvAG8AbABCAGEAcgAAAAAA/////wAAAAAAAAAA
 ToolBarsMovable=Disabled
 VNC-0 Height 1500x1000=934
 VNC-0 Height 2560x1440=934
@@ -159,18 +164,34 @@ VNC-0 YPosition 2560x1440=0
 Width 1500=740
 Width 1920=1024
 Width 2560=740
+rdp0 Height 1500x1000=934
+rdp0 Height 2560x1440=952
+rdp0 Width 1500x1000=740
+rdp0 Width 2560x1440=1500
+rdp0 Window-Maximized 1500x1000=true
+rdp0 XPosition 1500x1000=0
+rdp0 XPosition 2560x1440=788
+rdp0 YPosition 1500x1000=0
+rdp0 YPosition 2560x1440=159
 
 [Mount]
-MeridianFlipOffset=0.3333333333333333
+ExecuteMeridianFlip=true
+MeridianFlipOffset=0.16666666666666666
 
 [Scheduler]
+AlignCheckThreshold=4
 DawnOffset=0.25
 DuskOffset=-0.25
+ErrorHandlingStrategyDelay=300
+ForceAlignmentBeforeJob=true
 LeadTime=2
 PreDawnTime=0
+RealignAfterCalibrationFailure=true
+RescheduleErrors=true
 
 [StellarSolver]
 AstrometryIndexFolderList=/home/cobra/.local/share/kstars/astrometry,/home/cobra/AstrometryIndexes
+FocusOptionsProfile=3
 SolveOptionsProfile=0
 SolveSextractorType=2
 SolverType=1
@@ -181,12 +202,13 @@ RunOnStart=false
 [View]
 AutoSelectGrid=false
 FOVNames=
-FocusDec=-2.5005803452676068
-FocusObject=NGC 4079
-FocusRA=12.098641576093254
+FocusDec=72.37902562035535
+FocusObject=IC 1251
+FocusRA=17.16495515579927
 IsTracking=true
 ShowEquatorialGrid=true
 ShowHorizontalGrid=true
+ZoomFactor=360.0000000000001
 
 [Xplanet]
 XplanetBackgroundColorValue=#000000

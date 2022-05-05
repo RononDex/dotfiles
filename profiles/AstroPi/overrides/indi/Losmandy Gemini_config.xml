@@ -47,7 +47,7 @@ Off
     </newSwitchVector>
     <newSwitchVector device="Losmandy Gemini" name="DEVICE_AUTO_SEARCH">
         <oneSwitch name="INDI_ENABLED">
-Off
+On
         </oneSwitch>
         <oneSwitch name="INDI_DISABLED">
 Off
@@ -113,10 +113,10 @@ Off
     </newSwitchVector>
     <newNumberVector device="Losmandy Gemini" name="GEOGRAPHIC_COORD">
         <oneNumber name="LAT">
-      47.197589999999998156
+      47.183333333333330017
         </oneNumber>
         <oneNumber name="LONG">
-      7.5918583330000002363
+      7.5833333333333330373
         </oneNumber>
         <oneNumber name="ELEV">
       439.5

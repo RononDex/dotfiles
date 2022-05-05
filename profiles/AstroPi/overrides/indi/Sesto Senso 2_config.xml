@@ -14,15 +14,15 @@ On
     </newNumberVector>
     <newSwitchVector device="Sesto Senso 2" name="CONNECTION_MODE">
         <oneSwitch name="CONNECTION_SERIAL">
-      On
+On
         </oneSwitch>
         <oneSwitch name="CONNECTION_TCP">
-      Off
+Off
         </oneSwitch>
     </newSwitchVector>
     <newTextVector device="Sesto Senso 2" name="DEVICE_PORT">
         <oneText name="PORT">
-/dev/ttyUSB0
+/dev/serial/by-id/usb-Silicon_Labs_CP2102N_USB_to_UART_Bridge_Controller_d4e7238facd6e8119141f7c147cc1306-if00-port0
         </oneText>
     </newTextVector>
     <newSwitchVector device="Sesto Senso 2" name="DEVICE_BAUD_RATE">
@@ -47,10 +47,10 @@ Off
     </newSwitchVector>
     <newSwitchVector device="Sesto Senso 2" name="DEVICE_AUTO_SEARCH">
         <oneSwitch name="INDI_ENABLED">
-On
+Off
         </oneSwitch>
         <oneSwitch name="INDI_DISABLED">
-Off
+On
         </oneSwitch>
     </newSwitchVector>
     <newSwitchVector device="Sesto Senso 2" name="DEBUG_LEVEL">
@@ -92,6 +92,19 @@ Off
     <newNumberVector device="Sesto Senso 2" name="FOCUS_MAX">
         <oneNumber name="FOCUS_MAX_VALUE">
 2097152
+        </oneNumber>
+    </newNumberVector>
+    <newSwitchVector device="Sesto Senso 2" name="FOCUS_BACKLASH_TOGGLE">
+        <oneSwitch name="INDI_ENABLED">
+      Off
+        </oneSwitch>
+        <oneSwitch name="INDI_DISABLED">
+      On
+        </oneSwitch>
+    </newSwitchVector>
+    <newNumberVector device="Sesto Senso 2" name="FOCUS_BACKLASH_STEPS">
+        <oneNumber name="FOCUS_BACKLASH_VALUE">
+0
         </oneNumber>
     </newNumberVector>
     <newNumberVector device="Sesto Senso 2" name="Presets">
