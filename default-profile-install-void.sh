@@ -14,7 +14,7 @@ chmod +x ~/.config/.xinitrc
 chmod +x ~/.profile
 chmod +x ~/.zprofile
 chmod +x ~/.config/i3/config
-chmod +x ~/.config/polybar/config
+chmod +x ~/.config/polybar/config.ini
 chmod +x ~/.config/polybar/launch.sh
 chmod +x ~/.config/polybar/network-traffic.sh
 chmod +x ~/.config/xfce4/terminal/terminalrc
