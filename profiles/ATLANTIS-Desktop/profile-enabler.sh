@@ -27,7 +27,7 @@ sudo xbps-install -y i3-gaps nvidia dunst libnotify notification-daemon dmenu pa
 sudo xbps-install -y nvidia-libs remmina freerdp xf86-input-evdev PrusaSlicer texlive-most
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit nvidia-libs-32bit
-sudo xbps-install -y nomacs xournalpp libreoffice mpv breeze breeze-cursors
+sudo xbps-install -y nomacs xournalpp libreoffice mpv breeze breeze-cursors biber
 sudo xbps-install -y steam libdrm libdrm-32bit libglapi libglapi-32bit
 
 InstallXorg
