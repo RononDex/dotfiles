@@ -100,6 +100,7 @@ augroup END
 
 " OmniSharp: {{{
 let g:OmniSharp_popup_position = 'peek'
+let g:OmniSharp_server_use_net6 = 1
 if has('nvim')
   let g:OmniSharp_popup_options = {
   \ 'winhl': 'Normal:NormalFloat'
