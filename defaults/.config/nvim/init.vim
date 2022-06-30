@@ -219,7 +219,6 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-prettier', 
   \ 'coc-json', 
-  \ 'coc-omnisharp',
   \ 'coc-java',
   \ 'coc-java-debug',
   \ 'coc-rust-analyzer',

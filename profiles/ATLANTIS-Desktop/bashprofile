@@ -26,6 +26,10 @@ xset s noblank
 xset -dpms
 
 export PATH="$PATH:/usr/share/dotnet/"
+
 # Load sdkman
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 export SUDO_ASKPASS="/usr/bin/ksshaskpass"
+
+# setup dotnet language server
+export PATH="$PATH:/home/cobra/.dotnet/tools"
