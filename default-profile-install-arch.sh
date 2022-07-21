@@ -62,7 +62,7 @@ sudo pacman -S python python2 python-pip samba opencv pkgconfig gtest gmock wxgt
 sudo pacman -S htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
-sudo pacman -S ueberzug autoconf keyutils automake bison openconnect networkmanager-openconnect ksshaskpass --needed --noconfirm
+sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect networkmanager-openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S libvips lftp linux-firmware-marvell --needed --noconfirm
 
 # Set default apps
@@ -137,7 +137,6 @@ echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 # InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
-InstallAurPackage "redshift-minimal" "https://aur.archlinux.org/redshift-minimal.git"
 
 # Needed key for autofs
 gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
