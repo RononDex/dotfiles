@@ -44,10 +44,11 @@ sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmi
 sudo pacman -Sy acpi_call-dkms linux-surface-headers linux-surface surface-ipts-firmware iptsd --needed --noconfirm
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
+sudo pacman -Syu dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
-#SetupDotnet        # Gets installed over official package now
+#SetupDotnet                # Use official dotnet packages instead
 SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
