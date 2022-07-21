@@ -47,7 +47,7 @@ sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
-SetupDotnet
+#SetupDotnet        # Gets installed over official package now
 SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
