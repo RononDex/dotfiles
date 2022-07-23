@@ -7,3 +7,4 @@ protonmail-bridge --cli &
 
 ckb-next -b &
 nextcloud &
+redshift &

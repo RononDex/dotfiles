@@ -8,3 +8,4 @@ xfce4-terminal --initial-title=cava --title=cava -e cava &
 protonmail-bridge --cli &
 
 nextcloud &
+redshift &
