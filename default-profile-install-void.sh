@@ -129,8 +129,6 @@ fi
 echo "Enabling services ..."
 EnableService dcron
 StartService dcron
-EnableService pcscd
-StartService pcscd
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig

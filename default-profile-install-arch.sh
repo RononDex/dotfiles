@@ -148,8 +148,6 @@ gpg2 --recv 0xB4B88025927E502D
 echo "Enabling services ..."
 sudo systemctl enable dcron
 sudo systemctl start dcron
-sudo systemctl enable pcscd
-sudo systemctl start pcscd
 sudo systemctl enable autofs
 sudo systemctl start autofs
 
