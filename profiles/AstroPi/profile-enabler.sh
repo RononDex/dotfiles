@@ -34,6 +34,7 @@ sudo pacman -Sy ntp --needed --noconfirm
 sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
 sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 sudo cp $scriptDir/overrides/udev/09-pps.rules /etc/udev/rules.d/09-pps.rules
+sudo cp $scriptDir/overrides/udev/25-gpsd-usb.rules /etc/udev/25-gpsd-usb.rules
 sudo cp $scriptDir/overrides/boot/config.txt /boot/config.txt
 sudo cp $scriptDir/overrides/modules/pps.conf /etc/modules-load.d/pps.conf
 sudo ln -s /dev/ttyS0 /dev/gps0
