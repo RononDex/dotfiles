@@ -1,1 +1,2 @@
 KERNEL=="ttyS0", SUBSYSTEM=="tty", DRIVER=="", OWNER=="root", GROUP=="tty", MODE=="0777", SYMLINK+="gps0"
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="insert_your_serial_here", MODE="0666", SYMLINK+="sestosenso2"
