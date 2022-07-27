@@ -1,0 +1,1 @@
+KERNEL=="ttyS0", SUBSYSTEM=="tty", DRIVER=="", OWNER=="root", GROUP=="tty", MODE=="0777", SYMLINK+="gps0"
