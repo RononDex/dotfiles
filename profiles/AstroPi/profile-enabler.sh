@@ -80,9 +80,9 @@ sudo systemctl start elogind
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
-sudo pacman -Sy --noconfirm --needed kstars libindi
 
 InstallAstroPy
+InstallIndi
 InstallFxLoad
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 # InstallIndi
@@ -98,6 +98,7 @@ InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
 InstallIndiDriver "indi-gpsd"
 # InstallKstars
+sudo pacman -Sy --noconfirm --needed kstars
 InstallAstrometryNet
 DownloadIndexFiles
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
