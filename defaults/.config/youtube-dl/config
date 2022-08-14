@@ -5,4 +5,4 @@
 --embed-thumbnail
 
 # Save all videos under Movies directory in your home directory
--o ~/Downloads/yt/%(title)s.%(ext)
+-o ~/Downloads/yt/%(title)s.%(ext)s
