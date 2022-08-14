@@ -146,3 +146,6 @@ sudo vkpurge rm all
 
 echo "Updating Python packages ..."
 UpdatePipPackages
+
+echo "Installing python packages"
+sudo -H pip install --upgrade youtube-dl
