@@ -3,6 +3,7 @@
 
 --audio-quality 1
 --embed-thumbnail
+--audio-format mp3
 
 # Save all videos under Movies directory in your home directory
 -o ~/Downloads/yt/%(title)s.%(ext)s
