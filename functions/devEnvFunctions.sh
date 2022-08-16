@@ -27,6 +27,7 @@ SetupJavaDevEnv() {
     fi
 
     curl -s "https://get.sdkman.io" | bash
+    curl -o ~/.config/nvim/lombok.jar https://projectlombok.org/downloads/lombok.jar
 }
 
 SetupJavaScriptDevEnv() {

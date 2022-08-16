@@ -5,5 +5,6 @@
           "filetypes": ["cs"],
           "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
         }
-    }
+    },
+    "java.jdt.ls.vmargs": "-javaagent:/home/cobra/.config/nvim/lombok.jar"
 }
