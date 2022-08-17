@@ -220,7 +220,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-java',
-  \ 'coc-java-vimspector',
+  \ 'coc-java-debug',
   \ 'coc-rust-analyzer',
   \ 'coc-texlab',
   \ 'coc-spell-checker',
