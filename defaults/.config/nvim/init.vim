@@ -220,7 +220,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier', 
   \ 'coc-json', 
   \ 'coc-java',
-  \ 'coc-java-debug',
+  \ 'coc-java-vimspector',
   \ 'coc-rust-analyzer',
   \ 'coc-texlab',
   \ 'coc-spell-checker',
@@ -232,10 +232,12 @@ let g:coc_global_extensions = [
 
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> <leader>fd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 
 " gi - go to implementation
 nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> <leader>fi <Plug>(coc-implementation)
 
 " fu - find usages
 nmap <silent> <leader>fu <Plug>(coc-references)
