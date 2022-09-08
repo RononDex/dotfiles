@@ -1,5 +1,5 @@
 [section/base]
-dpi = 140
+dpi = 168
 monitor = eDP-1
 
 [deviceconfig]
