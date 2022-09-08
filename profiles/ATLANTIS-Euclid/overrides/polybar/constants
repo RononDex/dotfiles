@@ -3,17 +3,17 @@ dpi = 140
 monitor = eDP-1
 
 [deviceconfig]
-wireless-interface = wlp3s0
+wireless-interface = wlp0s20f3
 
 [bar/top]
 modules-right = wireless-network battery1 battery2 date
 modules-left = pulseaudio backlight mpd
 
-tray-maxsize = 32
-height = 40
+height = 30
+tray-maxsize = 24
 
 [bar/bottom]
 modules-left = i3
 modules-right = cpu memory
 
-height = 80
+height = 40
