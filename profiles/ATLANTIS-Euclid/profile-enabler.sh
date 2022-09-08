@@ -30,7 +30,7 @@ echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
-sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
+sudo pacman -Sy virt-manager qemu onboard chromium --needed --noconfirm
 sudo pacman -Syu dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
@@ -49,6 +49,7 @@ InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 # InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
+InstallAurPackage "slack-desktop" "https://aur.archlinux.org/packages/slack-desktop"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
