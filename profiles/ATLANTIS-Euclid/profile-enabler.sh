@@ -33,7 +33,7 @@ sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify 
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium --needed --noconfirm
-sudo pacman -Syu dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -Syu dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
@@ -52,6 +52,8 @@ InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-stu
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 # InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
+InstallAurPackage "intel-ipu6-dkms-git" "https://aur.archlinux.org/intel-ipu6-dkms-git.git"
+InstallAurPackage "intel-ipu6ep-camera-hal-git" "https://aur.archlinux.org/intel-ipu6ep-camera-hal-git.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
