@@ -53,9 +53,8 @@ InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/bree
 # InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "intel-ivsc-firmware" "https://aur.archlinux.org/intel-ivsc-firmware.git"
-InstallAurPackage "ipu6-camera-bin" "https://aur.archlinux.org/ipu6-camera-bin.git"
 InstallAurPackage "intel-ivsc-driver-dkms-git" "https://aur.archlinux.org/intel-ivsc-driver-dkms-git.git"
-InstallAurPackage "intel-ipu6-dkms-git" "https://aur.archlinux.org/intel-ipu6-dkms-git.git"
+InstallAurPackage "ipu6-camera-bin" "https://aur.archlinux.org/ipu6-camera-bin.git"
 InstallAurPackage "intel-ipu6ep-camera-hal-git" "https://aur.archlinux.org/intel-ipu6ep-camera-hal-git.git"
 
 echo "Installing screenkey"
