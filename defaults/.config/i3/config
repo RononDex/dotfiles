@@ -178,6 +178,7 @@ gaps outer 4
 # Assigne apps to default worskpaces
 assign [class="^firefox$"] "2:web"
 assign [class="^Signal$"] "4:com"
+assign [class="^Slack$"] "6"
 assign [class="^TeamSpeak 3$"] "4:com"
 assign [class="^Steam$"] "8:gaming"
 
