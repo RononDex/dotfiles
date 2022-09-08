@@ -52,6 +52,7 @@ InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-stu
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 # InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
+InstallAurPackage "intel-ivsc-firmware" "https://aur.archlinux.org/intel-ivsc-firmware.git"
 InstallAurPackage "intel-ivsc-driver-dkms-git" "https://aur.archlinux.org/intel-ivsc-driver-dkms-git.git"
 InstallAurPackage "intel-ipu6-dkms-git" "https://aur.archlinux.org/intel-ipu6-dkms-git.git"
 InstallAurPackage "intel-ipu6ep-camera-hal-git" "https://aur.archlinux.org/intel-ipu6ep-camera-hal-git.git"
