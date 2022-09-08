@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# --------------------------------------------
+# Actions / exports when X11 is initialized
+# --------------------------------------------
+#
+# --------------------------------------------
+# Surface book HiDPI and input settings
+# --------------------------------------------
+
+export EDITOR=nvim
+
+export MSBuildSDKsPath="/usr/share/dotnet/sdk/$(dotnet --version)/Sdks"
+
+wal -i "$(<"${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
+setxkbmap ch -variant de # Set keyboard mapping to ch-de
+
+# Download new background photo
+sh ~/.scripts/updateLoginBackground.sh &
+
+# Remap capslock to escape
+setxkbmap -option caps:escape 
+
+# Setup the gpg agent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent
+echo UPDATESTARTUPTTY | gpg-connect-agent
