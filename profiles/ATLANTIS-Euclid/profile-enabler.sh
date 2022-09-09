@@ -46,6 +46,7 @@ InstallGrubTheme
 
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
+InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
