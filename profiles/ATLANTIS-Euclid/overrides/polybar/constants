@@ -8,12 +8,23 @@ wireless-interface = wlp0s20f3
 [bar/top]
 modules-right = wireless-network battery0 battery2 date
 modules-left = pulseaudio backlight mpd
-
-height = 30
+height = 0
 tray-maxsize = 24
+
+[bar/topdp]
+modules-right = wireless-network battery0 battery2 date
+modules-left = pulseaudio backlight mpd
+height = 0
+tray-maxsize = 24
+monitor = DP-3-1-8
 
 [bar/bottom]
 modules-left = i3
 modules-right = cpu memory
+
+[bar/bottomdp]
+modules-left = i3
+modules-right = cpu memory
+monitor = DP-3-1-8
 
 height = 40

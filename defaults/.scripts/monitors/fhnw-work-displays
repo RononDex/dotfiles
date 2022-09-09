@@ -1,0 +1,10 @@
+#!/bin/bash
+
+mons -S 7,5:R
+
+i3-msg restart
+
+bash ~/.config/polybar/launch.sh
+
+polybar topdp &
+polybar bottomdp &

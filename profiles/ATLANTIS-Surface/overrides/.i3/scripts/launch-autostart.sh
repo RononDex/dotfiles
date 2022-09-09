@@ -7,5 +7,7 @@ xfce4-terminal --initial-title=ranger --title=ranger -e ranger &
 xfce4-terminal --initial-title=cava --title=cava -e cava &
 protonmail-bridge --cli &
 
+mons -a &!
+
 nextcloud &
 redshift &
