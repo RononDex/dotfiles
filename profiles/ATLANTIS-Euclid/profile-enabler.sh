@@ -57,6 +57,7 @@ InstallAurPackage "intel-ivsc-driver-dkms-git" "https://aur.archlinux.org/intel-
 InstallAurPackage "intel-ipu6-dkms-git" "https://aur.archlinux.org/intel-ipu6-dkms-git.git"
 InstallAurPackage "ipu6-camera-bin" "https://aur.archlinux.org/ipu6-camera-bin.git"
 InstallAurPackage "intel-ipu6ep-camera-hal-git" "https://aur.archlinux.org/intel-ipu6ep-camera-hal-git.git"
+InstallAurPackage "icamerasrc-git" "https://aur.archlinux.org/icamerasrc-git.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
