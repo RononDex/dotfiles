@@ -4,8 +4,10 @@ mons -S 7,5:R
 
 i3-msg restart
 
-sleep 1.0s
+sleep 0.5s
 
 # Move these two workspaces to the second screen by default
 i3-msg "workspace 2, move workspace to output DP-3-8"
 i3-msg "workspace 6, move workspace to output DP-3-8"
+
+i3-msg restart
