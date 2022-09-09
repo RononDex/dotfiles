@@ -199,7 +199,6 @@ bindsym $mod+shift+p exec --no-startup-id ~/.scripts/cycleExternalMonitorMode
 bindsym $mod+n exec "sh ~/.scripts/launchScripts/launchRanger.sh"
 
 # Screenshot controls
-bindsym $mod+p exec flameshot full -c
 bindsym $mod+shift+s exec flameshot gui
 
 # Backlight controls
@@ -211,6 +210,9 @@ bindsym $mod+F2 exec xfce4-terminal --command="todo"
 
 # Navigation
 bindsym $mod+F1 exec findInHomeFloating
+
+# Change display mode for 2 screens
+bindsym $mod+p exec mons -s
 
 # mounting / unmounting of devices
 bindsym $mod+m exec dmenumount
