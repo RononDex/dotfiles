@@ -4,7 +4,7 @@ Plug 'preservim/nerdtree'
 Plug 'phaazon/hop.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'NovaDev94/lightline-onedark'
-Plug 'gpanders/editorconfig.nvim'
+Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'josa42/vim-lightline-coc'
 Plug 'OmniSharp/omnisharp-vim'
