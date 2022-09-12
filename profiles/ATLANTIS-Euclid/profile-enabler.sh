@@ -74,7 +74,7 @@ sudo systemctl enable libvirtd
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"
-SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
+SetupAutofsForSmbShare "FHNW" "data" "" "://fs.edu.ds.fhnw.ch/data"
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
