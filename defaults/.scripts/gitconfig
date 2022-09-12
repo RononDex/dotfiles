@@ -4,6 +4,9 @@
 [pull]
     rebase = true
 
+[push]
+    autoSetupRemote = true
+
 [color]
     ui = true
 
