@@ -19,3 +19,5 @@ alias w=weather
 alias jp="jupyter notebook"
 
 alias gpg=gpg2
+
+alias mount_cvmfs="sudo mount -t cvmfs euclid.in2p3.fr /cvmfs/euclid.in2p3.fr && sudo mount -t cvmfs euclid-dev.in2p3.fr /cvmfs/euclid-dev.in2p3.fr"
