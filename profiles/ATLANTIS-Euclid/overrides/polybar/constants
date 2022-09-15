@@ -14,14 +14,14 @@ tray-maxsize = 24
 [bar/topdp]
 inherit = bar/top
 monitor = DP-3-1-8
-dpi = 100
+dpi = 130
 
 [bar/bottom]
 modules-left = i3
 modules-right = cpu memory
-height = 50
+height = 40
 
 [bar/bottomdp]
 inherit = bar/bottom
 monitor = DP-3-1-8
-dpi = 100
+dpi = 130
