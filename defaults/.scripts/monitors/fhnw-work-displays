@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mons -S 7,5:R
+mons -S 7,5:R --dpi 92
 
 i3-msg restart
 
