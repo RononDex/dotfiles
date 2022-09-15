@@ -228,6 +228,10 @@ let g:coc_global_extensions = [
   \ 'coc-xml'
   \ ]
 
+# allows to use tab or enter to select an entry in the auto complete window
+inoremap <expr> <TAB> pumvisible() ? "<C-y>" : "<TAB>"
+inoremap <expr> <enter> pumvisible() ? "<C-y>" : "<enter>"
+
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <leader>fd <Plug>(coc-definition)
