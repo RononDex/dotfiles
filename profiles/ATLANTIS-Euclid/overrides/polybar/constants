@@ -19,9 +19,10 @@ dpi = 130
 [bar/bottom]
 modules-left = i3
 modules-right = cpu memory
-height = 40
+height = 50
 
 [bar/bottomdp]
 inherit = bar/bottom
 monitor = DP-3-1-8
 dpi = 130
+height = 40
