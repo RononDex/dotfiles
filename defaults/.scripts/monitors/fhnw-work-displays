@@ -4,6 +4,9 @@ mons -S 7,5:R --dpi 92
 
 i3-msg restart
 
+xrandr --output DP-3-1-8 --scale 0.75x0.75
+xrandr --output DP-3-8 --scale 0.75x0.75
+
 sleep 1.0s
 
 # Move these two workspaces to the second screen by default
