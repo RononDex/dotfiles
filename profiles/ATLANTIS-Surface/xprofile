@@ -11,7 +11,7 @@
 export EDITOR=nvim
 
 # Scaling / DPI options
-export GDK_SCALE=2 # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
+#export GDK_SCALE=2 # Set GDK_SCALE to 2 to enable HiDPI support in GDK applications
 export QT_AUTO_SCREEN_SCALE_FACTOR=0
 export QT_FONT_DPI=130
 export QT_SCALE_FACTOR="1.8"
