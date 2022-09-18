@@ -18,7 +18,7 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
-cp $scriptDir/overrides/.Xresourcs ~/.Xresources
+cp $scriptDir/overrides/.Xresources ~/.Xresources
 
 sudo pacman -Syy
 sudo pacman -Syu --noconfirm
