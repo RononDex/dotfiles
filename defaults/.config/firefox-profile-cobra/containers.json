@@ -1,1 +1,170 @@
-{"version":4,"lastUserContextId":2893,"identities":[{"userContextId":1,"public":true,"icon":"fingerprint","color":"blue","l10nID":"userContextPersonal.label","accessKey":"userContextPersonal.accesskey","telemetryId":1},{"userContextId":2,"public":true,"icon":"briefcase","color":"orange","l10nID":"userContextWork.label","accessKey":"userContextWork.accesskey","telemetryId":2},{"userContextId":3,"public":true,"icon":"dollar","color":"green","l10nID":"userContextBanking.label","accessKey":"userContextBanking.accesskey","telemetryId":3},{"userContextId":4,"public":true,"icon":"cart","color":"pink","l10nID":"userContextShopping.label","accessKey":"userContextShopping.accesskey","telemetryId":4},{"userContextId":5,"public":false,"icon":"","color":"","name":"userContextIdInternal.thumbnail","accessKey":""},{"userContextId":4294967295,"public":false,"icon":"","color":"","name":"userContextIdInternal.webextStorageLocal","accessKey":""},{"userContextId":21,"public":true,"icon":"circle","color":"purple","name":"GitHub"},{"userContextId":25,"public":true,"icon":"circle","color":"red","name":"Youtube"},{"userContextId":35,"public":true,"icon":"fingerprint","color":"green","name":"Nextcloud"},{"userContextId":42,"public":true,"icon":"fingerprint","color":"yellow","name":"ProtonMail"},{"userContextId":50,"public":true,"icon":"circle","color":"red","name":"FHNW"},{"userContextId":56,"public":true,"icon":"circle","color":"toolbar","name":"tmp46"},{"userContextId":70,"public":true,"icon":"circle","color":"toolbar","name":"tmp60"},{"userContextId":71,"public":true,"icon":"circle","color":"toolbar","name":"tmp61"},{"userContextId":100,"public":true,"icon":"fingerprint","color":"blue","name":"Discord"},{"userContextId":168,"public":true,"icon":"fence","color":"purple","name":"Twitch"},{"userContextId":478,"public":true,"icon":"food","color":"blue","name":"Eat"},{"userContextId":525,"public":true,"icon":"fingerprint","color":"purple","name":"Nuget"},{"userContextId":583,"public":true,"icon":"dollar","color":"yellow","name":"Orell Füssli"},{"userContextId":1022,"public":true,"icon":"circle","color":"green","name":"Wyss"},{"userContextId":1202,"public":true,"icon":"fingerprint","color":"blue","name":"Mastodon "},{"userContextId":1345,"public":true,"icon":"circle","color":"toolbar","name":"tmp1328"},{"userContextId":1350,"public":true,"icon":"circle","color":"toolbar","name":"tmp1333"},{"userContextId":1352,"public":true,"icon":"circle","color":"toolbar","name":"tmp1335"},{"userContextId":1353,"public":true,"icon":"circle","color":"toolbar","name":"tmp1336"},{"userContextId":1355,"public":true,"icon":"circle","color":"toolbar","name":"tmp1338"},{"userContextId":1357,"public":true,"icon":"circle","color":"toolbar","name":"tmp1340"},{"userContextId":1358,"public":true,"icon":"circle","color":"toolbar","name":"tmp1341"},{"userContextId":1359,"public":true,"icon":"circle","color":"toolbar","name":"tmp1342"},{"userContextId":1360,"public":true,"icon":"circle","color":"toolbar","name":"tmp1343"},{"userContextId":1361,"public":true,"icon":"dollar","color":"green","name":"3D printerstore"},{"userContextId":1384,"public":true,"icon":"fingerprint","color":"orange","name":"AstroBin"},{"userContextId":1620,"public":true,"icon":"circle","color":"toolbar","name":"tmp3331"},{"userContextId":1623,"public":true,"icon":"circle","color":"toolbar","name":"tmp3334"},{"userContextId":1624,"public":true,"icon":"circle","color":"toolbar","name":"tmp3335"},{"userContextId":1697,"public":true,"icon":"circle","color":"toolbar","name":"tmp3408"},{"userContextId":1744,"public":true,"icon":"circle","color":"toolbar","name":"tmp3455"},{"userContextId":1754,"public":true,"icon":"circle","color":"toolbar","name":"tmp3465"},{"userContextId":1755,"public":true,"icon":"circle","color":"toolbar","name":"tmp3466"},{"userContextId":1759,"public":true,"icon":"circle","color":"toolbar","name":"tmp3470"},{"userContextId":1762,"public":true,"icon":"circle","color":"toolbar","name":"tmp3473"},{"userContextId":1763,"public":true,"icon":"circle","color":"toolbar","name":"tmp3474"},{"userContextId":1765,"public":true,"icon":"circle","color":"toolbar","name":"tmp3476"},{"userContextId":1766,"public":true,"icon":"circle","color":"toolbar","name":"tmp3477"},{"userContextId":1767,"public":true,"icon":"circle","color":"toolbar","name":"tmp3478"},{"userContextId":1768,"public":true,"icon":"circle","color":"toolbar","name":"tmp3479"},{"userContextId":1769,"public":true,"icon":"circle","color":"toolbar","name":"tmp3480"},{"userContextId":1770,"public":true,"icon":"fruit","color":"orange","name":"Prusa"},{"userContextId":1833,"public":true,"icon":"circle","color":"toolbar","name":"tmp4269"},{"userContextId":1926,"public":true,"icon":"circle","color":"toolbar","name":"tmp4362"},{"userContextId":2060,"public":true,"icon":"circle","color":"toolbar","name":"tmp4496"},{"userContextId":2109,"public":true,"icon":"circle","color":"toolbar","name":"tmp4545"},{"userContextId":2115,"public":true,"icon":"circle","color":"toolbar","name":"tmp4551"},{"userContextId":2131,"public":true,"icon":"circle","color":"toolbar","name":"tmp4567"},{"userContextId":2138,"public":true,"icon":"circle","color":"toolbar","name":"tmp4574"},{"userContextId":2139,"public":true,"icon":"circle","color":"toolbar","name":"tmp4575"},{"userContextId":2144,"public":true,"icon":"circle","color":"toolbar","name":"tmp4580"},{"userContextId":2145,"public":true,"icon":"circle","color":"toolbar","name":"tmp4581"},{"userContextId":2146,"public":true,"icon":"circle","color":"toolbar","name":"tmp4582"},{"userContextId":2147,"public":true,"icon":"circle","color":"toolbar","name":"tmp4583"},{"userContextId":2149,"public":true,"icon":"circle","color":"toolbar","name":"tmp4585"},{"userContextId":2150,"public":true,"icon":"dollar","color":"green","name":"Galaxus"},{"userContextId":2153,"public":true,"icon":"circle","color":"blue","name":"Conrad"},{"userContextId":2186,"public":true,"icon":"circle","color":"toolbar","name":"tmp5182"},{"userContextId":2315,"public":true,"icon":"circle","color":"toolbar","name":"tmp5311"},{"userContextId":2318,"public":true,"icon":"circle","color":"toolbar","name":"tmp5314"},{"userContextId":2393,"public":true,"icon":"circle","color":"toolbar","name":"tmp5389"},{"userContextId":2407,"public":true,"icon":"circle","color":"toolbar","name":"tmp5403"},{"userContextId":2457,"public":true,"icon":"circle","color":"toolbar","name":"tmp5453"},{"userContextId":2582,"public":true,"icon":"circle","color":"toolbar","name":"tmp5578"},{"userContextId":2682,"public":true,"icon":"circle","color":"toolbar","name":"tmp5678"},{"userContextId":2683,"public":true,"icon":"circle","color":"toolbar","name":"tmp5679"},{"userContextId":2721,"public":true,"icon":"circle","color":"toolbar","name":"tmp5717"},{"userContextId":2738,"public":true,"icon":"circle","color":"toolbar","name":"tmp5734"},{"userContextId":2747,"public":true,"icon":"circle","color":"toolbar","name":"tmp5743"},{"userContextId":2748,"public":true,"icon":"circle","color":"toolbar","name":"tmp5744"},{"userContextId":2782,"public":true,"icon":"circle","color":"toolbar","name":"tmp5778"},{"userContextId":2789,"public":true,"icon":"circle","color":"toolbar","name":"tmp5785"},{"userContextId":2790,"public":true,"icon":"circle","color":"toolbar","name":"tmp5786"},{"userContextId":2794,"public":true,"icon":"circle","color":"toolbar","name":"tmp5790"},{"userContextId":2816,"public":true,"icon":"circle","color":"toolbar","name":"tmp5812"},{"userContextId":2820,"public":true,"icon":"circle","color":"toolbar","name":"tmp5816"},{"userContextId":2821,"public":true,"icon":"circle","color":"toolbar","name":"tmp5817"},{"userContextId":2850,"public":true,"icon":"circle","color":"toolbar","name":"tmp5846"},{"userContextId":2851,"public":true,"icon":"circle","color":"toolbar","name":"tmp5847"},{"userContextId":2869,"public":true,"icon":"circle","color":"toolbar","name":"tmp5865"},{"userContextId":2872,"public":true,"icon":"circle","color":"toolbar","name":"tmp5868"},{"userContextId":2877,"public":true,"icon":"circle","color":"toolbar","name":"tmp5873"},{"userContextId":2878,"public":true,"icon":"circle","color":"toolbar","name":"tmp5874"},{"userContextId":2879,"public":true,"icon":"circle","color":"toolbar","name":"tmp5875"},{"userContextId":2880,"public":true,"icon":"circle","color":"toolbar","name":"tmp5876"},{"userContextId":2881,"public":true,"icon":"circle","color":"toolbar","name":"tmp5877"},{"userContextId":2882,"public":true,"icon":"circle","color":"toolbar","name":"tmp5878"},{"userContextId":2883,"public":true,"icon":"circle","color":"toolbar","name":"tmp5879"},{"userContextId":2884,"public":true,"icon":"fingerprint","color":"blue","name":"Coinbase"},{"userContextId":2885,"public":true,"icon":"fence","color":"purple","name":"M$"},{"userContextId":2886,"public":true,"icon":"circle","color":"toolbar","name":"tmp34"},{"userContextId":2887,"public":true,"icon":"circle","color":"toolbar","name":"tmp705"},{"userContextId":2888,"public":true,"icon":"circle","color":"toolbar","name":"tmp706"},{"userContextId":2889,"public":true,"icon":"circle","color":"toolbar","name":"tmp707"},{"userContextId":2890,"public":true,"icon":"circle","color":"toolbar","name":"tmp708"},{"userContextId":2891,"public":true,"icon":"circle","color":"toolbar","name":"tmp709"},{"userContextId":2892,"public":true,"icon":"chill","color":"green","name":"Spotify"},{"userContextId":2893,"public":true,"icon":"circle","color":"toolbar","name":"tmp710"}]}
+{
+  "version": 4,
+  "lastUserContextId": 2896,
+  "identities": [
+    {
+      "userContextId": 1,
+      "public": true,
+      "icon": "fingerprint",
+      "color": "blue",
+      "l10nID": "userContextPersonal.label",
+      "accessKey": "userContextPersonal.accesskey",
+      "telemetryId": 1
+    },
+    {
+      "userContextId": 2,
+      "public": true,
+      "icon": "briefcase",
+      "color": "orange",
+      "l10nID": "userContextWork.label",
+      "accessKey": "userContextWork.accesskey",
+      "telemetryId": 2
+    },
+    {
+      "userContextId": 3,
+      "public": true,
+      "icon": "dollar",
+      "color": "green",
+      "l10nID": "userContextBanking.label",
+      "accessKey": "userContextBanking.accesskey",
+      "telemetryId": 3
+    },
+    {
+      "userContextId": 4,
+      "public": true,
+      "icon": "cart",
+      "color": "pink",
+      "l10nID": "userContextShopping.label",
+      "accessKey": "userContextShopping.accesskey",
+      "telemetryId": 4
+    },
+    {
+      "userContextId": 5,
+      "public": false,
+      "icon": "",
+      "color": "",
+      "name": "userContextIdInternal.thumbnail",
+      "accessKey": ""
+    },
+    {
+      "userContextId": 4294967295,
+      "public": false,
+      "icon": "",
+      "color": "",
+      "name": "userContextIdInternal.webextStorageLocal",
+      "accessKey": ""
+    },
+    {
+      "userContextId": 21,
+      "public": true,
+      "icon": "circle",
+      "color": "purple",
+      "name": "GitHub"
+    },
+    {
+      "userContextId": 25,
+      "public": true,
+      "icon": "circle",
+      "color": "red",
+      "name": "Youtube"
+    },
+    {
+      "userContextId": 35,
+      "public": true,
+      "icon": "fingerprint",
+      "color": "green",
+      "name": "Nextcloud"
+    },
+    {
+      "userContextId": 42,
+      "public": true,
+      "icon": "fingerprint",
+      "color": "yellow",
+      "name": "ProtonMail"
+    },
+    {
+      "userContextId": 50,
+      "public": true,
+      "icon": "circle",
+      "color": "red",
+      "name": "FHNW"
+    },
+    {
+      "userContextId": 100,
+      "public": true,
+      "icon": "fingerprint",
+      "color": "blue",
+      "name": "Discord"
+    },
+    {
+      "userContextId": 168,
+      "public": true,
+      "icon": "fence",
+      "color": "purple",
+      "name": "Twitch"
+    },
+    {
+      "userContextId": 478,
+      "public": true,
+      "icon": "food",
+      "color": "blue",
+      "name": "Eat"
+    },
+    {
+      "userContextId": 525,
+      "public": true,
+      "icon": "fingerprint",
+      "color": "purple",
+      "name": "Nuget"
+    },
+    {
+      "userContextId": 583,
+      "public": true,
+      "icon": "dollar",
+      "color": "yellow",
+      "name": "Orell Füssli"
+    },
+    {
+      "userContextId": 1022,
+      "public": true,
+      "icon": "circle",
+      "color": "green",
+      "name": "Wyss"
+    },
+    {
+      "userContextId": 1202,
+      "public": true,
+      "icon": "fingerprint",
+      "color": "blue",
+      "name": "Mastodon "
+    },
+    {
+      "userContextId": 2150,
+      "public": true,
+      "icon": "dollar",
+      "color": "green",
+      "name": "Galaxus"
+    },
+    {
+      "userContextId": 2153,
+      "public": true,
+      "icon": "circle",
+      "color": "blue",
+      "name": "Conrad"
+    },
+    {
+      "userContextId": 2892,
+      "public": true,
+      "icon": "chill",
+      "color": "green",
+      "name": "Spotify"
+    },
+    {
+      "userContextId": 2896,
+      "public": true,
+      "icon": "fence",
+      "color": "orange",
+      "name": "Coursera "
+    }
+  ]
+}
