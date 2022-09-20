@@ -14,7 +14,6 @@ tray-maxsize = 24
 [bar/topdp]
 inherit = bar/top
 monitor = DP-3-1-8
-dpi = 130
 
 [bar/bottom]
 modules-left = i3
@@ -24,5 +23,4 @@ height = 50
 [bar/bottomdp]
 inherit = bar/bottom
 monitor = DP-3-1-8
-dpi = 130
 height = 40
