@@ -81,7 +81,7 @@ InstallPHD2() {
     cd compiled
     cmake ..
     make
-    sudo ln -sf /home/cobra/packages/phd2/compiled/phd2.bin /usr/bin/phd2
+    sudo make install
 }
 
 DownloadIndexFiles() {
