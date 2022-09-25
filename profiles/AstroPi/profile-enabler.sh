@@ -97,6 +97,7 @@ InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
 InstallIndiDriver "indi-gpsd"
+InstallIndiDriver "libsv305" # Somehow needed by phd2
 InstallIndiDriver "indi-sv305" # Somehow needed by phd2
 # InstallKstars
 sudo pacman -Sy --noconfirm --needed kstars
