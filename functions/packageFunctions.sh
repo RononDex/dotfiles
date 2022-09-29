@@ -66,3 +66,9 @@ InstallGrubTheme() {
     cd ~/packages/grub2-themes
     sudo ./install.sh -t slaze $1
 }
+
+InstallWebGreeter() {
+    CloneOrUpdateGitRepoToPackages "web-greeter" "https://github.com/JezerM/web-greeter.git" "--recursive"
+    cd ~/packages/web-greeter
+    sudo make install
+}

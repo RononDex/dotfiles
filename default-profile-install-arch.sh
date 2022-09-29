@@ -138,6 +138,10 @@ InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-co
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 
+echo "Setting up LightDM"
+InstallWebGreeter
+sudo cp /
+
 # Needed key for autofs
 gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
 InstallAurPackage "autofs" "https://aur.archlinux.org/autofs.git"

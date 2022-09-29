@@ -10,7 +10,7 @@ CloneOrUpdateGitRepoToPackages() {
     if [ ! -d ~/packages/$1 ]
     then
         cd ~/packages
-        git clone $2 $1
+        git clone $3 $2 $1
     else
         cd ~/packages/$1
         git stash
