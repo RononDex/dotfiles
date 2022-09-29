@@ -6,7 +6,7 @@ scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
 sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp $scriptDir/overrides/lightdm-webkit2-greeter.conf /etc/lightdm/lightdm-webkit2-greeter.conf
+sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf

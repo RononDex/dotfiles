@@ -67,6 +67,19 @@ InstallGrubTheme() {
 }
 
 InstallWebGreeter() {
+    # Install prerequisites
+    # Arch
+    if  command -v pacman &> /dev/null
+    then
+        sudo pacman -Sy python-gobject python-pyqt5 python-pyqt5-webengine python-ruamel-yaml python-pyinotify qt5-webengine gobject-introspection libxcb libx11 --needed --noconfirm
+    fi
+
+    # Void
+    if  command -v xbps-install &> /dev/null
+    then
+        sudo xbps-install -Sy python3-gobject python3-PyQt5 python3-PyQt5-webengine python3-ruamel.yaml python3-inotify qt5-webengine gobject-introspection libxcb libX11 --needed --noconfirm
+    fi
+
     CloneOrUpdateGitRepoToPackages "web-greeter" "https://github.com/JezerM/web-greeter.git" "--recursive"
     cd ~/packages/web-greeter
     sudo make install

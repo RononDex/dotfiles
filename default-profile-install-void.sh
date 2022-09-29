@@ -130,6 +130,10 @@ echo "Enabling services ..."
 EnableService dcron
 StartService dcron
 
+echo "Setting up LightDM"
+InstallWebGreeter
+InstallLitarvanLightDmTheme
+
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig
 
