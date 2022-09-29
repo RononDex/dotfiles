@@ -194,10 +194,10 @@ nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --excl
 let $FZF_DEFAULT_COMMAND = 'find .'
 
 " Git stuff
-nmap <leader>gb :Gblame<CR>
+nmap <leader>gb :Git blame<CR>
 nmap <leader>gs :G<CR>
-nmap <leader>gu :Gpull<CR>
-nmap <leader>gp :GPush<CR>
+nmap <leader>gu :Git pull<CR>
+nmap <leader>gp :Git push<CR>
 nmap <leader>gc :Gvdiff<CR>
 nmap <leader>gh :diffget //2 <bar> diffup<CR>
 nmap <leader>gl :diffget //3 <bar> diffup<CR>
