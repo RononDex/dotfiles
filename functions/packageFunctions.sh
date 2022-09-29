@@ -43,6 +43,7 @@ InstallLitarvanLightDmTheme() {
     CloneOrUpdateGitRepoToPackages "lightdm-webkit-theme-litarvan" "https://github.com/Litarvan/lightdm-webkit-theme-litarvan"
     cd ~/packages/lightdm-webkit-theme-litarvan
     bash ./build.sh
+    sudo rm -rf /usr/share/web-greeter/themes/litarvan
     sudo cp -r dist /usr/share/web-greeter/themes/litarvan
 }
 
