@@ -44,7 +44,7 @@ InstallLitarvanLightDmTheme() {
     cd ~/packages/lightdm-webkit-theme-litarvan
     bash ./build.sh
     sudo rm -rf /usr/share/web-greeter/themes/litarvan
-    sudo cp -r dist /usr/share/web-greeter/themes/litarvan
+    sudo tar -xvzf lightdm-webkit-theme-litarvan-3.2.0.tar.gz --directory /usr/share/web-greeter/themes/litarvan
 }
 
 InstallRustDev() {
