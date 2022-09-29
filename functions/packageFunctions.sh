@@ -43,9 +43,9 @@ InstallLitarvanLightDmTheme() {
     mkdir litarvan
     cd litarvan
     wget https://github.com/Litarvan/lightdm-webkit-theme-litarvan/files/6858021/lightdm-webkit-theme-litarvan-3.2.0.tar.gz
-    sudo rm -rf /usr/share/lightdm-webkit/themes/litarvan
-    sudo mkdir -p /usr/share/lightdm-webkit/themes/litarvan
-    sudo tar -xvzf lightdm-webkit-theme-litarvan-3.2.0.tar.gz --directory /usr/share/lightdm-webkit/themes/litarvan
+    sudo rm -rf /usr/share/web-greeter/themes/litarvan
+    sudo mkdir -p /usr/share//web-greeter/themes/litarvan
+    sudo tar -xvzf lightdm-webkit-theme-litarvan-3.2.0.tar.gz --directory /usr/share/web-greeter/themes/litarvan
     sudo rm ~/packages/litarvan/*
 }
 

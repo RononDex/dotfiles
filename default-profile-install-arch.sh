@@ -140,7 +140,7 @@ InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 
 echo "Setting up LightDM"
 InstallWebGreeter
-sudo cp /
+InstallLitarvanLightDmTheme
 
 # Needed key for autofs
 gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
