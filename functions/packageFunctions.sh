@@ -71,13 +71,15 @@ InstallWebGreeter() {
     # Arch
     if  command -v pacman &> /dev/null
     then
-        sudo pacman -Sy python-gobject python-pyqt5 python-pyqt5-webengine python-ruamel-yaml python-pyinotify qt5-webengine gobject-introspection libxcb libx11 --needed --noconfirm
+        sudo pacman -Sy rsync npm python-gobject python-pyqt5 python-pyqt5-webengine python-ruamel-yaml python-pyinotify qt5-webengine gobject-introspection libxcb libx11 --needed --noconfirm
+        npm i -g typescript
     fi
 
     # Void
     if  command -v xbps-install &> /dev/null
     then
-        sudo xbps-install -Sy python3-gobject python3-PyQt5 python3-PyQt5-webengine python3-ruamel.yaml python3-inotify qt5-webengine gobject-introspection libxcb libX11 --needed --noconfirm
+        sudo xbps-install -Sy rsync python3-gobject python3-PyQt5 python3-PyQt5-webengine python3-ruamel.yaml python3-inotify qt5-webengine gobject-introspection libxcb libX11 --needed --noconfirm
+        npm i -g typescript
     fi
 
     CloneOrUpdateGitRepoToPackages "web-greeter" "https://github.com/JezerM/web-greeter.git" "--recursive"
