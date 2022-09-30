@@ -54,7 +54,7 @@ SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
-InstallGrubTheme -s 4k
+InstallGrubTheme "-s 4k"
 
 echo "Turning on dGPU"
 echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call
