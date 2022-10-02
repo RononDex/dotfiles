@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "lastUserContextId": 2921,
+  "lastUserContextId": 3001,
   "identities": [
     {
       "userContextId": 1,
@@ -174,32 +174,18 @@
       "name": "Conrad"
     },
     {
-      "userContextId": 2884,
-      "public": true,
-      "icon": "fingerprint",
-      "color": "blue",
-      "name": "Coinbase"
-    },
-    {
-      "userContextId": 2885,
+      "userContextId": 2896,
       "public": true,
       "icon": "fence",
-      "color": "purple",
-      "name": "M$"
+      "color": "orange",
+      "name": "Coursera "
     },
     {
-      "userContextId": 2892,
+      "userContextId": 3001,
       "public": true,
-      "icon": "chill",
+      "icon": "dollar",
       "color": "green",
-      "name": "Spotify"
-    },
-    {
-      "userContextId": 2919,
-      "public": true,
-      "icon": "briefcase",
-      "color": "green",
-      "name": "Euclid"
+      "name": "Green"
     }
   ]
 }
