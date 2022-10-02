@@ -78,7 +78,7 @@ InstallWebGreeter() {
     # Void
     if  command -v xbps-install &> /dev/null
     then
-        sudo xbps-install -Sy rsync python3-gobject python3-PyQt5 python3-PyQt5-webengine python3-ruamel.yaml python3-inotify qt5-webengine gobject-introspection libxcb libX11 --needed --noconfirm
+        sudo xbps-install -Sy rsync python3-gobject python3-PyQt5 python3-PyQt5-webengine python3-ruamel.yaml python3-inotify qt5-webengine gobject-introspection libxcb libX11
         sudo npm i -g typescript
     fi
 
