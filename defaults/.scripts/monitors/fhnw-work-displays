@@ -1,8 +1,8 @@
 #!/bin/bash
 
 
-xrandr --output DP-3-1-8 --scale 1.25x1.25
-xrandr --output DP-3-8 --scale 1.25x1.25
+xrandr --output DP-3-1-8 --scale 1.35x1.35
+xrandr --output DP-3-8 --scale 1.35x1.35
 
 mons -S 7,5:R --dpi 92
 
