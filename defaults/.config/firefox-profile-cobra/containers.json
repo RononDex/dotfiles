@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "lastUserContextId": 3001,
+  "lastUserContextId": 3010,
   "identities": [
     {
       "userContextId": 1,
@@ -186,6 +186,20 @@
       "icon": "dollar",
       "color": "green",
       "name": "Green"
+    },
+    {
+      "userContextId": 3002,
+      "public": true,
+      "icon": "chill",
+      "color": "green",
+      "name": "Spotify"
+    },
+    {
+      "userContextId": 3010,
+      "public": true,
+      "icon": "fence",
+      "color": "blue",
+      "name": "FHNW Euclid"
     }
   ]
 }
