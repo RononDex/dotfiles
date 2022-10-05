@@ -77,9 +77,9 @@ SetupWireguardServer() {
 }
 
 SetupWireguardClient() {
-    if [ ! -f /etc/wireguard/client.key]; then
+    if [ ! -f /etc/wireguard/client.key ]; then
         sudo wg genkey | sudo tee /etc/wireguard/client.key
-        sudo wg pubkey < /etc/wireguard/client.key | sudo tee /etc/wireguard/client.pub
+        sudo -- sh -c "wg pubkey < /etc/wireguard/client.key | tee /etc/wireguard/client.pub"
         sudo wg genpsk | sudo tee /etc/wireguard/client.psk
         sudo chmod 700 /etc/wireguard -R
     fi
