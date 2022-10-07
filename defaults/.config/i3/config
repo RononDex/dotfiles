@@ -212,7 +212,7 @@ bindsym $mod+F2 exec xfce4-terminal --command="todo"
 bindsym $mod+F1 exec findInHomeFloating
 
 # Change display mode for 2 screens
-bindsym $mod+p exec mons -s
+bindsym $mod+p exec mons -n right
 
 # mounting / unmounting of devices
 bindsym $mod+m exec dmenumount
