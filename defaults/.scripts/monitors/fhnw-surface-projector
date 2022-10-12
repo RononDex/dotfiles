@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mons -d
+
+xrandr --output DP-2 --scale 2.0x2.0
+
+mons -d
