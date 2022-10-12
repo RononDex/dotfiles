@@ -1,10 +1,9 @@
 #!/bin/bash
-
+#
+mons -S 7,5:R --dpi 92
 
 xrandr --output DP-3-1-8 --scale 1.35x1.35
 xrandr --output DP-3-8 --scale 1.35x1.35
-
-mons -S 7,5:R --dpi 92
 
 i3-msg restart
 
