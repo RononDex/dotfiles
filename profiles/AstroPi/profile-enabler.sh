@@ -104,7 +104,8 @@ sudo pacman -Sy --noconfirm --needed kstars
 InstallAstrometryNet
 DownloadIndexFiles
 CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
-InstallPHD2
+InstallAurPackage "phd2" "https://aur.archlinux.org/phd2.git"
+
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
