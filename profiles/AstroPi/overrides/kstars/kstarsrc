@@ -2,15 +2,15 @@
 AlignExposure=3
 AstrometryConfFile=*Internal astrometry.cfg*
 AstrometryDetectParity=true
-AstrometryImageScaleHigh=52.224382932204
-AstrometryImageScaleLow=39.5047845118605
-AstrometryPositionDE=54.2425
-AstrometryPositionRA=211
+AstrometryImageScaleHigh=52.223441154936005
+AstrometryImageScaleLow=39.504072110757
+AstrometryPositionDE=30.255555555555556
+AstrometryPositionRA=23.77916666666667
 AstrometrySolverBinary=/usr/local/astrometry/bin/solve-field
 AstrometrySolverType=1
 AstrometryWCSInfo=/usr/local/astrometry/bin/wcsinfo
 DefaultAlignFilterWheel=Atik EFW2
-PAHMountSpeedIndex=2
+PAHMountSpeedIndex=1
 PAHRefreshUpdateError=true
 SolverBinningIndex=1
 
@@ -125,25 +125,26 @@ RegularLogging=false
 VerboseLogging=true
 
 [Guide]
-DECProportionalGain=0.75
-DitherEnabled=true
-DitherFrames=2
-DitherPixels=8
-DitherSettle=15
+AutoModeIterations=7
+CalibrationMaxMove=30
+CalibrationPulseDuration=500
+DECProportionalGain=1
+DECorrDisplayedOnGuideGraph=true
+GuideAlgorithm=1
 GuideAutoStarEnabled=true
-GuideExposure=1.5
-GuideMaxDeltaRMS=3
-GuideSubframeEnabled=true
-GuiderType=1
-RAProportionalGain=0.75
+GuideExposure=4
+GuideSquareSizeIndex=4
+GuiderAccuracyThreshold=1
+RACorrDisplayedOnGuideGraph=true
+RAProportionalGain=1
 
 [Location]
 CityName=GPS Location
 CountryName=
 DST=EU
 Elevation=439
-Latitude=47.197618333
-Longitude=7.591848333
+Latitude=47.197655
+Longitude=7.591785
 TimeZone=1
 
 [MainWindow]
@@ -164,14 +165,19 @@ VNC-0 YPosition 2560x1440=0
 Width 1500=740
 Width 1920=1024
 Width 2560=740
+rdp0=rdp0
 rdp0 Height 1500x1000=934
+rdp0 Height 1500x1000 rdp0=952
 rdp0 Height 2560x1440=952
 rdp0 Width 1500x1000=740
+rdp0 Width 1500x1000 rdp0=1500
 rdp0 Width 2560x1440=1500
 rdp0 Window-Maximized 1500x1000=true
 rdp0 XPosition 1500x1000=0
+rdp0 XPosition 1500x1000 rdp0=0
 rdp0 XPosition 2560x1440=788
 rdp0 YPosition 1500x1000=0
+rdp0 YPosition 1500x1000 rdp0=0
 rdp0 YPosition 2560x1440=159
 
 [Mount]
@@ -188,10 +194,12 @@ LeadTime=2
 PreDawnTime=0
 RealignAfterCalibrationFailure=true
 RescheduleErrors=true
+SerializedCalibration=Cal v1.0,bx=1,by=1,pw=0.00375,ph=0.00375,fl=1160,ang=284.077,angR=279.045,angD=199.11,ramspas=186.319,decmspas=174.372,swap=0,ra= 23:47:15,dec=02:01:01,side=0,when=2022-10-18 22:35:59,calEnd
 
 [StellarSolver]
 AstrometryIndexFolderList=/home/cobra/.local/share/kstars/astrometry,/home/cobra/AstrometryIndexes
 FocusOptionsProfile=3
+GuideOptionsProfile=4
 SolveOptionsProfile=0
 SolveSextractorType=2
 SolverType=1
@@ -202,13 +210,11 @@ RunOnStart=false
 [View]
 AutoSelectGrid=false
 FOVNames=
-FocusDec=72.37902562035535
-FocusObject=IC 1251
-FocusRA=17.16495515579927
-IsTracking=true
+FocusDec=74.64224681565705
+FocusRA=2.2204382119018033
 ShowEquatorialGrid=true
 ShowHorizontalGrid=true
-ZoomFactor=360.0000000000001
+ZoomFactor=432.0000000000001
 
 [Xplanet]
 XplanetBackgroundColorValue=#000000

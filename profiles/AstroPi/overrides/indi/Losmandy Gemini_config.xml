@@ -113,13 +113,13 @@ Off
     </newSwitchVector>
     <newNumberVector device="Losmandy Gemini" name="GEOGRAPHIC_COORD">
         <oneNumber name="LAT">
-      47.183333333333330017
+      47.197654999999997472
         </oneNumber>
         <oneNumber name="LONG">
-      7.5833333333333330373
+      7.5917849999999997834
         </oneNumber>
         <oneNumber name="ELEV">
-      439.5
+      413
         </oneNumber>
     </newNumberVector>
     <newSwitchVector device="Losmandy Gemini" name="TELESCOPE_SLEW_RATE">

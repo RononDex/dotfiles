@@ -65,7 +65,7 @@
       Focuser Simulator
   </oneText>
   <oneText name='ACTIVE_FILTER'>
-      Atik EFW2
+      
   </oneText>
   <oneText name='ACTIVE_SKYQUALITY'>
       SQM
@@ -90,20 +90,42 @@
       IMAGE_XXX
   </oneText>
 </newTextVector>
-<newSwitchVector device='ZWO CCD ASI224MC' name='TELESCOPE_TYPE'>
-  <oneSwitch name='TELESCOPE_PRIMARY'>
-      On
-  </oneSwitch>
-  <oneSwitch name='TELESCOPE_GUIDE'>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_FAST_TOGGLE'>
+  <oneSwitch name='INDI_ENABLED'>
       Off
+  </oneSwitch>
+  <oneSwitch name='INDI_DISABLED'>
+      On
   </oneSwitch>
 </newSwitchVector>
 <newSwitchVector device='ZWO CCD ASI224MC' name='CCD_COMPRESSION'>
-  <oneSwitch name='CCD_COMPRESS'>
+  <oneSwitch name='INDI_ENABLED'>
       Off
   </oneSwitch>
-  <oneSwitch name='CCD_RAW'>
+  <oneSwitch name='INDI_DISABLED'>
       On
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_CAPTURE_FORMAT'>
+  <oneSwitch name='ASI_IMG_RAW8'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='ASI_IMG_RGB24'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='ASI_IMG_Y8'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='ASI_IMG_RAW16'>
+      On
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='ZWO CCD ASI224MC' name='CCD_TRANSFER_FORMAT'>
+  <oneSwitch name='FORMAT_FITS'>
+      On
+  </oneSwitch>
+  <oneSwitch name='FORMAT_NATIVE'>
+      Off
   </oneSwitch>
 </newSwitchVector>
 <newNumberVector device='ZWO CCD ASI224MC' name='CCD_FRAME'>
@@ -171,24 +193,29 @@
       Off
   </oneSwitch>
 </newSwitchVector>
+<newNumberVector device='ZWO CCD ASI224MC' name='LIMITS'>
+  <oneNumber name='LIMITS_BUFFER_MAX'>
+      512
+  </oneNumber>
+  <oneNumber name='LIMITS_PREVIEW_FPS'>
+      10
+  </oneNumber>
+</newNumberVector>
 <newNumberVector device='ZWO CCD ASI224MC' name='CCD_CONTROLS'>
   <oneNumber name='Gain'>
-      300
+      570
   </oneNumber>
   <oneNumber name='WB_R'>
-      52
+      50
   </oneNumber>
   <oneNumber name='WB_B'>
-      95
+      50
   </oneNumber>
   <oneNumber name='Offset'>
       1
   </oneNumber>
   <oneNumber name='BandWidth'>
       40
-  </oneNumber>
-  <oneNumber name='Flip'>
-      0
   </oneNumber>
   <oneNumber name='AutoExpMaxGain'>
       300
@@ -220,6 +247,14 @@
       Off
   </oneSwitch>
   <oneSwitch name='AUTO_BandWidth'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='ZWO CCD ASI224MC' name='FLIP'>
+  <oneSwitch name='FLIP_HORIZONTAL'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='FLIP_VERTICAL'>
       Off
   </oneSwitch>
 </newSwitchVector>

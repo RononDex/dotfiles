@@ -1,0 +1,204 @@
+<INDIDriver>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='DEBUG'>
+  <oneSwitch name='ENABLE'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='DISABLE'>
+      On
+  </oneSwitch>
+</newSwitchVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='POLLING_PERIOD'>
+  <oneNumber name='PERIOD_MS'>
+      1000
+  </oneNumber>
+</newNumberVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='DEBUG_LEVEL'>
+  <oneSwitch name='DBG_ERROR'>
+      On
+  </oneSwitch>
+  <oneSwitch name='DBG_WARNING'>
+      On
+  </oneSwitch>
+  <oneSwitch name='DBG_SESSION'>
+      On
+  </oneSwitch>
+  <oneSwitch name='DBG_DEBUG'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='DBG_EXTRA_1'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='LOGGING_LEVEL'>
+  <oneSwitch name='LOG_ERROR'>
+      On
+  </oneSwitch>
+  <oneSwitch name='LOG_WARNING'>
+      On
+  </oneSwitch>
+  <oneSwitch name='LOG_SESSION'>
+      On
+  </oneSwitch>
+  <oneSwitch name='LOG_DEBUG'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='LOG_EXTRA_1'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='LOG_OUTPUT'>
+  <oneSwitch name='CLIENT_DEBUG'>
+      On
+  </oneSwitch>
+  <oneSwitch name='FILE_DEBUG'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newTextVector device='QHY CCD QHY163M-7c64ca4' name='ACTIVE_DEVICES'>
+  <oneText name='ACTIVE_TELESCOPE'>
+      Losmandy Gemini
+  </oneText>
+  <oneText name='ACTIVE_ROTATOR'>
+      Rotator Simulator
+  </oneText>
+  <oneText name='ACTIVE_FOCUSER'>
+      Focuser Simulator
+  </oneText>
+  <oneText name='ACTIVE_FILTER'>
+      QHY CCD QHY163M-7c64ca4
+  </oneText>
+  <oneText name='ACTIVE_SKYQUALITY'>
+      SQM
+  </oneText>
+</newTextVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='UPLOAD_MODE'>
+  <oneSwitch name='UPLOAD_CLIENT'>
+      On
+  </oneSwitch>
+  <oneSwitch name='UPLOAD_LOCAL'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='UPLOAD_BOTH'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newTextVector device='QHY CCD QHY163M-7c64ca4' name='UPLOAD_SETTINGS'>
+  <oneText name='UPLOAD_DIR'>
+      /home/cobra
+  </oneText>
+  <oneText name='UPLOAD_PREFIX'>
+      IMAGE_XXX
+  </oneText>
+</newTextVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='TELESCOPE_TYPE'>
+  <oneSwitch name='TELESCOPE_PRIMARY'>
+      On
+  </oneSwitch>
+  <oneSwitch name='TELESCOPE_GUIDE'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='CCD_COMPRESSION'>
+  <oneSwitch name='CCD_COMPRESS'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='CCD_RAW'>
+      On
+  </oneSwitch>
+</newSwitchVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_FRAME'>
+  <oneNumber name='X'>
+      0
+  </oneNumber>
+  <oneNumber name='Y'>
+      0
+  </oneNumber>
+  <oneNumber name='WIDTH'>
+      4656
+  </oneNumber>
+  <oneNumber name='HEIGHT'>
+      3522
+  </oneNumber>
+</newNumberVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_BINNING'>
+  <oneNumber name='HOR_BIN'>
+      1
+  </oneNumber>
+  <oneNumber name='VER_BIN'>
+      1
+  </oneNumber>
+</newNumberVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='CCD_STREAM_ENCODER'>
+  <oneSwitch name='RAW'>
+      On
+  </oneSwitch>
+  <oneSwitch name='MJPEG'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newTextVector device='QHY CCD QHY163M-7c64ca4' name='RECORD_FILE'>
+  <oneText name='RECORD_FILE_DIR'>
+      /home/cobra/indi__D_
+  </oneText>
+  <oneText name='RECORD_FILE_NAME'>
+      indi_record__T_
+  </oneText>
+</newTextVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='RECORD_OPTIONS'>
+  <oneNumber name='RECORD_DURATION'>
+      1
+  </oneNumber>
+  <oneNumber name='RECORD_FRAME_TOTAL'>
+      30
+  </oneNumber>
+</newNumberVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='CCD_STREAM_RECORDER'>
+  <oneSwitch name='SER'>
+      On
+  </oneSwitch>
+  <oneSwitch name='OGV'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_GAIN'>
+  <oneNumber name='GAIN'>
+      100
+  </oneNumber>
+</newNumberVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='CCD_OFFSET'>
+  <oneNumber name='OFFSET'>
+      0
+  </oneNumber>
+</newNumberVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='USB_TRAFFIC'>
+  <oneNumber name='TRAFFIC'>
+      0
+  </oneNumber>
+</newNumberVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='GPS_CONTROL'>
+  <oneSwitch name='INDI_ENABLED'>
+      Off
+  </oneSwitch>
+  <oneSwitch name='INDI_DISABLED'>
+      On
+  </oneSwitch>
+</newSwitchVector>
+<newSwitchVector device='QHY CCD QHY163M-7c64ca4' name='SLAVING_MODE'>
+  <oneSwitch name='SLAVING_MASTER'>
+      On
+  </oneSwitch>
+  <oneSwitch name='SLAVING_SLAVE'>
+      Off
+  </oneSwitch>
+</newSwitchVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='VCOX_FREQUENCY'>
+  <oneNumber name='FREQUENCY'>
+      0
+  </oneNumber>
+</newNumberVector>
+<newNumberVector device='QHY CCD QHY163M-7c64ca4' name='USB_BUFFER'>
+  <oneNumber name='BUFFER'>
+      512
+  </oneNumber>
+</newNumberVector>
+</INDIDriver>
