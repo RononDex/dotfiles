@@ -14,6 +14,9 @@ height = 40
 
 [bar/bottom]
 modules-left = i3
-modules-right = cpu memory
+modules-right = temperature cpu memory
 
 height = 80
+
+[module/temperature]
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
