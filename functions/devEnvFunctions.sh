@@ -46,4 +46,6 @@ InstallJupyterNotebooks() {
 
 SetupPythonDev() {
     pip3 install matplotlib
+    pip3 install pylint
+    pip3 install autopep8
 }

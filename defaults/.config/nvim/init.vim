@@ -225,7 +225,8 @@ let g:coc_global_extensions = [
   \ 'coc-cspell-dicts',
   \ 'coc-sh',
   \ 'coc-pyright',
-  \ 'coc-xml'
+  \ 'coc-xml',
+  \ 'coc-csharp-ls'
   \ ]
 
 " allows to use enter to select an entry in the auto complete window
