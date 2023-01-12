@@ -148,6 +148,7 @@ nmap <leader>bb :NERDTree<Return>
 nmap <leader>bv :NERDTreeVCS<Return>
 nnoremap <silent> <leader>bf :NERDTreeFind<CR>
 let NERDTreeAutoDeleteBuffer = 1
+let g:NERDTreeWinSize = 50
 
 " Md preview
 nmap <leader>mp <Plug>MarkdownPreviewToggle
