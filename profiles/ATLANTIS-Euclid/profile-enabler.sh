@@ -92,5 +92,5 @@ chmod +x ~/.scripts/xprofile
 chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Updating grub config"
-sudo cp $scriptDir/overrides/grub/grub /etc/defaulkts/grub
+sudo cp $scriptDir/overrides/grub/grub /etc/defaults/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg  
