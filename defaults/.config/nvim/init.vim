@@ -203,6 +203,7 @@ nmap <leader>gp :Git push<CR>
 nmap <leader>gc :Gvdiff<CR>
 nmap <leader>gh :diffget //2 <bar> diffup<CR>
 nmap <leader>gl :diffget //3 <bar> diffup<CR>
+nmap <leader>gm :Git mergetool -y
 nnoremap <leader>sr :%s/
 
 " Latex config
