@@ -184,6 +184,7 @@ map <F1> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 map <leader>wu :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>   " Search in files for word under cursor
 map <leader>fg :Ag<CR>
+nnoremap <leader>sr :%s/
 
 " Terminal mode
 :tnoremap <Esc> <C-\><C-n>
@@ -204,7 +205,8 @@ nmap <leader>gc :Gvdiff<CR>
 nmap <leader>gh :diffget //2 <bar> diffup<CR>
 nmap <leader>gl :diffget //3 <bar> diffup<CR>
 nmap <leader>gm :Git mergetool -y
-nnoremap <leader>sr :%s/
+nmap J ']c'
+nmap K '[c'
 
 " Latex config
 let g:vimtex_compiler_progname = 'nvr'
