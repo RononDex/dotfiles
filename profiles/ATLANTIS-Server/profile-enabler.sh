@@ -89,6 +89,7 @@ EnableService nginx
 EnableService smbd
 EnableService wireguard
 EnableService php-fpm
+EnableService docker
 
 crontab ~/.config/customCronConfig
 sudo crontab $scriptDir/overrides/defaultRootCronCfg
