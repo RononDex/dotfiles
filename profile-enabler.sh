@@ -9,6 +9,7 @@ git pull
 . ./functions/runitFunctions.sh
 . ./functions/restrictedPackagesFunctions.sh
 . ./functions/devEnvFunctions.sh
+. ./functions/dockerFunctions.sh.sh
 
 # --------------------------------------------
 # Script to install / enable a profile
