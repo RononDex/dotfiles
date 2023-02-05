@@ -103,7 +103,7 @@ InstallIndiDriver "indi-sv305" # Somehow needed by phd2
 sudo pacman -Sy --noconfirm --needed kstars
 InstallAstrometryNet
 DownloadIndexFiles
-CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
+#CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallAurPackage "phd2" "https://aur.archlinux.org/phd2.git"
 
 
