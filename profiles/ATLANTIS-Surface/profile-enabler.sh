@@ -94,24 +94,6 @@ echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 kstars --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw libindi gpsd gcc
 
-InstallAstroPy
-CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-MakePackage "indi"
-CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
-InstallIndiDriver "fxload"
-InstallIndiDriver "fxload-libusb"
-InstallIndiDriver "indi-gphoto"
-InstallIndiDriver "libasi"
-InstallIndiDriver "libatik"
-InstallIndiDriver "indi-atik"
-InstallIndiDriver "indi-asi"
-InstallIndiDriver "libqhy"
-InstallIndiDriver "indi-qhy"
-InstallAstrometryNet
-DownloadIndexFiles
-CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
-InstallPHD2
-
 echo "Adjust user permissions"
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}
