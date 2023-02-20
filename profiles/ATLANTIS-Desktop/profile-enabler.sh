@@ -83,5 +83,4 @@ chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "Downloads" "://192.168.1.12/Downloads" "Software" "://192.168.1.12/Software" "Astrophotography" "://192.168.1.12/Astrophotography" "Backup" "://192.168.1.12/Backup"
-SetupAutofsForSmbShare "ATLANTIS-ASTRO-PI1" "data" "://10.42.0.1/data"
 SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
