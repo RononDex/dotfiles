@@ -9,6 +9,16 @@ SetupDotnet() {
     sudo bash dotnet-install.sh -c 3.1 -InstallDir /usr/share/dotnet
     dotnet tool install --global csharp-ls
     dotnet tool update --global csharp-ls
+
+    if command -v xbps-install &> /dev/null
+    then
+        sudo xbps-install -y graphviz
+    fi
+
+    if command -v pacman &> /dev/null
+    then
+        sudo pacman -Sy graphviz --needed --noconfirm
+    fi
 }
 
 SetupMariaMySqlDb() {
