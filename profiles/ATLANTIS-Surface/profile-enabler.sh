@@ -20,9 +20,6 @@ cp $scriptDir/overrides/dunst/dunstrc ~/.config/dunst/dunstrc
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/.Xresources ~/.Xresources
 
-sudo pacman -Syy
-sudo pacman -Syu --noconfirm
-
 echo "Setting up surface repo"
 wget -qO - https://raw.githubusercontent.com/linux-surface/linux-surface/master/pkg/keys/surface.asc \
         | sudo pacman-key --add -
@@ -55,6 +52,7 @@ SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
 InstallGrubTheme "-s 4k"
+InstallLitarvanLightDmTheme
 
 echo "Turning on dGPU"
 echo "\_SB.PCI0.RP05.HGON" | sudo tee /proc/acpi/call

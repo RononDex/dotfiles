@@ -39,7 +39,7 @@ InstallLitarvanLightDmTheme
 InstallRustDev
 InstallJupyterNotebooks
 InstallYubiKeyStuff
-SetupDotnet
+#SetupDotnet                # Use official dotnet packages instead
 SetupMariaMySqlDb
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
