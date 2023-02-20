@@ -27,6 +27,7 @@ Plug 'vim-test/vim-test'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'weirongxu/plantuml-previewer.vim'
 
 call plug#end()
 
@@ -299,6 +300,9 @@ let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_auto_focus = {
     \ "at": "start"
     \ }
+
+" PlantUML
+nnoremap <leader>uml :PlantumlOpen<CR>
 
 " Neoformat
 nmap <leader>nf :Neoformat<CR>
