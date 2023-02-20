@@ -28,7 +28,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tyru/open-browser.vim'  " Depenendency of plantuml-previewer
-Plug 'plantuml-syntax' " Depenendency of plantuml-previewer
+Plug 'aklt/plantuml-syntax' " Depenendency of plantuml-previewer
 Plug 'weirongxu/plantuml-previewer.vim'
 
 call plug#end()
