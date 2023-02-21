@@ -316,7 +316,7 @@ set spellsuggest=best,9
 nnoremap <silent> <leader>sc :set spell!<cr>
 
 "Omnisharp config
-source ~/.config/nvim/omnisharp.vim
 source ~/.config/nvim/rust.vim
 source ~/.config/nvim/colorscheme.vim
 source ~/.config/nvim/java.vim
+source ~/.config/nvim/cpp.vim
