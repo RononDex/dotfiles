@@ -8,7 +8,7 @@ git pull
 . ./functions/astroFunctions.sh
 . ./functions/restrictedPackagesFunctions.sh
 . ./functions/devEnvFunctions.sh
-. ./functions/dockerFunctions.sh.sh
+. ./functions/dockerFunctions.sh
 
 # --------------------------------------------
 # Script to install / enable a profile
