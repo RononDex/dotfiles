@@ -16,6 +16,7 @@ SetupAutofsForSmbShare() {
 
         for ((i=2; i<=$#; i+=2)); do
             j=$((i+1))
+            sudo touch /etc/autofs/auto.$1
             echo "${!i} -fstype=cifs,rw,noperm,uid=1000,credentials=/etc/autofs/$1-credentials,$3 ${!j}" | sudo tee -a /etc/autofs/auto.$1 
         done
 
