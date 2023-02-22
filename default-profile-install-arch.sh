@@ -138,6 +138,7 @@ echo "Installing AUR packages"
 InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
+InstallAurPackage "autofs" "https://aur.archlinux.org/autofs.git"
 
 echo "Setting up LightDM"
 InstallWebGreeter
