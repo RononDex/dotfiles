@@ -170,3 +170,6 @@ UpdatePipPackages
 
 echo "Installing python packages"
 sudo -H pip install --upgrade youtube-dl
+
+echo "Updating gpg-agent"
+echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
