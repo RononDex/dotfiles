@@ -28,7 +28,7 @@ SetupAutofsForSmbShare() {
         read passwd         # read the password
         printf "username=$username\npassword=$passwd" | sudo tee /etc/autofs/$1-credentials > /dev/null
         stty $stty_orig     # restore terminal setting.
-
+        sudo touch /etc/autofs/$1-credentials  
         sudo chmod 700 /etc/autofs/$1-credentials
 
         sudo systemctl restart autofs
