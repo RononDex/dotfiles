@@ -23,33 +23,39 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff ..."
-sudo xbps-install -y network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
-sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract blueman Signal-Desktop 
-sudo xbps-install -y remmina freerdp xf86-input-evdev PrusaSlicer texlive-most
-sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
-sudo xbps-install -y steam libgcc-32bit libstdc++-32bit libdrm-32bit libglvnd-32bit
-sudo xbps-install -y nomacs xournalpp libreoffice mpv breeze breeze-cursors biber
-sudo xbps-install -y steam libdrm libdrm-32bit libglapi libglapi-32bit
+sudo pacman -Sy i3-gaps nextcloud-client light dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman wireguard-tools --noconfirm --needed
+sudo pacman -Sy texlive-most biber pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed polybar --noconfirm
+sudo pacman -Sy nomacs prusa-slicer obs-studio libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
+sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
+sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -Sy steam libdrm lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
 
 echo "Installing video drivers ..."
-sudo xbps-install -y linux-firmware-amd mesa-dri vulkan-loader mesa-vulkan-radeon xf86-video-amdgpu mesa-vaapi mesa-vdpau
+sudo pacman -Sy libva-mesa-driver lib32-mesa  --needed --noconfirm
+InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-installer.git"
+InstallAurPackage "obs-studio-amf" "https://aur.archlinux.org/obs-studio-amf.git"
 
-InstallXorg
+echo "Installing AUR packages..."
+InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
+InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
+InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
+InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
+InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
+InstallAurPackage "mesa-git" "https://aur.archlinux.org/mesa-git.git"
+
+echo "Installing screenkey"
+sudo pacman -Sy python2-setuptools --needed --noconfirm
+InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
+InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
+
 InstallLitarvanLightDmTheme
 InstallRustDev
 InstallJupyterNotebooks
-InstallYubiKeyStuff
 #SetupDotnet                # Use official dotnet packages instead
-SetupMariaMySqlDb
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
 SetupPythonDev
 InstallGrubTheme -s 2k
-
-echo "Installing restricted packages ..."
-InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
-InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree pritunl-client
-InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
@@ -67,7 +73,7 @@ echo "Enabling services ..."
 EnableService lightdm
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
-EnableService bluetoothd
+EnableService bluetooth
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}

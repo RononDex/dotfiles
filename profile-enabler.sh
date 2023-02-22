@@ -6,7 +6,6 @@ git pull
 . ./functions/packageFunctions.sh
 . ./functions/networkingFunctions.sh
 . ./functions/astroFunctions.sh
-. ./functions/runitFunctions.sh
 . ./functions/restrictedPackagesFunctions.sh
 . ./functions/devEnvFunctions.sh
 . ./functions/dockerFunctions.sh.sh
