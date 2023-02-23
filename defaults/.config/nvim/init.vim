@@ -7,8 +7,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'NovaDev94/lightline-onedark'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'josa42/vim-lightline-coc'
-Plug 'nickspoons/vim-sharpenup'
+Plug 'josa42/vim-lightline-cc'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'drewtempelmeyer/palenight.vim'
@@ -313,7 +312,6 @@ set spelllang=en,de-ch
 set spellsuggest=best,9
 nnoremap <silent> <leader>sc :set spell!<cr>
 
-"Omnisharp config
 source ~/.config/nvim/rust.vim
 source ~/.config/nvim/colorscheme.vim
 source ~/.config/nvim/java.vim
