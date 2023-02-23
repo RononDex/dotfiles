@@ -68,12 +68,12 @@ BasicVimInstall() {
 
     if command -v xbps-install &> /dev/null
     then
-        sudo xbps-install -Sy the_silver_searcher python3-neovim
+        sudo xbps-install -Sy the_silver_searcher python3-neovim tree-sitter
     fi
 
     if command -v pacman &> /dev/null
     then
-        sudo pacman -S the_silver_searcher python-pynvim
+        sudo pacman -S the_silver_searcher python-pynvim tree-sitter --noconfirm --needed
     fi
 
     sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -82,23 +82,6 @@ BasicVimInstall() {
     python ~/.config/nvim/plugged/vimspector/install_gadget.py --force-enable-csharp
 
     vim +PlugUpdate +qa > /dev/null 2&>1
-
-    vim +"TSInstall c_sharp" +qa > /dev/null 2&>1
-    vim +"TSInstall c" +qa > /dev/null 2&>1
-    vim +"TSInstall java" +qa > /dev/null 2&>1
-    vim +"TSInstall html" +qa > /dev/null 2&>1
-    vim +"TSInstall css" +qa > /dev/null 2&>1
-    vim +"TSInstall javascript" +qa > /dev/null 2&>1
-    vim +"TSInstall xml" +qa > /dev/null 2&>1
-    vim +"TSInstall json" +qa > /dev/null 2&>1
-    vim +"TSInstall markdown" +qa > /dev/null 2&>1
-    vim +"TSInstall ini" +qa > /dev/null 2&>1
-    vim +"TSInstall latex" +qa > /dev/null 2&>1
-    vim +"TSInstall make" +qa > /dev/null 2&>1
-    vim +"TSInstall rust" +qa > /dev/null 2&>1
-    vim +"TSInstall python" +qa > /dev/null 2&>1
-    vim +"TSInstall sql" +qa > /dev/null 2&>1
-    vim +"TSInstall cpp" +qa > /dev/null 2&>1
 
     vim +CocUpdate +qa > /dev/null 2&>1
 }
