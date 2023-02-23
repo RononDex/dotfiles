@@ -316,3 +316,4 @@ source ~/.config/nvim/rust.vim
 source ~/.config/nvim/colorscheme.vim
 source ~/.config/nvim/java.vim
 source ~/.config/nvim/cpp.vim
+lua require("treesitter")
