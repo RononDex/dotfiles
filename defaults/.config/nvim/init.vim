@@ -1,17 +1,16 @@
 call plug#begin()
 
 Plug 'preservim/nerdtree'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'phaazon/hop.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'NovaDev94/lightline-onedark'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'josa42/vim-lightline-coc'
-Plug 'OmniSharp/omnisharp-vim'
 Plug 'nickspoons/vim-sharpenup'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-Plug 'sheerun/vim-polyglot'
 Plug 'drewtempelmeyer/palenight.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'frazrepo/vim-rainbow'
@@ -25,7 +24,6 @@ Plug 'dyng/ctrlsf.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'vim-test/vim-test'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'uiiaoo/java-syntax.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tyru/open-browser.vim'  " Depenendency of plantuml-previewer
 Plug 'aklt/plantuml-syntax' " Depenendency of plantuml-previewer
