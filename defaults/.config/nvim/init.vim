@@ -7,7 +7,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'NovaDev94/lightline-onedark'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'josa42/vim-lightline-cc'
+Plug 'josa42/vim-lightline-coc'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'drewtempelmeyer/palenight.vim'
