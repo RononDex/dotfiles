@@ -29,12 +29,12 @@ SetupMariaMySqlDb() {
 SetupJavaDevEnv() {
     if command -v xbps-install &> /dev/null
     then
-        sudo xbps-install -y openjdk11 openjdk intellij-idea-community-edition apache-maven
+        sudo xbps-install -y openjdk11 openjdk intellij-idea-community-edition apache-maven gradle
     fi
 
     if command -v pacman &> /dev/null
     then
-        sudo pacman -Sy jdk11-openjdk jre-openjdk java-openjfx intellij-idea-community-edition maven --needed --noconfirm
+        sudo pacman -Sy jdk11-openjdk jre-openjdk java-openjfx intellij-idea-community-edition maven gradle --needed --noconfirm
     fi
 
     curl -s "https://get.sdkman.io" | bash
