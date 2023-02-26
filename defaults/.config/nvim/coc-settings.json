@@ -1,10 +1,32 @@
 {
-    "languageserver": {
-        "csharp-ls": {
-          "command": "csharp-ls",
-          "filetypes": ["cs"],
-          "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
-        }
+  "languageserver": {
+    "csharp-ls": {
+      "command": "csharp-ls",
+      "filetypes": [
+        "cs"
+      ],
+      "rootPatterns": [
+        "*.csproj",
+        ".vim/",
+        ".git/",
+        ".hg/"
+      ]
+    }
+  },
+  "java.jdt.ls.vmargs": "-javaagent:/home/cobra/.config/nvim/lombok.jar",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-11",
+      "path": "/usr/lib/jvm/java-11-openjdk",
     },
-    "java.jdt.ls.vmargs": "-javaagent:/home/cobra/.config/nvim/lombok.jar"
+    {
+      "name": "JavaSE-17",
+      "path": "/usr/lib/jvm/java-17-openjdk",
+      "default": true
+    },
+    {
+      "name": "JavaSE-19",
+      "path": "/usr/lib/jvm/java-19-openjdk",
+    },
+  ]
 }
