@@ -6,7 +6,7 @@ require'nvim-treesitter.configs'.setup {
     -- Using this option may slow down your editor, and you may see some duplicate highlights.
     -- Instead of true it can also be a list of languages
 	-- A list of parser names, or "all" (the four listed parsers should always be installed)
-  ensure_installed = { "c", "lua", "vim", "help" },
+  ensure_installed = { "c", "lua", "java", "html", "css", "c_sharp", "cpp", "vim", "help" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
