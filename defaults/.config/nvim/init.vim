@@ -112,6 +112,11 @@ nmap <space> :HopWord<CR>
 let g:vimspector_enable_mappings = 'HUMAN'
 nnoremap <leader>ds :VimspectorContinue<CR>
 nnoremap <leader>de :VimspectorReset<CR>
+nmap <Leader>di <Plug>VimspectorBalloonEval
+xmap <Leader>di <Plug>VimspectorBalloonEval
+nmap <Leader>du <Plug>VimspectorUpFrame
+nmap <Leader>dd <Plug>VimspectorDownFrame
+nmap <Leader>db <Plug>VimspectorBreakpoints
 
 " Go to tab by number
 noremap <leader>1 1gt
