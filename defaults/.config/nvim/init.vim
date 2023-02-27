@@ -110,7 +110,7 @@ nmap <space> :HopWord<CR>
 
 " VimSpector
 let g:vimspector_enable_mappings = 'HUMAN'
-nnoremap <leader>ds :VimspectorContinue<CR>
+nnoremap <leader>ds :call vimspector#Launch()<CR>
 nnoremap <leader>de :VimspectorReset<CR>
 nmap <Leader>di <Plug>VimspectorBalloonEval
 xmap <Leader>di <Plug>VimspectorBalloonEval
