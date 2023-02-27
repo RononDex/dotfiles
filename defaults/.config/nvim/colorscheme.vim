@@ -16,6 +16,7 @@ hi String ctermfg=120 guifg=#87ff87
 hi @type.qualifier ctermfg=203 guifg=#ff5f5f
 hi @variable.builtin ctermfg=215 guifg=#ffaf5f
 hi @attribute ctermfg=176 guifg=#d787d7
+hi @type ctermfg=215 guifg=#ffaf5f
 
 let g:conoline_color_normal_dark = 'guibg=#0A0A0A'
 let g:conoline_color_insert_dark = 'guibg=black'
