@@ -2,6 +2,10 @@ call plug#begin()
 
 Plug 'preservim/nerdtree'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'https://github.com/nvim-treesitter/playground.git'
+Plug 'https://github.com/nvim-treesitter/nvim-treesitter-context'
+Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/JoosepAlviste/nvim-ts-context-commentstring.git'
 Plug 'phaazon/hop.nvim'
 Plug 'itchyny/lightline.vim'
 Plug 'NovaDev94/lightline-onedark'
@@ -182,7 +186,7 @@ nmap T O<Esc>
 map <F1> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-map <leader><F1> <cmd>echo nvim_treesitter#statusline()<cr>
+map <leader><F1> :TSHighlightCapturesUnderCursor<cr>
 map <leader>wu :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>   " Search in files for word under cursor
 map <leader>fg :Ag<CR>
 nnoremap <leader>sr :%s/
@@ -318,3 +322,4 @@ source ~/.config/nvim/colorscheme.vim
 source ~/.config/nvim/java.vim
 source ~/.config/nvim/cpp.vim
 lua require("treesitter")
+lua require("spellsitter")
