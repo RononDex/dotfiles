@@ -229,6 +229,8 @@ let g:coc_global_extensions = [
   \ 'coc-eslint', 
   \ 'coc-json', 
   \ 'coc-java',
+  \ 'coc-html',
+  \ 'coc-css',
   \ 'coc-java-debug',
   \ 'coc-rust-analyzer',
   \ 'coc-texlab',
