@@ -50,6 +50,8 @@ fi
 
 rm ~/pacman.conf
 rm ~/mirrorlist
+rm ~/pacman.arm.conf
+rm ~/mirrorListARM
 
 source ~/.profile
 
