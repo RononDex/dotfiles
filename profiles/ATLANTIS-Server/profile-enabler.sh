@@ -30,6 +30,10 @@ sudo mkdir -p /etc/php/php-fpm.d
 sudo cp $scriptDir/overrides/php/php.ini /etc/php/php.ini
 sudo cp $scriptDir/overrides/php/php-fpm.conf /etc/php/php-fpm.conf
 sudo cp $scriptDir/overrides/php/www.conf /etc/php/php-fpm.d/www.conf
+sudo mkdir -p /etc/php8.1/php-fpm.d
+sudo cp $scriptDir/overrides/php8.1/php.ini /etc/php8.1/php.ini
+sudo cp $scriptDir/overrides/php8.1/php-fpm.conf /etc/php8.1/php-fpm.conf
+sudo cp $scriptDir/overrides/php8.1/www.conf /etc/php8.1/php-fpm.d/www.conf
 sudo mkdir -p /etc/nginx/sites-available
 sudo mkdir -p /etc/nginx/sites-enabled
 sudo cp $scriptDir/overrides/nginx/nginx.conf /etc/nginx/nginx.conf
