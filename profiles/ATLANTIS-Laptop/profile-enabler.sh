@@ -26,7 +26,7 @@ sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmi
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
-sudo pacman -Sy mesa lib32-mesa xf86-video-intel vulkan-intel intel-ucode --needed --confirm
+sudo pacman -Sy mesa steam lib32-mesa xf86-video-intel vulkan-intel intel-ucode --needed --confirm
 
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
