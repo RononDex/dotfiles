@@ -7,7 +7,7 @@ wireless-interface = wlp0s20f3
 
 [bar/top]
 modules-right = wireless-network battery0 date
-modules-left = pulseaudio backlight mpd
+modules-left = rotate-screen virtual-keyboard pulseaudio backlight mpd
 height = 30
 tray-maxsize = 24
 
@@ -26,4 +26,4 @@ monitor = DP-3-1-8
 height = 50
 
 [module/temperature]
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
