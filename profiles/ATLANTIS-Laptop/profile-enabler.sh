@@ -10,6 +10,7 @@ sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
+sudo cp $scriptDir/overrides/xorg/21-intel.conf /etc/X11/xorg.conf.d/21-intel.conf
 cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
