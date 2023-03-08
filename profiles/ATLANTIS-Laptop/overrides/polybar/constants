@@ -1,6 +1,6 @@
 [section/base]
-dpi = 168
-monitor = eDP1
+dpi = 150
+monitor = eDP-1
 
 [deviceconfig]
 wireless-interface = wlp0s20f3
