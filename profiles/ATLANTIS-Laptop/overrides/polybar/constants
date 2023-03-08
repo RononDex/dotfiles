@@ -18,7 +18,7 @@ monitor = DP-3-1-8
 [bar/bottom]
 modules-left = i3
 modules-right = temperature cpu memory
-height = 45
+height = 40
 
 [bar/bottomdp]
 inherit = bar/bottom
