@@ -10,7 +10,6 @@ sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
-sudo cp $scriptDir/overrides/xorg/21-intel.conf /etc/X11/xorg.conf.d/21-intel.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
 cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
@@ -26,7 +25,7 @@ sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmi
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
-sudo pacman -Sy mesa steam lib32-mesa xf86-video-intel vulkan-intel intel-ucode --needed --confirm
+sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode --needed --confirm
 
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
