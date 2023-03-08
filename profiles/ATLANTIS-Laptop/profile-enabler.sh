@@ -17,11 +17,10 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 
-sudo pacman -Syy
 sudo pacman -Syu --noconfirm
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
+sudo pacman -Sy sof-firmware i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy nomacs libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
