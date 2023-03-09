@@ -21,6 +21,9 @@ sh ~/.scripts/updateLoginBackground.sh &
 # Remap capslock to escape
 setxkbmap -option caps:escape 
 
+# Enable Firefox touch controls
+export MOZ_USE_XINPUT2=1
+
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
