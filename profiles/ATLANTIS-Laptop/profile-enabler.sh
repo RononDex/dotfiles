@@ -11,6 +11,8 @@ sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
+sudo cp $scriptDir/overrides/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio.conf
+sudo cp $scriptDir/overrides/modprobe/i915.conf /etc/modprobe.d/i915.conf
 cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
@@ -73,3 +75,6 @@ chmod +x ~/.i3/workspaces/load-workspaces.sh
 echo "Updating grub config"
 sudo cp $scriptDir/overrides/grub/grub.cfg /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg  
+
+echo "Regenerating initramfs"
+sudo mkinitcpio -P
