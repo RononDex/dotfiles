@@ -8,6 +8,5 @@ xfce4-terminal --initial-title=cava --title=cava -e cava &
 
 mons -a &!
 
-slack &
 nextcloud &
 redshift &
