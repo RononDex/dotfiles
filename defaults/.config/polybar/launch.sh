@@ -10,6 +10,9 @@ sleep 0.2s
 
 # Launch
 polybar top &
+
+sleep 0.2s
+
 polybar bottom &
 
 echo "Bars launched..."
