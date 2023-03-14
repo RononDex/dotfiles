@@ -1,0 +1,3 @@
+#!/bin/bash
+
+getTemp | grep TCPU: | awk '{ print $2 }' | grep -Eo "[0-9]*\.[0-9]*"
