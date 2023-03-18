@@ -27,7 +27,7 @@ sudo pacman -Sy texlive-most biber pulseaudio-bluetooth aspnet-runtime xournalpp
 sudo pacman -Sy nomacs prusa-slicer obs-studio libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
-sudo pacman -Sy amd-ucode steam libdrm lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
+sudo pacman -Sy amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
 
 echo "Installing video drivers ..."
 sudo pacman -Sy libva-mesa-driver lib32-mesa  --needed --noconfirm
@@ -39,7 +39,6 @@ InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "mesa-git" "https://aur.archlinux.org/mesa-git.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
