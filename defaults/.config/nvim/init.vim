@@ -247,7 +247,7 @@ let g:coc_global_extensions = [
   \ 'coc-xml',
   \ 'coc-csharp-ls',
   \ 'coc-clangd',
-  \ 'coc-prettier'
+  \ 'coc-prettier',
   \ 'coc-markdownlint'
   \ ]
 
