@@ -1,5 +1,6 @@
 {
   "codeLens.enable": true,
+  "semanticTokens.enable": true,
   "languageserver": {
     "csharp-ls": {
       "command": "csharp-ls",
