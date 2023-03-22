@@ -11,6 +11,7 @@ hi Function ctermfg=75 guifg=#5fafff
 hi Constant ctermfg=75 guifg=#5fafff
 hi Normal ctermbg=236 guibg=#202020
 hi String ctermfg=120 guifg=#87ff87
+hi CocInlayHint ctermfg=59 guifg=#697098
 
 " Treesitter 
 hi @type.qualifier ctermfg=203 guifg=#ff5f5f
