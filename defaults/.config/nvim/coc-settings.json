@@ -7,7 +7,7 @@
       "rootPatterns": ["*.csproj", ".vim/", ".git/", ".hg/"]
     }
   },
-  "java.jdt.ls.vmargs": "-javaagent:/home/cobra/.config/nvim/lombok.jar  -Xbootclasspath/a:/home/cobra/.config/nvim/lombok.jar",
+  "java.jdt.ls.vmargs": "-javaagent:/home/cobra/.config/nvim/lombok.jar",
   "java.referencesCodeLens.enabled": true,
   "java.configuration.runtimes": [
     {
