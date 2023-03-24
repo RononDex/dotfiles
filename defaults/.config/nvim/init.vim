@@ -297,18 +297,17 @@ nnoremap <silent> <leader>cl  :<C-u>CocList locationlist<CR>
 " manage extensions
 nnoremap <silent> <leader>cx  :<C-u>CocList extensions<cr>
 
-" rename the current word in the cursor
 nmap <leader>cr  <Plug>(coc-rename)
 nmap <F2>        <Plug>(coc-rename)
-nmap <leader>cf  <Plug>(coc-format)
-vmap <leader>cf  <Plug>(coc-format-selected)
+" Register prettier command for formatting documents
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+nmap <leader>cf  :Prettier<CR>
+vmap <leader>cf  :Prettier<CR>
 
 " run code actions
 vmap <leader>ca  <Plug>(coc-codeaction-selected)
 vmap <leader><space>  <Plug>(coc-codeaction-selected)
 nmap <leader><space>  v<Plug>(coc-codeaction-selected)
-
-
 
 " Global Search with CtrlSF
 let g:ctrlsf_regex_pattern = 1
