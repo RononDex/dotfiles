@@ -299,10 +299,8 @@ nnoremap <silent> <leader>cx  :<C-u>CocList extensions<cr>
 
 nmap <leader>cr  <Plug>(coc-rename)
 nmap <F2>        <Plug>(coc-rename)
-" Register prettier command for formatting documents
-command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-nmap <leader>cf  :Prettier<CR>
-vmap <leader>cf  :Prettier<CR>
+nmap <leader>cf <Plug>(coc-format)
+vmap <leader>cf  <Plug>(coc-format-selected)
 
 " run code actions
 vmap <leader>ca  <Plug>(coc-codeaction-selected)
