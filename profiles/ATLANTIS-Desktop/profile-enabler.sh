@@ -45,6 +45,7 @@ sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
+InstallHyprland
 InstallLitarvanLightDmTheme
 InstallRustDev
 InstallJupyterNotebooks
