@@ -69,11 +69,3 @@ InstallWebGreeter() {
     cd ~/packages/web-greeter
     sudo make install
 }
-
-InstallHyprland() {
-    if  command -v pacman &> /dev/null
-    then
-        InstallAurPackage "libdisplay-info" "https://aur.archlinux.org/libdisplay-info.git"
-        InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
-	fi
-}

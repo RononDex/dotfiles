@@ -3,6 +3,8 @@
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
+sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
+sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
@@ -43,6 +45,7 @@ sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
+InstallLitarvanLightDmTheme
 InstallRustDev
 InstallJupyterNotebooks
 #SetupDotnet                # Use official dotnet packages instead
@@ -64,7 +67,7 @@ rm -rf ~/.omnisharp
 cp -Raf $scriptDir/../ATLANTIS-Surface/overrides/omnisharp ~/.omnisharp
 
 echo "Enabling services ..."
-EnableService sddm
+EnableService lightdm
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
 EnableService bluetooth
