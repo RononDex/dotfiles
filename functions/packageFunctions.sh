@@ -75,5 +75,6 @@ InstallHyprland() {
     then
         InstallAurPackage "libdisplay-info" "https://aur.archlinux.org/libdisplay-info.git"
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
+		InstallAurPackage "sddm-sugar-candy-git" "https://aur.archlinux.org/sddm-sugar-candy-git.git"
 	fi
 }
