@@ -77,3 +77,13 @@ InstallHyprland() {
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
 	fi
 }
+
+InstallSddm() {
+    if  command -v pacman &> /dev/null
+    then
+		InstallAurPackage "sddm-git" "https://aur.archlinux.org/sddm-git.git"
+		InstallAurPackage "sddm-sugar-candy-git" "https://aur.archlinux.org/sddm-sugar-candy-git.git"
+
+		sudo systemctl enable sddm
+	fi
+}
