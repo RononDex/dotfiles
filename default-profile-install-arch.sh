@@ -26,6 +26,10 @@ chmod -R +x ~/.scripts
 chmod +x ~/.xprofile
 chmod 700 ~/.gnupg -R
 
+echo "Copying default config files"
+sudo cp ~/.files/sddm/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
+rm -rf ~/.files
+
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
 
 isArm=$false
