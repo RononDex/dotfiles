@@ -75,6 +75,18 @@ InstallHyprland() {
     then
         InstallAurPackage "libdisplay-info" "https://aur.archlinux.org/libdisplay-info.git"
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
+		InstallAurPackage "xdg-desktop-portal-hyprland-git" "https://aur.archlinux.org/xdg-desktop-portal-hyprland-git.git"
+
+		sudo pacman -Sy waybar --needed --noconfirm
+	fi
+}
+
+InstallWayland() {
+    if  command -v pacman &> /dev/null
+    then
+		sudo pacman -Sy pipewire wireplumber qt5-wayland qt6-wayland slurp pipewire-pulse --needed --noconfirm
+		sudo systemctl start pipewire-pulse.service
+		sudo systemctl enable pipewire-pulse.service
 	fi
 }
 
