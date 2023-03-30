@@ -68,7 +68,7 @@ sudo pacman -S vim neovim bash-completion libftdi ccfits network-manager-applet 
 sudo pacman -S python acpi python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
 sudo pacman -S htop imagemagick zlib curl exfat-utils unzip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
-sudo pacman -S dkms linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
+sudo pacman -S dkms btop linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect networkmanager-openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
 
