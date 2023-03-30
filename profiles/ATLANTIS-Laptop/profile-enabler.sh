@@ -21,6 +21,7 @@ cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 sudo mkdir /etc/sddm.conf.d/
 sudo cp $scriptDir/overrides/sddm.conf /etc/sddm.conf.d/custom.conf
+cp $scriptDir/overrides/hyperland/monitors.conf ~/.config/hypr/configs/monitors.conf
 
 sudo pacman -Syu --noconfirm
 
