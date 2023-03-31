@@ -77,7 +77,7 @@ InstallHyprland() {
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
 		InstallAurPackage "xdg-desktop-portal-hyprland-git" "https://aur.archlinux.org/xdg-desktop-portal-hyprland-git.git"
 
-		sudo pacman -Sy waybar wofi --needed --noconfirm
+		sudo pacman -Sy waybar wofi swaybg --needed --noconfirm
 	fi
 }
 
