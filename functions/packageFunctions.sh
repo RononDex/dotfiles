@@ -84,7 +84,7 @@ InstallHyprland() {
 InstallWayland() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -Sy pipewire xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp pipewire-pulse --needed --noconfirm
+		sudo pacman -Sy pipewire polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp pipewire-pulse --needed --noconfirm
 		sudo systemctl start pipewire-pulse.service
 		sudo systemctl enable pipewire-pulse.service
 		InstallAurPackage "wlsunset" "https://aur.archlinux.org/wlsunset.git"
