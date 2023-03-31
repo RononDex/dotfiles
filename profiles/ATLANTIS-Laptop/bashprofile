@@ -6,10 +6,6 @@
 export EDITOR=nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Opt out of dotnet telemtry
 (wal -R -e -q -n &)                    # Reload pywal theme
-if test -f ~/.ssh/id_rsa
-then
-    eval $(keychain --eval --quiet id_rsa)                                  # Initializes the keychain
-fi
 
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
@@ -20,5 +16,3 @@ echo UPDATESTARTUPTTY | gpg-connect-agent -q > /dev/null 2>&1
 
 # Turn off screensaver
 export DISPLAY=:0.0
-xset s off
-xset s noblank

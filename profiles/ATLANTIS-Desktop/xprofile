@@ -24,3 +24,7 @@ export PATH="$PATH:/usr/share/dotnet/"
 
 # Remap capslock to escape
 setxkbmap -option caps:escape 
+
+xset s off
+xset s noblank
+xset -dpms
