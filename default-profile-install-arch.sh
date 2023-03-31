@@ -62,7 +62,7 @@ source ~/.profile
 echo "Installing stuff..."
 sudo pacman -S pkgconfig bc powerline-fonts fakeroot gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
-sudo pacman -S feh xfce4-terminal picom alsa pulseaudio pulseaudio-jack pulseaudio-alsa pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
+sudo pacman -S feh xfce4-terminal picom alsa pipewire pipewire-pulse pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk ntfs-3g xdotool --noconfirm --needed
 sudo pacman -S vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit adobe-source-code-pro-fonts --noconfirm --needed
 sudo pacman -S python acpi python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
@@ -160,6 +160,8 @@ sudo systemctl enable dcron
 sudo systemctl start dcron
 sudo systemctl enable autofs
 sudo systemctl start autofs
+sudo systemctl start pipewire-pulse.service
+sudo systemctl enable pipewire-pulse.service
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig

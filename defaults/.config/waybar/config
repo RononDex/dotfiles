@@ -8,7 +8,7 @@
     "exclusive": true, 	
     "passthrough": false, 
     "position": "top",
-    "output": "DP-2", 	
+    "output": "DP-2", 
     "height": 32, 		
     "width": "", 		
     "spacing": 6, 		
