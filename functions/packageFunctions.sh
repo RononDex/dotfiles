@@ -76,6 +76,7 @@ InstallHyprland() {
         InstallAurPackage "libdisplay-info" "https://aur.archlinux.org/libdisplay-info.git"
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
 		InstallAurPackage "xdg-desktop-portal-hyprland-git" "https://aur.archlinux.org/xdg-desktop-portal-hyprland-git.git"
+		InstallAurPackage "waybar-hyprland-git" "https://aur.archlinux.org/waybar-hyprland-git.git"
 
 		sudo pacman -Sy waybar wofi swaybg --needed --noconfirm
 	fi

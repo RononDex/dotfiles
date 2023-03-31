@@ -30,7 +30,7 @@ sudo pacman -Sy sof-firmware i3-gaps nextcloud-client light xf86-input-wacom dun
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy nomacs tlp tlp-rdw libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
-sudo pacman -Sy dotnet-sdk brightnessctl aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
+sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
 sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode --needed --confirm
 
 sudo systemctl enable bluetooth

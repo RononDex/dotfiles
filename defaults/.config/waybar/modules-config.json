@@ -1,6 +1,4 @@
-// Waybar modules configuration
 {
-	// waybar-backlight
     "backlight": {
 		"interval": 2,
 		"align": 0,
