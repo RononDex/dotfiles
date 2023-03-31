@@ -9,4 +9,4 @@ sleep 0.05s
 wal -i $(cat ~/.cache/wal/bgImage) &
 pkill swaybg
 sleep 0.05s
-swaybg -i $backgroundImage &
+swaybg -i $backgroundImage -m fill &
