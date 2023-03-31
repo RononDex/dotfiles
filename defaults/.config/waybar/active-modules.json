@@ -1,11 +1,8 @@
 {
   "modules-left": [
-    "sway/workspaces",
-    "sway/mode",
-    "sway/scratchpad",
-    "custom/media"
+    "wlr/workspaces",
   ],
-  "modules-center": ["sway/window"],
+  "modules-center": ["wlr/window"],
   "modules-right": [
     "idle_inhibitor",
     "pulseaudio",
