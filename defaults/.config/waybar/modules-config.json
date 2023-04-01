@@ -36,7 +36,6 @@
     }
   },
 
-  // waybar-battery
   "battery": {
     "interval": 60,
     "align": 0,
