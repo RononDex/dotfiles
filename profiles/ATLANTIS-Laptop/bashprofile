@@ -15,4 +15,3 @@ gpgconf --launch gpg-agent
 echo UPDATESTARTUPTTY | gpg-connect-agent -q > /dev/null 2>&1
 
 # Turn off screensaver
-export DISPLAY=:0.0

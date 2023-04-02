@@ -11,3 +11,4 @@ wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
 
 # Download new background photo
 sh ~/.scripts/updateLoginBackground.sh &
+
