@@ -36,7 +36,7 @@ window#waybar.chromium {
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
+    box-shadow: 0 3px transparent inset;
     /* Avoid rounded borders under each button name */
     border: none;
     border-radius: 0;
@@ -45,11 +45,11 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
     background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: 0 3px #ffffff inset;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0px 10px;
     background-color: transparent;
     color: #ffffff;
 }
@@ -60,11 +60,15 @@ button:hover {
 
 #workspaces button.focused {
     background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    box-shadow: 0 3px #ffffff inset;
 }
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+}
+
+#workspaces button.active {
+    box-shadow: 0 3px #cc1111 inset;
 }
 
 #mode {
@@ -108,12 +112,9 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
 }
 
 #battery.charging, #battery.plugged {
@@ -143,24 +144,18 @@ label:focus {
 }
 
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
 }
 
 #memory {
-    background-color: #9b59b6;
 }
 
 #disk {
-    background-color: #964B00;
 }
 
 #backlight {
-    background-color: #90b1b1;
 }
 
 #network {
-    background-color: #2980b9;
 }
 
 #network.disconnected {
@@ -168,8 +163,6 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
 }
 
 #pulseaudio.muted {
@@ -178,8 +171,6 @@ label:focus {
 }
 
 #wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
 }
 
 #wireplumber.muted {
@@ -187,7 +178,6 @@ label:focus {
 }
 
 #custom-media {
-    background-color: #66cc99;
     color: #2a5c45;
     min-width: 100px;
 }
@@ -201,7 +191,6 @@ label:focus {
 }
 
 #temperature {
-    background-color: #f0932b;
 }
 
 #temperature.critical {
@@ -209,7 +198,6 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
 }
 
 #tray > .passive {
@@ -222,16 +210,13 @@ label:focus {
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
     color: #2d3436;
 }
 
 #mpd {
-    background-color: #66cc99;
     color: #2a5c45;
 }
 
@@ -248,7 +233,6 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
@@ -256,8 +240,6 @@ label:focus {
 }
 
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
