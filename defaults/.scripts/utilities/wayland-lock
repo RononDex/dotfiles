@@ -1,4 +1,4 @@
 #!/bin/bash
 
-swaylock --screenshot --fade-in 0.5 --effect-blur 15x1 --clock --indicator
+swaylock -f --screenshot --fade-in 0.5 --effect-blur 15x1 --clock --indicator
 
