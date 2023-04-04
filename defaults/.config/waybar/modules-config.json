@@ -3,10 +3,8 @@
     "interval": 2,
     "align": 0,
     "rotate": 0,
-    //"device": "amdgpu_bl0",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", ""],
-    // Commands to execute on events
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""],
     "on-click": "",
     "on-click-middle": "",
     "on-click-right": "",
@@ -20,7 +18,7 @@
     "format": "{name} {icon}",
     "on-click": "activate",
     "all-outputs": true,
-	"sort-by-number": true,
+    "sort-by-number": true,
     "format-icons": {
       "1": "",
       "2": "",
@@ -41,8 +39,6 @@
     "interval": 60,
     "align": 0,
     "rotate": 0,
-    //"bat": "BAT1",
-    //"adapter": "ACAD",
     "full-at": 100,
     "design-capacity": false,
     "states": {
@@ -53,8 +49,6 @@
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
-    "format-full": "{icon} Full",
-    //"format-good": "",
     "format-alt": "{icon} {time}",
     "format-icons": ["", "", "", "", ""],
     "format-time": "{H}h {M}min",
@@ -66,9 +60,8 @@
     "interval": 60,
     "align": 0,
     "rotate": 0,
-    //"timezone": "America/New_York",
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": " {:%H:%M}",
+    "format": "  {:%H:%M}",
     "format-alt": " {:%a %b %d, %G}"
   },
 
@@ -132,9 +125,9 @@
   "network": {
     "interval": 5,
     //"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
-    "format-wifi": " {essid}",
-    "format-ethernet": " {ipaddr}/{cidr}",
-    "format-linked": " {ifname} (No IP)",
+    "format-wifi": "  {essid}",
+    "format-ethernet": "  {ipaddr}/{cidr}",
+    "format-linked": "  {ifname} (No IP)",
     "format-disconnected": "睊 Disconnected",
     "format-disabled": "睊 Disabled",
     "format-alt": " {bandwidthUpBits} |  {bandwidthDownBits}",
@@ -165,7 +158,7 @@
   "pulseaudio": {
     //"format": "{volume}% {icon} {format_source}",
     "format": "{icon} {volume}%",
-    "format-muted": " Mute",
+    "format-muted": "  Mute",
     "format-bluetooth": " {volume}% {format_source}",
     "format-bluetooth-muted": " Mute",
     "format-source": " {volume}%",
@@ -190,5 +183,36 @@
   "tray": {
     "icon-size": 16,
     "spacing": 10
+  },
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "cpu": {
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "{}% "
+  },
+  "temperature": {
+    // "thermal-zone": 2,
+    // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+    "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C {icon}",
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
   }
 }
