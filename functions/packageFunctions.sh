@@ -77,6 +77,7 @@ InstallHyprland() {
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
 		InstallAurPackage "xdg-desktop-portal-hyprland-git" "https://aur.archlinux.org/xdg-desktop-portal-hyprland-git.git"
 		InstallAurPackage "waybar-hyprland-git" "https://aur.archlinux.org/waybar-hyprland-git.git"
+		InstallAurPackage "swaylock-effects-git" "https://aur.archlinux.org/swaylock-effects-git.git"
 
 		sudo pacman -Sy wofi swaybg --needed --noconfirm
 	fi
