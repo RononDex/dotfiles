@@ -79,7 +79,7 @@ InstallHyprland() {
 		InstallAurPackage "waybar-hyprland-git" "https://aur.archlinux.org/waybar-hyprland-git.git"
 		InstallAurPackage "swaylock-effects-git" "https://aur.archlinux.org/swaylock-effects-git.git"
 
-		sudo pacman -Sy wofi swaybg --needed --noconfirm
+		sudo pacman -Sy wofi swaybg swayidle --needed --noconfirm
 	fi
 }
 

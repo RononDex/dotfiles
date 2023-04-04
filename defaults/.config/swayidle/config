@@ -1,0 +1,3 @@
+timeout 300 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+timeout 305 '~/.scripts/utilities/wayland-lock'
+before-sleep '~/.scripts/utilities/wayland-lock'
