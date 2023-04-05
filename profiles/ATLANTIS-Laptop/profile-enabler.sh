@@ -22,6 +22,7 @@ sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 sudo mkdir /etc/sddm.conf.d/
 sudo cp $scriptDir/overrides/sddm.conf /etc/sddm.conf.d/custom.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/configs/monitors.conf
+cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 
 sudo pacman -Syu --noconfirm
 
@@ -32,6 +33,9 @@ sudo pacman -Sy nomacs tlp tlp-rdw libreoffice mpv breeze breeze-icons libvncser
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
 sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode --needed --confirm
+
+echo "Setup auto screen rotation"
+InstallAurPackage "iio-hyprland" "https://aur.archlinux.org/iio-hyprland.git"
 
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
