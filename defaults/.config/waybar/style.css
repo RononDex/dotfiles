@@ -6,11 +6,18 @@
 
 window#waybar {
   background-color: rgba(43, 48, 59, 0.5);
-  border-bottom: 2px solid rgba(100, 114, 125, 0.5);
   color: #bbbbbb;
   transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: 2s;
   padding: 10;
+}
+
+window#waybar.top {
+  border-bottom: 2px solid rgba(100, 114, 125, 0.5);
+}
+
+window#waybar.bottom {
+  border-top: 2px solid rgba(100, 114, 125, 0.5);
 }
 
 window#waybar.hidden {
@@ -50,13 +57,13 @@ button:hover {
 }
 
 #workspaces button {
-  padding: 0px 8px;
-  padding-right: 16px;
+  padding: 0px 10px;
+  padding-right: 18px;
   background-color: transparent;
 }
 
 #workspaces button * {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 #workspaces button:hover {

@@ -1,13 +1,27 @@
-{
+[{
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
+    "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
  	"include": [
-		"~/.config/waybar/active-modules.json",
+		"~/.config/waybar/active-modules-top.json",
 		"~/.config/waybar/modules-config.json",
 	],
-}
+	"name": "top"
+},
+{
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 35, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+ 	"include": [
+		"~/.config/waybar/active-modules-bottom.json",
+		"~/.config/waybar/modules-config.json",
+	],
+	"name": "bottom"
+}]
 

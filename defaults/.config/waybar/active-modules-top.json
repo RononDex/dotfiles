@@ -1,0 +1,5 @@
+{
+  "modules-left": ["idle_inhibitor", "pulseaudio", "backlight"],
+  "modules-center": ["wlr/window"],
+  "modules-right": ["network", "battery", "clock", "tray"]
+}

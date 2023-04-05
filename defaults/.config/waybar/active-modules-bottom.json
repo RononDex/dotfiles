@@ -1,0 +1,10 @@
+{
+  "modules-left": [
+    "wlr/workspaces",
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "temperature",
+  ]
+}
