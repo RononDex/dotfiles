@@ -21,6 +21,7 @@
  	"include": [
 		"~/.config/waybar/active-modules-bottom.json",
 		"~/.config/waybar/modules-config.json",
+		"~/.config/waybar/bar-output.json",
 	],
 	"name": "bottom"
 }]
