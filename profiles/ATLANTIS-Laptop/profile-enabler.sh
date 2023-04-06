@@ -37,6 +37,9 @@ sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode --needed --confir
 echo "Setup auto screen rotation"
 InstallAurPackage "iio-hyprland" "https://aur.archlinux.org/iio-hyprland.git"
 
+echo "Setting up virtual keybaord"
+InstallAurPackage "wvkdb" "https://aur.archlinux.org/wvkbd.git"
+
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable tlp
