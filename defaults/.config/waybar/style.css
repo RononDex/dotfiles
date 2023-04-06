@@ -24,15 +24,6 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
 window#waybar.termite {
   background-color: #3f3f3f;
 }
@@ -51,15 +42,13 @@ button {
 }
 
 /* bigger buttons */
-#workspaces button,
-#custom-wvkbd button {
+#workspaces button {
   padding: 0px 11px;
   padding-right: 18px;
   background-color: transparent;
 }
 
-#workspaces button *,
-#custom-wvkbd button * {
+#workspaces button * {
   font-size: 17px;
 }
 
@@ -90,6 +79,7 @@ button:hover {
   background-color: #64727d;
   border-bottom: 2px solid #ffffff;
 }
+
 
 #clock,
 #battery,
@@ -227,7 +217,7 @@ label:focus {
 }
 
 #idle_inhibitor.activated {
-  color: #2d3436;
+  background-color: #601f40;
 }
 
 #mpd {
@@ -267,6 +257,10 @@ label:focus {
   background: rgba(0, 0, 0, 0.2);
 }
 
-#custom-wvkbd button {
-  padding-right: 20px;
+#custom-wvkbd {
+  padding-right: 10px;
+}
+
+#custom-wvkbd  {
+  font-size: 22px;
 }
