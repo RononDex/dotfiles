@@ -50,20 +50,23 @@ button {
   border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-  background: inherit;
-  box-shadow: 0 2px #ffffff inset;
-}
-
-#workspaces button {
+/* bigger buttons */
+#workspaces button,
+#custom-wvkbd button {
   padding: 0px 11px;
   padding-right: 18px;
   background-color: transparent;
 }
 
-#workspaces button * {
+#workspaces button *,
+#custom-wvkbd button * {
   font-size: 17px;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: 0 2px #ffffff inset;
 }
 
 #workspaces button:hover {
@@ -264,10 +267,6 @@ label:focus {
   background: rgba(0, 0, 0, 0.2);
 }
 
-#scratchpad {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-  background-color: transparent;
+#custom-wvkbd button {
+  padding-right: 20px;
 }
