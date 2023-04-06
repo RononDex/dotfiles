@@ -23,6 +23,7 @@ sudo mkdir /etc/sddm.conf.d/
 sudo cp $scriptDir/overrides/sddm.conf /etc/sddm.conf.d/custom.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/configs/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
+cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
 
 sudo pacman -Syu --noconfirm
 
