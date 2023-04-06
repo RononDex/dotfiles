@@ -8,6 +8,7 @@
  	"include": [
 		"~/.config/waybar/active-modules-top.json",
 		"~/.config/waybar/modules-config.json",
+		"~/.config/waybar/bar-output.json",
 	],
 	"name": "top"
 },
