@@ -14,4 +14,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 echo UPDATESTARTUPTTY | gpg-connect-agent -q > /dev/null 2>&1
 
-# Turn off screensaver
+export PATH="$PATH:/usr/share/dotnet/"
+
+# setup dotnet language server
+export PATH="$PATH:/home/cobra/.dotnet/tools"
