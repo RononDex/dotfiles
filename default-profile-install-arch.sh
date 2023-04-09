@@ -27,6 +27,7 @@ chmod +x ~/.xprofile
 chmod 700 ~/.gnupg -R
 
 echo "Copying default config files"
+sudo cp ~/.files/sddm/custom.conf /etc/sddm.conf.d/custom.conf
 sudo cp ~/.files/sddm/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
 rm -rf ~/.files
 
