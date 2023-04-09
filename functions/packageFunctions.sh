@@ -76,11 +76,20 @@ InstallHyprland() {
         InstallAurPackage "libdisplay-info" "https://aur.archlinux.org/libdisplay-info.git"
         InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
 		InstallAurPackage "xdg-desktop-portal-hyprland-git" "https://aur.archlinux.org/xdg-desktop-portal-hyprland-git.git"
-		InstallAurPackage "waybar-hyprland-git" "https://aur.archlinux.org/waybar-hyprland-git.git"
+		InstallWaybarExperimentalHyprland
 		InstallAurPackage "swaylock-effects-git" "https://aur.archlinux.org/swaylock-effects-git.git"
 
 		sudo pacman -Sy wofi swaybg swayidle --needed --noconfirm
 	fi
+}
+
+InstallWaybarExperimentalHyprland() {
+		CloneOrUpdateGitRepoToPackages "Waybar" "https://github.com/Alexays/Waybar"
+		cd ~/packages/Waybar
+		sed -i -e 's/zext_workspace_handle_v1_activate(workspace_handle_);/const std::string command = "hyprctl dispatch workspace " + name_;\n\tsystem(command.c_str());/g' src/modules/wlr/workspace_manager.cpp
+		meson --prefix=/usr --buildtype=plain --auto-features=enabled --wrap-mode=nodownload build
+		meson configure -Dexperimental=true build
+		sudo ninja -C build install
 }
 
 InstallWayland() {
