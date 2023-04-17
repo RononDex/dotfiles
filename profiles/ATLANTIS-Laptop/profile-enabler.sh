@@ -19,8 +19,6 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
-sudo mkdir /etc/sddm.conf.d/
-sudo cp $scriptDir/overrides/sddm.conf /etc/sddm.conf.d/custom.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/configs/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
