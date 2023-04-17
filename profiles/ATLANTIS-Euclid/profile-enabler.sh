@@ -22,14 +22,6 @@ sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 sudo pacman -Syy
 sudo pacman -Syu --noconfirm
 
-if [ ! -d ~/.omnisharp ]; then
-    mkdir ~/.omnisharp
-fi
-
-echo "Setting up omnisharp for vscode..."
-rm -rf ~/.omnisharp
-cp -Raf $scriptDir/../ATLANTIS-Surface/overrides/omnisharp ~/.omnisharp
-
 echo "Installing stuff..."
 sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
 sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
@@ -40,6 +32,8 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
 #SetupDotnet                # Use official dotnet packages instead
+InstallWayland
+InstallHyprland
 SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
