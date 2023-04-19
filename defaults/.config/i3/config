@@ -190,7 +190,7 @@ for_window [title="^floating_modifier"] floating enable
 for_window [class="^floating_modifier"] resize set 120pt 150pt
 
 # Lockscreen
-bindsym $mod+shift+a exec light-locker-command -l
+bindsym $mod+shift+a exec i3lock
 
 # Cycle external screen mode
 bindsym $mod+shift+p exec --no-startup-id ~/.scripts/cycleExternalMonitorMode
