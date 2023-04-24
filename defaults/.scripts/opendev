@@ -1,11 +1,11 @@
 #!/bin/bash
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]]; then
-		devFolder=$(find . -type d \( -exec /usr/bin/test -d "{}/.git" -a "{}" != "." \; -print -prune \
+		devFolder=$(find ~/dev -type d \( -exec /usr/bin/test -d "{}/.git" -a "{}" != "." \; -print -prune \
        -o -name .git -prune \) | wofi --dmenu --insensitive)
 else 
-		devFolder=$(find . -type d \( -exec /usr/bin/test -d "{}/.git" -a "{}" != "." \; -print -prune \
+		devFolder=$(find ~/dev -type d \( -exec /usr/bin/test -d "{}/.git" -a "{}" != "." \; -print -prune \
        -o -name .git -prune \) | dmenu -i)
 fi
-cd ~/dev/$devFolder/
+cd $devFolder
 "${EDITOR:-vi}"
