@@ -12,7 +12,7 @@ case $1'' in
     if pkill -0 wlsunset; then
         pkill wlsunset
     else
-        wlsunset -l 44 -L 8
+        wlsunset -l 44 -L 8 &
     fi
     ;;
 'check')
