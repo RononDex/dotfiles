@@ -16,7 +16,7 @@
 
   // wlsunset
   "custom/sunset": {
-    "interval": "2",
+    "interval": "once",
     "tooltip": false,
     "return-type": "json",
     "format": "{icon}",
