@@ -21,14 +21,13 @@ function onSunSet(){
 
 	if [ ${location} = "on" ]; 
 	then
-		CONTENT=$(curl -s https://freegeoip.app/json/)
-		longitude=$(echo $CONTENT | jq .longitude)
-		latitude=$(echo $CONTENT | jq .latitude)
+		longitude=8
+		latitude=44
 		if [ -e $longitude ];
 		then
 			echo location ERROR: freegeoip.app
-			longitude='65'
-			latitude='60'
+			longitude='8'
+			latitude='44'
 		else
 			echo location OK:  $latitude $longitude
 		fi	
