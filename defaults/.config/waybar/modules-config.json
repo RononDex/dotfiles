@@ -24,8 +24,7 @@
       "on": "☾b",
       "off": "☀a",
       "exec": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh",
-      "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle",
-	  "exec-if": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh check" 
+      "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle"
     }
   },
 
