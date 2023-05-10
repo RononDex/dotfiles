@@ -21,8 +21,8 @@
     "return-type": "json",
     "format": "{icon}",
     "format-icons": {
-      "on": "☾b",
-      "off": "☀a",
+      "off": "☾",
+      "on": "☀",
     },
     "exec": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh",
     "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle"
