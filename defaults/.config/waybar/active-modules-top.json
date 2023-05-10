@@ -1,5 +1,5 @@
 {
-  "modules-left": ["idle_inhibitor", "pulseaudio", "backlight", "custom/wlsunset"],
+  "modules-left": ["idle_inhibitor", "pulseaudio", "backlight", "custom/sunset"],
   "modules-center": ["wlr/window"],
   "modules-right": ["network", "battery", "clock", "tray"]
 }
