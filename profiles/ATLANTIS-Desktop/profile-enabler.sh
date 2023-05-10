@@ -14,6 +14,7 @@ sudo cp $scriptDir/overrides/grub/grub /etc/default/grub
 cp $scriptDir/overrides/hyprland/custom-devices.conf ~/.config/hypr/configs/custom-devices.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/configs/monitors.conf
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
+cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 mkdir -p ~/.local/share/applications
 
 mkdir ~/.i3
