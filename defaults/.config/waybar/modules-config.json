@@ -14,6 +14,20 @@
     "smooth-scrolling-threshold": 1
   },
 
+  // wlsunset
+  "custom/sunset": {
+    "interval": 2,
+    "tooltip": false,
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "on": "☾",
+      "off": "☀"
+    ,
+    "exec": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh",
+    "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle"
+  },
+
   "wlr/workspaces": {
     "format": "{name} {icon}",
     "on-click": "activate",
