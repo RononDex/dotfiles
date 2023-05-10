@@ -16,15 +16,16 @@
 
   // wlsunset
   "custom/sunset": {
-    "interval": 2,
+    "interval": "once",
     "tooltip": false,
     "return-type": "json",
     "format": "{icon}",
     "format-icons": {
-      "on": "☾",
-      "off": "☀",
+      "on": "☾b",
+      "off": "☀a",
       "exec": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh",
-      "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle"
+      "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle",
+	  "exec-if": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh check" 
     }
   },
 
