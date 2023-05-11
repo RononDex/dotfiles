@@ -18,10 +18,6 @@
       "name": "JavaSE-17",
       "path": "/usr/lib/jvm/java-17-openjdk",
       "default": true
-    },
-    {
-      "name": "JavaSE-20",
-      "path": "/usr/lib/jvm/java-20-openjdk"
     }
   ]
 }
