@@ -3,7 +3,7 @@
     "interval": 2,
     "align": 0,
     "rotate": 0,
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["", "", "", "", "", "", "", "", ""],
     "on-click": "",
     "on-click-middle": "",
