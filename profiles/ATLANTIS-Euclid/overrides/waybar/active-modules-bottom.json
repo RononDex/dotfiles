@@ -1,11 +1,10 @@
 {
-  "modules-left": [
-    "wlr/workspaces",
-  ],
+  "modules-left": ["wlr/workspaces"],
   "modules-right": [
     "cpu",
     "memory",
     "temperature",
-	"custom/wvkbd"
+    "custom/wvkbd",
+    "custom/display"
   ]
 }

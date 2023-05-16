@@ -80,7 +80,6 @@ button:hover {
   border-bottom: 2px solid #ffffff;
 }
 
-
 #clock,
 #battery,
 #cpu,
@@ -261,10 +260,11 @@ label:focus {
   padding-right: 10px;
 }
 
-#custom-wvkbd  {
+#custom-wvkbd,
+#custom-display {
   font-size: 22px;
 }
 
-#custom-sunset  {
+#custom-sunset {
   font-size: 18px;
 }

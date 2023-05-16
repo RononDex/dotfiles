@@ -6,5 +6,6 @@
     "cpu",
     "memory",
     "temperature",
+    "custom/display",
   ]
 }

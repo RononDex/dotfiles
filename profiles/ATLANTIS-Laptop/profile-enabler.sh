@@ -32,7 +32,7 @@ sudo pacman -Sy texlive-most pulseaudio-bluetooth aspnet-runtime xournalpp remmi
 sudo pacman -Sy nomacs tlp tlp-rdw libreoffice mpv breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
-sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode --needed --confirm
+sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 
 echo "Setup auto screen rotation"
 InstallAurPackage "iio-hyprland" "https://aur.archlinux.org/iio-hyprland.git"

@@ -159,15 +159,6 @@
     "exec-if": "ping wttr.in -c1"
   },
 
-  // updater-custom
-  "custom/updater": {
-    "format": "  {} ",
-    "exec": "checkupdates | wc -l",
-    "exec-if": "[[ $(checkupdates | wc -l) ]]",
-    "interval": 15,
-    "on-click": "foot -e yay -Syu && notify-send 'The system has been updated' "
-  },
-
   // waybar-pulseaudio
   "pulseaudio": {
     //"format": "{volume}% {icon} {format_source}",
@@ -232,5 +223,9 @@
   "custom/wvkbd": {
     "format": "⌨",
     "on-click": "bash ~/.config/waybar/scripts/wvkbd-toggle.sh"
+  },
+  "custom/displays": {
+    "format": "🖵",
+    "on-click": "nwg-displays"
   }
 }
