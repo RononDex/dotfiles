@@ -12,7 +12,7 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 sudo cp $scriptDir/overrides/grub/grub /etc/default/grub
 cp $scriptDir/overrides/hyprland/custom-devices.conf ~/.config/hypr/configs/custom-devices.conf
-cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/configs/monitors.conf
+cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 mkdir -p ~/.local/share/applications
