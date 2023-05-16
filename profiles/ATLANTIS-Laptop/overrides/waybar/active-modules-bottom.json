@@ -4,7 +4,7 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/wvkbd",
-    "custom/display"
+    "custom/displays",
+    "custom/wvkbd"
   ]
 }
