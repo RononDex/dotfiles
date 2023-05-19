@@ -260,14 +260,14 @@ label:focus {
   padding-right: 10px;
 }
 
-#custom-wvkbd,
-#custom-displays {
+#custom-wvkbd {
   font-size: 22px;
   margin-right: 5px;
 }
 
 #custom-displays {
-	margin-top: 5px;	
+  padding-top: 5px;
+  font-size: 18px;
 }
 
 #custom-sunset {
