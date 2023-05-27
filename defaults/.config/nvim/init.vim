@@ -30,6 +30,8 @@ Plug 'vim-test/vim-test'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'tyru/open-browser.vim'  " Depenendency of plantuml-previewer
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
 
 call plug#end()
 
