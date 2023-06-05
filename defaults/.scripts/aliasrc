@@ -25,3 +25,6 @@ alias mh="vim ~/Nextcloud/Documents/mh.md"
 
 # Fix for kitty and ssh
 alias ssh="kitty +kitten ssh"
+
+# Fix PixInsight on wayland
+alias PixInsight="env -u WAYLAND_DISPLAY PixInsight"
