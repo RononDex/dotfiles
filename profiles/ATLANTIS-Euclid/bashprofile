@@ -4,12 +4,8 @@
 # --------------------------------------------
 
 export EDITOR=nvim
-export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Opt out of dotnet telemtry
-(wal -R -e -q -n &)                    # Reload pywal theme
-if test -f ~/.ssh/id_rsa
-then
-    eval $(keychain --eval --quiet id_rsa)                                  # Initializes the keychain
-fi
+export DOTNET_CLI_TELEMETRY_OPTOUT=1                                        # Opt out of dotnet telemtry
+(wal -R -e -n -q &)                                                        # Reload pywal theme
 
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
@@ -18,7 +14,7 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 echo UPDATESTARTUPTTY | gpg-connect-agent -q > /dev/null 2>&1
 
-# Turn off screensaver
-export DISPLAY=:0.0
-xset s off
-xset s noblank
+export PATH="$PATH:/usr/share/dotnet/"
+
+# setup dotnet language server
+export PATH="$PATH:/home/cobra/.dotnet/tools"
