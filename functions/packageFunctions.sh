@@ -76,7 +76,7 @@ InstallHyprland() {
 		gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
 
         InstallAurPackage "libdisplay-info" "https://aur.archlinux.org/libdisplay-info.git"
-        InstallAurPackage "hyprland-bin" "https://aur.archlinux.org/hyprland-bin.git"
+		sudo pacman -Sy hyprland --needed --noconfirm
 		InstallAurPackage "xdg-desktop-portal-hyprland-git" "https://aur.archlinux.org/xdg-desktop-portal-hyprland-git.git"
 		InstallWaybarExperimentalHyprland
 		InstallAurPackage "swaylock-effects-git" "https://aur.archlinux.org/swaylock-effects-git.git"
