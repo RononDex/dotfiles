@@ -181,5 +181,8 @@ UpdatePipPackages
 echo "Installing python packages"
 sudo -H pip install --upgrade youtube-dl
 
+# Dark Theme by default
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
 echo "Updating gpg-agent"
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1

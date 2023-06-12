@@ -152,5 +152,8 @@ sudo vkpurge rm all
 echo "Updating Python packages ..."
 UpdatePipPackages
 
+# Dark Theme by default
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
 echo "Installing python packages"
 sudo -H pip install --upgrade youtube-dl
