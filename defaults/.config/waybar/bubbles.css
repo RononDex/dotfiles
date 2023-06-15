@@ -17,11 +17,27 @@ window#waybar.hidden {
 }
 
 widget {
+  border-radius: 20px;
+  background-color: rgba(40, 40, 40, 0.8);
+}
+
+.modules-left widget:first-child {
+  padding-left: 0px;
+}
+
+.modules-right widget:first-child  {
+  padding-right: 0px;
+}
+
+box,
+label {
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-  border-radius: 5px;
-  background-color: #333333;
+button label,
+button box {
+		padding: 0px;
 }
