@@ -1,0 +1,27 @@
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+}
+
+window#waybar {
+  background-color: rgba(43, 48, 59, 0);
+  color: #bbbbbb;
+  transition-property: background-color;
+  transition-duration: 2s;
+  padding: 10px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+widget {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 5px;
+  background-color: #333333;
+}
