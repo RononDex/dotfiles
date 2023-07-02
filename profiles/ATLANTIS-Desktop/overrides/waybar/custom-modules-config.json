@@ -1,5 +1,8 @@
 {
   "idle_inhibitor": {
     "start-activated": true
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input"
   }
 }
