@@ -42,6 +42,7 @@ SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
 InstallGrubTheme 
+InstallEruption
 
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
