@@ -117,6 +117,10 @@ InstallEruption() {
     then
 		InstallAurPackage "eruption" "https://aur.archlinux.org/eruption.git"
 
-		sudo systemctl enable sddm
+		systemctl --user enable --now eruption-fx-proxy.service
+		systemctl --user enable --now eruption-audio-proxy.service
+		systemctl --user enable --now eruption-process-monitor.service
+
+		sudo systemctl enable --now eruption.service
 	fi
 }
