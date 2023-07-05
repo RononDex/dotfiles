@@ -6,8 +6,6 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . $scriptDir/../../functions/astroFunctions.sh
 
-sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
@@ -68,7 +66,6 @@ InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-d
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
 echo "Enabling services ..."
-sudo systemctl enable lightdm.service
 sudo systemctl enable iptsd
 sudo systemctl enable libvirtd
 

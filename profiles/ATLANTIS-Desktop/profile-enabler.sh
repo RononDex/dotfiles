@@ -3,8 +3,6 @@
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
-sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
@@ -51,7 +49,6 @@ InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
 InstallWayland
 InstallHyprland
-InstallLitarvanLightDmTheme
 InstallRustDev
 InstallJupyterNotebooks
 #SetupDotnet                # Use official dotnet packages instead

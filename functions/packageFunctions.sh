@@ -111,3 +111,12 @@ InstallSddm() {
 		sudo systemctl enable sddm
 	fi
 }
+
+InstallEruption() {
+    if  command -v pacman &> /dev/null
+    then
+		InstallAurPackage "eruption" "https://aur.archlinux.org/eruption.git"
+
+		sudo systemctl enable sddm
+	fi
+}
