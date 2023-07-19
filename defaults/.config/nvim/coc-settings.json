@@ -19,5 +19,6 @@
       "path": "/usr/lib/jvm/java-17-openjdk",
       "default": true
     }
-  ]
+  ],
+  "java.saveActions.organizeImports": true
 }
