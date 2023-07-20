@@ -30,6 +30,7 @@ Plug 'vim-test/vim-test'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'tyru/open-browser.vim'  " Depenendency of plantuml-previewer
+Plug 'mfussenegger/nvim-jdtls' " Java language server
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 
@@ -206,6 +207,8 @@ nmap <leader>q :Bclose<CR>
 " FzF
 "map <C-p> :Files<Return>
 nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+nnoremap <expr> <C-b> :Buffers
+nnoremap <expr> <C-c> :Commands
 let $FZF_DEFAULT_COMMAND = 'find .'
 
 " Git stuff
@@ -213,10 +216,11 @@ nmap <leader>gb :Git blame<CR>
 nmap <leader>gs :G<CR>
 nmap <leader>gu :Git pull<CR>
 nmap <leader>gp :Git push<CR>
-nmap <leader>gc :Gvdiff<CR>
+nmap <leader>gd :Gvdiff<CR>
 nmap <leader>gh :diffget //2 <bar> diffup<CR>
 nmap <leader>gl :diffget //3 <bar> diffup<CR>
 nmap <leader>gm :Git mergetool -y<CR>
+nmap <leader>gc :BCommits
 nmap J ']c'
 nmap K '[c'
 
@@ -261,10 +265,9 @@ nmap <silent> gy <Plug>(coc-type-definition)
 
 " gi - go to implementation
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> <leader>fi <Plug>(coc-implementation)
 
 " fu - find usages
-nmap <silent> <leader>fu <Plug>(coc-references)
+nmap <silent> gu <Plug>(coc-references)
 
 " gh - get hint on whatever's under the cursor
 nnoremap <silent> K :call <SID>show_documentation()<CR>
