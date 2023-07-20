@@ -207,8 +207,8 @@ nmap <leader>q :Bclose<CR>
 " FzF
 "map <C-p> :Files<Return>
 nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
-nnoremap <expr> <C-b> :Buffers
-nnoremap <expr> <C-c> :Commands
+nnoremap <C-c> :Commands<CR>
+nnoremap <C-b> :Buffers<CR>
 let $FZF_DEFAULT_COMMAND = 'find .'
 
 " Git stuff
