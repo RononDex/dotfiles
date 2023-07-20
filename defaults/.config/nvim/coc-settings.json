@@ -20,6 +20,5 @@
       "default": true
     }
   ],
-  "java.saveActions.organizeImports": true,
   "java.format.settings.url": "./eclipse-java-style.xml"
 }
