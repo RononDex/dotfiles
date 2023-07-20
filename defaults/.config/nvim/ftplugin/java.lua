@@ -1,5 +1,6 @@
+local home = os.getenv('HOME')
 local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
-local workspace_dir = '~/.config/jdtls-workspaces/' .. project_name
+local workspace_dir = home .. '/.config/jdtls-workspaces/' .. project_name
 
 -- See `:help vim.lsp.start_client` for an overview of the supported `config` options.
 local config = {
@@ -23,14 +24,14 @@ local config = {
 
 		-- 💀
 		'-jar',
-		'~/packages/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar ',
+		home .. '/packages/jdt-language-server/plugins/org.eclipse.equinox.launcher_1.6.400.v20210924-0641.jar ',
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^                                       ^^^^^^^^^^^^^^
 		-- Must point to the                                                     Change this to
 		-- eclipse.jdt.ls installation                                           the actual version
 
 
 		-- 💀
-		'-configuration', '~/packages/jdt-language-server/config_linux',
+		'-configuration', home .. '/packages/jdt-language-server/config_linux',
 		-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^        ^^^^^^
 		-- Must point to the                      Change to one of `linux`, `win` or `mac`
 		-- eclipse.jdt.ls installation            Depending on your system.
@@ -64,9 +65,10 @@ local config = {
 	init_options = {
 		bundles = {
 			vim.fn.glob(
-			"~/packages/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
+				home ..
+				"/packages/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
 				1),
-			vim.fn.glob("~/packages/vscode-java-test/microsoft/vscode-java-test/server/*.jar", 1)
+			vim.fn.glob(home .. "/packages/vscode-java-test/microsoft/vscode-java-test/server/*.jar", 1)
 		}
 	},
 }

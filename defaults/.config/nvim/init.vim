@@ -250,7 +250,8 @@ let g:coc_global_extensions = [
   \ 'coc-csharp-ls',
   \ 'coc-clangd',
   \ 'coc-prettier',
-  \ 'coc-markdownlint'
+  \ 'coc-markdownlint',
+  \ 'coc-java'
   \ ]
 
 " allows to use enter to select an entry in the auto complete window
