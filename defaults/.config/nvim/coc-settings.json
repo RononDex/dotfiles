@@ -24,5 +24,6 @@
       "default": true
     }
   ],
+  "java.saveActions.organizeImports": true,
   "java.format.settings.url": "~/.config/nvim/eclipse-java-style.xml"
 }
