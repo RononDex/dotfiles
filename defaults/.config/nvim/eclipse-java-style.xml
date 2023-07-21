@@ -76,7 +76,7 @@
 		<setting id="org.eclipse.jdt.core.formatter.alignment_for_enum_constants.count_dependent" value="16|5|48" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_for" value="do not insert" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_before_opening_brace_in_method_declaration" value="insert" />
-		<setting id="org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation" value="48" />
+		<setting id="org.eclipse.jdt.core.formatter.alignment_for_selector_in_method_invocation" value="80" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_switch" value="do not insert" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_after_unary_operator" value="do not insert" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_after_colon_in_case" value="insert" />
@@ -177,7 +177,6 @@
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_before_opening_paren_in_constructor_declaration" value="do not insert" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_before_comma_in_constructor_declaration_throws" value="do not insert" />
 		<setting id="org.eclipse.jdt.core.formatter.insert_space_after_opening_paren_in_if" value="do not insert" />
-		<setting id="org.eclipse.jdt.core.formatter.alignment_for_arguments_in_method_invocation" value="48" />
 		<setting id="org.eclipse.jdt.core.formatter.comment.clear_blank_lines_in_javadoc_comment" value="false" />
 		<setting id="org.eclipse.jdt.core.formatter.alignment_for_annotations_on_parameter.count_dependent" value="1040|-1|1040" />
 		<setting id="org.eclipse.jdt.core.formatter.alignment_for_throws_clause_in_constructor_declaration" value="16" />
