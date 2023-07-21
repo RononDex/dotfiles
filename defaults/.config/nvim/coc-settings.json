@@ -20,5 +20,5 @@
       "default": true
     }
   ],
-  "java.format.settings.url": "./eclipse-java-style.xml"
+  "java.format.settings.url": "~/.config/nvim/eclipse-java-style.xml"
 }
