@@ -37,19 +37,8 @@ SetupJavaDevEnv() {
         sudo pacman -Sy jdk11-openjdk jre-openjdk java-openjfx intellij-idea-community-edition maven gradle --needed --noconfirm
     fi
 
-    # CloneOrUpdateGitRepoToPackages "java-debug" "https://github.com/microsoft/java-debug"
-	# cd ~/packages/java-debug/
-	# ./mvnw clean install -DskipTests
-
-	# CloneOrUpdateGitRepoToPackages "vscode-java-test" "https://github.com/microsoft/vscode-java-test"
-	# cd ~/packages/vscode-java-test
-	# npm install
-	# npm run build-plugin
-
-	# rm -rf ~/packages/jdt-language-server
-	# mkdir ~/packages/jdt-language-server/
-	# cd ~/packages/jdt-language-server
-	# wget https://www.eclipse.org/downloads/download.php?file=/jdtls/milestones/1.9.0/jdt-language-server-1.9.0-202203031534.tar.gz
+	mkdir -p ~/.config/coc/extensions/node_modules/coc-java/lombok/
+	wget -O ~/.config/coc/extensions/node_modules/coc-java/lombok/lombok.jar https://projectlombok.org/downloads/lombok.jar
 }
 
 SetupJavaScriptDevEnv() {
