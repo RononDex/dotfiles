@@ -28,7 +28,7 @@
     "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle"
   },
 
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{name} {icon}",
     "on-click": "activate",
     "all-outputs": true,
