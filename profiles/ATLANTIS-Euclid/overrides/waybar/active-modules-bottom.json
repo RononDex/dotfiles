@@ -1,5 +1,5 @@
 {
-  "modules-left": ["wlr/workspaces"],
+  "modules-left": ["hyprland/workspaces"],
   "modules-right": [
     "cpu",
     "memory",
