@@ -257,6 +257,10 @@ let g:coc_global_extensions = [
 " allows to use enter to select an entry in the auto complete window
 inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
+" Use Ctrl + J,K to move inside autosuggestions window
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("<C-j>"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("<C-k>"))
+
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> <leader>fd <Plug>(coc-definition)
