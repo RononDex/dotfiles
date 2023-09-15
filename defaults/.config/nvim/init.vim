@@ -258,8 +258,8 @@ let g:coc_global_extensions = [
 inoremap <expr> <cr> coc#pum#visible() ? coc#_select_confirm() : "\<CR>"
 
 " Use Ctrl + J,K to move inside autosuggestions window
-inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("<C-j>"))
-inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("<C-k>"))
+inoremap <C-j> <C-n>
+inoremap <C-k> <C-p>
 
 " gd - go to definition of word under cursor
 nmap <silent> gd <Plug>(coc-definition)
