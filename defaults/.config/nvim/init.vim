@@ -30,6 +30,7 @@ Plug 'vim-test/vim-test'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'ryanoasis/vim-devicons'
 Plug 'tyru/open-browser.vim'  " Depenendency of plantuml-previewer
+Plug 'https://github.com/OmniSharp/Omnisharp-vim'
 " Plug 'mfussenegger/nvim-jdtls' " Java language server
 " Plug 'mfussenegger/nvim-dap'
 " Plug 'rcarriga/nvim-dap-ui'
@@ -247,7 +248,7 @@ let g:coc_global_extensions = [
   \ 'coc-sh',
   \ 'coc-pyright',
   \ 'coc-xml',
-  \ 'coc-csharp-ls',
+  " \ 'coc-csharp-ls',
   \ 'coc-clangd',
   \ 'coc-prettier',
   \ 'coc-markdownlint',
