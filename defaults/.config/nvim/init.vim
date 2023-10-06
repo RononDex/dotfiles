@@ -248,7 +248,6 @@ let g:coc_global_extensions = [
   \ 'coc-sh',
   \ 'coc-pyright',
   \ 'coc-xml',
-  " \ 'coc-csharp-ls',
   \ 'coc-clangd',
   \ 'coc-prettier',
   \ 'coc-markdownlint',
