@@ -34,7 +34,7 @@ sudo pacman -Sy amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd
 echo "Installing video drivers ..."
 sudo pacman -Sy libva-mesa-driver lib32-mesa  --needed --noconfirm
 InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-installer.git"
-InstallAurPackage "obs-studio-amf" "https://aur.archlinux.org/obs-studio-amf.git"
+InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
 
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
@@ -46,6 +46,8 @@ echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
+EnableService "lactd"
+StartService "lactd"
 
 InstallWayland
 InstallHyprland

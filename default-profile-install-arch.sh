@@ -73,7 +73,7 @@ sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosugge
 sudo pacman -S dkms btop linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect networkmanager-openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
-sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome --needed --noconfirm
+sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil --needed --noconfirm
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
@@ -148,6 +148,7 @@ InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-co
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
+InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 
 echo "Setting up Display Manager"
 InstallSddm
