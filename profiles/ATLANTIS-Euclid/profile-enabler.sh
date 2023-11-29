@@ -63,6 +63,7 @@ InstallAurPackage "ipu6-camera-bin" "https://aur.archlinux.org/ipu6-camera-bin.g
 InstallAurPackage "intel-ipu6ep-camera-hal-git" "https://aur.archlinux.org/intel-ipu6ep-camera-hal-git.git"
 InstallAurPackage "icamerasrc-git" "https://aur.archlinux.org/icamerasrc-git.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
+InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
