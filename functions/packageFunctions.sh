@@ -25,6 +25,15 @@ InstallLitarvanLightDmTheme() {
     sudo tar -xvzf lightdm-webkit-theme-litarvan-3.2.0.tar.gz --directory /usr/share/web-greeter/themes/litarvan
 }
 
+InstallMpv() {
+    # Arch
+    if  command -v pacman &> /dev/null
+    then
+        sudo pacman -Sy vapoursynth --needed --noconfirm
+		InstallAurPackage "mpv-git" "https://aur.archlinux.org/mpv-git.git"
+    fi
+}
+
 InstallRustDev() {
     sudo xbps-install -Sy rust rust-analyzer racer cargo
 }
