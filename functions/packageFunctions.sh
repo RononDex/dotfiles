@@ -29,7 +29,7 @@ InstallMpv() {
     # Arch
     if  command -v pacman &> /dev/null
     then
-        sudo pacman -Sy vapoursynth --needed --noconfirm
+        sudo pacman -Sy vapoursynth mkvtoolnix-cli --needed --noconfirm
 		InstallAurPackage "mpv-git" "https://aur.archlinux.org/mpv-git.git"
     fi
 }
