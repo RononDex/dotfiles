@@ -23,6 +23,7 @@ cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-
 cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
+
 echo "Installing stuff ..."
 sudo pacman -Sy i3-gaps nextcloud-client light dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman wireguard-tools --noconfirm --needed
 sudo pacman -Sy texlive-most biber pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed polybar --noconfirm
@@ -38,6 +39,7 @@ InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-i
 InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
 
 echo "Installing AUR packages..."
+InstallMpv
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
@@ -55,7 +57,6 @@ InstallWayland
 InstallHyprland
 InstallRustDev
 InstallJupyterNotebooks
-InstallMpv
 #SetupDotnet                # Use official dotnet packages instead
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
