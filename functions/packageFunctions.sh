@@ -30,6 +30,7 @@ InstallMpv() {
     if  command -v pacman &> /dev/null
     then
         sudo pacman -Sy vapoursynth mkvtoolnix-cli --needed --noconfirm
+		sudo pacman -R mpv jellyfin-media-player
 		InstallAurPackage "libplacebo-git" "https://aur.archlinux.org/libplacebo-git.git"
 		InstallAurPackage "mpv-git" "https://aur.archlinux.org/mpv-git.git"
     fi
