@@ -127,7 +127,7 @@ echo "Copying default ranger config ..."
 ranger --copy-config=all
 
 echo "Setting up vim..."
-BasicVimInstall
+BasicNvimInstall
 
 echo "Setting up git"
 if grep -q "gitalias" "$HOME/.gitconfig" ; then

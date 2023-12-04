@@ -1,9 +1,11 @@
-require("setupLazyPackageManager")
-
-require("lazy").setup({
-		'nvim-neo-tree/neo-tree.nvim',
-		'nvim-telescope/telescope.nvim'
-})
+require("globalSettings")
+require("config/lazy")
 
 
-vim.opt.background='dark'
+require("config/hop")
+require("config/neotree")
+require("config/onedark")
+require("config/telescope")
+require("after/plugin/keymap")
+
+
