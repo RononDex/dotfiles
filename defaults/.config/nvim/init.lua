@@ -1,7 +1,8 @@
 require("setupLazyPackageManager")
 
 require("lazy").setup({
-		'nvim-neo-tree/neo-tree.nvim'
+		'nvim-neo-tree/neo-tree.nvim',
+		'nvim-telescope/telescope.nvim'
 })
 
 
