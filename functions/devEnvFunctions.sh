@@ -86,3 +86,7 @@ BasicVimInstall() {
 
     vim +CocUpdate +qa > /dev/null 2&>1
 }
+
+BasicNvimInstall() {
+		nvim --headless "+Lazy! sync" +qa
+}
