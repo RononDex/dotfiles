@@ -90,7 +90,6 @@ BasicVimInstall() {
 BasicNvimInstall() {
     if command -v pacman &> /dev/null
     then
-        sudo pacman -S ripgrep tree-sitter --noconfirm --needed
+        sudo pacman -S ripgrep tree-sitter tree-sitter-cli fd --noconfirm --needed
     fi
-    nvim --headless "+Lazy! sync" +qa
 }
