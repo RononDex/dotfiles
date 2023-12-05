@@ -9,4 +9,3 @@ vim.opt.smartcase = true
 vim.opt.mouse = 'a'               -- Enable all mouse features
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
-vim.cmd("silent :w")
