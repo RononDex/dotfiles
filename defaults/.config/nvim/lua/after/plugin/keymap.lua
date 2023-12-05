@@ -45,3 +45,7 @@ keymap("n", "T", "O<Esc>", default_opts)
 -- Terminal Mode
 keymap("t", "<Esc>", "<C-\\><C-n>", default_opts)
 keymap("n", "<leader>nt", "ss<cmd>terminal<cr>20su", default_opts)
+
+-- Splitting of windows
+keymap("n", "ss", "<cmd>split<cr><C-w>w", default_opts)
+keymap("n", "sv", "<cmd>vsplit<cr><C-w>w", default_opts)
