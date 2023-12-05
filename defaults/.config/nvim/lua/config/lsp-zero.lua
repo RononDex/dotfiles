@@ -48,12 +48,10 @@ require("mason").setup({
 require('mason-lspconfig').setup({
 		ensure_installed = { 
 				"lua_ls", 
-				"csharp-language-server", 
-				"csharpier", 
-				"bash-language-server",
 				"jdtls",
-				"java-debug-adapter",
-				"java-test",
+				"omnisharp",
+				"clangd",
+				"html",
 		},
   handlers = {
     lsp_zero.default_setup,
