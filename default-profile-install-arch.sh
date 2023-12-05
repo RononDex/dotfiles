@@ -62,7 +62,7 @@ rm ~/mirrorListARM
 source ~/.profile
 
 echo "Installing stuff..."
-sudo pacman -S pkgconfig bc powerline-fonts fakeroot gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions automake m4 autoconf --noconfirm --needed
+sudo pacman -S pkgconfig bc powerline-fonts fakeroot ttf-firacode-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans bash-completion zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
 sudo pacman -S feh picom alsa pipewire pipewire-pulse pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk ntfs-3g xdotool --noconfirm --needed
@@ -144,7 +144,7 @@ else
 fi
 
 echo "Installing AUR packages"
-InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
+#InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
 InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
