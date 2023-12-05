@@ -1,5 +1,5 @@
 return {
-		'navarasu/onedark.nvim',
-		'nvim-lualine/lualine.nvim'
+	'navarasu/onedark.nvim',
+	'nvim-lualine/lualine.nvim',
+	'kdheepak/lazygit.nvim'
 }
-
