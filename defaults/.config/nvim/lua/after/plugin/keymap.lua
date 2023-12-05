@@ -45,12 +45,3 @@ keymap("n", "T", "O<Esc>", default_opts)
 -- Terminal Mode
 keymap("t", "<Esc>", "<C-\\><C-n>", default_opts)
 keymap("n", "<leader>nt", "ss<cmd>terminal<cr>20su", default_opts)
-
--- LSP
-vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(args)
-    vim.keymap.set('n', '<leader>cf', vim.lsp.buf.format(), { buffer = args.buf })
-    vim.keymap.set('n', '<F2>', vim.lsp.buf.rename(), { buffer = args.buf })
-    vim.keymap.set('v', '<F2>', vim.lsp.buf.rename(), { buffer = args.buf })
-  end,
-})
