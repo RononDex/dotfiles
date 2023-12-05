@@ -7,8 +7,6 @@ lsp_zero.on_attach(function(client, bufnr)
 	vim.keymap.set({ 'n', 'x', 'v' }, '<leader>cf', function()
 		vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 	end, { buffer = bufnr })
-	vim.keymap.set('n', '<F2>', vim.lsp.buf.rename())
-	vim.keymap.set('v', '<F2>', vim.lsp.buf.rename())
 	lsp_zero.buffer_autoformat()
 end)
 
