@@ -55,7 +55,7 @@ require('mason-lspconfig').setup({
 		"jdtls",
 		"omnisharp",
 		"clangd",
-		"bash-ls",
+		"bashls",
 		"html",
 	},
 	handlers = {
