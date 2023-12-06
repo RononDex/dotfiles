@@ -12,6 +12,17 @@ lsp_zero.on_attach(function(client, bufnr)
 		vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 	end, { buffer = bufnr })
 	lsp_zero.buffer_autoformat()
+
+	pcall(vim.lsp.codelens.refresh)
+
+	vim.api.nvim_create_autocmd('BufWritePost', {
+		buffer = bufnr,
+		group = java_cmds,
+		desc = 'refresh codelens',
+		callback = function()
+			pcall(vim.lsp.codelens.refresh)
+		end,
+	})
 end)
 
 local cmp = require('cmp')
