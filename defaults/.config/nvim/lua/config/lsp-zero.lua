@@ -13,11 +13,14 @@ lsp_zero.on_attach(function(client, bufnr)
 	end, { buffer = bufnr })
 	lsp_zero.buffer_autoformat()
 
+	-- Enbale code lense everywhere by default
 	pcall(vim.lsp.codelens.refresh)
+
+	local codelense_cmds = vim.api.nvim_create_augroup('codelense_cmds', { clear = true })
 
 	vim.api.nvim_create_autocmd('BufWritePost', {
 		buffer = bufnr,
-		group = java_cmds,
+		group = codelense_cmds,
 		desc = 'refresh codelens',
 		callback = function()
 			pcall(vim.lsp.codelens.refresh)
@@ -34,6 +37,8 @@ cmp.setup({
 		['<Tab>'] = cmp_action.luasnip_supertab(),
 		['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
 		['<C-Space>'] = cmp.mapping.complete(),
+		['<C-j>'] = cmp.mapping.select_next_item({behavior = 'select'})
+		['<C-k>'] = cmp.mapping.select_prev_item({behavior = 'select'})
 	}),
 	preselect = 'item',
 	completion = {
