@@ -1,5 +1,8 @@
 local lsp_zero = require('lsp-zero')
 
+
+lsp_zero.skip_server_setup({ 'jdtls' })
+
 lsp_zero.on_attach(function(client, bufnr)
 	-- see :help lsp-zero-keybindings
 	-- to learn the available actions
