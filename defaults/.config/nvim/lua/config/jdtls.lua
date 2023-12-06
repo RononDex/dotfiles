@@ -19,7 +19,7 @@ local config =
 
 	-- How to run jdtls. This can be overridden to a full java command-line
 	-- if the Python wrapper script doesn't suffice.
-	cmd = { vim.fn.exepath("jdtls"), "--jvm-arg", "~/.local/share/jdtls/extensions/lombok/lombok.jar" },
+	cmd = { vim.fn.exepath("jdtls"), "--jvm-arg=" .. "~/.local/share/jdtls/extensions/lombok/lombok.jar" },
 	full_cmd = function(opts)
 		local fname = vim.api.nvim_buf_get_name(0)
 		local root_dir = opts.root_dir(fname)
@@ -58,6 +58,10 @@ local config =
 					{
 						name = "JavaSE-17",
 						path = "/usr/lib/jvm/java-17-openjdk",
+					},
+					{
+						name = "JavaSE-21",
+						path = "/usr/lib/jvm/java-21-openjdk",
 						default = true
 					}
 				}
