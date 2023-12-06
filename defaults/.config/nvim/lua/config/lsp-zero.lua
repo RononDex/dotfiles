@@ -1,7 +1,5 @@
 local lsp_zero = require('lsp-zero').preset({})
 
-
-
 lsp_zero.on_attach(function(client, bufnr)
 	-- see :help lsp-zero-keybindings
 	-- to learn the available actions
@@ -62,6 +60,7 @@ require('mason-lspconfig').setup({
 		"clangd",
 		"bashls",
 		"html",
+		"jdtls",
 	},
 	handlers = {
 		lsp_zero.default_setup,

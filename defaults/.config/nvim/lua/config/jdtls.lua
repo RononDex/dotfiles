@@ -283,3 +283,4 @@ vim.api.nvim_create_autocmd('FileType', {
 	desc = 'Setup jdtls',
 	callback = jdtls_setup,
 })
+vim.notify("This is an error message, JDTLS", "error")
