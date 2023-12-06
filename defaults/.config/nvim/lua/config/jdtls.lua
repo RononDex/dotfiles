@@ -177,7 +177,6 @@ local function jdtls_setup(event)
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
 		--'-javaagent:' .. path.java_agent,
-		"-javaagent:/home/cobra/.local/share/jdtls/extensions/lombok/lombok.jar",
 		'-Xms1g',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens',
@@ -190,6 +189,7 @@ local function jdtls_setup(event)
 		path.platform_config,
 		'-data',
 		data_dir,
+		"--jvm-arg=" .. "-javaagent:/home/cobra/.local/share/jdtls/extensions/lombok/lombok.jar",
 	}
 
 	local lsp_settings = {
@@ -282,4 +282,3 @@ vim.api.nvim_create_autocmd('FileType', {
 	desc = 'Setup jdtls',
 	callback = jdtls_setup,
 })
-vim.notify("This is an error message, JDTLS", "error")
