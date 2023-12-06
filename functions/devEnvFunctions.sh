@@ -38,8 +38,8 @@ SetupJavaDevEnv() {
         sudo pacman -Sy jdk11-openjdk jre-openjdk java-openjfx intellij-idea-community-edition maven gradle --needed --noconfirm
     fi
 
-	mkdir -p ~/.config/coc/extensions/node_modules/coc-java/lombok/
-	wget -O ~/.config/coc/extensions/node_modules/coc-java/lombok/lombok.jar https://projectlombok.org/downloads/lombok.jar
+	mkdir -p ~/.local/share/jdtls/extensions/lombok
+	wget -O ~/.local/share/jdtls/extensions/lombok/lombok.jar https://projectlombok.org/downloads/lombok.jar
 }
 
 SetupJavaScriptDevEnv() {

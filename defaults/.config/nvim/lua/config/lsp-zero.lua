@@ -48,7 +48,6 @@ require("mason").setup({
 		"csharp-language-server",
 		"csharpier",
 		"bash-language-server",
-		"jdtls",
 		"java-debug-adapter",
 		"java-test",
 	},
@@ -56,7 +55,6 @@ require("mason").setup({
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		"lua_ls",
-		"jdtls",
 		"omnisharp",
 		"clangd",
 		"bashls",
