@@ -14,5 +14,6 @@ require("config/dressing")
 require("config/lazygit")
 require("config/jdtls")
 require("config/comment")
+require("config/debugging")
 
 require("after/plugin/keymap")
