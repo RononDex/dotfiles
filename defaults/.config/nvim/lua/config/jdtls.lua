@@ -1,3 +1,4 @@
+local home = os.getenv("HOME")
 local java_cmds = vim.api.nvim_create_augroup('java_cmds', { clear = true })
 local cache_vars = {}
 
@@ -176,7 +177,7 @@ local function jdtls_setup(event)
 		'-Declipse.product=org.eclipse.jdt.ls.core.product',
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
-		--'-javaagent:' .. path.java_agent,
+		'-javaagent:' .. path.java_agent,
 		'-Xms1g',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens',
@@ -189,7 +190,6 @@ local function jdtls_setup(event)
 		path.platform_config,
 		'-data',
 		data_dir,
-		"--jvm-arg=" .. "-javaagent:/home/cobra/.local/share/jdtls/extensions/lombok/lombok.jar",
 	}
 
 	local lsp_settings = {
