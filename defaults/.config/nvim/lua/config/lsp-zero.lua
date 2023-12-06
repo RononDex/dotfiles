@@ -53,6 +53,7 @@ require("mason").setup({
 		"bash-language-server",
 		"java-debug-adapter",
 		"java-test",
+		"jdtls"
 	},
 })
 require('mason-lspconfig').setup({
