@@ -11,11 +11,11 @@ local root_files = {
 
 local features = {
 	-- change this to `true` to enable codelens
-	codelens = false,
+	codelens = true,
 
 	-- change this to `true` if you have `nvim-dap`,
 	-- `java-test` and `java-debug-adapter` installed
-	debugger = false,
+	debugger = true,
 }
 
 local function get_jdtls_paths()
@@ -178,7 +178,7 @@ local function jdtls_setup(event)
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
 		--'-javaagent:' .. path.java_agent,
-		"-javaagent:~/.local/share/jdtls/extensions/lombok/lombok.jar",
+		"-javaagent:/home/cobra/.local/share/jdtls/extensions/lombok/lombok.jar",
 		'-Xms1g',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens',
