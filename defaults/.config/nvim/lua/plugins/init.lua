@@ -1,5 +1,6 @@
 return {
 	'navarasu/onedark.nvim',
 	'nvim-lualine/lualine.nvim',
-	'kdheepak/lazygit.nvim'
+	'kdheepak/lazygit.nvim',
+	'nanozuki/tabby.nvim'
 }
