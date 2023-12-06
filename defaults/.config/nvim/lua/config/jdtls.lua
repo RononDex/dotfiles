@@ -222,9 +222,10 @@ local function jdtls_setup(event)
 			},
 			format = {
 				enabled = true,
-				-- settings = {
-				--   profile = 'asdf'
-				-- },
+				settings = {
+					--   profile = 'asdf'
+					url = home .. "/.config/nvim/eclipse-java-style.xml",
+				},
 			}
 		},
 		signatureHelp = {
