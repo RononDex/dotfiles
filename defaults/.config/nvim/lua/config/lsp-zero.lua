@@ -37,8 +37,8 @@ cmp.setup({
 		['<Tab>'] = cmp_action.luasnip_supertab(),
 		['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
 		['<C-Space>'] = cmp.mapping.complete(),
-		['<C-j>'] = cmp.mapping.select_next_item({behavior = 'select'})
-		['<C-k>'] = cmp.mapping.select_prev_item({behavior = 'select'})
+		['<C-j>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
+		['<C-k>'] = cmp.mapping.select_prev_item({ behavior = 'select' })
 	}),
 	preselect = 'item',
 	completion = {
