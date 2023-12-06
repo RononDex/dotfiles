@@ -19,7 +19,7 @@ local config =
 
 	-- How to run jdtls. This can be overridden to a full java command-line
 	-- if the Python wrapper script doesn't suffice.
-	cmd = { vim.fn.exepath("jdtls") },
+	cmd = { vim.fn.exepath("jdtls"), "--jvm-arg", "~/.local/share/jdtls/extensions/lombok/lombok.jar" },
 	full_cmd = function(opts)
 		local fname = vim.api.nvim_buf_get_name(0)
 		local root_dir = opts.root_dir(fname)
@@ -41,7 +41,56 @@ local config =
 	-- for a list of options
 	settings = {
 		java = {
-			referenceCodeLens = { enabled = true }
+			configuration = {
+				-- See https://github.com/eclipse/eclipse.jdt.ls/wiki/Running-the-JAVA-LS-server-from-the-command-line#initialize-request
+				-- And search for `interface RuntimeOption`
+				-- The `name` is NOT arbitrary, but must match one of the elements from `enum ExecutionEnvironment` in the link above
+				runtimes = {
+
+					{
+						name = "JavaSE-1.8",
+						path = "/usr/lib/jvm/java-8-openjdk"
+					},
+					{
+						name = "JavaSE-11",
+						path = "/usr/lib/jvm/java-11-openjdk"
+					},
+					{
+						name = "JavaSE-17",
+						path = "/usr/lib/jvm/java-17-openjdk",
+						default = true
+					}
+				}
+			},
+			codeGeneration = {
+				hashCodeEquals = {
+					useInstanceof = true,
+					useJava7Objects = true
+				},
+				toString = {
+					codeStyle = "STRING_BUILDER_CHAINED"
+				},
+				useBlocks = true,
+			},
+			contentProvider = { preferred = 'fernflower' },
+			implementationsCodeLens = {
+				enabled = true
+			},
+			referencesCodeLens = {
+				enabled = true
+			},
+			signatureHelp = { enabled = true },
+			sources = {
+				organizeImports = {
+					starThreshold = 9999,
+					staticStarThreshold = 9999,
+				}
+			},
+			format = {
+				settings = {
+					url = "~/.config/nvim/eclipse-java-style.xml",
+				}
+			}
 		}
 	},
 
