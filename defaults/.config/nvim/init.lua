@@ -1,7 +1,6 @@
 require("globalSettings")
+
 require("config/lazy")
-
-
 require("config/hop")
 require("config/neotree")
 require("config/onedark")
@@ -14,4 +13,6 @@ require("config/autocmd")
 require("config/dressing")
 require("config/lazygit")
 require("config/jdtls")
+require("config/comment")
+
 require("after/plugin/keymap")
