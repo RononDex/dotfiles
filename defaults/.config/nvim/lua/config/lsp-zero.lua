@@ -42,15 +42,15 @@ cmp.setup({
 	}
 })
 
+lsp_zero.skip_server_setup({ 'jdtls' })
+
+lsp_zero.setup()
+
 require("mason").setup({
 	ensure_installed = {
-		"lua_ls",
-		"csharp-language-server",
-		"csharpier",
-		"bash-language-server",
 		"java-debug-adapter",
 		"java-test",
-		"jdtls"
+		--"jdtls"
 	},
 })
 require('mason-lspconfig').setup({
@@ -66,7 +66,3 @@ require('mason-lspconfig').setup({
 		lsp_zero.default_setup,
 	},
 })
-
-lsp_zero.skip_server_setup({ 'jdtls' })
-
-lsp_zero.setup()
