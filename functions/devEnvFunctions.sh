@@ -7,8 +7,6 @@ SetupDotnet() {
     wget https://dot.net/v1/dotnet-install.sh
     sudo bash dotnet-install.sh -c Current -InstallDir /usr/share/dotnet
     sudo bash dotnet-install.sh -c STS -InstallDir /usr/share/dotnet
-    dotnet tool install --global csharp-ls
-    dotnet tool update --global csharp-ls
     dotnet new install BenchmarkDotNet.Templates
 
     if command -v xbps-install &> /dev/null

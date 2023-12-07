@@ -57,7 +57,7 @@ InstallWayland
 InstallHyprland
 InstallRustDev
 InstallJupyterNotebooks
-#SetupDotnet                # Use official dotnet packages instead
+SetupDotnet
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
 SetupPythonDev

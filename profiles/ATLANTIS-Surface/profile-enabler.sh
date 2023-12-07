@@ -46,7 +46,7 @@ sudo pacman -Syu dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noco
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 
-#SetupDotnet                # Use official dotnet packages instead
+SetupDotnet
 SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks

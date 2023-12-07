@@ -37,7 +37,7 @@ sudo systemctl start bluetooth
 sudo systemctl enable tlp
 sudo systemctl start tlp
 
-#SetupDotnet                # Use official dotnet packages instead
+SetupDotnet
 InstallWayland
 InstallHyprland
 SetupWireguardClient
