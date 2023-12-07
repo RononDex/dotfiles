@@ -136,7 +136,7 @@ local function jdtls_on_attach(client, bufnr)
 	end
 
 	if features.codelens then
-		enable_codelens(bufnr)
+		--enable_codelens(bufnr)
 	end
 
 	-- The following mappings are based on the suggested usage of nvim-jdtls
