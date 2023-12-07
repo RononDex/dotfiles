@@ -58,10 +58,6 @@ cmp.setup({
 	}
 })
 
-lsp_zero.skip_server_setup({ 'jdtls' })
-
-lsp_zero.setup()
-
 require("mason").setup({
 	ensure_installed = {
 		"java-debug-adapter",
