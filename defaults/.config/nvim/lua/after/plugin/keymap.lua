@@ -51,5 +51,6 @@ keymap("n", "ss", "<cmd>split<cr><C-w>w", default_opts)
 keymap("n", "sv", "<cmd>vsplit<cr><C-w>w", default_opts)
 
 -- List available commands
-keymap("n", "<C-F1>", "<cmd>lua require('telescope.builtin')<cr>", default_opts)
-keymap("n", "<C-c>", "<cmd>lua require('telescope.builtin')<cr>", default_opts)
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<C-F1>', builtin.commands, {})
+vim.keymap.set('n', '<C-c>', builtin.commands, {})
