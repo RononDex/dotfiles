@@ -200,6 +200,9 @@ local function jdtls_setup(event)
 			configuration = {
 				updateBuildConfiguration = 'interactive',
 				runtimes = path.runtimes,
+				saveActions = {
+					organizeImports = true,
+				}
 			},
 			maven = {
 				downloadSources = true,
