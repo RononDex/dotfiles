@@ -49,3 +49,8 @@ keymap("n", "<leader>nt", "ss<cmd>terminal<cr>20su", default_opts)
 -- Splitting of windows
 keymap("n", "ss", "<cmd>split<cr><C-w>w", default_opts)
 keymap("n", "sv", "<cmd>vsplit<cr><C-w>w", default_opts)
+
+-- List available commands
+local builtin = require('telescope.builtin')
+keymap("n", "<C-F1>", builtin.commands, default_opts)
+keymap("n", "<C-c>", builtin.commands, default_opts)
