@@ -29,9 +29,7 @@ InstallMpv() {
     # Arch
     if  command -v pacman &> /dev/null
     then
-        sudo pacman -Sy vapoursynth mkvtoolnix-cli --needed --noconfirm
-		InstallAurPackage "libplacebo-git" "https://aur.archlinux.org/libplacebo-git.git"
-		InstallAurPackage "mpv-git" "https://aur.archlinux.org/mpv-git.git"
+        sudo pacman -Sy vapoursynth mpv mkvtoolnix-cli --needed --noconfirm
     fi
 }
 
