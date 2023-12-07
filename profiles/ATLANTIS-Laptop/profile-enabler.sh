@@ -52,6 +52,7 @@ SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
+SetupDotnet
 InstallGrubTheme 
 InstallMpv
 
