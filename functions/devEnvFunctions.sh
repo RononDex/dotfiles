@@ -23,7 +23,7 @@ SetupDotnet() {
     latest_netcoredbg_url=$(curl -sL https://api.github.com/repos/Samsung/netcoredbg/releases/latest | jq -r ".assets[].browser_download_url" | grep netcoredbg-linux-amd64.tar.gz)
     cd ~/Downloads
 	wget $latest_netcoredbg_url
-	tar -xf netcoredbg-linux-amd64.tar.gz -C ~/.local/share/netcoredbg
+	tar -xf netcoredbg-linux-amd64.tar.gz -C ~/.local/share
 	rm netcoredbg-linux-amd64.tar.gz
 }
 
