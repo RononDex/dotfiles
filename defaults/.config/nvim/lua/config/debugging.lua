@@ -1,4 +1,5 @@
 require("dapui").setup()
+local home = os.getenv("HOME")
 
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -20,7 +21,7 @@ vim.keymap.set('n', '<F12>', '<cmd>lua require("dap").step_out()<cr>')
 
 dap.adapters.coreclr = {
 	type = 'executable',
-	command = '~/.local/share/netcoredbg/netcoredbg',
+	command = home .. '/.local/share/netcoredbg/netcoredbg',
 	args = { '--interpreter=vscode' }
 }
 
