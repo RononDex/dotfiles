@@ -6,7 +6,7 @@ SetupDotnet() {
     rm dotnet-install.sh*
     wget https://dot.net/v1/dotnet-install.sh
     sudo bash dotnet-install.sh -c Current -InstallDir /usr/share/dotnet
-    sudo bash dotnet-install.sh -c 3.1 -InstallDir /usr/share/dotnet
+    sudo bash dotnet-install.sh -c STS -InstallDir /usr/share/dotnet
     dotnet tool install --global csharp-ls
     dotnet tool update --global csharp-ls
     dotnet new install BenchmarkDotNet.Templates
@@ -20,6 +20,13 @@ SetupDotnet() {
     then
         sudo pacman -Sy graphviz --needed --noconfirm
     fi
+
+	echo "Installing netcoredbg"
+    latest_netcoredbg_url=$(curl -sL https://api.github.com/repos/Samsung/netcoredbg/releases/latest | jq -r ".assets[].browser_download_url" | grep netcoredbg-linux-amd64.tar.gz)
+    cd ~/Downloads
+	wget $latest_yq_linux
+	tar -xf netcoredbg-linux-amd64.tar.gz -C ~/.local/share/netcoredbg
+	rm netcoredbg-linux-amd64.tar.gz
 }
 
 SetupMariaMySqlDb() {
