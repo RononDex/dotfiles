@@ -79,3 +79,5 @@ require('mason-lspconfig').setup({
 		jdtls = lsp_zero.noop,
 	},
 })
+
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = false })
