@@ -35,6 +35,7 @@ sudo pacman -Sy amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd
 echo "Installing video drivers ..."
 sudo pacman -Sy libva-mesa-driver lib32-mesa --needed --noconfirm
 sudo pacman -Sy vulkan-radeon lib32-vulkan-radeon --needed --noconfirm
+sudo pacman -Sy rocm-hip-sdk rocm-opencl-sdk rocm-hip-runtime hip-runtime-amd miopen-hip --needed --noconfirm
 InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-installer.git"
 InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
 
