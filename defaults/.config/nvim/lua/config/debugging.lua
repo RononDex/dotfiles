@@ -15,8 +15,8 @@ end
 vim.keymap.set('n', '<F9>', '<cmd>lua require("dap").toggle_breakpoint()<cr>')
 vim.keymap.set('n', '<S-F9>', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")<cr>') -- Set Breakpoint condition
 vim.keymap.set('n', '<F5>', '<cmd>lua require("dap").continue()<cr>')
-vim.keymap.set('n', '<C-F5>', '<cmd>lua require("dap").run_last()<cr>')                                            -- Run last debug again
-vim.keymap.set('n', '<S-F5>', '<cmd>lua require("dap").disconnect({ terminateDebuggee = true })<<cr>')             -- Stop debugging
+vim.keymap.set('n', '<F29>', '<cmd>lua require("dap").run_last()<cr>')                                             -- Run last debug again
+vim.keymap.set('n', '<F17>', '<cmd>lua require("dap").disconnect({ terminateDebuggee = true })<<cr>')              -- Stop debugging
 vim.keymap.set('n', '<F10>', '<cmd>lua require("dap").step_over()<cr>')
 vim.keymap.set('n', '<F11>', '<cmd>lua require("dap").step_into()<cr>')
 vim.keymap.set('n', '<F12>', '<cmd>lua require("dap").step_out()<cr>')
@@ -56,3 +56,6 @@ vim.fn.sign_define('DapBreakpointRejected',
 	{ text = '', texthl = 'DapBreakpoint', linehl = 'DapBreakpoint', numhl = 'DapBreakpoint' })
 vim.fn.sign_define('DapLogPoint', { text = '', texthl = 'DapLogPoint', linehl = 'DapLogPoint', numhl = 'DapLogPoint' })
 vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl = 'DapStopped', numhl = 'DapStopped' })
+
+-- Load vscode / launch.json by default
+require('dap.ext.vscode').load_launchjs(nil, {})
