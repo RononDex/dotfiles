@@ -73,6 +73,7 @@ require('mason-lspconfig').setup({
 		"bashls",
 		"html",
 		"jdtls",
+		"texlab",
 	},
 	handlers = {
 		lsp_zero.default_setup,
