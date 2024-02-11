@@ -53,6 +53,7 @@ SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
 SetupDotnet
+SetupLatex
 InstallGrubTheme 
 InstallMpv
 

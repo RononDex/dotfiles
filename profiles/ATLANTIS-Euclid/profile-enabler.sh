@@ -45,6 +45,7 @@ SetupWireguardClient
 SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
+SetupLatex
 InstallGrubTheme 
 InstallEruption
 

@@ -65,6 +65,7 @@ SetupDotnet
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
 SetupPythonDev
+SetupLatex
 InstallGrubTheme -s 2k
 
 echo "Installing rust/cargo stuff ..."

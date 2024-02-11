@@ -27,6 +27,14 @@ SetupDotnet() {
 	rm netcoredbg-linux-amd64.tar.gz
 }
 
+SetupLatex() {
+		
+    if command -v pacman &> /dev/null
+    then
+        sudo pacman -Sy texlive texlive-langgerman --needed --noconfirm
+    fi
+}
+
 SetupMariaMySqlDb() {
     sudo xbps-install -y mariadb
     EnableService mysqld
