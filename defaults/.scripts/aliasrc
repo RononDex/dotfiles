@@ -6,6 +6,7 @@ alias c="xclip -selection clipboard"
 alias ed=editdotfiles
 alias dev=opendev
 alias up=updateDotFiles
+alias chromium=chromium --ozone-platform-hint=auto
 # Reset smart card mapping for personal gpg key (if different yubikey is plugged in)
 alias resetKey="remove-keygrips 0xB4B88025927E502D"
 alias rk=resetKey
