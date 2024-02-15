@@ -65,17 +65,6 @@ require("mason").setup({
 		--"jdtls"
 	},
 })
-lsp_zero.ensure_installed({
-	"lua_ls",
-	"omnisharp",
-	"clangd",
-	"bashls",
-	"html",
-	"jdtls",
-	"texlab",
-	"eslint",
-	"cssls"
-})
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		"lua_ls",
