@@ -74,6 +74,8 @@ require('mason-lspconfig').setup({
 		"html",
 		"jdtls",
 		"texlab",
+		"eslint",
+		"cssls"
 	},
 	handlers = {
 		lsp_zero.default_setup,
