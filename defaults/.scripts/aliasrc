@@ -7,6 +7,7 @@ alias ed=editdotfiles
 alias dev=opendev
 alias up=updateDotFiles
 alias chromium=chromium --ozone-platform-hint=auto
+alias signal-desktop="signal-desktop -ozone-platform=wayland"
 # Reset smart card mapping for personal gpg key (if different yubikey is plugged in)
 alias resetKey="remove-keygrips 0xB4B88025927E502D"
 alias rk=resetKey
@@ -29,3 +30,7 @@ alias ssh="kitty +kitten ssh"
 
 # Fix PixInsight on wayland
 alias PixInsight="env -u WAYLAND_DISPLAY PixInsight"
+
+# Use wayland when available
+alias chromium="chromium --ozone-platform-hint=auto"
+alias signal-desktop="signal-desktop --ozone-platform-hint=auto"
