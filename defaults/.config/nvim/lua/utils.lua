@@ -31,10 +31,10 @@ end
 function utils.close_debugger()
 	utils.debugging = false
 	require("dapui").close()
-	-- if not utils.is_neotree_open() and utils.neotree_open_before_debug == true then
-	-- 	utils.neotree_open_before_debug = false
-	-- 	vim.cmd("Neotree show")
-	-- end
+	if not utils.is_neotree_open() and utils.neotree_open_before_debug == true then
+		utils.neotree_open_before_debug = false
+		vim.cmd("Neotree show")
+	end
 end
 
 function utils.is_neotree_open()

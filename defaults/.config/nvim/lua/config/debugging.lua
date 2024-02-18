@@ -38,15 +38,15 @@ dap.configurations.cs = {
 }
 
 vim.keymap.set('n', '<F9>', '<cmd>lua require("dap").toggle_breakpoint()<cr>')
-vim.keymap.set('n', '<F21>', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")<cr>') -- Set Breakpoint condition
+vim.keymap.set('n', '<F21>', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<cr>') -- Set Breakpoint condition
 vim.keymap.set('n', '<F5>', '<cmd>lua require("utils").start_debugger(true)<cr>')
-vim.keymap.set('n', '<F29>', '<cmd>lua require("dap").run_last()<cr>')                                            -- Run last debug again
-vim.keymap.set('n', '<F17>', '<cmd>lua require("dap").disconnect({ terminateDebuggee = true })')                  -- Stop debugging
+vim.keymap.set('n', '<F29>', '<cmd>lua require("dap").run_last()<cr>')                                             -- Run last debug again
+vim.keymap.set('n', '<F17>', '<cmd>lua require("dap").disconnect({ terminateDebuggee = true })<cr>')               -- Stop debugging
 vim.keymap.set('n', '<F10>', '<cmd>lua require("dap").step_over()<cr>')
 vim.keymap.set('n', '<F11>', '<cmd>lua require("dap").step_into()<cr>')
 vim.keymap.set('n', '<F12>', '<cmd>lua require("dap").step_out()<cr>')
 
--- Breakpoints apperance
+-- Breakpoints appearance
 vim.api.nvim_set_hl(0, 'DapBreakpoint', { ctermbg = 0, fg = '#993939', bg = '#31353f' })
 vim.api.nvim_set_hl(0, 'DapLogPoint', { ctermbg = 0, fg = '#61afef', bg = '#31353f' })
 vim.api.nvim_set_hl(0, 'DapStopped', { ctermbg = 0, fg = '#98c379', bg = '#31353f' })
