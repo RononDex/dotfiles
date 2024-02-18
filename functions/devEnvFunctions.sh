@@ -48,7 +48,7 @@ SetupJavaDevEnv() {
 
     if command -v pacman &> /dev/null
     then
-        sudo pacman -Sy jdk11-openjdk jre-openjdk java-openjfx intellij-idea-community-edition maven gradle --needed --noconfirm
+        sudo pacman -Sy jdk11-openjdk jdk-openjdk intellij-idea-community-edition maven gradle --needed --noconfirm
 		InstallAurPackage "java-openjfx" "https://aur.archlinux.org/java-openjfx.git"
     fi
 
