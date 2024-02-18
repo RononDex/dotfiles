@@ -20,11 +20,12 @@ SetupDotnet() {
     fi
 
 	echo "Installing netcoredbg"
-    latest_netcoredbg_url=$(curl -sL https://api.github.com/repos/Samsung/netcoredbg/releases/latest | jq -r ".assets[].browser_download_url" | grep netcoredbg-linux-amd64.tar.gz)
-    cd ~/Downloads
-	wget $latest_netcoredbg_url
-	tar -xf netcoredbg-linux-amd64.tar.gz -C ~/.local/share
-	rm netcoredbg-linux-amd64.tar.gz
+	InstallAurPackage "netcoredbg" "https://aur.archlinux.org/netcoredbg.git"
+ #    latest_netcoredbg_url=$(curl -sL https://api.github.com/repos/Samsung/netcoredbg/releases/latest | jq -r ".assets[].browser_download_url" | grep netcoredbg-linux-amd64.tar.gz)
+ #    cd ~/Downloads
+	# wget $latest_netcoredbg_url
+	# tar -xf netcoredbg-linux-amd64.tar.gz -C ~/.local/share
+	# rm netcoredbg-linux-amd64.tar.gz
 }
 
 SetupLatex() {
