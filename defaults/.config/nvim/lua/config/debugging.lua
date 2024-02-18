@@ -21,22 +21,22 @@ vim.keymap.set('n', '<F10>', '<cmd>lua require("dap").step_over()<cr>')
 vim.keymap.set('n', '<F11>', '<cmd>lua require("dap").step_into()<cr>')
 vim.keymap.set('n', '<F12>', '<cmd>lua require("dap").step_out()<cr>')
 
-dap.adapters.coreclr = {
-	type = 'executable',
-	command = home .. '/.local/share/netcoredbg/netcoredbg',
-	args = { '--interpreter=vscode' }
-}
-
-dap.configurations.cs = {
-	{
-		type = "coreclr",
-		name = "launch - netcoredbg",
-		request = "launch",
-		program = function()
-			return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
-		end,
-	},
-}
+-- dap.adapters.coreclr = {
+-- 	type = 'executable',
+-- 	command = home .. '/.local/share/netcoredbg/netcoredbg',
+-- 	args = { '--interpreter=vscode' }
+-- }
+--
+-- dap.configurations.cs = {
+-- 	{
+-- 		type = "coreclr",
+-- 		name = "launch - netcoredbg",
+-- 		request = "launch",
+-- 		program = function()
+-- 			return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+-- 		end,
+-- 	},
+-- }
 
 -- Breakpoints apperance
 vim.api.nvim_set_hl(0, 'DapBreakpoint', { ctermbg = 0, fg = '#993939', bg = '#31353f' })
