@@ -4,6 +4,13 @@ local utils = {
 	debugging = false,
 }
 
+function utils.is_editable()
+	local current_buffer = vim.fn.bufnr("%")
+	local is_modifiable = vim.api.nvim_buf_get_option(current_buffer, "modifiable")
+	local is_readonly = vim.api.nvim_buf_get_option(current_buffer, "readonly")
+	return is_modifiable and not is_readonly
+end
+
 function utils.start_debugger(autoclose_windows)
 	if not utils.debugging then
 		utils.debugging = true
@@ -28,4 +35,12 @@ function utils.close_debugger()
 		utils.neotree_open_before_debug = false
 		vim.cmd("Neotree show")
 	end
+end
+
+function utils.is_neotree_open()
+	local manager = require("neo-tree.sources.manager")
+	local renderer = require("neo-tree.ui.renderer")
+	local state = manager.get_state("filesystem")
+	local window_exists = renderer.window_exists(state)
+	return window_exists
 end
