@@ -14,29 +14,12 @@ end
 
 vim.keymap.set('n', '<F9>', '<cmd>lua require("dap").toggle_breakpoint()<cr>')
 vim.keymap.set('n', '<F21>', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")<cr>') -- Set Breakpoint condition
-vim.keymap.set('n', '<F5>', '<cmd>lua require("dap").continue()<cr>')
+vim.keymap.set('n', '<F5>', "<cmd>lua require('utils').start_debugger(true)<cr>")
 vim.keymap.set('n', '<F29>', '<cmd>lua require("dap").run_last()<cr>')                                            -- Run last debug again
-vim.keymap.set('n', '<F17>', '<cmd>lua require("dap").disconnect({ terminateDebuggee = true })<cr>')              -- Stop debugging
+vim.keymap.set('n', '<F17>', "<cmd>lua require('utils').close_debugger()<cr>")                                    -- Stop debugging
 vim.keymap.set('n', '<F10>', '<cmd>lua require("dap").step_over()<cr>')
 vim.keymap.set('n', '<F11>', '<cmd>lua require("dap").step_into()<cr>')
 vim.keymap.set('n', '<F12>', '<cmd>lua require("dap").step_out()<cr>')
-
--- dap.adapters.coreclr = {
--- 	type = 'executable',
--- 	command = home .. '/.local/share/netcoredbg/netcoredbg',
--- 	args = { '--interpreter=vscode' }
--- }
---
--- dap.configurations.cs = {
--- 	{
--- 		type = "coreclr",
--- 		name = "launch - netcoredbg",
--- 		request = "launch",
--- 		program = function()
--- 			return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
--- 		end,
--- 	},
--- }
 
 -- Breakpoints apperance
 vim.api.nvim_set_hl(0, 'DapBreakpoint', { ctermbg = 0, fg = '#993939', bg = '#31353f' })
