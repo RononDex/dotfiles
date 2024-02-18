@@ -23,6 +23,20 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	end
 end
 
+dap.adapters.coreclr = {
+	type = 'executable',
+	command = '/usr/local/bin/netcoredbg/netcoredbg',
+	args = { '--interpreter=vscode' }
+}
+
+dap.configurations.cs = {
+	{
+		type = "coreclr",
+		name = "launch - netcoredbg",
+		request = "launch",
+	}
+}
+
 vim.keymap.set('n', '<F9>', '<cmd>lua require("dap").toggle_breakpoint()<cr>')
 vim.keymap.set('n', '<F21>', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: ")<cr>') -- Set Breakpoint condition
 vim.keymap.set('n', '<F5>', '<cmd>lua require("utils").start_debugger(true)<cr>')
