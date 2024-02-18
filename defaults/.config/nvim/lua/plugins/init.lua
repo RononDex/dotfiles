@@ -3,5 +3,5 @@ return {
 	'nvim-lualine/lualine.nvim',
 	'kdheepak/lazygit.nvim',
 	'nanozuki/tabby.nvim',
-	'norcalli/nvim-colorizer.lua'
+	'norcalli/nvim-colorizer.lua',
 }

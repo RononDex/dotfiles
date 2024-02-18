@@ -31,16 +31,16 @@ end
 function utils.close_debugger()
 	utils.debugging = false
 	require("dapui").close()
-	if not utils.is_neotree_open() and utils.neotree_open_before_debug == true then
-		utils.neotree_open_before_debug = false
-		vim.cmd("Neotree show")
-	end
+	-- if not utils.is_neotree_open() and utils.neotree_open_before_debug == true then
+	-- 	utils.neotree_open_before_debug = false
+	-- 	vim.cmd("Neotree show")
+	-- end
 end
 
-function utils.is_neotree_open()
-	local manager = require("neo-tree.sources.manager")
-	local renderer = require("neo-tree.ui.renderer")
-	local state = manager.get_state("filesystem")
-	local window_exists = renderer.window_exists(state)
-	return window_exists
-end
+-- function utils.is_neotree_open()
+-- 	local manager = require("neo-tree.sources.manager")
+-- 	local renderer = require("neo-tree.ui.renderer")
+-- 	local state = manager.get_state("filesystem")
+-- 	local window_exists = renderer.window_exists(state)
+-- 	return window_exists
+-- end
