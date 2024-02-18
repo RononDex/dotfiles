@@ -37,12 +37,12 @@ function utils.close_debugger()
 	-- end
 end
 
--- function utils.is_neotree_open()
--- 	local manager = require("neo-tree.sources.manager")
--- 	local renderer = require("neo-tree.ui.renderer")
--- 	local state = manager.get_state("filesystem")
--- 	local window_exists = renderer.window_exists(state)
--- 	return window_exists
--- end
+function utils.is_neotree_open()
+	local manager = require("neo-tree.sources.manager")
+	local renderer = require("neo-tree.ui.renderer")
+	local state = manager.get_state("filesystem")
+	local window_exists = renderer.window_exists(state)
+	return window_exists
+end
 
 return utils
