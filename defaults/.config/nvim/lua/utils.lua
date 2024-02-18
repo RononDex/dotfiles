@@ -44,3 +44,5 @@ end
 -- 	local window_exists = renderer.window_exists(state)
 -- 	return window_exists
 -- end
+
+return utils
