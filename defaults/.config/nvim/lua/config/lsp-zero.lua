@@ -74,6 +74,7 @@ require('mason-lspconfig').setup({
 		"html",
 		"jdtls",
 		"texlab",
+		"tsserver",
 		"eslint",
 		"cssls",
 		"typos_lsp",
