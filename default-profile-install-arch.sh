@@ -68,10 +68,10 @@ sudo pacman -S feh picom alsa pipewire pipewire-pulse pavucontrol arc-gtk-theme 
 sudo pacman -S java-runtime-common jre-openjdk ntfs-3g xdotool --noconfirm --needed
 sudo pacman -S vim neovim bash-completion libftdi ccfits network-manager-applet xorg xorg-xinit adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python debugedit acpi python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
-sudo pacman -S htop imagemagick zlib curl exfat-utils unzip zip shadow perl-anyevent-i3 perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
+sudo pacman -S htop imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms btop linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
-sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect networkmanager-openconnect ksshaskpass --needed --noconfirm
+sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
 sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq --needed --noconfirm
 
