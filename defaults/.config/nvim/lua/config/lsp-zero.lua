@@ -80,7 +80,7 @@ require('mason-lspconfig').setup({
 		"yamlls",
 		"sqlls",
 		"cmake",
-		"lau_ls",
+		"lua_ls",
 		"vimls",
 	},
 	handlers = {
