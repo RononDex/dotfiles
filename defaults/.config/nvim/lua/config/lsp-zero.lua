@@ -58,13 +58,6 @@ cmp.setup({
 	}
 })
 
-require("mason").setup({
-	ensure_installed = {
-		"java-debug-adapter",
-		"java-test",
-		--"jdtls"
-	},
-})
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		"lua_ls",
@@ -81,7 +74,6 @@ require('mason-lspconfig').setup({
 		"yamlls",
 		"sqlls",
 		"cmake",
-		"lua_ls",
 		"vimls",
 	},
 	handlers = {
