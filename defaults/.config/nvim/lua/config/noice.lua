@@ -21,4 +21,22 @@ require("noice").setup({
 	cmdline = {
 		view = "cmdline",
 	},
+	routes = {
+		{
+			filter = {
+				event = "msg_show",
+				kind = "",
+				find = "written",
+			},
+			opts = { skip = true },
+		},
+		{
+			filter = {
+				event = "notify.error",
+				kind = "",
+				find = "textDocument/codeLens is not supported",
+			},
+			opts = { skip = true },
+		},
+	},
 })
