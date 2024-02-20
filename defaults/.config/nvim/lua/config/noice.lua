@@ -22,21 +22,38 @@ require("noice").setup({
 		view = "cmdline",
 	},
 	routes = {
-		{
+		{ -- route long messages to split
 			filter = {
-				event = 'msg_show',
-				any = {
-					{ find = '%d+L, %d+B' },
-					{ find = '; after #%d+' },
-					{ find = '; before #%d+' },
-					{ find = '%d fewer lines' },
-					{ find = '%d more lines' },
-					{ find = 'written' },
+				event = "msg_show",
+				any = { { min_height = 5 }, { min_width = 200 } },
+				["not"] = {
+					kind = { "confirm", "confirm_sub", "return_prompt", "quickfix", "search_count" },
 				},
+				blocking = false,
+			},
+			view = "messages",
+			opts = { stop = true },
+		},
+		{ -- route long messages to split
+			filter = {
+				event = "msg_show",
+				any = { { min_height = 5 }, { min_width = 200 } },
+				["not"] = {
+					kind = { "confirm", "confirm_sub", "return_prompt", "quickfix", "search_count" },
+				},
+				blocking = true,
+			},
+			view = "mini",
+		},
+		{ -- hide `written` message
+			filter = {
+				event = "msg_show",
+				kind = "",
+				find = "written",
 			},
 			opts = { skip = true },
 		},
-		{
+		{ -- hide "codelense not supported" messages
 			filter = {
 				event = 'notify.error',
 				find = 'textDocument/codeLens is not supported'
