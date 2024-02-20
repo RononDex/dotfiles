@@ -24,17 +24,22 @@ require("noice").setup({
 	routes = {
 		{
 			filter = {
-				event = "msg_show",
-				kind = "",
-				find = "written",
+				event = 'msg_show',
+				any = {
+					{ find = '%d+L, %d+B' },
+					{ find = '; after #%d+' },
+					{ find = '; before #%d+' },
+					{ find = '%d fewer lines' },
+					{ find = '%d more lines' },
+					{ find = 'written' },
+				},
 			},
 			opts = { skip = true },
 		},
 		{
 			filter = {
-				event = "notify.error",
-				kind = "",
-				find = "textDocument/codeLens is not supported",
+				event = 'notify.error',
+				find = 'textDocument/codeLens is not supported'
 			},
 			opts = { skip = true },
 		},
