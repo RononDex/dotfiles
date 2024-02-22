@@ -55,7 +55,6 @@ require("noice").setup({
 		},
 		{ -- hide "codelense not supported" messages
 			filter = {
-				event = 'notify.error',
 				find = 'textDocument/codeLens is not supported'
 			},
 			opts = { skip = true },
