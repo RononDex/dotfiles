@@ -18,10 +18,10 @@ function readJson {
   fi;
 }
 
-wget "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1"
-mv "HPImageArchive.aspx?format=js&idx=0&n=1" /tmp/currentBingImage.json
-FILEURL=`node -p "require('/tmp/currentBingImage.json').images[0].url"`
-wget "https://bing.com/${FILEURL}"
+wget "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&uhd=1"
+mv "HPImageArchive.aspx?format=js&idx=0&n=1&uhd=1" /tmp/currentBingImage.json
+FILEURL=`node -p "require('/tmp/currentBingImage.json').images[0].urlbase"`
+wget "https://bing.com/${FILEURL}_UHD.jpg"
 sudo mkdir -p /usr/share/backgrounds
-mv "${FILEURL:1}" /usr/share/backgrounds/bing.jpg
+mv "${FILEURL:1}_UHD.jpg" /usr/share/backgrounds/bing.jpg
 chmod 777 /usr/share/backgrounds/bing.jpg
