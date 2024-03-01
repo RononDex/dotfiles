@@ -67,7 +67,6 @@ require('mason-lspconfig').setup({
 		"clangd",
 		"bashls",
 		"html",
-		"jdtls",
 		"texlab",
 		"tsserver",
 		"eslint",
