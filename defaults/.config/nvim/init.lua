@@ -11,14 +11,14 @@ require("config/noice")
 require("config/lualine")
 require("config/autocmd")
 require("config/dressing")
-require("config/lazygit")
 require("config/comment")
 require("config/debugging")
 require("config/tabby")
 require("config/autopairs")
-
-require("after/plugin/keymap")
+require("config/neogit")
 
 require("config/lsp/jdtls")
 require("config/lsp/texlive")
 require("config/lsp/eslint")
+
+require("after/plugin/keymap")
