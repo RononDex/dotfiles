@@ -135,7 +135,7 @@ local function jdtls_on_attach(client, bufnr)
 	end
 
 	if features.codelens then
-		--enable_codelens(bufnr)
+		enable_codelens(bufnr)
 	end
 
 	-- The following mappings are based on the suggested usage of nvim-jdtls
@@ -172,7 +172,7 @@ local function jdtls_setup(event)
 		'-Dlog.protocol=true',
 		'-Dlog.level=ALL',
 		'-javaagent:' .. path.java_agent,
-		'-Xms1g',
+		'-Xmx1g',
 		'--add-modules=ALL-SYSTEM',
 		'--add-opens',
 		'java.base/java.util=ALL-UNNAMED',
