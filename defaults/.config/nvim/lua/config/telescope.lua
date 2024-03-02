@@ -37,6 +37,8 @@ require('telescope').setup({
 	}
 })
 
+require("telescope").load_extension("ui-select")
+
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-p>', "<cmd>Telescope find_files hidden=true<cr>", {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
