@@ -48,8 +48,8 @@ PostSteamSetupVivePro2() {
 }
 
 SetupDriver() {
-		sudo pacman -S git rsync rustup --needed --noconfirm
-		sudo pacman -S mingw-w64-binutils mingw-w64-crt mingw-w64-gcc mingw-w64-headers mingw-w64-winpthreads --needed --noconfirm
+		sudo pacman -Sy git rsync rustup --needed --noconfirm
+		sudo pacman -Sy mingw-w64-binutils mingw-w64-crt mingw-w64-gcc mingw-w64-headers mingw-w64-winpthreads --needed --noconfirm
 		rustup toolchain install nightly
 		rustup +nightly target add x86_64-pc-windows-gnu
 
