@@ -32,7 +32,7 @@ BuildAndInstallKernel() {
 		makepkg -sc
 
 		# Install kernel
-		makepkg -si
+		makepkg -sic
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 }
 
