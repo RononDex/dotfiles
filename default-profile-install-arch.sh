@@ -74,7 +74,7 @@ sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosugge
 sudo pacman -S dkms btop linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
-sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq --needed --noconfirm
+sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq polkit --needed --noconfirm
 
 # Set default apps
 xdg-mime default zathura.desktop application/pdf
@@ -168,6 +168,8 @@ sudo systemctl enable autofs
 sudo systemctl start autofs
 sudo systemctl start pipewire-pulse.service
 sudo systemctl enable pipewire-pulse.service
+sudo systemctl start polkit.service
+sudo systemctl enable polkit.service
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig
