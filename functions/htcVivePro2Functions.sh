@@ -6,9 +6,10 @@
 #
 # How to use:
 # 1. execute PreSteamSetupVivePro2
-# 2. Open Steam and install Steam VR: steam steam://install/250820
-# 3. Completely exit steam
-# 4. execute PostSteamSetupVivePro
+# 2. Reboot and ensure system is booted with new kernel (uname -a)
+# 3. Open Steam and install Steam VR: steam steam://install/250820
+# 4. Completely exit steam
+# 5. execute PostSteamSetupVivePro
 
 PreSteamSetupVivePro2() {
 		SetupGitRepo
