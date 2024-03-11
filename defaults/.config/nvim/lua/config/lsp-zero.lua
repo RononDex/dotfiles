@@ -83,7 +83,5 @@ require('mason-lspconfig').setup({
 		jdtls = lsp_zero.noop,
 	},
 })
-lsp_zero.skip_server_setup({ 'jdtls' })
-lsp_zero.setup()
 
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = false })
