@@ -26,18 +26,6 @@ fi
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
 sudo mkdir -p /etc/samba
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
-sudo mkdir -p /etc/php/php-fpm.d
-sudo cp $scriptDir/overrides/php/php.ini /etc/php/php.ini
-sudo cp $scriptDir/overrides/php/php-fpm.conf /etc/php/php-fpm.conf
-sudo cp $scriptDir/overrides/php/www.conf /etc/php/php-fpm.d/www.conf
-sudo mkdir -p /etc/php8.1/php-fpm.d
-sudo cp $scriptDir/overrides/php8.1/php.ini /etc/php8.1/php.ini
-sudo cp $scriptDir/overrides/php8.1/php-fpm.conf /etc/php8.1/php-fpm.conf
-sudo cp $scriptDir/overrides/php8.1/www.conf /etc/php8.1/php-fpm.d/www.conf
-sudo mkdir -p /etc/nginx/sites-available
-sudo mkdir -p /etc/nginx/sites-enabled
-sudo cp $scriptDir/overrides/nginx/nginx.conf /etc/nginx/nginx.conf
-sudo cp $scriptDir/overrides/nginx/nextcloud /etc/nginx/sites-available/nextcloud
 sudo mkdir -p /data
 sudo cp ~/.scripts/utilities/updateAndReboot /root/updateAndReboot
 sudo cp ~/.scripts/networking/updateSslCertbot /usr/bin/updateSslCertbot
@@ -58,7 +46,7 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 echo "Installing stuff..."
 sudo xbps-install -y linux-firmware-amd network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
 sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract xf86-input-evdev
-sudo xbps-install -y qemu virt-manager php php-fpm php-gd php-mysql php-intl nginx certbot certbot-nginx php-imagick php-sodium
+sudo xbps-install -y qemu virt-manager 
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu vulkan-loader mesa cryptsetup tpm2-tss cronie mesa-vaapi mesa-vdpau mesa-vulkan-radeon mesa-dri
 sudo xbps-install -y nomacs breeze breeze-cursors samba
@@ -89,10 +77,8 @@ EnableService mdadm
 EnableService libvirtd
 EnableService virtlockd
 EnableService virtlogd
-EnableService nginx
 EnableService smbd
 EnableService wireguard
-EnableService php-fpm
 EnableService docker
 EnableService cronie
 
