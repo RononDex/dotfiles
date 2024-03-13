@@ -52,6 +52,7 @@ InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-stu
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
+InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
