@@ -20,6 +20,7 @@ cp $scriptDir/overrides/dcronConfig ~/.config/customCronConfig
 sudo cp $scriptDir/overrides/networking/interfaces /etc/network/interfaces
 sudo mkdir -p /etc/mdadm
 sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
+sudo cp $scriptDir/overrides/docker/daemon.json /etc/docker/daemon.json
 if [ ! -f /etc/wireguard/ATLANTIS-Net.conf]; then
     sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
 fi
