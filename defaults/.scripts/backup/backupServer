@@ -10,7 +10,6 @@ rsync -avhP --delete /data/Software/ /backup/Software/
 rsync -avhP --delete /data/Downloads/ /backup/Downloads/
 rsync -avhP --delete /data/VirtualMachines/ /backup/VirtualMachines/
 rsync -avhP --delete /data/Astrophotography /backup/Astrophotography/
-rsync -avhP --delete /data/NextCloud /backup/NextCloud/
 rsync -avhP --delete /data/ConfigStoreAstroBot /backup/ConfigStore/ConfigStoreAstroBot
 rsync -avhP --delete /data/containers /backup/containers/
 rsync -avhP --delete /data/docker-data /backup/docker-data/
