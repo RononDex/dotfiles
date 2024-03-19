@@ -13,7 +13,7 @@ lsp_zero.on_attach(function(client, bufnr)
 	end, { buffer = bufnr })
 	lsp_zero.buffer_autoformat()
 
-	-- Enbale code lense everywhere by default
+	-- Enable code lense everywhere by default
 	pcall(vim.lsp.codelens.refresh)
 
 	local codelense_cmds = vim.api.nvim_create_augroup('codelense_cmds', { clear = true })

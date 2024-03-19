@@ -42,7 +42,7 @@ sudo pacman -Sy vulkan-radeon lib32-vulkan-radeon --needed --noconfirm
 sudo pacman -Sy rocm-hip-sdk rocm-opencl-sdk rocm-hip-runtime hip-runtime-amd miopen-hip amdvlk --needed --noconfirm
 InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-installer.git"
 InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
-sudo pacman -R vulkan-amdgpu-pro --noconfirm --needed
+# sudo pacman -R vulkan-amdgpu-pro --noconfirm --needed
 
 echo "Installing AUR packages..."
 InstallMpv
