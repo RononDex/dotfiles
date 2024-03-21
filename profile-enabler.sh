@@ -19,6 +19,7 @@ RED='\033[0;31m'
 GREEN='\033[1;32m'
 PURPLE='\033[1;35m'
 NC='\033[0m' # No Color
+export MAKEFLAGS="-j $(nproc)"
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 profilesFolder="$scriptDir/profiles/"
 
