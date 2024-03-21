@@ -45,7 +45,7 @@ SetupJavaDevEnv
 InstallJupyterNotebooks
 SetupPythonDev
 SetupLatex
-InstallGrubTheme 
+InstallGrubTheme "-s 1080p"
 InstallEruption
 
 echo "Installing AUR packages..."

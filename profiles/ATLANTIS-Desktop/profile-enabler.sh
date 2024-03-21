@@ -1,6 +1,7 @@
 #!/bin/bash
 
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+. $scriptDir/../../functions/htcVivePro2Functions.sh
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
 cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
@@ -70,7 +71,9 @@ SetupJavaDevEnv
 SetupJavaScriptDevEnv
 SetupPythonDev
 SetupLatex
-InstallGrubTheme -s 2k
+InstallGrubTheme "-s 4k"
+PreSteamSetupVivePro2
+PostSteamSetupVivePro2
 
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
