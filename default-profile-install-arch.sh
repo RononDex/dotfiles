@@ -145,8 +145,6 @@ else
 fi
 
 echo "Installing AUR packages"
-#InstallAurPackage "nerd-fonts-complete" "https://aur.archlinux.org/nerd-fonts-complete.git"
-InstallAurPackage "cava" "https://aur.archlinux.org/cava.git"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
 InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
