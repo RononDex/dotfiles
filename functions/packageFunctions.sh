@@ -95,7 +95,7 @@ InstallHyprland() {
 InstallWayland() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -Sy pipewire polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim wl-clipboard --needed --noconfirm
+		sudo pacman -Sy pipewire polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
 		InstallAurPackage "wlsunset" "https://aur.archlinux.org/wlsunset.git"
 	fi
 }
