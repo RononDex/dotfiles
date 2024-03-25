@@ -29,10 +29,10 @@ BuildAndInstallKernel() {
 
 		# Build kernel
 		export MAKEFLAGS="-j $(nproc)"
-		makepkg -sic
+		makepkg -sc
 
 		# Install kernel
-		makepkg -sic
+		makepkg -si --noconfirm --needed
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 }
 
