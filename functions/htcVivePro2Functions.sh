@@ -29,7 +29,7 @@ BuildAndInstallKernel() {
 
 		# Build kernel
 		export MAKEFLAGS="-j $(nproc)"
-		makepkg -sc
+		makepkg -sic
 
 		# Install kernel
 		makepkg -sic
