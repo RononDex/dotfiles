@@ -72,7 +72,7 @@ sudo pacman -S python debugedit acpi python2 python-pip samba opencv pkgconfig g
 sudo pacman -S htop imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms btop linux-headers gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
-sudo pacman -S ueberzug redshift autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
+sudo pacman -S ueberzug autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
 sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq polkit --needed --noconfirm
 
@@ -176,13 +176,6 @@ echo "Copying some default files ..."
 sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
 sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
-
-echo "Updating Python packages ..."
-python3 -m pip install pynvim
-UpdatePipPackages
-
-echo "Installing python packages"
-sudo -H pip install --upgrade youtube-dl
 
 # Dark Theme by default
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
