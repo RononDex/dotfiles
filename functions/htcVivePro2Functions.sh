@@ -10,7 +10,9 @@
 # 3. Open Steam and install Steam VR: steam steam://install/250820
 # 4. Completely exit steam
 # 5. execute PostSteamSetupVivePro
-
+# TROUBLESHOOTING:
+# 	It might be needed to add following launch option to steam vr: VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json QT_QPA_PLATFORM=xcb %command%
+#
 PreSteamSetupVivePro2() {
 		SetupGitRepo
 		BuildAndInstallKernel

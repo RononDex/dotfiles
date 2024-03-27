@@ -71,7 +71,7 @@ SetupJavaDevEnv
 SetupJavaScriptDevEnv
 SetupPythonDev
 SetupLatex
-InstallGrubTheme "-s 4k"
+InstallGrubTheme -s 4k
 PreSteamSetupVivePro2
 PostSteamSetupVivePro2
 

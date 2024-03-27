@@ -1,0 +1,46 @@
+{
+   "DesktopUI" : {
+      "pairing" : "1520,780,799,600,0",
+      "settings_desktop" : "1555,537,799,600,0"
+   },
+   "DismissedWarnings" : {
+      "DismissableWarning_UnknownHardwareDetected" : true
+   },
+   "GpuSpeed" : {
+      "gpuSpeed0" : 3493,
+      "gpuSpeed1" : 3253,
+      "gpuSpeed2" : 3390,
+      "gpuSpeed3" : 3398,
+      "gpuSpeed4" : 3232,
+      "gpuSpeed5" : 3508,
+      "gpuSpeed6" : 3301,
+      "gpuSpeed7" : 3420,
+      "gpuSpeedCount" : 8,
+      "gpuSpeedDriver" : "100663299",
+      "gpuSpeedHorsepower" : 3377,
+      "gpuSpeedRenderTargetScale" : 1.5,
+      "gpuSpeedVendor" : "AMD Radeon RX 7900 XTX (RADV NAVI31)",
+      "gpuSpeedVersion" : 2
+   },
+   "LastKnown" : {
+      "ActualHMDDriver" : "lighthouse",
+      "HMDManufacturer" : "HTC",
+      "HMDModel" : "VIVE_Pro 2 MV"
+   },
+   "driver_lighthouse" : {
+      "PowerManagedBaseStations2" : "LHB-15CB735F:BS2:1,LHB-0735C7DE:BS2:1"
+   },
+   "steamvr" : {
+      "installID" : "16662446167410534119",
+      "lastVersionNotice" : "2.4.4",
+      "lastVersionNoticeDate" : "1711388652",
+      "mirrorViewDisplayMode" : 0,
+      "showMirrorView" : true,
+      "showPerfGraph" : true
+   },
+   "vivepro2" : {
+      "brightness" : 130,
+      "noiseCancel" : false,
+      "resolution" : 0
+   }
+}
