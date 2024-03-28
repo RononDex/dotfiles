@@ -224,6 +224,9 @@ local function jdtls_setup(event)
 					--   profile = 'asdf'
 					url = home .. "/.config/nvim/eclipse-java-style.xml",
 				},
+			},
+			saveActions = {
+				organizeImports = true,
 			}
 		},
 		signatureHelp = {
@@ -259,7 +262,6 @@ local function jdtls_setup(event)
 	}
 
 	local extendedClientCapabilities = jdtls.extendedClientCapabilities;
-	extendedClientCapabilities.onCompletionItemSelectedCommand = "editor.action.triggerParameterHints"
 
 	-- This starts a new client & server,
 	-- or attaches to an existing client & server depending on the `root_dir`.
