@@ -153,6 +153,7 @@ local function jdtls_setup(event)
 
 	if cache_vars.capabilities == nil then
 		jdtls.extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
+		jdtls.extendedClientCapabilities.onCompletionItemSelectedCommand = "editor.action.triggerParameterHints"
 
 		local ok_cmp, cmp_lsp = pcall(require, 'cmp_nvim_lsp')
 		cache_vars.capabilities = vim.tbl_deep_extend(
@@ -257,6 +258,9 @@ local function jdtls_setup(event)
 		},
 	}
 
+	local extendedClientCapabilities = jdtls.extendedClientCapabilities;
+	extendedClientCapabilities.onCompletionItemSelectedCommand = "editor.action.triggerParameterHints"
+
 	-- This starts a new client & server,
 	-- or attaches to an existing client & server depending on the `root_dir`.
 	jdtls.start_or_attach({
@@ -270,6 +274,7 @@ local function jdtls_setup(event)
 		},
 		init_options = {
 			bundles = path.bundles,
+			extendedClientCapabilities = extendedClientCapabilities
 		},
 	})
 end

@@ -1,4 +1,4 @@
-local lsp_zero = require('lsp-zero').preset({})
+local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
 	-- see :help lsp-zero-keybindings
@@ -13,19 +13,26 @@ lsp_zero.on_attach(function(client, bufnr)
 	end, { buffer = bufnr })
 	lsp_zero.buffer_autoformat()
 
-	-- Enable code lense everywhere by default
-	pcall(vim.lsp.codelens.refresh)
+	if client.supports_method("textDocument/codeLens") then
+		pcall(vim.lsp.codelens.refresh)
 
-	local codelense_cmds = vim.api.nvim_create_augroup('codelense_cmds', { clear = true })
+		local codelense_cmds = vim.api.nvim_create_augroup('codelense_cmds', { clear = true })
 
-	vim.api.nvim_create_autocmd('BufWritePost', {
-		buffer = bufnr,
-		group = codelense_cmds,
-		desc = 'refresh codelens',
-		callback = function()
-			pcall(vim.lsp.codelens.refresh)
-		end,
-	})
+		vim.api.nvim_create_autocmd('BufWritePost', {
+			buffer = bufnr,
+			group = codelense_cmds,
+			desc = 'refresh codelens',
+			callback = function()
+				pcall(vim.lsp.codelens.refresh)
+			end,
+		})
+	end
+
+	if client.supports_method("textDocument/inlayHint") then
+		if vim.lsp.inlay_hint then
+			vim.lsp.inlay_hint.enable(bufnr, true)
+		end
+	end
 end)
 
 local cmp = require('cmp')
