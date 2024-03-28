@@ -20,14 +20,9 @@
 				"forImplicitObjectCreation": true
     }
   },
-
   "FormattingOptions": {
-    	"OrganizeImports": true,
-        "enableEditorConfigSupport": true
-  },
-  "FormattingOptions": {
-    "EnableEditorConfigSupport": false,
-    "OrganizeImports": false,
+    "EnableEditorConfigSupport": true,
+    "OrganizeImports": true,
     "NewLine": "\n",
     "UseTabs": false,
     "TabSize": 4,
