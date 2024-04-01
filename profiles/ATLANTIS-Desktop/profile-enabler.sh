@@ -30,7 +30,7 @@ cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-aut
 
 echo "Installing stuff ..."
 sudo pacman -Sy i3-gaps nextcloud-client light dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman wireguard-tools --noconfirm --needed
-sudo pacman -Sy texlive-most biber pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed polybar --noconfirm
+sudo pacman -Sy texlive biber pulseaudio-bluetooth aspnet-runtime xournalpp remmina signal-desktop freerdp --needed polybar --noconfirm
 sudo pacman -Sy nomacs prusa-slicer obs-studio libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
