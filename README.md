@@ -46,10 +46,9 @@ For an up to date list check the file itself here https://github.com/RononDex/do
 - zsh (with oh-my-zsh and powerlevel10k)
 - networkmanager
 - fonts
-- pulseaudio
 - ranger
 - zathura
-- lightdm (with webkit litarvan theme)
+- sddm (with sugar candy theme)
 - ...
 
 # Data Structure
@@ -60,4 +59,4 @@ This repository is structured into the following folders:
 2. profiles: Contains one subfolder per profile, with overrides for the base profile.
 3. functions: Contains several functions reused throughout the different shell scripts
 
-![Screenshot](https://github.com/RononDex/voiddotfiles/raw/master/Screenshot.png)
+![Screenshot](https://github.com/RononDex/voiddotfiles/raw/master/Screenshot.jpg)
