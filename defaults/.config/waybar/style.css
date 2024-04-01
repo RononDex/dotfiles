@@ -1,83 +1,84 @@
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+	/* `otf-font-awesome` is required to be installed for icons */
+	font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #EEEEEE;
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.7);
-  color: #bbbbbb;
-  transition-property: background-color;
-  transition-duration: 2s;
-  padding: 10px;
+	background-color: rgba(43, 48, 59, 0.7);
+	color: #bbbbbb;
+	transition-property: background-color;
+	transition-duration: 2s;
+	padding: 10px;
 }
 
 window#waybar.top {
-  border-bottom: 2px solid rgba(100, 114, 125, 0.7);
+	border-bottom: 2px solid rgba(100, 114, 125, 0.7);
 }
 
 window#waybar.bottom {
-  border-top: 2px solid rgba(100, 114, 125, 0.7);
+	border-top: 2px solid rgba(100, 114, 125, 0.7);
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+	opacity: 0.2;
 }
 
 window#waybar.termite {
-  background-color: #3f3f3f;
+	background-color: #3f3f3f;
 }
 
 window#waybar.chromium {
-  background-color: #000000;
-  border: none;
+	background-color: #000000;
+	border: none;
 }
 
 button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: 0 2px transparent inset;
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 0;
+	/* Use box-shadow instead of border so the text isn't offset */
+	box-shadow: 0 2px transparent inset;
+	/* Avoid rounded borders under each button name */
+	border: none;
+	border-radius: 0;
 }
 
 /* bigger buttons */
 #workspaces button {
-  padding: 0px 10px;
-  padding-right: 14px;
-  background-color: transparent;
+	padding: 0px 10px;
+	padding-right: 14px;
+	background-color: transparent;
 }
 
 #workspaces button * {
-  font-size: 17px;
+	font-size: 17px;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-  background: inherit;
-  box-shadow: 0 2px #ffffff inset;
+	background: inherit;
+	box-shadow: 0 2px #ffffff inset;
 }
 
 #workspaces button:hover {
-  background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.2);
 }
 
 #workspaces button.focused {
-  background-color: #64727d;
-  box-shadow: 0 2px #ffffff inset;
+	background-color: #64727d;
+	box-shadow: 0 2px #ffffff inset;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+	background-color: #eb4d4b;
 }
 
 #workspaces button.active {
-  box-shadow: 0 2px #cc1111 inset;
+	box-shadow: 0 2px #cc1111 inset;
 }
 
 #mode {
-  background-color: #64727d;
-  border-bottom: 2px solid #ffffff;
+	background-color: #64727d;
+	border-bottom: 2px solid #ffffff;
 }
 
 #clock,
@@ -96,181 +97,169 @@ button:hover {
 #idle_inhibitor,
 #scratchpad,
 #mpd {
-  padding: 0 10px;
+	padding: 0 10px;
 }
 
 #window,
 #workspaces {
-  margin: 0 4px;
+	margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
+.modules-left>widget:first-child>#workspaces {
+	margin-left: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
+.modules-right>widget:last-child>#workspaces {
+	margin-right: 0;
 }
 
-#clock {
-}
+#clock {}
 
-#battery {
-}
+#battery {}
 
 #battery.charging,
 #battery.plugged {
-  background-color: #408000;
+	background-color: #408000;
 }
 
 @keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
 }
 
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+	background-color: #f53c3c;
+	color: #ffffff;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 
 label:focus {
-  background-color: #000000;
+	background-color: #000000;
 }
 
-#cpu {
-}
+#cpu {}
 
-#memory {
-}
+#memory {}
 
-#disk {
-}
+#disk {}
 
-#backlight {
-}
+#backlight {}
 
-#network {
-}
+#network {}
 
 #network.disconnected {
-  background-color: #f53c3c;
+	background-color: #f53c3c;
 }
 
-#pulseaudio {
-}
+#pulseaudio {}
 
 #pulseaudio.muted {
-  background-color: #90b1b1;
-  color: #2a5c45;
+	background-color: #90b1b1;
+	color: #2a5c45;
 }
 
-#wireplumber {
-}
+#wireplumber {}
 
 #wireplumber.muted {
-  background-color: #f53c3c;
+	background-color: #f53c3c;
 }
 
 #custom-media {
-  color: #2a5c45;
-  min-width: 100px;
+	color: #2a5c45;
+	min-width: 100px;
 }
 
 #custom-media.custom-spotify {
-  background-color: #66cc99;
+	background-color: #66cc99;
 }
 
 #custom-media.custom-vlc {
-  background-color: #ffa000;
+	background-color: #ffa000;
 }
 
-#temperature {
-}
+#temperature {}
 
 #temperature.critical {
-  background-color: #eb4d4b;
+	background-color: #eb4d4b;
 }
 
-#tray {
+#tray {}
+
+#tray>.passive {
+	-gtk-icon-effect: dim;
 }
 
-#tray > .passive {
-  -gtk-icon-effect: dim;
+#tray>.needs-attention {
+	-gtk-icon-effect: highlight;
+	background-color: #eb4d4b;
 }
 
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-}
+#idle_inhibitor {}
 
 #idle_inhibitor.activated {
-  background-color: #601f40;
+	background-color: #601f40;
 }
 
 #mpd {
-  color: #2a5c45;
+	color: #2a5c45;
 }
 
 #mpd.disconnected {
-  background-color: #f53c3c;
+	background-color: #f53c3c;
 }
 
 #mpd.stopped {
-  background-color: #90b1b1;
+	background-color: #90b1b1;
 }
 
 #mpd.paused {
-  background-color: #51a37a;
+	background-color: #51a37a;
 }
 
 #language {
-  color: #740864;
-  padding: 0 5px;
-  margin: 0 5px;
-  min-width: 16px;
+	color: #740864;
+	padding: 0 5px;
+	margin: 0 5px;
+	min-width: 16px;
 }
 
 #keyboard-state {
-  padding: 0 0px;
-  margin: 0 5px;
-  min-width: 16px;
+	padding: 0 0px;
+	margin: 0 5px;
+	min-width: 16px;
 }
 
-#keyboard-state > label {
-  padding: 0 5px;
+#keyboard-state>label {
+	padding: 0 5px;
 }
 
-#keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#custom-wvkbd {
-  padding-right: 10px;
+#keyboard-state>label.locked {
+	background: rgba(0, 0, 0, 0.2);
 }
 
 #custom-wvkbd {
-  font-size: 22px;
-  margin-right: 5px;
+	padding-right: 10px;
+}
+
+#custom-wvkbd {
+	font-size: 22px;
+	margin-right: 5px;
 }
 
 #custom-displays {
-  padding-top: 5px;
-  font-size: 18px;
-  margin-right: 5px;
+	padding-top: 5px;
+	font-size: 18px;
+	margin-right: 5px;
 }
 
 #custom-sunset {
-  font-size: 18px;
+	font-size: 18px;
 }
