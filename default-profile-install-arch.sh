@@ -95,9 +95,8 @@ if [[ "$SHELL" != "/bin/zsh" ]]; then
 fi
 
 echo "Setting up oh-my-zsh ..."
-export ZSH=~/.config/oh-my-zsh
 if [ ! -d ${ZSH} ]; then
-    ZSH=${ZSH} sh -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
+		sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 fi
 
 if [ ! -d ${ZSH}/themes/powerlevel10k ]; then
