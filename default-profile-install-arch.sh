@@ -65,7 +65,7 @@ source ~/.profile
 echo "Installing stuff..."
 sudo pacman -S pkgconfig bc powerline-fonts fakeroot debugedit ttf-firacode-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet xorg xorg-xinit firefox adobe-source-code-pro-fonts neofetch xclip --noconfirm --needed
-sudo pacman -S picom alsa pipewire pipewire-pulse pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
+sudo pacman -S picom pipewire pipewire-pulse pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python debugedit acpi python2 python-pip samba opencv pkgconfig gtest gmock wxgtk2 libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
