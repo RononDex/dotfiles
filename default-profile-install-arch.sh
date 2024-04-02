@@ -180,5 +180,6 @@ echo "Updating gpg-agent"
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 
 # Setting theme
+InstallAurPackage "nordic-theme" "https://aur.archlinux.org/nordic-theme.git"
 gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
