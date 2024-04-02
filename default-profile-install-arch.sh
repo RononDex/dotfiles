@@ -176,8 +176,9 @@ sudo rm -rf /usr/share/backgrounds/*
 SetupBackgroundsFolderForBing
 sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
 
-# Dark Theme by default
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-
 echo "Updating gpg-agent"
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
+
+# Setting theme
+gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
