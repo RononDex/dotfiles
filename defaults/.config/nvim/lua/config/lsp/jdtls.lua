@@ -93,7 +93,7 @@ local function get_jdtls_paths()
 			path = "/usr/lib/jvm/java-17-openjdk",
 		},
 		{
-			name = "JavaSE-21",
+			name = "JavaSE-22",
 			path = "/usr/lib/jvm/java-22-openjdk",
 			default = true
 		}
