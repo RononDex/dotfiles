@@ -3,6 +3,7 @@
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . ./functions/archPackagesFunctions.sh
+. ./functions/basicFunctions.sh
 . ./functions/systemDFunctions.sh
 
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
@@ -179,7 +180,8 @@ sh ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new backgroun
 echo "Updating gpg-agent"
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 
-# Setting theme
-InstallAurPackage "nordic-theme" "https://aur.archlinux.org/nordic-theme.git"
-gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'
+# Install nordic theme
+DownloadAndInstallGtkTheme "1267246"
+gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-v40'
+gsettings set org.gnome.desktop.wm.preferences theme 'Nordic-v40'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
