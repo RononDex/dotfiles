@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/cobra/.gtkrc-2.0.mine"
-gtk-theme-name="Nordic"
+gtk-theme-name="Nordic-v40"
 gtk-icon-theme-name="Arc"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="breeze_cursors"
