@@ -1,43 +1,70 @@
+/* @import '../../../../../.cache/wal/colors-waybar.css'; */
+
+/* NORD palette https://github.com/nordtheme/nord */
+@define-color bg_color rgba(46, 52, 64, 0.7);
+@define-color fg_color #bbbbbb;
+
+@define-color bg_active_color #8fbcbb;
+@define-color fg_active_color #2e3440;
+
+:root {
+	--border-radius: 10px;
+}
+
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+	font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	border: none;
+	border-radius: 0px;
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0);
-  color: #bbbbbb;
-  transition-property: background-color;
-  transition-duration: 2s;
-  padding: 10px;
+	background-color: rgba(43, 48, 59, 0);
+	transition-property: background-color;
+	transition-duration: .5s;
+	margin-top: 5px;
 }
 
 window#waybar.hidden {
-  opacity: 0.2;
+	opacity: 0.2;
 }
 
-widget {
-  border-radius: 20px;
-  background-color: rgba(40, 40, 40, 0.8);
+.module,
+button {
+	border-radius: 10px;
 }
 
-.modules-left widget:first-child {
-  padding-left: 0px;
+.module {
+	border-width: 2px;
+	background-color: @bg_color;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
 
-.modules-right widget:first-child  {
-  padding-right: 0px;
+#custom-right-arrow,
+#custom-left-arrow {
+	font-family: monospace;
+	color: #1a1a1a;
+	/* font-size: 18px; */
+	padding: 0;
 }
 
-box,
-label {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
+#workspaces button {}
+
+#workspaces button,
+#workspaces button.active {
+	transition: 0.5s all ease-out;
 }
 
-button label,
-button box {
-		padding: 0px;
+#workspaces button.active {
+	background-color: @bg_active_color;
+	color: @fg_active_color;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#workspaces button:hover {
+	background-color: @bg_active_color;
+	color: @fg_active_color;
 }

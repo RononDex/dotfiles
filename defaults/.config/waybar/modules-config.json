@@ -227,5 +227,21 @@
   "custom/displays": {
     "format": "🖵",
     "on-click": "nwg-displays"
-  }
+  },
+  "custom/left-arrow": {
+		"format": "",
+		"tooltip": false
+},
+"custom/left-arrow": {
+"format": "",
+"tooltip": false
+},
+"custom/right-arrow": {
+"format": "",
+"tooltip": false
+},
+"custom/right-arrow": {
+"format": "",
+"tooltip": false
+},
 }
