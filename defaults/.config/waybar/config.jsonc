@@ -1,9 +1,9 @@
 [{
     "layer": "top", // Waybar at top layer
-    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "position": "top", // Waybar position (top|bottom|left|right)
     //"height": 28, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
  	"include": [
 		"~/.config/waybar/active-modules-top.json",
@@ -12,19 +12,19 @@
 		"~/.config/waybar/bar-output.json",
 	],
 	"name": "top"
-},
-{
-    "layer": "top", // Waybar at top layer
-    "position": "bottom", // Waybar position (top|bottom|left|right)
-    //"height": 36, // Waybar height (to be removed for auto height)
-    // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
-    // Choose the order of the modules
- 	"include": [
-		"~/.config/waybar/active-modules-bottom.json",
-		"~/.config/waybar/modules-config.json",
-		"~/.config/waybar/custom-modules-config.json",
-		"~/.config/waybar/bar-output.json",
-	],
-	"name": "bottom"
 }]
+// {
+//     "layer": "top", // Waybar at top layer
+//     "position": "bottom", // Waybar position (top|bottom|left|right)
+//     //"height": 36, // Waybar height (to be removed for auto height)
+//     // "width": 1280, // Waybar width
+//     "spacing": 4, // Gaps between modules (4px)
+//     // Choose the order of the modules
+//  	"include": [
+// 		"~/.config/waybar/active-modules-bottom.json",
+// 		"~/.config/waybar/modules-config.json",
+// 		"~/.config/waybar/custom-modules-config.json",
+// 		"~/.config/waybar/bar-output.json",
+// 	],
+// 	"name": "bottom"
+// }]

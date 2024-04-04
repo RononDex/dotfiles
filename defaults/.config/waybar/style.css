@@ -1,265 +1,188 @@
+@import '../../.cache/wal/colors-waybar.css';
+
+/* NORD palette https://github.com/nordtheme/nord */
+/* blacks */
+@define-color nord1 #2e3440;
+@define-color nord2 #3b4252;
+@define-color nord3 #434c5e;
+@define-color nord4 #4c566a;
+/* whites */
+@define-color nord5 #d8dee9;
+@define-color nord6 #e5e9f0;
+@define-color nord7 #e5e9f0;
+/* frost */
+@define-color nord8 #8fbcbb;
+@define-color nord9 #88c0d0;
+@define-color nord10 #81a1c1;
+@define-color nord11 #5e81ac;
+/* aurora */
+@define-color nord12 #bf616a;
+@define-color nord13 #d08770;
+@define-color nord14 #ebcb8b;
+@define-color nord15 #a3be8c;
+@define-color nord16 #b48ead;
+
+@define-color bg_color rgba(46, 52, 64, 0.7);
+@define-color fg_color #bbbbbb;
+
+@define-color bg_active_color #8fbcbb;
+@define-color fg_active_color #2e3440;
+
+
 * {
-	/* `otf-font-awesome` is required to be installed for icons */
-	font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-	font-size: 13px;
-	color: #EEEEEE;
+	font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	border: none;
+	border-radius: 0px;
+	font-size: 12pt;
 }
 
 window#waybar {
-	background-color: rgba(43, 48, 59, 0.7);
-	color: #bbbbbb;
+	background-color: rgba(43, 48, 59, 0);
 	transition-property: background-color;
-	transition-duration: 2s;
-	padding: 10px;
-}
-
-window#waybar.top {
-	border-bottom: 2px solid rgba(100, 114, 125, 0.7);
-}
-
-window#waybar.bottom {
-	border-top: 2px solid rgba(100, 114, 125, 0.7);
+	transition-duration: .5s;
+	margin-top: 5px;
 }
 
 window#waybar.hidden {
 	opacity: 0.2;
 }
 
-window#waybar.termite {
-	background-color: #3f3f3f;
+.modules-left .module {
+	margin-right: 2px;
 }
 
-window#waybar.chromium {
-	background-color: #000000;
-	border: none;
+.modules-right .module {
+	margin-left: 2px;
 }
 
+.module,
 button {
-	/* Use box-shadow instead of border so the text isn't offset */
-	box-shadow: 0 2px transparent inset;
-	/* Avoid rounded borders under each button name */
-	border: none;
-	border-radius: 0;
+	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 15px;
 }
 
-/* bigger buttons */
-#workspaces button {
-	padding: 0px 10px;
-	padding-right: 14px;
-	background-color: transparent;
+.module {
+	border-width: 2px;
+	background-color: @bg_color;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
-#workspaces button * {
-	font-size: 17px;
+/* .module button, */
+/* .module label { */
+/* 	padding-top: 5px; */
+/* } */
+
+#custom-right-arrow,
+#custom-left-arrow {
+	font-family: monospace;
+	color: #1a1a1a;
+	/* font-size: 18px; */
+	padding: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-button:hover {
-	background: inherit;
-	box-shadow: 0 2px #ffffff inset;
-}
-
-#workspaces button:hover {
-	background: rgba(0, 0, 0, 0.2);
-}
-
-#workspaces button.focused {
-	background-color: #64727d;
-	box-shadow: 0 2px #ffffff inset;
-}
-
-#workspaces button.urgent {
-	background-color: #eb4d4b;
+#workspaces button,
+#workspaces button.active {
+	transition: 0.5s all ease-out;
+	margin-left: 3px;
+	margin-right: 3px;
+	border-radius: 15px;
 }
 
 #workspaces button.active {
-	box-shadow: 0 2px #cc1111 inset;
+	background-color: @bg_active_color;
+	color: @fg_active_color;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
-#mode {
-	background-color: #64727d;
-	border-bottom: 2px solid #ffffff;
+#workspaces button:hover {
+	background-color: @bg_active_color;
+	color: @fg_active_color;
 }
 
-#clock,
-#battery,
+/* Merge system info modules together */
 #cpu,
 #memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
+#temperature {
+	border-radius: 0px;
+	margin: 0px;
+	background-color: @nord13;
+	color: @nord1;
+}
+
+#cpu {
+	border-bottom-left-radius: 15px;
+}
+
+#temperature {
+	border-bottom-right-radius: 15px;
+}
+
+/* Merge controls together */
 #idle_inhibitor,
-#scratchpad,
-#mpd {
-	padding: 0 10px;
+#pulseaudio,
+#backlight {
+	border-radius: 0px;
+	margin: 0px;
+	background-color: @nord11;
+	color: @nord1;
 }
 
-#window,
-#workspaces {
-	margin: 0 4px;
+#idle_inhibitor {
+	border-bottom-left-radius: 15px;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-	margin-left: 0;
+#pulseaudio {
+	border-bottom-right-radius: 15px;
+	margin-right: 2px;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-	margin-right: 0;
-}
-
-#clock {}
-
-#battery {}
-
-#battery.charging,
-#battery.plugged {
-	background-color: #408000;
-}
-
-@keyframes blink {
-	to {
-		background-color: #ffffff;
-		color: #000000;
-	}
-}
-
-#battery.critical:not(.charging) {
-	background-color: #f53c3c;
-	color: #ffffff;
-	animation-name: blink;
-	animation-duration: 0.5s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-}
-
-label:focus {
-	background-color: #000000;
-}
-
-#cpu {}
-
-#memory {}
-
-#disk {}
-
-#backlight {}
-
-#network {}
-
-#network.disconnected {
-	background-color: #f53c3c;
-}
-
-#pulseaudio {}
-
-#pulseaudio.muted {
-	background-color: #90b1b1;
-	color: #2a5c45;
-}
-
-#wireplumber {}
-
-#wireplumber.muted {
-	background-color: #f53c3c;
-}
-
-#custom-media {
-	color: #2a5c45;
-	min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-	background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-	background-color: #ffa000;
-}
-
-#temperature {}
-
-#temperature.critical {
-	background-color: #eb4d4b;
-}
-
-#tray {}
-
-#tray>.passive {
-	-gtk-icon-effect: dim;
-}
-
-#tray>.needs-attention {
-	-gtk-icon-effect: highlight;
-	background-color: #eb4d4b;
-}
-
-#idle_inhibitor {}
-
-#idle_inhibitor.activated {
-	background-color: #601f40;
-}
-
-#mpd {
-	color: #2a5c45;
-}
-
-#mpd.disconnected {
-	background-color: #f53c3c;
-}
-
-#mpd.stopped {
-	background-color: #90b1b1;
-}
-
-#mpd.paused {
-	background-color: #51a37a;
-}
-
-#language {
-	color: #740864;
-	padding: 0 5px;
-	margin: 0 5px;
-	min-width: 16px;
-}
-
-#keyboard-state {
-	padding: 0 0px;
-	margin: 0 5px;
-	min-width: 16px;
-}
-
-#keyboard-state>label {
-	padding: 0 5px;
-}
-
-#keyboard-state>label.locked {
-	background: rgba(0, 0, 0, 0.2);
-}
-
-#custom-wvkbd {
-	padding-right: 10px;
-}
-
-#custom-wvkbd {
-	font-size: 22px;
-	margin-right: 5px;
+/* Merge utilities together */
+#custom-displays,
+#custom-wvkbd,
+#custom-sunset {
+	border-radius: 0px;
+	margin: 0px;
+	background-color: @nord10;
+	color: @nord1;
 }
 
 #custom-displays {
-	padding-top: 5px;
-	font-size: 18px;
-	margin-right: 5px;
+	border-bottom-left-radius: 15px;
 }
 
 #custom-sunset {
-	font-size: 18px;
+	border-bottom-right-radius: 15px;
+}
+
+#network {
+	background-color: @nord15;
+	color: @nord1;
+}
+
+#tray {
+	background-color: @nord2;
+	color: @nord1;
+}
+
+#battery {
+	background-color: @nord14;
+	color: @nord1;
+}
+
+#clock {
+	background-color: @nord16;
+	color: @nord1;
+}
+
+#custom-archicon {
+	font-size: 1.4em;
+	color: #1793d0;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 10px;
+	padding-left: 10px;
 }
