@@ -1,15 +1,33 @@
 /* @import '../../../../../.cache/wal/colors-waybar.css'; */
 
 /* NORD palette https://github.com/nordtheme/nord */
+/* blacks */
+@define-color nord1 #2e3440;
+@define-color nord2 #3b4252;
+@define-color nord3 #434c5e;
+@define-color nord4 #4c566a;
+/* whites */
+@define-color nord5 #d8dee9;
+@define-color nord6 #e5e9f0;
+@define-color nord7 #e5e9f0;
+/* frost */
+@define-color nord8 #8fbcbb;
+@define-color nord9 #88c0d0;
+@define-color nord10 #81a1c1;
+@define-color nord11 #5e81ac;
+/* aurora */
+@define-color nord12 #bf616a;
+@define-color nord13 #d08770;
+@define-color nord15 #ebcb8b;
+@define-color nord16 #a3be8c;
+@define-color nord17 #b48ead;
+
 @define-color bg_color rgba(46, 52, 64, 0.7);
 @define-color fg_color #bbbbbb;
 
 @define-color bg_active_color #8fbcbb;
 @define-color fg_active_color #2e3440;
 
-:root {
-	--border-radius: 10px;
-}
 
 * {
 	font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -30,7 +48,7 @@ window#waybar.hidden {
 
 .module,
 button {
-	border-radius: 10px;
+	border-radius: 15px;
 }
 
 .module {

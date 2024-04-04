@@ -24,7 +24,6 @@ echo "Copying default config files"
 sudo mkdir /etc/sddm.conf.d
 sudo cp ~/.files/sddm/custom.conf /etc/sddm.conf.d/custom.conf
 sudo cp ~/.files/sddm/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
-sudo cp ~/.files/pulse/daemon.conf /etc/pulse/daemon.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
@@ -70,9 +69,6 @@ sudo pacman -S ueberzug autoconf keyutils automake bison openconnect ksshaskpass
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
 sudo pacman -S tracker3 tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq polkit --needed --noconfirm
 
-# Set default apps
-xdg-mime default zathura.desktop application/pdf
-
 # Install Architecture specific stuff
 if [ $isArm ]; then
     sudo pacman -Sy fakeroot --noconfirm --needed
@@ -111,9 +107,6 @@ else
 fi
 
 zplug update
-
-sudo systemctl enable NetworkManager
-sudo systemctl start NetworkManager
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
@@ -157,10 +150,10 @@ sudo systemctl enable dcron
 sudo systemctl start dcron
 sudo systemctl enable autofs
 sudo systemctl start autofs
-sudo systemctl start pipewire-pulse.service
-sudo systemctl enable pipewire-pulse.service
 sudo systemctl start polkit.service
 sudo systemctl enable polkit.service
+sudo systemctl enable NetworkManager
+sudo systemctl start NetworkManager
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig
