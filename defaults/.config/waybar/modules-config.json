@@ -81,7 +81,7 @@
 
   // waybar-cpu
   "cpu": {
-    "interval": 5,
+    "interval": 2,
     "format": " LOAD: {usage}%"
   },
 
@@ -106,7 +106,7 @@
 
   // waybar-memory
   "memory": {
-    "interval": 10,
+    "interval": 2,
     "format": " USED: {used:0.1f}G"
   },
 
