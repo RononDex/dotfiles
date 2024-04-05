@@ -162,7 +162,7 @@
   // waybar-pulseaudio
   "pulseaudio": {
     //"format": "{volume}% {icon} {format_source}",
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": "  Mute",
     "format-bluetooth": " {volume}% {format_source}",
     "format-bluetooth-muted": " Mute",
@@ -245,7 +245,7 @@
     "tooltip": false
   },
   "custom/archicon": {
-    "format": " ",
+    "format": "  ",
     "tooltip": false
   },
 }

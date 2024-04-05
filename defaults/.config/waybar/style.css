@@ -111,14 +111,18 @@ button {
 	margin: 0px;
 	background-color: @nord13;
 	color: @nord1;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #cpu {
 	border-bottom-left-radius: 15px;
+	padding-left: 10px;
 }
 
 #temperature {
 	border-bottom-right-radius: 15px;
+	padding-right: 10px;
 }
 
 /* Merge controls together */
@@ -129,15 +133,19 @@ button {
 	margin: 0px;
 	background-color: @nord11;
 	color: @nord1;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #idle_inhibitor {
 	border-bottom-left-radius: 15px;
+	padding-left: 10px;
 }
 
 #pulseaudio {
 	border-bottom-right-radius: 15px;
 	margin-right: 2px;
+	padding-right: 10px;
 }
 
 /* Merge utilities together */
@@ -147,15 +155,19 @@ button {
 	border-radius: 0px;
 	margin: 0px;
 	background-color: @nord10;
+	padding-left: 5px;
+	padding-right: 5px;
 	color: @nord1;
 }
 
 #custom-displays {
 	border-bottom-left-radius: 15px;
+	padding-left: 10px;
 }
 
 #custom-sunset {
 	border-bottom-right-radius: 15px;
+	padding-right: 10px;
 }
 
 #network {
@@ -184,5 +196,5 @@ button {
 	padding-top: 0px;
 	padding-bottom: 0px;
 	padding-right: 10px;
-	padding-left: 10px;
+	padding-left: 5px;
 }
