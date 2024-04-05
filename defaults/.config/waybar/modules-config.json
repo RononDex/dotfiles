@@ -201,8 +201,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": "",
-      "deactivated": ""
+      "activated": " ",
+      "deactivated": " "
     }
   },
   "cpu": {
@@ -225,7 +225,7 @@
     "on-click": "bash ~/.config/waybar/scripts/wvkbd-toggle.sh"
   },
   "custom/displays": {
-    "format": "🖵",
+    "format": "🖵 ",
     "on-click": "nwg-displays"
   },
   "custom/left-arrow": {
