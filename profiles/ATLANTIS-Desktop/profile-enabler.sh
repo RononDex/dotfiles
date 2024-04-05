@@ -3,8 +3,6 @@
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 . $scriptDir/../../functions/htcVivePro2Functions.sh
 
-cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
-cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
@@ -18,15 +16,6 @@ cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 mkdir -p ~/.local/share/applications
-
-mkdir ~/.i3
-mkdir ~/.i3/workspaces
-mkdir ~/.i3/scripts
-
-cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
-cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
-cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
-
 
 echo "Installing stuff ..."
 sudo pacman -Sy nextcloud-client dunst libnotify notification-daemon vlc flameshot teamspeak3 blueman wireguard-tools --noconfirm --needed

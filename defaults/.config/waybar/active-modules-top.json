@@ -5,7 +5,6 @@
 		  "backlight", 
 		  "pulseaudio", 
           "custom/displays",
-          "custom/wvkbd",
 		  "custom/sunset"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
