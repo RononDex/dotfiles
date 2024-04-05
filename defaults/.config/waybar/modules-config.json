@@ -169,13 +169,13 @@
     "format-source": " {volume}%",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
+      "headphone": " ",
       "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""]
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": ["", " ", " "]
     },
     "scroll-step": 5.0,
     // Commands to execute on events
