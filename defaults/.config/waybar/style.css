@@ -23,10 +23,11 @@
 @define-color nord16 #b48ead;
 
 @define-color bg_color rgba(46, 52, 64, 0.7);
-@define-color fg_color #bbbbbb;
+@define-color fg_color @nord7;
 
 @define-color bg_active_color #8fbcbb;
 @define-color fg_active_color #2e3440;
+@define-color critical #D60B00;
 
 
 * {
@@ -59,6 +60,7 @@ window#waybar.hidden {
 button {
 	border-bottom-right-radius: 15px;
 	border-bottom-left-radius: 15px;
+	color: @fg_color;
 }
 
 .module {
@@ -68,19 +70,6 @@ button {
 	padding-right: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-}
-
-/* .module button, */
-/* .module label { */
-/* 	padding-top: 5px; */
-/* } */
-
-#custom-right-arrow,
-#custom-left-arrow {
-	font-family: monospace;
-	color: #1a1a1a;
-	/* font-size: 18px; */
-	padding: 0;
 }
 
 #workspaces button,
@@ -197,4 +186,28 @@ button {
 	padding-bottom: 0px;
 	padding-right: 10px;
 	padding-left: 5px;
+}
+
+/* Critical blinkin animations */
+@keyframes blinkCritical {
+	to {
+		background-color: @critical;
+		color: @fg_color;
+	}
+}
+
+#battery.critical:not(.charging) {
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#temperature.critical {
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
