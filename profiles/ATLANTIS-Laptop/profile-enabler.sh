@@ -18,7 +18,7 @@ cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
-cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
+cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-modules-top.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 
 sudo pacman -Syu --noconfirm
