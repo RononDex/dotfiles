@@ -31,10 +31,11 @@
 
 
 * {
-	font-family: "FiraCode Nerd Font Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+	font-family: "Arimo Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 	border: none;
 	border-radius: 0px;
 	font-size: 11pt;
+	font-weight: 600;
 }
 
 window#waybar {
@@ -107,6 +108,7 @@ button {
 #cpu {
 	border-bottom-left-radius: 15px;
 	padding-left: 10px;
+	padding-right: 10px;
 }
 
 #temperature {

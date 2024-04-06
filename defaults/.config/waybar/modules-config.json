@@ -205,7 +205,7 @@
   },
   "memory": {
     "interval": 2,
-    "format": "  {}% "
+    "format": "  {}% "
   },
   "temperature": {
     // "thermal-zone": 2,
