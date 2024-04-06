@@ -1,0 +1,19 @@
+{
+  "modules-left": [
+		  "custom/archicon", 
+		  "idle_inhibitor", 
+		  "backlight", 
+		  "pulseaudio", 
+          "custom/displays",
+		  "custom/wvkbd",
+		  "custom/sunset"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+          "cpu",
+          "memory",
+          "temperature",
+		  "battery", 
+		  "network", 
+		  "clock", 
+		  "tray"]
+}
