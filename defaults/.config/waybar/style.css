@@ -197,7 +197,7 @@ button {
 }
 
 #battery.critical:not(.charging) {
-	animation-name: blink;
+	animation-name: blinkCritical;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
@@ -205,7 +205,7 @@ button {
 }
 
 #temperature.critical {
-	animation-name: blink;
+	animation-name: blinkCritical;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;

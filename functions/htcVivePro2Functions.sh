@@ -20,7 +20,7 @@ PreSteamSetupVivePro2() {
 }
 
 SetupGitRepo() {
-		CloneOrUpdateGitRepoToPackages "vive-pro-2-on-linux" "https://github.com/santeri3700/vive-pro-2-on-linux"
+		CloneOrUpdateGitRepoToPackages "vive-pro-2-on-linux" "https://github.com/RononDex/vive-pro-2-on-linux"
 }
 
 BuildAndInstallKernel() {
