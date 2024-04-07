@@ -46,6 +46,12 @@ InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 
+echo "Installing drivers for other devices"
+InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
+InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
+InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
+sudo pacman -Sy	linux-firmware-qlogic --needed --noconfirm
+
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
