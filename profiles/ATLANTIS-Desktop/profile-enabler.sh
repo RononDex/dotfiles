@@ -50,6 +50,7 @@ echo "Installing drivers for other devices"
 InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
 InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
 InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
+InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
 sudo pacman -Sy	linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing screenkey"
