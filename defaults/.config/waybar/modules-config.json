@@ -17,15 +17,12 @@
   // wlsunset
   "custom/sunset": {
     "interval": "once",
-    "tooltip": false,
+    "tooltip": true,
     "return-type": "json",
-    "format": "{icon}",
-    "format-icons": {
-      "off": "☾",
-      "on": "☀",
-    },
     "exec": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh",
-    "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle"
+    "on-click": "/bin/sh ~/.config/waybar/scripts/wlsunset.sh toggle",
+    "on-scroll-up": "bash ~/.config/waybar/scripts/wlsunset.sh inc",
+   	"on-scroll-down": "bash ~/.config/waybar/scripts/wlsunset.sh dec",
   },
 
   "hyprland/workspaces": {
