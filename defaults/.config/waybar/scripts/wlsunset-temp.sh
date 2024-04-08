@@ -1,3 +1,3 @@
 #!/usr/bin/bash
 
-SUNET_TEMP=6500
+SUNET_TEMP=4000
