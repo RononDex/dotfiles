@@ -46,6 +46,7 @@ InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "ledger-udev" "https://aur.archlinux.org/ledger-udev.git"
+InstallAurPackage "ledger-live-bin" "https://aur.archlinux.org/ledger-live-bin.git"
 
 echo "Installing drivers for other devices"
 InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
