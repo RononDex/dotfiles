@@ -194,7 +194,9 @@
     "format-icons": {
       "activated": " ",
       "deactivated": " "
-    }
+    },
+    "tooltip-format-activated": "Keep PC awake",
+    "tooltip-format-deactivated": "PC will go to sleep"
   },
   "cpu": {
     "format": "  {usage}%",
