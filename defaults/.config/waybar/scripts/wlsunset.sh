@@ -25,12 +25,12 @@ case $1'' in
 'inc')
     SUNET_TEMP=$((SUNET_TEMP + 100))
 	echo "SUNET_TEMP=${SUNET_TEMP}" > $VARSCRIPT
-    toggle
+    restart
 	;;
 'dec')
     SUNET_TEMP=$((SUNET_TEMP - 100))
 	echo "SUNET_TEMP=${SUNET_TEMP}" > $VARSCRIPT
-    toggle
+    restart
 	;;
 'toggle')
     if pkill -0 wlsunset; then
