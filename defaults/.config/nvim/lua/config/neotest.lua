@@ -10,6 +10,6 @@ require("neotest").setup({
 })
 
 
-vim.keymap.set('n', '<leader>td', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>")
-vim.keymap.set('n', '<leader>rt', "<cmd>lua require('neotest').run.run()<cr>")
-vim.keymap.set('n', '<leader>dn', "<cmd>lua require('jdtls').test_nearest_method()<cr>")
+vim.keymap.set('n', '<leader>td', "<cmd>lua require('neotest').run.run({strategy = 'dap'})<cr>", {})
+vim.keymap.set('n', '<leader>rt', "<cmd>lua require('neotest').run.run()<cr>", {})
+vim.keymap.set('n', '<leader>dn', "<cmd>lua require('jdtls').test_nearest_method()<cr>", {})
