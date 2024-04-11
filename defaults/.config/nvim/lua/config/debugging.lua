@@ -70,4 +70,3 @@ vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl =
 
 -- Load vscode / launch.json by default
 require('dap.ext.vscode').load_launchjs(nil, {})
-require("telescope").load_extension "dap"
