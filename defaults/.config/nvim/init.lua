@@ -16,6 +16,7 @@ require("config/debugging")
 require("config/tabby")
 require("config/autopairs")
 require("config/neogit")
+require("config/neotest")
 
 require("config/lsp/jdtls")
 require("config/lsp/texlive")
