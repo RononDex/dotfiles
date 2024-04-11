@@ -23,7 +23,7 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	end
 end
 
-dap.adapters.coreclr = {
+dap.adapters.netcoredbg = {
 	type = 'executable',
 	command = '/usr/local/bin/netcoredbg/netcoredbg',
 	args = { '--interpreter=vscode' }
@@ -31,11 +31,11 @@ dap.adapters.coreclr = {
 
 dap.configurations.cs = {
 	{
-		type = "coreclr",
+		type = "netcoredbg",
 		name = "launch - netcoredbg",
 		request = "launch",
 		program = function()
-			return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+			return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/", "file")
 		end,
 	}
 }
@@ -70,3 +70,4 @@ vim.fn.sign_define('DapStopped', { text = '', texthl = 'DapStopped', linehl =
 
 -- Load vscode / launch.json by default
 require('dap.ext.vscode').load_launchjs(nil, {})
+require("telescope").load_extension "dap"
