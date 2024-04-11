@@ -136,7 +136,6 @@ local function jdtls_on_attach(client, bufnr)
 	-- https://github.com/mfussenegger/nvim-jdtls#usage
 
 	local opts = { buffer = bufnr }
-	vim.keymap.set('n', '<leader>rt', "<cmd>lua require('jdtls').test_nearest_method()<cr>", opts)
 end
 
 local function jdtls_setup(event)
