@@ -191,7 +191,7 @@
   },
   "idle_inhibitor": {
     "format": "{icon}",
-    "format-icons": {
+    "format-icons":{
       "activated": "󰈈 ",
       "deactivated": "󰈉 "
     },

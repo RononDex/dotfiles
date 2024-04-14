@@ -131,6 +131,8 @@ button {
 #idle_inhibitor {
 	border-bottom-left-radius: 15px;
 	padding-left: 10px;
+
+	font-size: 1.4em;
 }
 
 #pulseaudio {
@@ -149,6 +151,11 @@ button {
 	padding-left: 5px;
 	padding-right: 5px;
 	color: @nord1;
+	font-size: 1.1em;
+}
+
+#custom-wvkbd {
+	font-size: 1.4em;
 }
 
 #custom-displays {
