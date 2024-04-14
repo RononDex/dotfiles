@@ -58,10 +58,10 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": " {capacity}%",
+    "format-charging": " {icon} {capacity}%",
     "format-plugged": "   {capacity}%",
     "format-alt": "{icon} {time}",
-    "format-icons": [" ", " ", " ", " ", " "],
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "format-time": "{H}h {M}min",
     "tooltip": true
   },
@@ -72,7 +72,7 @@
     "align": 0,
     "rotate": 0,
     "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "  {:%H:%M}",
+    "format": "󰥔  {:%H:%M}",
     "format-alt": " {:%a %b %d, %G}"
   },
 
@@ -192,8 +192,8 @@
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
-      "activated": " ",
-      "deactivated": " "
+      "activated": "󰈈 ",
+      "deactivated": "󰈉 "
     },
     "tooltip-format-activated": "Keep PC awake",
     "tooltip-format-deactivated": "PC will go to sleep"
@@ -204,7 +204,7 @@
   },
   "memory": {
     "interval": 2,
-    "format": "  {}% "
+    "format": "  {}% "
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -215,7 +215,7 @@
     "format-icons": ["", "", ""]
   },
   "custom/wvkbd": {
-    "format": "⌨",
+    "format": "󰌌 ",
     "on-click": "bash ~/.config/waybar/scripts/wvkbd-toggle.sh"
   },
   "custom/displays": {
