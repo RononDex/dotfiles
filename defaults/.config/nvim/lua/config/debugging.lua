@@ -29,6 +29,8 @@ dap.adapters.netcoredbg = {
 	args = { '--interpreter=vscode' }
 }
 
+dap.adapters.coreclr = dap.adapters.netcoredbg
+
 dap.configurations.cs = {
 	{
 		type = "netcoredbg",
