@@ -120,7 +120,7 @@ end
 local function enable_debugger(bufnr)
 	require('jdtls').setup_dap({ hotcodereplace = 'auto' })
 
-	local opts = { buffer = bufnr }
+	require('dap.ext.vscode').load_launchjs(nil, {})
 end
 
 local function jdtls_on_attach(client, bufnr)
