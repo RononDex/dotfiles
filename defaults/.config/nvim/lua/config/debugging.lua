@@ -13,6 +13,7 @@ dap.listeners.after.event_initialized["dapui_config"] = function()
 	end
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
 	if utils.autoclose_debug_windows then
 		utils.close_debugger()
 	end
