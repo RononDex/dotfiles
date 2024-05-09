@@ -6,7 +6,7 @@ return {
 		"antoinemadec/FixCursorHold.nvim",
 		"nvim-treesitter/nvim-treesitter",
 		"Issafalcon/neotest-dotnet",
+		"nvim-neotest/neotest-python",
+		"rcasia/neotest-java"
 	},
-	"nvim-neotest/neotest-python",
-	"rcasia/neotest-java"
 }
