@@ -21,5 +21,6 @@ require("config/neotest")
 require("config/lsp/jdtls")
 require("config/lsp/texlive")
 require("config/lsp/eslint")
+require("config/lsp/python")
 
 require("after/plugin/keymap")
