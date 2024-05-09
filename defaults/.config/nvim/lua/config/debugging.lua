@@ -43,6 +43,8 @@ dap.configurations.cs = {
 	}
 }
 
+require('dap-python').setup(utils.get_python_path())
+
 vim.keymap.set('n', '<F9>', '<cmd>lua require("dap").toggle_breakpoint()<cr>')
 vim.keymap.set('n', '<F21>', '<cmd>lua require("dap").set_breakpoint(vim.fn.input("Breakpoint condition: "))<cr>') -- Set Breakpoint condition
 vim.keymap.set('n', '<F5>', '<cmd>lua require("utils").start_debugger(true)<cr>')

@@ -45,4 +45,15 @@ function utils.is_neotree_open()
 	return window_exists
 end
 
+function utils.get_python_path()
+	local cwd = vim.fn.getcwd()
+	if vim.fn.executable(cwd .. "/venv/bin/python") == 1 then
+		return cwd .. "/venv/bin/python"
+	elseif vim.fn.executable(cwd .. "/.venv/bin/python") == 1 then
+		return cwd .. "/.venv/bin/python"
+	else
+		return utils.get_mason_dir("debugpy") .. "/venv/bin/python"
+	end
+end
+
 return utils
