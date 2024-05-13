@@ -134,6 +134,7 @@ echo "Installing AUR packages"
 InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
 InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
+InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 
 echo "Setting up Display Manager"
 InstallSddm
