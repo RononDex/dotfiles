@@ -27,7 +27,7 @@ return {
 					respect_gitignore = true,
 				},
 				follow_current_file = { enabled = false },
-				use_libuv_file_watcher = true,
+				-- use_libuv_file_watcher = true,
 				group_empty_dirs = true,
 			}
 		}
