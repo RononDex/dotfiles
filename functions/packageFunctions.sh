@@ -88,7 +88,7 @@ InstallHyprland() {
 		InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
 		InstallAurPackage "nwg-displays" "https://aur.archlinux.org/nwg-displays.git"
 
-		sudo pacman -Sy wofi swaybg swayidle --needed --noconfirm
+		sudo pacman -Sy wofi swaybg hypridle --needed --noconfirm
 	fi
 }
 
