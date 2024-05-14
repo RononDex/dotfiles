@@ -1,4 +1,0 @@
-timeout 300 'bash ~/.scripts/utilities/wayland-lock'
-timeout 60 'if pgrep swaylock; then hyprctl dispatch dpms off; fi' resume 'hyprctl dispatch dpms on'
-timeout 360 'if pgrep swaylock; then hyprctl dispatch dpms off; fi' resume 'hyprctl dispatch dpms on'
-before-sleep 'bash ~/.scripts/utilities/wayland-lock'

@@ -1,4 +1,0 @@
-#!/bin/bash
-
-swaylock -f -e -i /usr/share/backgrounds/bing.jpg --screenshot --fade-in 0.5 --effect-blur 15x1 --clock --indicator
-
