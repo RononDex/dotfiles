@@ -83,8 +83,7 @@ InstallHyprland() {
     then
 		gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
 
-		yes | sudo pacman -Sy hyprland nwg-look xdg-desktop-portal-hyprland libdisplay-info waybar --needed --noconfirm
-		InstallAurPackage "swaylock-effects-git" "https://aur.archlinux.org/swaylock-effects-git.git"
+		yes | sudo pacman -Sy hyprland nwg-look xdg-desktop-portal-hyprland libdisplay-info waybar hyprlock --needed --noconfirm
 		InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
 		InstallAurPackage "nwg-displays" "https://aur.archlinux.org/nwg-displays.git"
 
