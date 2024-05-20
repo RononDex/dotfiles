@@ -78,15 +78,6 @@ PostSteamSetupVivePro2
 echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
 
-if [ ! -d ~/.omnisharp ]
-then
-    mkdir ~/.omnisharp
-fi
-
-echo "Setting up omnisharp ..."
-rm -rf ~/.omnisharp
-cp -Raf $scriptDir/../ATLANTIS-Surface/overrides/omnisharp ~/.omnisharp
-
 echo "Enabling services ..."
 EnableService lightdm
 EnableService ckb-next-daemon

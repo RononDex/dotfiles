@@ -71,7 +71,7 @@ echo "Distribution: ${distro}"
 echo
 echo "Copying default files...."
 rm -rf ~/wallpapers
-cp -ra $scriptDir/defaults/. ~/
+cp -ra ${scriptDir}/defaults/. ~/
 
 # Copy profile files
 echo
