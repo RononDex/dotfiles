@@ -23,6 +23,11 @@ keymap("n", "su", "3<C-w>-", default_opts)
 keymap("n", "so", "3<C-w><", default_opts)
 keymap("n", "sp", "3<C-w>>", default_opts)
 
+-- Page Down/Up
+keymap("n", "J", "<C-f>", default_opts)
+keymap("n", "K", "<C-b>", default_opts)
+
+
 -- Go to tab by number
 keymap("n", "<leader>1", "1gt", default_opts)
 keymap("n", "<leader>2", "2gt", default_opts)
