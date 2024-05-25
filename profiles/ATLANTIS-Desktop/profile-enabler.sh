@@ -9,6 +9,7 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 sudo cp $scriptDir/overrides/xorg/21-amdgpu.conf /etc/X11/xorg.conf.d/21-amdgpu.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 sudo cp $scriptDir/overrides/grub/grub /etc/default/grub
+sudo cp $scriptDir/overrides/udev/30-amdgpu-pm.rules /etc/udev/rules.d/30-amdgpu-pm.rules
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
