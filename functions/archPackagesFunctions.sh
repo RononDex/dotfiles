@@ -1,9 +1,9 @@
 #!/bin/sh
 
 InstallAurPackage() {
-    CloneOrUpdateGitRepoToPackages $1 $2
+    CloneOrUpdateGitRepoToPackages $1 $2 $3
     cd ~/packages/$1
-    makepkg -sic --noconfirm --needed
+    makepkg -sic $3 --noconfirm --needed
 }
 
 BasicVimInstall() {
