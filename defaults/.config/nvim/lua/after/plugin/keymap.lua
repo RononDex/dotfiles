@@ -24,8 +24,8 @@ keymap("n", "so", "3<C-w><", default_opts)
 keymap("n", "sp", "3<C-w>>", default_opts)
 
 -- Page Down/Up
-keymap("n", "J", "<C-f>", default_opts)
-keymap("n", "K", "<C-b>", default_opts)
+keymap("n", "<C-j", "<C-f>", default_opts)
+keymap("n", "<C-k>", "<C-b>", default_opts)
 
 
 -- Go to tab by number
