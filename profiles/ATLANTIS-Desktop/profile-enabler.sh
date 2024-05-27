@@ -1,7 +1,6 @@
 #!/bin/bash
 
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-. $scriptDir/../../functions/htcVivePro2Functions.sh
+scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" . $scriptDir/../../functions/htcVivePro2Functions.sh
 
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
@@ -102,3 +101,15 @@ chmod +x ~/.i3/workspaces/load-workspaces.sh
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "Downloads" "://192.168.1.12/Downloads" "Software" "://192.168.1.12/Software" "Astrophotography" "://192.168.1.12/Astrophotography" "Backup" "://192.168.1.12/Backup"
 SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
+
+echo "Fixing SE clipboard copy and paste"
+if [ -d  ~/.steam/steam/steamapps/common/SpaceEngineers ]; then
+		CloneOrUpdateGitRepoToPackages "CosmicWineFixes" "https://github.com/opekope2/CosmicWineFixes"
+		cd ~/packages/CosmicWineFixes
+		ln -s ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64 Bin64
+		dotnet build
+		cp $scriptDir/overrides/SpaceEngineers/SpaceEngineersLauncher.py ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
+		chmod +x ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
+		# Also set launch options in steam to ./SpaceEngineersLauncher.py %command%
+		wget https://github.com/sepluginloader/SpaceEngineersLauncher/releases/download/v1.0.6/SpaceEngineersLauncher.exe -O ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.exe
+fi
