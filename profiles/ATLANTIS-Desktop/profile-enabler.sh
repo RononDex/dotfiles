@@ -1,6 +1,7 @@
 #!/bin/bash
 
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" . $scriptDir/../../functions/htcVivePro2Functions.sh
+scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" 
+. $scriptDir/../../functions/htcVivePro2Functions.sh
 
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
