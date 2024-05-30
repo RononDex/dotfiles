@@ -27,11 +27,11 @@ sudo pacman -Syy
 sudo pacman -Syu --noconfirm
 
 echo "Installing stuff..."
-sudo pacman -Sy i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
+sudo pacman -Sy nextcloud-client light dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
 sudo pacman -Sy texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -Sy nomacs tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
-sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
-sudo pacman -Syu sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
+sudo pacman -Sy nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
+sudo pacman -Sy virt-manager qemu chromium xf86-video-vesa --needed --noconfirm
+sudo pacman -Syu sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable tlp
@@ -50,20 +50,11 @@ InstallEruption
 
 echo "Installing AUR packages..."
 InstallMpv
-InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
-InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
-InstallAurPackage "polybar" "https://aur.archlinux.org/polybar.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 # InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
-InstallAurPackage "intel-ivsc-firmware" "https://aur.archlinux.org/intel-ivsc-firmware.git"
-InstallAurPackage "intel-ivsc-driver-dkms-git" "https://aur.archlinux.org/intel-ivsc-driver-dkms-git.git"
-InstallAurPackage "intel-ipu6-dkms-git" "https://aur.archlinux.org/intel-ipu6-dkms-git.git"
-InstallAurPackage "ipu6-camera-bin" "https://aur.archlinux.org/ipu6-camera-bin.git"
-InstallAurPackage "intel-ipu6ep-camera-hal-git" "https://aur.archlinux.org/intel-ipu6ep-camera-hal-git.git"
-InstallAurPackage "icamerasrc-git" "https://aur.archlinux.org/icamerasrc-git.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
@@ -77,7 +68,6 @@ InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-d
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
 echo "Enabling services ..."
-sudo systemctl enable iptsd
 sudo systemctl enable libvirtd
 
 echo "Setting up shares ..."
