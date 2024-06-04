@@ -1,3 +1,2 @@
 # Auto update every tuesday at 03 AM
 0 3 * * 2   bash /root/updateAndReboot
-0 5 5 */2 * bash /usr/bin/updateSslCertbot

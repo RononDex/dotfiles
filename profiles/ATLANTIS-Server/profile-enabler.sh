@@ -3,9 +3,6 @@
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
-sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
-sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
-cp $scriptDir/overrides/polybar/constants ~/.config/polybar/constants
 sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
@@ -45,7 +42,7 @@ cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspa
 cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 
 echo "Installing stuff..."
-sudo xbps-install -y linux-firmware-amd network-manager-applet lightdm lightdm-webkit2-greeter light-locker firefox arc-theme arc-icon-theme nautilus 
+sudo xbps-install -y linux-firmware-amd network-manager-applet firefox arc-theme arc-icon-theme nautilus 
 sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract xf86-input-evdev
 sudo xbps-install -y qemu virt-manager 
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
@@ -54,7 +51,6 @@ sudo xbps-install -y nomacs breeze breeze-cursors samba
 sudo xbps-install -y mdadm wireguard tigervnc docker
 
 InstallXorg
-InstallLitarvanLightDmTheme
 InstallYubiKeyStuff
 SetupDotnet
 SetupWireguardServer
@@ -72,7 +68,6 @@ InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree pritunl-client
 InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 
 echo "Enabling services ..."
-EnableService lightdm
 EnableService sshd
 EnableService mdadm
 EnableService libvirtd
