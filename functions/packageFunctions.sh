@@ -83,8 +83,11 @@ InstallHyprland() {
     then
 		gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
 
-		yes | sudo pacman -Sy hyprland hypridle hyprlock nwg-look xdg-desktop-portal-hyprland libdisplay-info waybar --needed --noconfirm
+		yes | sudo pacman -Sy hyprland nwg-look xdg-desktop-portal-hyprland libdisplay-info waybar --needed --noconfirm
 		InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
+		# InstallAurPackage "hyprland-git" "https://aur.archlinux.org/hyprland-git.git" "-f"
+		InstallAurPackage "hyprlock-git" "https://aur.archlinux.org/hyprlock-git.git" "-f"
+		InstallAurPackage "hypridle-git" "https://aur.archlinux.org/hypridle-git.git" "-f"
 		InstallAurPackage "nwg-displays" "https://aur.archlinux.org/nwg-displays.git"
 
 		sudo pacman -Sy wofi swaybg --needed --noconfirm
@@ -94,8 +97,7 @@ InstallHyprland() {
 InstallWayland() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -Sy pipewire polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
-		InstallAurPackage "wlsunset" "https://aur.archlinux.org/wlsunset.git"
+		sudo pacman -Sy pipewire wlsunset polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
 	fi
 }
 
