@@ -85,6 +85,7 @@ InstallHyprland() {
 
 		yes | sudo pacman -Sy hyprland nwg-look xdg-desktop-portal-hyprland libdisplay-info waybar --needed --noconfirm
 		InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
+		InstallAurPackage "hyprutils-git" "https://aur.archlinux.org/packages/hyprutils-git"
 		# InstallAurPackage "hyprland-git" "https://aur.archlinux.org/hyprland-git.git" "-f"
 		InstallAurPackage "hyprlock-git" "https://aur.archlinux.org/hyprlock-git.git" "-f"
 		InstallAurPackage "hypridle-git" "https://aur.archlinux.org/hypridle-git.git" "-f"
