@@ -1,58 +1,52 @@
 {
-  "version": 4,
-  "lastUserContextId": 4450,
+  "version": 5,
+  "lastUserContextId": 4524,
   "identities": [
     {
       "userContextId": 1,
       "public": true,
       "icon": "fingerprint",
       "color": "blue",
-      "l10nID": "userContextPersonal.label",
-      "accessKey": "userContextPersonal.accesskey",
-      "telemetryId": 1
+      "telemetryId": 1,
+      "l10nId": "user-context-personal"
     },
     {
       "userContextId": 2,
       "public": true,
       "icon": "briefcase",
       "color": "orange",
-      "l10nID": "userContextWork.label",
-      "accessKey": "userContextWork.accesskey",
-      "telemetryId": 2
+      "telemetryId": 2,
+      "l10nId": "user-context-work"
     },
     {
       "userContextId": 3,
       "public": true,
       "icon": "dollar",
       "color": "green",
-      "l10nID": "userContextBanking.label",
-      "accessKey": "userContextBanking.accesskey",
-      "telemetryId": 3
+      "telemetryId": 3,
+      "l10nId": "user-context-banking"
     },
     {
       "userContextId": 4,
       "public": true,
       "icon": "cart",
       "color": "pink",
-      "l10nID": "userContextShopping.label",
-      "accessKey": "userContextShopping.accesskey",
-      "telemetryId": 4
+      "telemetryId": 4,
+      "l10nId": "user-context-shopping"
     },
     {
       "userContextId": 5,
       "public": false,
       "icon": "",
       "color": "",
-      "name": "userContextIdInternal.thumbnail",
-      "accessKey": ""
+      "name": "userContextIdInternal.thumbnail"
     },
     {
       "userContextId": 4294967295,
       "public": false,
       "icon": "",
       "color": "",
-      "name": "userContextIdInternal.webextStorageLocal",
-      "accessKey": ""
+      "name": "userContextIdInternal.webextStorageLocal"
     },
     {
       "userContextId": 21,
@@ -228,6 +222,6 @@
       "icon": "dollar",
       "color": "blue",
       "name": "Coinbase"
-    }
+    },
   ]
 }
