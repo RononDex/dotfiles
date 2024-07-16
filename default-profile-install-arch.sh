@@ -177,3 +177,5 @@ echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 # gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-v40'
 # gsettings set org.gnome.desktop.wm.preferences theme 'Nordic-v40'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+
+InstallAurPackage "colloid-gtk-theme-git" "https://aur.archlinux.org/colloid-gtk-theme-git.git"
