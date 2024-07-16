@@ -24,6 +24,7 @@ echo "Copying default config files"
 sudo mkdir /etc/sddm.conf.d
 sudo cp ~/.files/sddm/custom.conf /etc/sddm.conf.d/custom.conf
 sudo cp ~/.files/sddm/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
+sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
