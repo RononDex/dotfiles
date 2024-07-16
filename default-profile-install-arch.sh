@@ -173,7 +173,7 @@ echo "Updating gpg-agent"
 echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 
 # Install nordic theme
-DownloadAndInstallGtkTheme "1267246"
-gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-v40'
-gsettings set org.gnome.desktop.wm.preferences theme 'Nordic-v40'
+# DownloadAndInstallGtkTheme "1267246"
+# gsettings set org.gnome.desktop.interface gtk-theme 'Nordic-v40'
+# gsettings set org.gnome.desktop.wm.preferences theme 'Nordic-v40'
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
