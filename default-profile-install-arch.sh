@@ -176,7 +176,7 @@ echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 # Install GTK themes
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
-# InstallAurPackage "colloid-gtk-theme-git" "https://aur.archlinux.org/colloid-gtk-theme-git.git"
+InstallAurPackage "colloid-gtk-theme-git" "https://aur.archlinux.org/colloid-gtk-theme-git.git"
 InstallAurPackage "colloid-icon-theme-git" "https://aur.archlinux.org/colloid-icon-theme-git.git"
 InstallAurPackage "kanagawa-gtk-theme-git" "https://aur.archlinux.org/kanagawa-gtk-theme-git.git"
 InstallAurPackage "rose-pine-hyprcursor" "https://aur.archlinux.org/rose-pine-hyprcursor.git"
