@@ -22,5 +22,6 @@ require("config/lsp/jdtls")
 require("config/lsp/texlive")
 require("config/lsp/eslint")
 require("config/lsp/python")
+require("config/lsp/ltex")
 
 require("after/plugin/keymap")
