@@ -3,26 +3,19 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . $scriptDir/../../functions/astroFunctions.sh
 
-echo "Please ensure that Arch Linux ARM was correclty setup prior to launching this profile installer!"
+echo "Please ensure that Arch Linux ARM was correctly setup prior to launching this profile installer!"
 echo "Exit with Ctrl+C if not setup properly yet"
 
 echo "Copying some files..."
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
-cp $scriptDir/overrides/.xinitrc ~/.xinitrc
-cp $scriptDir/overrides/xfce4/terminalrc ~/.config/xfce4/terminal/terminalrc
-cp $scriptDir/overrides/xfce4/xfce4-desktop.xml ~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop.xml
-sudo cp $scriptDir/overrides/lightdm.conf /etc/lightdm/lightdm.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
-sudo cp $scriptDir/overrides/web-greeter.yml /etc/lightdm/web-greeter.yml 
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
-cp $scriptDir/overrides/indi/* ~/.indi/
-cp $scriptDir/overrides/kstars/kstarsrc ~/.config/kstarsrc
 sudo mkdir /data
-sudo chown cobra:cobra /data
+sudo chown $USER:$USER /data
 sudo chmod 700 /data
 mkdir ~/.ssh
 cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
@@ -45,18 +38,13 @@ sudo systemctl start ntpd
 echo "Importing keys"
 gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDBC01BF10EB
 
-echo "Setting up XFCE"
-sudo pacman -Sy lxde firefox dnsmasq gpsd --noconfirm --needed
 
 echo "Installing stuff ..."
-InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
-InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
 InstallAurPackage "elogind" "https://aur.archlinux.org/elogind.git"
-
-echo "Setting up xrdp ..."
-sudo rm /etc/X11/Xwrapper.config
-echo "allowed_users=anybody" | sudo tee /etc/X11/Xwrapper.config
+sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
+sudo pacman -Sy  --noconfirm --needed
+InstallAurPackage "wayfire" "https://aur.archlinux.org/wayfire.git"
 
 echo "Setting up network .."
 SetupHotspot "wlan0" "ATLANTIS-ASTRO-PI1-AP" true
@@ -69,9 +57,6 @@ sudo chmod u+x /usr/share/scripts/startHotspot.sh
 InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 
 echo "Enabling services"
-sudo systemctl enable lightdm.service
-sudo systemctl enable xrdp
-sudo systemctl start xrdp
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
 sudo systemctl enable elogind
@@ -81,6 +66,7 @@ echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
 
+InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 InstallAstroPy
 InstallIndi
 InstallFxLoad
