@@ -22,7 +22,7 @@
 		```
 	1. Download and extract the root filesystem (as root, not via sudo): 
 		```
-		wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-armv7-latest.tar.gz
+		wget http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-aarch64-latest.tar.gz
 		bsdtar -xpf ArchLinuxARM-rpi-armv7-latest.tar.gz -C root
 		sync
 		```
@@ -30,12 +30,11 @@
 		```
 		mv root/boot/* boot
 		```
-	1. Adjust `boot/cmdline.txt` and `root/etc/fstab` to mount correct drives
 	1. Unmount the two partitions: 
 		```
 		umount boot root
 		```
-1. Unplug the flashed device and plug it into your raspberry pi and boot it up.
+1. Unplug the SD card and plug it into your raspberry pi and boot it up.
 1. You can now connect through `ssh` using user `alarm` and password `alarm`. Root password is `root`
 1. Initialize the pacman keyring and populate the Arch Linux ARM package signing keys: 
 	```
@@ -43,6 +42,21 @@
 	pacman-key --populate archlinuxarm
 	```
 1. Follow chapter 3 "Configure the system" here: [Arch Linux Instructions](https://wiki.archlinux.org/title/Installation_guide#Time_zone) starting from "Time zone"
+1. Repeat steps above for the attached USB SSD directly from the Raspberry PI
+1. Replace boot device in fstab: `sed -i 's/mmcblk0p/sda/g' root/etc/fstab`
+1. ```
+umount /mnt/boot
+mount /dev/sda1 /mnt/root/boot
+arch-chroot /mnt/root
+pacman -Syu
+vi /etc/mkinitcpio.conf
+# modify mkinitcpio.conf so MODULES=(pcie_brcmstb) to enbale boot from USB device
+mkinitcpio -P
+exit
+poweroff
+
+```
+1. remove micro sd card and reboot (should now boot from USB SSD)
 1. Install necessary software: `pacman -Sy vim git sudo`
 1. Setup your personal user with password `useradd -m <username>`, change the root password to something more secure and delete the existing
    user `userdel alarm -f`
