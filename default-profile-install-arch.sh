@@ -32,7 +32,7 @@ cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
 isArm=$false
 echo "Configuring pacman ..."
 architecture=$(uname -m | grep -E "arm|aarch")
-if [[ $architecture == *"arm"* ]]; then
+if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
     echo -n "$RED"
     echo "ARM system detected ..."
     echo -n "$NC"
