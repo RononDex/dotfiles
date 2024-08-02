@@ -83,8 +83,8 @@ git lfs install
 git lfs pull
 
 echo "Changing default shell to zsh"
-if [[ "$SHELL" != "/bin/zsh" ]]; then
-    chsh -s /bin/zsh
+if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
+    chsh -s /usr/bin/zsh
 fi
 
 echo "Setting up oh-my-zsh ..."
