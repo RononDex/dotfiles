@@ -24,7 +24,6 @@ echo "Copying default config files"
 sudo mkdir /etc/sddm.conf.d
 sudo cp ~/.files/sddm/custom.conf /etc/sddm.conf.d/custom.conf
 sudo cp ~/.files/sddm/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
-sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
@@ -37,6 +36,7 @@ if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
     echo "ARM system detected ..."
     echo -n "$NC"
     sudo cp defaults/mirrorListARM /etc/pacman.d/mirrorlist
+	sudo cp ~/.files/makepkgARM.conf /etc/makepkg.conf
     # sudo cp defaults/pacman.arm.conf /etc/pacman.conf
     # sudo chmod 744 /etc/pacman.conf
     sudo chmod 744 /etc/pacman.d/mirrorlist
@@ -44,6 +44,7 @@ if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
 else
     sudo cp defaults/mirrorlist /etc/pacman.d/mirrorlist
     sudo cp defaults/pacman.conf /etc/pacman.conf
+	sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
     sudo chmod 744 /etc/pacman.conf
     sudo chmod 744 /etc/pacman.d/mirrorlist
     isArm=$false
