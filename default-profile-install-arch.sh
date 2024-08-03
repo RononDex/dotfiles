@@ -181,4 +181,5 @@ InstallAurPackage "colloid-gtk-theme-git" "https://aur.archlinux.org/colloid-gtk
 InstallAurPackage "colloid-icon-theme-git" "https://aur.archlinux.org/colloid-icon-theme-git.git"
 InstallAurPackage "kanagawa-gtk-theme-git" "https://aur.archlinux.org/kanagawa-gtk-theme-git.git"
 InstallAurPackage "rose-pine-hyprcursor" "https://aur.archlinux.org/rose-pine-hyprcursor.git"
+InstallAurPackage "rose-pine-cursor" "https://aur.archlinux.org/rose-pine-cursor.git"
 InstallAurPackage "hyprcursor-dracula-kde-git" "https://aur.archlinux.org/hyprcursor-dracula-kde-git.git"
