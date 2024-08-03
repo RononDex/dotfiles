@@ -33,7 +33,7 @@ SetupLatex() {
 		
     if command -v pacman &> /dev/null
     then
-        sudo pacman -Sy texlive texlive-langgerman --needed --noconfirm
+        sudo pacman -Sy texlive texlive-langgerman texlive-doc --needed --noconfirm
     fi
 }
 
