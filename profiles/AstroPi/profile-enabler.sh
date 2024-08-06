@@ -43,9 +43,7 @@ echo "Installing stuff ..."
 InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
 InstallAurPackage "elogind" "https://aur.archlinux.org/elogind.git"
 sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
-sudo pacman -Sy  --noconfirm --needed
-InstallAurPackage "wf-config" "https://aur.archlinux.org/wf-config.git"
-InstallAurPackage "wayfire" "https://aur.archlinux.org/wayfire.git"
+sudo pacman -Sy wayvnc --noconfirm --needed
 
 InstallWayland
 InstallHyprland
