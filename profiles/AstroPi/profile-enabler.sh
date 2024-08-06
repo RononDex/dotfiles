@@ -47,6 +47,9 @@ sudo pacman -Sy  --noconfirm --needed
 InstallAurPackage "wf-config" "https://aur.archlinux.org/wf-config.git"
 InstallAurPackage "wayfire" "https://aur.archlinux.org/wayfire.git"
 
+InstallWayland
+InstallHyprland
+
 echo "Setting up network .."
 SetupHotspot "wlan0" "ATLANTIS-ASTRO-PI1-AP" true
 sudo mkdir /usr/share/scripts
