@@ -11,6 +11,9 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
+cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
+cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
+cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
@@ -43,10 +46,12 @@ echo "Installing stuff ..."
 InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
 InstallAurPackage "elogind" "https://aur.archlinux.org/elogind.git"
 sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
-sudo pacman -Sy wayvnc --noconfirm --needed
+sudo pacman -Sy wayvnc xfce4 --noconfirm --needed
+InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
+InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
 
-InstallWayland
-InstallHyprland
+# InstallWayland
+# InstallHyprland
 
 echo "Setting up network .."
 SetupHotspot "wlan0" "ATLANTIS-ASTRO-PI1-AP" true
