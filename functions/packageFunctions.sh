@@ -124,3 +124,18 @@ InstallEruption() {
 		sudo systemctl enable --now eruption.service
 	fi
 }
+
+CompileFixedUBootForRpi4() {
+	CloneOrUpdateGitRepoToPackages "u-boot" "git://git.denx.de/u-boot.git" "--depth 1"
+	cd ~/packages/u-boot
+
+    cp $1/defaults/.files/rpi4-uboot.patch ./rpi4-uboot.patch
+	git apply rpi4-uboot.patch
+
+    make rpi_4_defconfig
+
+	make
+
+	sudo mkdir /boot/firmware
+	sudo cp u-boot.bin /boot/firmware/uboot_rpi_4.bin
+}
