@@ -30,6 +30,10 @@
 		```
 		mv root/boot/* boot
 		```
+    1. Run this to correctly setup boot from sd card
+        ```
+        sed -i 's/mmcblk0/mmcblk1/g' root/etc/fstab
+        ```
 	1. Unmount the two partitions: 
 		```
 		umount boot root
@@ -44,7 +48,8 @@
 1. Follow chapter 3 "Configure the system" here: [Arch Linux Instructions](https://wiki.archlinux.org/title/Installation_guide#Time_zone) starting from "Time zone"
 1. Repeat steps above for the attached USB SSD directly from the Raspberry PI
 1. Replace boot device in fstab: `sed -i 's/mmcblk0p/sda/g' root/etc/fstab`
-1. ```
+1. Run these commands:
+```
 umount /mnt/boot
 mount /dev/sda1 /mnt/root/boot
 arch-chroot /mnt/root
