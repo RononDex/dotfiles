@@ -134,8 +134,8 @@ CompileFixedUBootForRpi4() {
 
     make rpi_4_defconfig
 
-	make
+	make -j2
 
 	sudo mkdir /boot/firmware
-	sudo cp u-boot.bin /boot/firmware/uboot_rpi_4.bin
+	sudo cp u-boot.bin /boot/kernel8.img
 }
