@@ -126,16 +126,8 @@ InstallEruption() {
 }
 
 CompileFixedUBootForRpi4() {
-	CloneOrUpdateGitRepoToPackages "u-boot" "git://git.denx.de/u-boot.git" "--depth 1"
-	cd ~/packages/u-boot
+	CloneOrUpdateGitRepoToPackages "PKGBUILDs-archlinux-arm" "https://github.com/RononDex/PKGBUILDs-archlinux-arm.git" "--depth 1"
+	cd ~/packages/PKGBUILDs-archlinux-arm/alarm/uboot-raspberrypi
 
-    cp $1/defaults/.files/rpi4-uboot.patch ./rpi4-uboot.patch
-	git apply rpi4-uboot.patch
-
-    make rpi_4_defconfig
-
-	make -j2
-
-	sudo mkdir /boot/firmware
-	sudo cp u-boot.bin /boot/kernel8.img
+	makepkg -sic
 }
