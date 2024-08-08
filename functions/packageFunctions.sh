@@ -126,7 +126,7 @@ InstallEruption() {
 }
 
 CompileFixedUBootForRpi4() {
-	CloneOrUpdateGitRepoToPackages "PKGBUILDs-archlinux-arm" "https://github.com/RononDex/PKGBUILDs-archlinux-arm.git" "--depth 1"
+	CloneOrUpdateGitRepoToPackages "PKGBUILDs-archlinux-arm" "https://github.com/RononDex/PKGBUILDs-archlinux-arm.git" 
 	cd ~/packages/PKGBUILDs-archlinux-arm/alarm/uboot-raspberrypi
 
 	makepkg -sic
