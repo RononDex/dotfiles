@@ -14,8 +14,8 @@ sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
-mkdir -p ~/.local/share/kstars/astrometry
-cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
+# mkdir -p ~/.local/share/kstars/astrometry
+# cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
 sudo mkdir /data
 sudo chown $USER:$USER /data
@@ -74,7 +74,7 @@ echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
 
-InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
+# InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 InstallAstroPy
 InstallIndi
 InstallFxLoad
@@ -95,10 +95,12 @@ InstallIndiDriver "libsv305" # Somehow needed by phd2
 InstallIndiDriver "indi-sv305" # Somehow needed by phd2
 # InstallKstars
 sudo pacman -Sy --noconfirm --needed kstars
-InstallAstrometryNet
+# InstallAstrometryNet
 DownloadIndexFiles
 #CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
 InstallAurPackage "phd2" "https://aur.archlinux.org/phd2.git"
+InstallAurPackage "astap" "https://aur.archlinux.org/astap.git"
+InstallAurPackage "d50-star-db-astap" "https://aur.archlinux.org/d50-star-db-astap.git"
 
 
 echo "Adjust user permissions"
