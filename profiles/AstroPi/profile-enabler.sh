@@ -69,6 +69,8 @@ sudo systemctl enable smb.service
 sudo systemctl start smb.service
 sudo systemctl enable elogind
 sudo systemctl start elogind
+sudo systemctl enable xrdp
+sudo systemctl start xrdp
 
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
@@ -105,6 +107,7 @@ InstallAurPackage "d50-star-db-astap" "https://aur.archlinux.org/d50-star-db-ast
 # Install missing firmwares for hardware devices
 sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
+InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
 
 
 echo "Adjust user permissions"
