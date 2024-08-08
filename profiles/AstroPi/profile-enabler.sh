@@ -14,7 +14,7 @@ sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
-cp $scriptDir/overrides/.xinitrc ~/.xinitc
+cp $scriptDir/overrides/.xinitrc ~/.config/.xinitc
 chmod +x ~/.xinitrc
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
