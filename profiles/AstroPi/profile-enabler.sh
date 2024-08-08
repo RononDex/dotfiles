@@ -102,6 +102,10 @@ InstallAurPackage "phd2" "https://aur.archlinux.org/phd2.git"
 InstallAurPackage "astap" "https://aur.archlinux.org/astap.git"
 InstallAurPackage "d50-star-db-astap" "https://aur.archlinux.org/d50-star-db-astap.git"
 
+# Install missing firmwares for hardware devices
+sudo pacman -S linux-firmware-qlogic --needed --noconfirm
+InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
+
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
