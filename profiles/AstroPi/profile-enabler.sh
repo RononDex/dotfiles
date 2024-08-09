@@ -45,8 +45,6 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 
 echo "Installing stuff ..."
-InstallAurPackage "raspi-config-git" "https://aur.archlinux.org/raspi-config-git.git"
-InstallAurPackage "elogind" "https://aur.archlinux.org/elogind.git"
 sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
 sudo pacman -Sy wayvnc xfce4 --noconfirm --needed
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
