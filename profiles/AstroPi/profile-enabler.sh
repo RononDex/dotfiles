@@ -14,7 +14,7 @@ sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
-cp $scriptDir/overrides/.xinitrc ~/.config/.xinitc
+cp $scriptDir/overrides/xrdp/.xinitrc ~/.config/.xinitc
 chmod +x ~/.xinitrc
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
@@ -67,8 +67,6 @@ InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 echo "Enabling services"
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
-sudo systemctl enable elogind
-sudo systemctl start elogind
 sudo systemctl enable xrdp
 sudo systemctl start xrdp
 

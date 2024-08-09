@@ -40,4 +40,4 @@ if [ -d ~/.scripts ] ; then
     fi
 fi
 
-exec xfce4-session
+exec startxfce4
