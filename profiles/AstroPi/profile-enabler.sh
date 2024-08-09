@@ -75,7 +75,6 @@ sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
 
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
-InstallAstroPy
 InstallIndi
 InstallFxLoad
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
