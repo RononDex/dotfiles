@@ -49,6 +49,10 @@ sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
 sudo pacman -Sy wayvnc xfce4 --noconfirm --needed
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
+xrdp-genkeymap km-0807.ini
+sudo mv km-080C.ini /etc/xrdp
+sudo chown root:root /etc/xrdp/km-080C.ini
+sudo service xrdp restart
 # CompileFixedUBootForRpi4 $scriptDir
 
 # InstallWayland
