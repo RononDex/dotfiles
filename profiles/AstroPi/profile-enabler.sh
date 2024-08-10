@@ -69,6 +69,8 @@ sudo systemctl enable smb.service
 sudo systemctl start smb.service
 sudo systemctl enable xrdp
 sudo systemctl start xrdp
+sudo systemctl stop sddm
+sudo systemctl disable sddm
 
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
