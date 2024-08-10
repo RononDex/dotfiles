@@ -14,7 +14,7 @@ sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
-cp $scriptDir/overrides/xrdp/.xinitrc ~/.config/.xinitc
+cp $scriptDir/overrides/xrdp/.xinitrc ~/.config/.xinitrc
 chmod +x ~/.xinitrc
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
@@ -49,10 +49,6 @@ sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
 sudo pacman -Sy wayvnc xfce4 --noconfirm --needed
 InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
 InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
-xrdp-genkeymap km-0807.ini
-sudo mv km-080C.ini /etc/xrdp
-sudo chown root:root /etc/xrdp/km-080C.ini
-sudo service xrdp restart
 # CompileFixedUBootForRpi4 $scriptDir
 
 # InstallWayland

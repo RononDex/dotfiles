@@ -40,4 +40,4 @@ if [ -d ~/.scripts ] ; then
     fi
 fi
 
-exec startxfce4
+exec ck-launch-session dbus-launch startxfce4
