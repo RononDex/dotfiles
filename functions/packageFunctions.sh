@@ -105,7 +105,7 @@ InstallWayland() {
 InstallSddm() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -Sy sddm --needed --noconfirm
+		sudo pacman -Sy sddm sddm-kcm --needed --noconfirm
 		InstallAurPackage "sddm-sugar-candy-git" "https://aur.archlinux.org/sddm-sugar-candy-git.git"
 
 		sudo systemctl enable sddm

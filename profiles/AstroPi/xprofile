@@ -7,8 +7,8 @@
 setxkbmap ch -variant de                                # Set keyboard mapping to ch-de
 
 export EDITOR=nvim
-wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
+# wal -i "$(< "${HOME}/wallpapers/")" -f ~/.config/wal/colors.json
 
 # Download new background photo
-sh ~/.scripts/updateLoginBackground.sh &
+# sh ~/.scripts/updateLoginBackground.sh &
 
