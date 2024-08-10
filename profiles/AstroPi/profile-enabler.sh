@@ -42,7 +42,7 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 echo "Installing stuff ..."
 sudo pacman -Sy firefox tigervnc dnsmasq gpsd --noconfirm --needed
-sudo pacman -Sy xfce4 --noconfirm --needed
+sudo pacman -Sy lxde --noconfirm --needed
 # CompileFixedUBootForRpi4 $scriptDir
 
 # InstallWayland
@@ -123,7 +123,6 @@ sudo chown ${currentUser} ~/.xinitrc
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
-chmod +x ~/.config/xfce4/terminal/terminalrc
 
 echo "ATLANTIS-ASTRO-PI" | sudo tee /etc/hostname
 sudo mkinitcpio -P
