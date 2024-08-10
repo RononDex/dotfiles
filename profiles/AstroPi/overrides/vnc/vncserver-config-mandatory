@@ -1,0 +1,20 @@
+## Mandatory settings for VNC servers started by the vncserver service
+#
+# Any settings given here will override the builtin defaults and
+# settings specified in ~/.config/tigervnc/config or vnc-config-defaults.
+#
+# See HOWTO.md and the following manpages for more details:
+#     vncsession(8) Xvnc(1)
+#
+# Several common settings are shown below. Uncomment and modify to your
+# liking.
+
+# session=gnome
+# securitytypes=vncauth,tlsvnc
+# geometry=2000x1200
+# localhost
+# alwaysshared
+session=LXDE
+securitytypes=vncauth,tlsvnc
+geometry=1920x1080
+alwaysshared

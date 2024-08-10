@@ -9,12 +9,10 @@ echo "Exit with Ctrl+C if not setup properly yet"
 echo "Copying some files..."
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
-sudo cp $scriptDir/overrides/xrdp/startwm.sh /etc/xrdp/startwm.sh
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
-cp $scriptDir/overrides/xrdp/.xinitrc ~/.config/.xinitrc
 chmod +x ~/.xinitrc
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
@@ -24,8 +22,6 @@ sudo chown $USER:$USER /data
 sudo chmod 700 /data
 mkdir ~/.ssh
 cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
-
-sudo chmod +x /etc/xrdp/startwm.sh
 
 echo "Setting up gps and ntp"
 sudo pacman -Sy ntp --needed --noconfirm
@@ -45,10 +41,8 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 
 echo "Installing stuff ..."
-sudo pacman -Sy firefox dnsmasq gpsd --noconfirm --needed
-sudo pacman -Sy wayvnc xfce4 --noconfirm --needed
-InstallAurPackage "xrdp" "https://aur.archlinux.org/xrdp.git"
-InstallAurPackage "xorgxrdp" "https://aur.archlinux.org/xorgxrdp.git"
+sudo pacman -Sy firefox tigervnc dnsmasq gpsd --noconfirm --needed
+sudo pacman -Sy xfce4 --noconfirm --needed
 # CompileFixedUBootForRpi4 $scriptDir
 
 # InstallWayland
@@ -67,14 +61,20 @@ InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 echo "Enabling services"
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
-sudo systemctl enable xrdp
-sudo systemctl start xrdp
 sudo systemctl stop sddm
 sudo systemctl disable sddm
 
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
+
+echo "Setting up VNC server"
+sudo cp $scriptDir/overrides/vnc/vncserver.users /etc/tigervnc/vncserver.users
+sudo cp $scriptDir/overrides/vnc/vncserver-config-mandatory /etc/tigervnc/vncserver-config-mandatory
+echo "Setting vnc password:"
+vncpasswd
+sudo systemctl enable vncserver@:1
+sudo systemctl start vncserver@:1
 
 InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
 InstallIndi
