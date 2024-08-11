@@ -26,3 +26,6 @@ hdmi_mode=82
 dtparam=i2c_arm=on
 dtparam=spi=on
 dtparam=audio=on
+
+# GPS pps support (adafruit gps hat)
+dtoverlay=pps-gpio,gpiopin=4
