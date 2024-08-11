@@ -29,7 +29,7 @@ sudo cp $scriptDir/overrides/udev/25-gpsd-usb.rules /etc/udev/rules.d/25-gpsd-us
 sudo cp $scriptDir/overrides/boot/config.txt /boot/config.txt
 sudo cp $scriptDir/overrides/boot/boot.txt /boot/boot.txt
 sudo cp $scriptDir/overrides/modules/pps.conf /etc/modules-load.d/pps.conf
-sudo ln -s /dev/ttyS0 /dev/gps0
+sudo ln -s /dev/ttyS1 /dev/gps0
 sudo timedatectl set-ntp true
 sudo systemctl enable ntpd
 sudo systemctl start ntpd
@@ -39,7 +39,7 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 
 echo "Installing stuff ..."
-sudo pacman -Sy firefox tigervnc dnsmasq gpsd --noconfirm --needed
+sudo pacman -Sy firefox tigervnc dnsmasq --noconfirm --needed
 sudo pacman -Sy lxde --noconfirm --needed
 # CompileFixedUBootForRpi4 $scriptDir
 
@@ -65,6 +65,9 @@ sudo systemctl disable sddm
 echo "Setting up astronomy stuff .."
 sudo pacman -Sy gpsd libdc1394 sof-firmware xf86-video-fbdev --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
+
+echo "Setting up gpsd console"
+sudo stty -F /dev/ttyS1 raw 9600 cs8 clocal -cstopb
 
 echo "Setting up VNC server"
 sudo cp $scriptDir/overrides/vnc/vncserver.users /etc/tigervnc/vncserver.users
