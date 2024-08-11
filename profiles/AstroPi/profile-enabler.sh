@@ -63,7 +63,7 @@ sudo systemctl stop sddm
 sudo systemctl disable sddm
 
 echo "Setting up astronomy stuff .."
-sudo pacman -Sy gpsd libdc1394 sof-firmware --noconfirm --needed
+sudo pacman -Sy gpsd libdc1394 sof-firmware xf86-video-fbdev --noconfirm --needed
 sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
 
 echo "Setting up VNC server"
