@@ -59,6 +59,8 @@ InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
 echo "Enabling services"
 sudo systemctl enable smb.service
 sudo systemctl start smb.service
+sudo systemctl enable gpsd.service
+sudo systemctl start gpsd.service
 sudo systemctl stop sddm
 sudo systemctl disable sddm
 
