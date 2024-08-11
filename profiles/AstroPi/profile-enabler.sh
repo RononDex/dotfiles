@@ -10,9 +10,6 @@ echo "Copying some files..."
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
-cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
-cp $scriptDir/overrides/hyprland/custom-config.conf ~/.config/hypr/configs/custom-config.conf
-cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
 chmod +x ~/.xinitrc
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
@@ -126,3 +123,6 @@ chmod +x ~/.scripts/xprofile
 
 echo "ATLANTIS-ASTRO-PI" | sudo tee /etc/hostname
 sudo mkinitcpio -P
+
+cd /boot
+sudo bash ./mkscr
