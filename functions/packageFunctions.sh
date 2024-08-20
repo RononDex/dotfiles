@@ -29,7 +29,7 @@ InstallMpv() {
     # Arch
     if  command -v pacman &> /dev/null
     then
-        sudo pacman -Sy vapoursynth mpv mkvtoolnix-cli --needed --noconfirm
+        sudo pacman -S vapoursynth mpv mkvtoolnix-cli --needed --noconfirm
     fi
 }
 
@@ -83,7 +83,7 @@ InstallHyprland() {
     then
 		gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
 
-		yes | sudo pacman -Sy hyprland nwg-look xdg-desktop-portal-hyprland hyprutils libdisplay-info waybar --needed --noconfirm
+		yes | sudo pacman -S hyprland nwg-look xdg-desktop-portal-hyprland hyprutils libdisplay-info waybar --needed --noconfirm
 		InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
 		# InstallAurPackage "hyprutils-git" "https://aur.archlinux.org/hyprutils-git.git"
 		# InstallAurPackage "hyprland-git" "https://aur.archlinux.org/hyprland-git.git" "-f"
@@ -98,14 +98,14 @@ InstallHyprland() {
 InstallWayland() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -Sy pipewire wlsunset polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
+		sudo pacman -S pipewire wlsunset polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
 	fi
 }
 
 InstallSddm() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -Sy sddm sddm-kcm --needed --noconfirm
+		sudo pacman -S sddm sddm-kcm --needed --noconfirm
 		InstallAurPackage "sddm-sugar-candy-git" "https://aur.archlinux.org/sddm-sugar-candy-git.git"
 
 		sudo systemctl enable sddm
