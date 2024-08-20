@@ -183,3 +183,4 @@ InstallAurPackage "kanagawa-gtk-theme-git" "https://aur.archlinux.org/kanagawa-g
 InstallAurPackage "rose-pine-hyprcursor" "https://aur.archlinux.org/rose-pine-hyprcursor.git"
 InstallAurPackage "rose-pine-cursor" "https://aur.archlinux.org/rose-pine-cursor.git"
 InstallAurPackage "hyprcursor-dracula-kde-git" "https://aur.archlinux.org/hyprcursor-dracula-kde-git.git"
+InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git"
