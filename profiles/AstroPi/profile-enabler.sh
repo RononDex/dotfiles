@@ -123,6 +123,10 @@ sudo usermod -a -G users ${currentUser}
 sudo usermod -a -G wheel ${currentUser}
 sudo smbpasswd -a ${currentUser}
 
+
+echo "Setting up shares ..."
+SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "Downloads" "://192.168.1.12/Downloads" "Software" "://192.168.1.12/Software" "Astrophotography" "://192.168.1.12/Astrophotography" "Backup" "://192.168.1.12/Backup"
+
 sudo chown ${currentUser} ~/.xinitrc
 
 chmod +x ~/.scripts/bashprofile
