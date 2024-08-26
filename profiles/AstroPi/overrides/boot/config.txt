@@ -27,4 +27,4 @@ dtparam=spi=on
 dtparam=audio=on
 
 # GPS pps support (adafruit gps hat)
-dtoverlay=pps-gpio,gpiopin=7
+dtoverlay=pps-gpio,gpiopin=4
