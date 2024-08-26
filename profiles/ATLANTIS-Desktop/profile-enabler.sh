@@ -57,6 +57,10 @@ InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
 InstallAurPackage "wootility-appimage" "https://aur.archlinux.org/wootility-appimage.git"
 sudo pacman -Sy	linux-firmware-qlogic --needed --noconfirm
 
+echo "Installing Proton Stuff"
+InstallAurPackage "proton-vpn-gtk-app" "https://aur.archlinux.org/proton-vpn-gtk-app.git"
+InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
+
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"

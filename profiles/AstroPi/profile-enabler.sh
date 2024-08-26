@@ -120,6 +120,7 @@ sudo usermod -a -G video ${currentUser}
 sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G tty ${currentUser}
 sudo usermod -a -G users ${currentUser}
+sudo usermod -a -G wheel ${currentUser}
 sudo smbpasswd -a ${currentUser}
 
 sudo chown ${currentUser} ~/.xinitrc
