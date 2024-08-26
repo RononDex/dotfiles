@@ -5,7 +5,6 @@ initramfs initramfs-linux.img followkernel
 
 # Uncomment to enable bluetooth
 #dtparam=krnbt=on
-dtoverlay=pps-gpio,gpiopin=4
 
 hdmi_group=2
 hdmi_mode=82
