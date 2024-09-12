@@ -9,7 +9,7 @@ CreateTarBackup(){
 		sudo tar -cv -I 'zstd -8 --long -T2' -pf - $2 | gpg --output $1.gpg --encrypt --recipient $5 --batch --yes
 		filename=$(basename $1)
 		rclone mkdir $4:$3
-		rclone copy $1.gpg $4:$3/$filename.gpg
+		rclone copy -P $1.gpg $4:$3/$filename.gpg
 }
 
 echo "------------------------------------------------"
