@@ -35,7 +35,7 @@ InstallPowerLineFonts
 sudo xbps-install -y fakeroot gcc boost ffmpeg make cmake bash-completion zsh zsh-completions automake m4 autoconf
 sudo xbps-install -y NetworkManager dbus dbus-x11 elogind accountsservice gnome-keyring font-adobe-source-code-pro neofetch xclip
 sudo xbps-install -y feh picom libspa-bluetooth netcat
-sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass socklog-void rsync
+sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass socklog-void rsync rclone
 sudo xbps-install -y vim neovim neovim-remote libftdi1 cfitsio void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient ranger binutils keychain lftp
 sudo xbps-install -y htop kitty ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass patch ncurses ncurses-devel
