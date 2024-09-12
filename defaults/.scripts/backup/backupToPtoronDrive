@@ -33,9 +33,9 @@ cd /data
 sudo mkdir -p tarBackups
 CreateTarBackup tarBackups/Backup.tar.gz Backup ServerBackups ProtonDriveBackup
 CreateTarBackup tarBackups/Documents.tar.gz Documents ServerBackups ProtonDriveBackup
-CreateTarBackup tarBackups/Software.tar.gz Software ServerBackups ProtonDriveBackup
-CreateTarBackup tarBackups/Downloads.tar.gz Downloads ServerBackups ProtonDriveBackup
-CreateTarBackup tarBackups/VirtualMachines.tar.gz VirtualMachines ServerBackups ProtonDriveBackup
+# CreateTarBackup tarBackups/Software.tar.gz Software ServerBackups ProtonDriveBackup
+# CreateTarBackup tarBackups/Downloads.tar.gz Downloads ServerBackups ProtonDriveBackup
+# CreateTarBackup tarBackups/VirtualMachines.tar.gz VirtualMachines ServerBackups ProtonDriveBackup
 CreateTarBackup tarBackups/Astrophotography.tar.gz Astrophotography ServerBackups ProtonDriveBackup
 CreateTarBackup tarBackups/ConfigStoreAstroBot.tar.gz ConfigStoreAstroBot ServerBackups ProtonDriveBackup
 CreateTarBackup tarBackups/containers.tar.gz containers ServerBackups ProtonDriveBackup
