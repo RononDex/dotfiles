@@ -5,7 +5,7 @@ CreateEncryptdTarBackup(){
 		# $2: Path to folder to backup
 		# $3: target recipient for GPG encryption
 		# $4: additional tar parameters
-		sudo tar -cv -I 'zstd -12 --long -T4' $4 -pf - $2 | gpg --output $1.gpg --encrypt --recipient $3 --batch --yes
+		tar -cv -I 'zstd -12 --long -T4' $4 -pf $1 $2 
 }
 
 echo "------------------------------------------------"
@@ -18,11 +18,10 @@ if [ -z "$(gpg --list-secret-keys)" ]; then
 		gpg --default-new-key-algo rsa8192 --gen-key
 fi
 
-targetGPGKey="tinoheuberger@protonmail.com"
-
 cd /data
 
-sudo mkdir -p tarBackups
+mkdir -p tarBackups
+
 CreateEncryptdTarBackup tarBackups/Backup.tar.gz Backup $targetGPGKey
 CreateEncryptdTarBackup tarBackups/Documents.tar.gz Documents $targetGPGKey
 CreateEncryptdTarBackup tarBackups/Software.tar.gz Software $targetGPGKey
