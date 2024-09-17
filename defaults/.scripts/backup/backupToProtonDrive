@@ -1,42 +1,21 @@
 #!/bin/bash
 
-CreateTarBackup(){
+UploadToProtonDrive(){
 		# $1: Path to output tar.gz file
-		# $2: Path to folder to backup
-		# $3: Remote folder
-		# $4: rclone remote name
-		# $5: target recipient for GPG encryption
-		sudo tar -cv -I 'zstd -8 --long -T2' -pf - $2 | gpg --output $1.gpg --encrypt --recipient $5 --batch --yes
+		# $2: Remote folder
+		# $3: rclone remote name
+		# $4: target recipient for GPG encryption
 		filename=$(basename $1)
-		rclone mkdir $4:$3
-		rclone copy -P $1.gpg $4:$3/
+		rclone mkdir $3:$2
+		rclone copy -P $1 $3:$2/
 }
-
-echo "------------------------------------------------"
-echo "--- Backing up files to proton drive archive ---"
-echo "------------------------------------------------"
-
-if [ -z "$(gpg --list-secret-keys)" ]; then
-		echo "No GPG key for encryption currently available."
-		echo "Generating one..."
-		gpg --default-new-key-algo rsa8192 --gen-key
-else
-fi
-
-targetGPGKey="tinoheuberger@protonmail.com"
 
 read -s -p "Password for rclone configuration store: " rclone_password
 export RCLONE_CONFIG_PASS=$rclone_password
 
-cd /data
-
-sudo mkdir -p tarBackups
-CreateTarBackup tarBackups/Backup.tar.gz Backup ServerBackups ProtonDriveBackup $targetGPGKey
-CreateTarBackup tarBackups/Documents.tar.gz Documents ServerBackups ProtonDriveBackup $targetGPGKey
-# CreateTarBackup tarBackups/Software.tar.gz Software ServerBackups ProtonDriveBackup $targetGPGKey
-# CreateTarBackup tarBackups/Downloads.tar.gz Downloads ServerBackups ProtonDriveBackup $targetGPGKey
-# CreateTarBackup tarBackups/VirtualMachines.tar.gz VirtualMachines ServerBackups ProtonDriveBackup $targetGPGKey
-CreateTarBackup tarBackups/Astrophotography.tar.gz Astrophotography ServerBackups ProtonDriveBackup $targetGPGKey
-CreateTarBackup tarBackups/ConfigStoreAstroBot.tar.gz ConfigStoreAstroBot ServerBackups ProtonDriveBackup $targetGPGKey
-CreateTarBackup tarBackups/containers.tar.gz containers ServerBackups ProtonDriveBackup $targetGPGKey
-CreateTarBackup tarBackups/docker-data.tar.gz docker-data ServerBackups ProtonDriveBackup $targetGPGKey
+UploadToProtonDrive tarBackups/Backup.tar.gz.gpg ServerBackups ProtonDriveBackup 
+UploadToProtonDrive tarBackups/Documents.tar.gz.gpg ServerBackups ProtonDriveBackup 
+UploadToProtonDrive tarBackups/Astrophotography.tar.gz.gpg ServerBackups ProtonDriveBackup 
+UploadToProtonDrive tarBackups/ConfigStoreAstroBot.tar.gz.gpg ServerBackups ProtonDriveBackup 
+UploadToProtonDrive tarBackups/containers.tar.gz.gpg ServerBackups ProtonDriveBackup 
+UploadToProtonDrive tarBackups/docker-data.tar.gz.gpg ServerBackups ProtonDriveBackup 
