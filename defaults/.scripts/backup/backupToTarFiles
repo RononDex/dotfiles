@@ -16,7 +16,6 @@ if [ -z "$(gpg --list-secret-keys)" ]; then
 		echo "No GPG key for encryption currently available."
 		echo "Generating one..."
 		gpg --default-new-key-algo rsa8192 --gen-key
-else
 fi
 
 targetGPGKey="tinoheuberger@protonmail.com"
