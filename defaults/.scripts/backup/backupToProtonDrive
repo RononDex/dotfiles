@@ -8,8 +8,7 @@ UploadToProtonDrive(){
 		#
 		tarGzFile=$1
 		echo "Encrypting archive ${tarGzFile}"
-		gpg --input $tarGzFile --output $tarGzFile.gpg --encrypt --recipient $4 --batch --yes
-		filename=$(basename $tarGzFile)
+		gpg --output $tarGzFile.gpg --encrypt --recipient $4 --yes $tarGzFile
 		echo "Uploading to File to ProtonDrive"
 		rclone mkdir $3:$2
 		rclone copy -P $tarGzFile.gpg $3:$2/
