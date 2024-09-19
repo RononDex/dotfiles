@@ -21,4 +21,5 @@ UploadToProtonDrive tarBackups/Documents.tar.gz ServerBackups ProtonDriveBackup 
 UploadToProtonDrive tarBackups/Astrophotography.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
 UploadToProtonDrive tarBackups/ConfigStoreAstroBot.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
 UploadToProtonDrive tarBackups/containers.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
+UploadToProtonDrive tarBackups/VirtualMachines.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
 UploadToProtonDrive tarBackups/docker-data.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
