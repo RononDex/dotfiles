@@ -27,6 +27,7 @@ export RCLONE_CONFIG_PASS=$rclone_password
 
 targetGPGKey="tinoheuberger@protonmail.com"
 
+cd /data
 
 UploadToProtonDrive tarBackups/Backup.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
 UploadToProtonDrive tarBackups/Documents.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
