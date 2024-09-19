@@ -5,16 +5,21 @@ UploadToProtonDrive(){
 		# $2: Remote folder
 		# $3: rclone remote name
 		# $4: target recipient for GPG encryption
-		gpg --input $1 --output $1.gpg --encrypt --recipient $4 --batch --yes
-		filename=$(basename $1)
+		#
+		tarGzFile=$1
+		echo "Encrypting archive ${tarGzFile}"
+		gpg --input $tarGzFile --output $tarGzFile.gpg --encrypt --recipient $4 --batch --yes
+		filename=$(basename $tarGzFile)
 		rclone mkdir $3:$2
-		rclone copy -P $1.gpg $3:$2/
+		rclone copy -P $tarGzFile.gpg $3:$2/
 }
 
 read -s -p "Password for rclone configuration store: " rclone_password
+echo
 export RCLONE_CONFIG_PASS=$rclone_password
 
 targetGPGKey="tinoheuberger@protonmail.com"
+
 
 UploadToProtonDrive tarBackups/Backup.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
 UploadToProtonDrive tarBackups/Documents.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
