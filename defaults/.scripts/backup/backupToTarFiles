@@ -29,4 +29,4 @@ CreateEncryptdTarBackup tarBackups/VirtualMachines.tar.gz VirtualMachines
 CreateEncryptdTarBackup tarBackups/Astrophotography.tar.gz Astrophotography "--exclude 'Light' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
 CreateEncryptdTarBackup tarBackups/ConfigStoreAstroBot.tar.gz ConfigStoreAstroBot
 CreateEncryptdTarBackup tarBackups/containers.tar.gz containers
-CreateEncryptdTarBackup tarBackups/docker-data.tar.gz docker-data
+CreateEncryptdTarBackup tarBackups/docker-volumes.tar.gz docker-data/volumes
