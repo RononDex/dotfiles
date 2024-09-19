@@ -11,12 +11,6 @@ echo "---------------------------------------------------"
 echo "--- Backing up files to compressed tar archives ---"
 echo "---------------------------------------------------"
 
-if [ -z "$(gpg --list-secret-keys)" ]; then
-		echo "No GPG key for encryption currently available."
-		echo "Generating one..."
-		gpg --default-new-key-algo rsa8192 --gen-key
-fi
-
 cd /data
 
 mkdir -p tarBackups
