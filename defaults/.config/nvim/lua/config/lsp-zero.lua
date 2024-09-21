@@ -67,6 +67,12 @@ cmp.setup({
 	}
 })
 
+vim.g.rustaceanvim = {
+	server = {
+		capabilities = lsp_zero.get_capabilities()
+	},
+}
+
 require('mason').setup({
 })
 require('mason-lspconfig').setup({
@@ -92,6 +98,7 @@ require('mason-lspconfig').setup({
 	handlers = {
 		lsp_zero.default_setup,
 		jdtls = lsp_zero.noop,
+		rust_analyzer = lsp_zero.noop,
 	},
 })
 
