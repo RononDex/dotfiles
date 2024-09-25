@@ -1,0 +1,22 @@
+#!/bin/bash
+
+cd /data/containers/nextcloud
+
+sudo docker stop nextcloud-app-1
+sudo docker stop nextcloud-web-1
+sudo docker stop nextcloud-proxy-1
+sudo docker stop nextcloud-cron-1
+sudo docker stop nextcloud-db-1
+sudo docker stop nextcloud-redis-1
+sudo docker stop nextcloud-letsencrypt-companion-1
+
+sudo docker rm nextcloud-app-1
+sudo docker rm nextcloud-web-1
+sudo docker rm nextcloud-proxy-1
+sudo docker rm nextcloud-cron-1
+sudo docker rm nextcloud-db-1
+sudo docker rm nextcloud-redis-1
+sudo docker rm nextcloud-letsencrypt-companion-1
+
+sudo docker compose build --pull
+sudo docker-compose up -d

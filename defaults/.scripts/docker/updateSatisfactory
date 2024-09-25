@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cd /data/containers/satisfactory
+
+sudo docker stop satisfactory-server
+
+sudo docker rm satisfactory-server
+
+sudo docker compose build --pull
+sudo docker-compose up -d

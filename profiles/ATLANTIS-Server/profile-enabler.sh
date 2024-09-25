@@ -110,3 +110,5 @@ sudo cp $scriptDir/overrides/vnc/configCobra /home/cobra/.vnc/config
 sudo cp $scriptDir/overrides/vnc/xstartupcobra /home/cobra/.vnc/xstartup
 sudo chmod +x /home/cobra/.vnc/xstartup
 sudo chown cobra:cobra /home/cobra/.vnc -R
+
+updateDockerContainersServer
