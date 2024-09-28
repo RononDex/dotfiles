@@ -102,4 +102,10 @@ require('mason-lspconfig').setup({
 	},
 })
 
+vim.g.rustaceanvim = {
+	server = {
+		capabilities = lsp_zero.get_capabilities()
+	},
+}
+
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = false })
