@@ -85,6 +85,7 @@ require('mason-lspconfig').setup({
 		"omnisharp",
 		"clangd",
 		"bashls",
+		"rust_analyzer",
 		"html",
 		"texlab",
 		"ltex",
