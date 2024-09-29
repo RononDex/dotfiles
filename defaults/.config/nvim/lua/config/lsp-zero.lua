@@ -67,6 +67,10 @@ cmp.setup({
 	}
 })
 
+lsp_zero.extend_lspconfig({
+	capabilities = require('cmp_nvim_lsp').default_capabilities(),
+})
+
 vim.g.rustaceanvim = {
 	server = {
 		capabilities = lsp_zero.get_capabilities()
@@ -78,7 +82,6 @@ require('mason').setup({
 require('mason-lspconfig').setup({
 	ensure_installed = {
 		"lua_ls",
-		"rust_analyzer",
 		"omnisharp",
 		"clangd",
 		"bashls",
@@ -101,11 +104,5 @@ require('mason-lspconfig').setup({
 		rust_analyzer = lsp_zero.noop,
 	},
 })
-
-vim.g.rustaceanvim = {
-	server = {
-		capabilities = lsp_zero.get_capabilities()
-	},
-}
 
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = false })
