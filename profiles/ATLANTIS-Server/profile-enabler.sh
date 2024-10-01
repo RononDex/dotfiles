@@ -96,6 +96,7 @@ sudo usermod -a -G radio ${currentUser}
 sudo usermod -a -G ssh_access ${currentUser}
 sudo usermod -a -G basicfilesharing ${currentUser}
 sudo usermod -a -G libvirt ${currentUser}
+sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
