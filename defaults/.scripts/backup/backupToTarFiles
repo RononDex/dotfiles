@@ -6,7 +6,7 @@ CreateEncryptdTarBackup(){
 		# $3: target recipient for GPG encryption
 		# $4: additional tar parameters
 		outputFile=$1.gpg
-		cmd1="tar -cv -I \"xz -8 -T0\" $4 -pf - $2" 
+		cmd1="tar -cv -I \"xz -6 -T0\" $4 -pf - $2" 
 		eval "$cmd1" | gpg --output $outputFile --encrypt --recipient "$3" --yes
 }
 
