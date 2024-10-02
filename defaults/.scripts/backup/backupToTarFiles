@@ -4,21 +4,25 @@ CreateEncryptdTarBackup(){
 		# $1: Path to output tar.gz file
 		# $2: Path to folder to backup
 		# $3: additional tar parameters
-		eval tar -cv -I \"zstd -12 --long -T4\" $3 -pf $1 $2 
+		# $4: target recipient for GPG encryption
+		outputFile=$1.gpg
+		eval tar -cv -I "xz -9 -T0" $3 -pf - $2 | gpg --output $outputFile --encrypt --recipient $4 --yes
 }
 
 echo "---------------------------------------------------"
 echo "--- Backing up files to compressed tar archives ---"
 echo "---------------------------------------------------"
 
+targetGPGKey="tinoheuberger@protonmail.com"
+
 cd /data
 
 mkdir -p tarBackups
 
-CreateEncryptdTarBackup tarBackups/Backup.tar.gz Backup
-CreateEncryptdTarBackup tarBackups/Documents.tar.gz Documents
-CreateEncryptdTarBackup tarBackups/VirtualMachines.tar.gz VirtualMachines
-CreateEncryptdTarBackup tarBackups/Astrophotography.tar.gz Astrophotography "--exclude 'Light' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
-CreateEncryptdTarBackup tarBackups/ConfigStoreAstroBot.tar.gz ConfigStoreAstroBot
-CreateEncryptdTarBackup tarBackups/containers.tar.gz containers
-CreateEncryptdTarBackup tarBackups/docker-volumes.tar.gz docker-data/volumes
+CreateEncryptdTarBackup tarBackups/Backup.tar.xz Backup $targetGPGKey
+CreateEncryptdTarBackup tarBackups/Documents.tar.xz Documents $targetGPGKey
+CreateEncryptdTarBackup tarBackups/VirtualMachines.tar.xz VirtualMachines $targetGPGKey
+CreateEncryptdTarBackup tarBackups/Astrophotography.tar.xz Astrophotography "--exclude 'Light' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'" $targetGPGKey
+CreateEncryptdTarBackup tarBackups/ConfigStoreAstroBot.tar.xz ConfigStoreAstroBot $targetGPGKey
+CreateEncryptdTarBackup tarBackups/containers.tar.xz containers $targetGPGKey
+CreateEncryptdTarBackup tarBackups/docker-volumes.tar.xz docker-data/volumes $targetGPGKey

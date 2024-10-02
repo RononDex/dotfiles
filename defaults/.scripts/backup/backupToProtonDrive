@@ -1,14 +1,10 @@
 #!/bin/bash
 
 UploadToProtonDrive(){
-		# $1: Path to output tar.gz file
+		# $1: Path to file to upload
 		# $2: Remote folder
 		# $3: rclone remote name
-		# $4: target recipient for GPG encryption
 		#
-		tarGzFile=$1
-		echo "Encrypting archive ${tarGzFile}"
-		gpg --output $tarGzFile.gpg --encrypt --recipient $4 --yes $tarGzFile
 		echo "Uploading to File to ProtonDrive"
 		rclone mkdir $3:$2
 		rclone copy --protondrive-replace-existing-draft=true -P $tarGzFile.gpg $3:$2/
@@ -25,14 +21,12 @@ read -s -p "Password for rclone configuration store: " rclone_password
 echo
 export RCLONE_CONFIG_PASS=$rclone_password
 
-targetGPGKey="tinoheuberger@protonmail.com"
-
 cd /data
 
-UploadToProtonDrive tarBackups/Backup.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
-UploadToProtonDrive tarBackups/Documents.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
-UploadToProtonDrive tarBackups/Astrophotography.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
-UploadToProtonDrive tarBackups/ConfigStoreAstroBot.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
-UploadToProtonDrive tarBackups/containers.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
-UploadToProtonDrive tarBackups/VirtualMachines.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
-UploadToProtonDrive tarBackups/docker-data.tar.gz ServerBackups ProtonDriveBackup $targetGPGKey
+UploadToProtonDrive tarBackups/Backup.tar.gz ServerBackups ProtonDriveBackup
+UploadToProtonDrive tarBackups/Documents.tar.gz ServerBackups ProtonDriveBackup
+UploadToProtonDrive tarBackups/Astrophotography.tar.gz ServerBackups ProtonDriveBackup
+UploadToProtonDrive tarBackups/ConfigStoreAstroBot.tar.gz ServerBackups ProtonDriveBackup
+UploadToProtonDrive tarBackups/containers.tar.gz ServerBackups ProtonDriveBackup
+UploadToProtonDrive tarBackups/VirtualMachines.tar.gz ServerBackups ProtonDriveBackup
+UploadToProtonDrive tarBackups/docker-data.tar.gz ServerBackups ProtonDriveBackup
