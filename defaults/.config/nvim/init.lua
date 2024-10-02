@@ -17,6 +17,7 @@ require("config/tabby")
 require("config/autopairs")
 require("config/neogit")
 require("config/neotest")
+require("config/gitsigns")
 
 require("config/lsp/jdtls")
 require("config/lsp/texlive")
