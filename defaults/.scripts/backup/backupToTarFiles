@@ -3,10 +3,11 @@
 CreateEncryptdTarBackup(){
 		# $1: Path to output tar.gz file
 		# $2: Path to folder to backup
-		# $3: additional tar parameters
-		# $4: target recipient for GPG encryption
+		# $3: target recipient for GPG encryption
+		# $4: additional tar parameters
 		outputFile=$1.gpg
-		eval tar -cv -I \"xz -9 -T0\" $3 -pf - $2 | gpg --output $outputFile --encrypt --recipient $4 --yes
+		cmd1="tar -cv -I \"xz -8 -T0\" $4 -pf - $2" 
+		eval "$cmd1" | gpg --output $outputFile --encrypt --recipient "$3" --yes
 }
 
 echo "---------------------------------------------------"
@@ -22,7 +23,7 @@ mkdir -p tarBackups
 CreateEncryptdTarBackup tarBackups/Backup.tar.xz Backup $targetGPGKey
 CreateEncryptdTarBackup tarBackups/Documents.tar.xz Documents $targetGPGKey
 CreateEncryptdTarBackup tarBackups/VirtualMachines.tar.xz VirtualMachines $targetGPGKey
-CreateEncryptdTarBackup tarBackups/Astrophotography.tar.xz Astrophotography "--exclude 'Light' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'" $targetGPGKey
+CreateEncryptdTarBackup tarBackups/Astrophotography.tar.xz Astrophotography $targetGPGKey "--exclude 'Light' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
 CreateEncryptdTarBackup tarBackups/ConfigStoreAstroBot.tar.xz ConfigStoreAstroBot $targetGPGKey
 CreateEncryptdTarBackup tarBackups/containers.tar.xz containers $targetGPGKey
 CreateEncryptdTarBackup tarBackups/docker-volumes.tar.xz docker-data/volumes $targetGPGKey

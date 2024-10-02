@@ -7,7 +7,7 @@ UploadToProtonDrive(){
 		#
 		echo "Uploading to File to ProtonDrive"
 		rclone mkdir $3:$2
-		rclone copy --protondrive-replace-existing-draft=true -P $tarGzFile.gpg $3:$2/
+		rclone copy --protondrive-replace-existing-draft=true -P $1 $3:$2/
 }
 
 if [ -z "$(gpg --list-secret-keys)" ]; then
