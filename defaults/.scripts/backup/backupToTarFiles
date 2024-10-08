@@ -23,7 +23,7 @@ mkdir -p tarBackups
 CreateEncryptdTarBackup tarBackups/Backup.tar.xz Backup $targetGPGKey
 CreateEncryptdTarBackup tarBackups/Documents.tar.xz Documents $targetGPGKey
 CreateEncryptdTarBackup tarBackups/VirtualMachines.tar.xz VirtualMachines $targetGPGKey
-CreateEncryptdTarBackup tarBackups/Astrophotography.tar.xz Astrophotography $targetGPGKey "--exclude 'Light' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
+CreateEncryptdTarBackup tarBackups/Astrophotography.tar.xz Astrophotography $targetGPGKey "--exclude 'Light' --exclude '*LIGHT*' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
 CreateEncryptdTarBackup tarBackups/ConfigStoreAstroBot.tar.xz ConfigStoreAstroBot $targetGPGKey
 CreateEncryptdTarBackup tarBackups/containers.tar.xz containers $targetGPGKey
 CreateEncryptdTarBackup tarBackups/docker-volumes.tar.xz docker-data/volumes $targetGPGKey
