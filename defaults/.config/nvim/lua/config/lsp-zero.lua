@@ -1,6 +1,6 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
+local lsp_attach = function(client, bufnr)
 	-- see :help lsp-zero-keybindings
 	-- to learn the available actions
 	lsp_zero.default_keymaps({ buffer = bufnr })
@@ -35,12 +35,15 @@ lsp_zero.on_attach(function(client, bufnr)
 			vim.lsp.inlay_hint.enable(true)
 		end
 	end
-end)
+end
 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 cmp.setup({
+	sources = {
+		{ name = 'nvim_lsp' },
+	},
 	mapping = cmp.mapping.preset.insert({
 		['<CR>'] = cmp.mapping.confirm({ select = false }),
 		['<Tab>'] = cmp_action.luasnip_supertab(),
@@ -49,6 +52,7 @@ cmp.setup({
 		['<C-j>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
 		['<C-k>'] = cmp.mapping.select_prev_item({ behavior = 'select' })
 	}),
+	-- mapping = cmp.mapping.preset.insert({}),
 	preselect = 'item',
 	completion = {
 		completeopt = 'menu,menuone,noinsert'
@@ -56,6 +60,12 @@ cmp.setup({
 	window = {
 		completion = cmp.config.window.bordered(),
 		documentation = cmp.config.window.bordered(),
+	},
+	snippet = {
+		expand = function(args)
+			-- You need Neovim v0.10 to use vim.snippet
+			vim.snippet.expand(args.body)
+		end,
 	},
 	formatting = {
 		fields = { 'abbr', 'kind', 'menu' },
@@ -69,6 +79,9 @@ cmp.setup({
 
 lsp_zero.extend_lspconfig({
 	capabilities = require('cmp_nvim_lsp').default_capabilities(),
+	lsp_attach = lsp_attach,
+	float_border = 'rounded',
+	sign_text = true,
 })
 
 vim.g.rustaceanvim = {
@@ -92,7 +105,6 @@ require('mason-lspconfig').setup({
 		"eslint",
 		"jdtls",
 		"cssls",
-		"typos_lsp",
 		"yamlls",
 		"sqlls",
 		"cmake",
