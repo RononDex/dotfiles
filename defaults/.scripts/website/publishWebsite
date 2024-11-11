@@ -7,7 +7,7 @@ port=5544
 # read -p "SFTP Server port: " port
 read -p "Username: " username
 
-lftp -p ${port} -u ${username} sftp://${server} -e 'set sftp:connect-program "ssh -a -x -oHostKeyAlgorithms=+ssh-dss -oStrictHostKeyChecking=no -oPasswordAuthentication=yes"' <<EOF
+lftp -p ${port} -u ${username} sftp://${server} -e 'set sftp:connect-program "ssh -a -x -oStrictHostKeyChecking=no -oPasswordAuthentication=yes"' <<EOF
 cd public_html
 mirror -R public/ ./
 EOF
