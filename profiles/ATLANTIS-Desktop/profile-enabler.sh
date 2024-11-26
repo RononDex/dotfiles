@@ -72,6 +72,7 @@ StartService "lactd"
 InstallWayland
 InstallHyprland
 InstallRustDev
+InstallGoDev
 InstallJupyterNotebooks
 SetupDotnet
 SetupJavaDevEnv

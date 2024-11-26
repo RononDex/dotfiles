@@ -96,7 +96,7 @@ BasicNvimInstall() {
     fi
 }
 
-SetupGoDev() {
+InstallGoDev() {
 
     if command -v pacman &> /dev/null
     then
