@@ -109,7 +109,10 @@ require('mason-lspconfig').setup({
 		"sqlls",
 		"cmake",
 		"vimls",
-		"basedpyright"
+		"basedpyright",
+		"gopls",
+		"golangci_lint_ls",
+		"glslls"
 	},
 	handlers = {
 		lsp_zero.default_setup,
