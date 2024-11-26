@@ -95,3 +95,11 @@ BasicNvimInstall() {
         sudo pacman -S ripgrep lazygit tree-sitter tree-sitter-cli python-pynvim fd --noconfirm --needed
     fi
 }
+
+SetupGoDev() {
+
+    if command -v pacman &> /dev/null
+    then
+			InstallAurPackage "golangci-lint" "https://aur.archlinux.org/golangci-lint.git"
+	fi
+}

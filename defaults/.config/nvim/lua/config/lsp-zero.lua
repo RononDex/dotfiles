@@ -118,6 +118,20 @@ require('mason-lspconfig').setup({
 		lsp_zero.default_setup,
 		jdtls = lsp_zero.noop,
 		rust_analyzer = lsp_zero.noop,
+		gopls = function()
+			require('lspconfig').gopls.setup({
+				capabilities = lsp_zero.get_capabilities(),
+				settings = {
+					gopls = {
+						completeUnimported = true,
+						usePlaceholders = true,
+						analyses = {
+							unusedparams = true,
+						},
+					}
+				}
+			})
+		end
 	},
 })
 
