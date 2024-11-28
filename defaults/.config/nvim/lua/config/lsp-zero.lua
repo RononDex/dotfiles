@@ -136,3 +136,14 @@ require('mason-lspconfig').setup({
 })
 
 vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = false })
+
+vim.filetype.add({
+	extension = {
+		vert = "glsl",
+		tesc = "glsl",
+		tese = "glsl",
+		frag = "glsl",
+		geom = "glsl",
+		comp = "glsl",
+	},
+})
