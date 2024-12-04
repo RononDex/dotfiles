@@ -87,7 +87,6 @@ echo "Installing rust/cargo stuff ..."
 cargo install rustfmt
 
 echo "Enabling services ..."
-EnableService lightdm
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
 EnableService bluetooth
