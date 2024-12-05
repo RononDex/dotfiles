@@ -14,14 +14,7 @@ chmod +x ~/.xinitrc
 chmod +x ~/.config/.xinitrc
 chmod +x ~/.profile
 chmod +x ~/.zprofile
-chmod +x ~/.config/i3/config
-chmod +x ~/.config/polybar/config.ini
-chmod +x ~/.config/polybar/launch.sh
-chmod +x ~/.config/polybar/network-traffic.sh
 chmod +x ~/.config/xfce4/terminal/terminalrc
-chmod +x ~/.i3/scripts/launch-picom.sh
-chmod +x ~/.i3/scripts/launch-autostart.sh
-chmod +x ~/.i3/scripts/set-background.sh
 chmod -R +x ~/.scripts
 chmod +x ~/.xprofile
 chmod 700 ~/.gnupg -R
