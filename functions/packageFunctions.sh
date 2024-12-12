@@ -91,6 +91,7 @@ InstallHyprland() {
 		# InstallAurPackage "hypridle-git" "https://aur.archlinux.org/hypridle-git.git"
 		# InstallAurPackage "nwg-displays" "https://aur.archlinux.org/nwg-displays.git"
 		#
+		InstallAurPackage "hyprland-protocols" "https://aur.archlinux.org/hyprland-protocols.git"
 		InstallAurPackage "hyprsunset" "https://aur.archlinux.org/hyprsunset.git"
 
 		sudo pacman -Sy wofi swaybg --needed --noconfirm
