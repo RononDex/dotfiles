@@ -83,9 +83,6 @@ InstallGrubTheme -s 4k
 PreSteamSetupVivePro2
 PostSteamSetupVivePro2
 
-echo "Installing rust/cargo stuff ..."
-cargo install rustfmt
-
 echo "Enabling services ..."
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
@@ -100,10 +97,6 @@ sudo usermod -a -G users ${currentUser}
 sudo usermod -a -G audio ${currentUser}
 sudo usermod -a -G radio ${currentUser}
 sudo usermod -a -G wheel ${currentUser}
-
-chmod +x ~/.scripts/bashprofile
-chmod +x ~/.scripts/xprofile
-chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "Downloads" "://192.168.1.12/Downloads" "Software" "://192.168.1.12/Software" "Astrophotography" "://192.168.1.12/Astrophotography" "Backup" "://192.168.1.12/Backup"
