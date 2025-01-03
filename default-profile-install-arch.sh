@@ -25,6 +25,7 @@ sudo mkdir /etc/sddm.conf.d
 sudo cp ~/.files/sddm/custom.conf /etc/sddm.conf.d/custom.conf
 sudo cp ~/.files/sddm/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf
 sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
+sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
@@ -185,3 +186,4 @@ InstallAurPackage "rose-pine-hyprcursor" "https://aur.archlinux.org/rose-pine-hy
 InstallAurPackage "rose-pine-cursor" "https://aur.archlinux.org/rose-pine-cursor.git"
 InstallAurPackage "hyprcursor-dracula-kde-git" "https://aur.archlinux.org/hyprcursor-dracula-kde-git.git"
 InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git"
+InstallAurPackage "youtube-dl" "https://aur.archlinux.org/youtube-dl.git"
