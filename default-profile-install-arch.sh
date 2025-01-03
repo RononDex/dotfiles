@@ -186,4 +186,5 @@ InstallAurPackage "rose-pine-hyprcursor" "https://aur.archlinux.org/rose-pine-hy
 InstallAurPackage "rose-pine-cursor" "https://aur.archlinux.org/rose-pine-cursor.git"
 InstallAurPackage "hyprcursor-dracula-kde-git" "https://aur.archlinux.org/hyprcursor-dracula-kde-git.git"
 InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git"
+gpg --recv-keys 2C393E0F18A9236D
 InstallAurPackage "youtube-dl" "https://aur.archlinux.org/youtube-dl.git"
