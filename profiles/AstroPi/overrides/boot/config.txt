@@ -1,30 +1,60 @@
-# See /boot/overlays/README for all available options
+# For more options and information see:
+# https://www.raspberrypi.com/documentation/computers/config_txt.html
 
-#dtoverlay=vc4-kms-v3d
+# Some settings may impact device functionality. See link above for details
+
 initramfs initramfs-linux.img followkernel
 
-# Uncomment to enable bluetooth
-#dtparam=krnbt=on
-
-hdmi_group=2
-hdmi_mode=82
+# Power settings (adjust to your PSU)
+usb_max_current_enable=1
+PSU_MAX_CURRENT=3000 # 3000 (3A) or 5000 (5A)
 
 # Uncomment some or all of these to enable the optional hardware interfaces
-dtparam=i2c_arm=on
+#dtparam=i2c_arm=on
 #dtparam=i2s=on
-dtparam=spi=on
+#dtparam=spi=on
+
+# Additional overlays and parameters are documented
+# /boot/overlays/README
+
+# Automatically load overlays for detected cameras
+camera_auto_detect=1
+
+# Automatically load overlays for detected DSI displays
+display_auto_detect=1
+
+# Enable DRM VC4 V3D driver
+dtoverlay=vc4-kms-v3d
+max_framebuffers=2
+
+# Don't have the firmware create an initial video= setting in cmdline.txt.
+# Use the kernel's default instead.
+disable_fw_kms_setup=1
+
+# Disable compensation for displays with overscan
+disable_overscan=1
+
+# Uncomment if hdmi display is not detected and composite is being output
+#hdmi_force_hotplug=1
+
+# Uncomment if you want to disable wifi or bluetooth respectively
+#dtoverlay=disable-wifi
+#dtoverlay=disable-bt
+
+# Uncomment this to enable infrared communication.
+#dtoverlay=gpio-ir,gpio_pin=17
+#dtoverlay=gpio-ir-tx,gpio_pin=18
 
 # Run as fast as firmware / board allows
 arm_boost=1
-max_framebuffers=2
-enable_uart=1
-gpu_mem=128
-hdmi_force_hotplug=1
-hdmi_group=2
-hdmi_mode=82
-dtparam=i2c_arm=on
-dtparam=spi=on
-dtparam=audio=on
 
-# GPS pps support (adafruit gps hat)
-dtoverlay=pps-gpio,gpiopin=4
+[cm4]
+# Enable host mode on the 2711 built-in XHCI USB controller.
+# This line should be removed if the legacy DWC2 controller is required
+# (e.g. for USB device mode) or if USB support is not required.
+otg_mode=1
+
+[cm5]
+dtoverlay=dwc2,dr_mode=host
+
+[all]

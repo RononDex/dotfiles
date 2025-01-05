@@ -27,7 +27,7 @@ sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 sudo cp $scriptDir/overrides/udev/09-pps.rules /etc/udev/rules.d/09-pps.rules
 sudo cp $scriptDir/overrides/udev/25-gpsd-usb.rules /etc/udev/rules.d/25-gpsd-usb.rules
 sudo cp $scriptDir/overrides/boot/config.txt /boot/config.txt
-sudo cp $scriptDir/overrides/boot/boot.txt /boot/boot.txt
+sudo cp $scriptDir/overrides/boot/cmdline.txt /boot/cmdline.txt
 sudo cp $scriptDir/overrides/modules/pps.conf /etc/modules-load.d/pps.conf
 sudo ln -s /dev/ttyS1 /dev/gps0
 sudo timedatectl set-ntp true
