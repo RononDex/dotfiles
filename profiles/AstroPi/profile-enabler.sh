@@ -121,6 +121,7 @@ sudo usermod -a -G uucp ${currentUser}
 sudo usermod -a -G tty ${currentUser}
 sudo usermod -a -G users ${currentUser}
 sudo usermod -a -G wheel ${currentUser}
+sudo usermod -a -G disk ${currentUser}
 sudo smbpasswd -a ${currentUser}
 
 echo "Setting up shares ..."
