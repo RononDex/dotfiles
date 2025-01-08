@@ -83,10 +83,9 @@ InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git
 InstallIndi
 InstallFxLoad
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
-# InstallIndi
+
+# InstallIndi drivers
 CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
-InstallIndiDriver "fxload"
-InstallIndiDriver "fxload-libusb"
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "libatik"
@@ -95,8 +94,7 @@ InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
 InstallIndiDriver "indi-gpsd"
-InstallIndiDriver "libsv305" # Somehow needed by phd2
-InstallIndiDriver "indi-sv305" # Somehow needed by phd2
+
 # InstallKstars
 sudo pacman -Sy --noconfirm --needed kstars
 InstallAstrometryNet
