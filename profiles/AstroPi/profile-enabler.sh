@@ -120,6 +120,8 @@ sudo usermod -a -G tty ${currentUser}
 sudo usermod -a -G users ${currentUser}
 sudo usermod -a -G wheel ${currentUser}
 sudo usermod -a -G disk ${currentUser}
+sudo usermod -a -G radio ${currentUser}
+sudo usermod -a -G audio ${currentUser}
 sudo smbpasswd -a ${currentUser}
 
 echo "Setting up shares ..."
