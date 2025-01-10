@@ -7,7 +7,7 @@ initramfs initramfs-linux.img followkernel
 
 # Power settings (adjust to your PSU)
 usb_max_current_enable=1
-PSU_MAX_CURRENT=3000 # 3000 (3A) or 5000 (5A)
+PSU_MAX_CURRENT=5000 # 3000 (3A) or 5000 (5A)
 
 # Uncomment some or all of these to enable the optional hardware interfaces
 #dtparam=i2c_arm=on
