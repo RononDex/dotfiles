@@ -85,3 +85,12 @@ SetupWireguardClient() {
         sudo chmod 700 /etc/wireguard -R
     fi
 }
+
+Install8814auDriver() {
+	if [ ! -d ~/packages/8814au ]; then
+		cd ~/packages
+		git clone https://github.com/morrownr/8814au
+		cd 8814au
+		sudo ./install-driver.sh
+	fi
+}

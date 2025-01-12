@@ -39,7 +39,7 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 
 echo "Installing stuff ..."
-sudo pacman -Sy firefox tigervnc dnsmasq --noconfirm --needed
+sudo pacman -Sy firefox tigervnc dnsmasq linux-rpi-16k linux-rpi-16k-headers --noconfirm --needed
 sudo pacman -Sy lxde --noconfirm --needed
 # CompileFixedUBootForRpi4 $scriptDir
 
@@ -94,6 +94,9 @@ InstallIndiDriver "indi-asi"
 InstallIndiDriver "libqhy"
 InstallIndiDriver "indi-qhy"
 InstallIndiDriver "indi-gpsd"
+
+# Install wifi dongle driver
+Install8814auDriver
 
 # InstallKstars
 sudo pacman -Sy --noconfirm --needed kstars
