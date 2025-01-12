@@ -29,6 +29,7 @@ sudo cp $scriptDir/overrides/udev/25-gpsd-usb.rules /etc/udev/rules.d/25-gpsd-us
 sudo cp $scriptDir/overrides/boot/config.txt /boot/config.txt
 sudo cp $scriptDir/overrides/boot/cmdline.txt /boot/cmdline.txt
 sudo cp $scriptDir/overrides/modules/pps.conf /etc/modules-load.d/pps.conf
+sudo cp $scriptDir/overrides/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 sudo ln -s /dev/ttyS1 /dev/gps0
 sudo timedatectl set-ntp true
 sudo systemctl enable ntpd
