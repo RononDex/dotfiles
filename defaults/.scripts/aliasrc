@@ -34,3 +34,6 @@ alias PixInsight="env -u WAYLAND_DISPLAY PixInsight"
 # Use wayland when available
 alias chromium="chromium --ozone-platform-hint=auto"
 alias signal-desktop="signal-desktop --ozone-platform-hint=auto"
+
+# VPN connect to fhnw
+alias vpn-fhnw="openconnect-sso --server vpn.fhnw.ch --user tino.heuberger@fhnw.ch"

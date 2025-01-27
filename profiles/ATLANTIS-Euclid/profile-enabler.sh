@@ -58,6 +58,7 @@ InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
+InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
 
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
