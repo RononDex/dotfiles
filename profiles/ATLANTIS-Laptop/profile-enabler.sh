@@ -55,6 +55,7 @@ SetupDotnet
 SetupLatex
 InstallGrubTheme 
 InstallMpv
+InstallGoDev
 
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"

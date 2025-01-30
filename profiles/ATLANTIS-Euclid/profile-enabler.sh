@@ -47,6 +47,7 @@ SetupPythonDev
 SetupLatex
 InstallGrubTheme -s 1080p
 InstallEruption
+InstallGoDev
 
 echo "Installing AUR packages..."
 InstallMpv
