@@ -72,7 +72,7 @@ sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personaliza
 sudo pacman -S ueberzug autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
 sudo pacman -S tracker3 webkit2gtk tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq polkit --needed --noconfirm
-sudo pacman -S gtk-engine-murrine sassc --needed --noconfirm
+sudo pacman -S gtk-engine-murrine sassc luarocks --needed --noconfirm
 
 # Install Architecture specific stuff
 if [ $isArm ]; then
