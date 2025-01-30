@@ -107,7 +107,6 @@ require('mason-lspconfig').setup({
 		"cssls",
 		"yamlls",
 		"sqlls",
-		"cmake",
 		"vimls",
 		"basedpyright",
 		"gopls",
