@@ -48,7 +48,7 @@ sudo xbps-install -y qemu virt-manager smartmontools
 sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu vulkan-loader mesa cryptsetup tpm2-tss cronie mesa-vaapi mesa-vdpau mesa-vulkan-radeon mesa-dri
 sudo xbps-install -y nomacs breeze breeze-cursors samba
-sudo xbps-install -y mdadm wireguard tigervnc docker
+sudo xbps-install -y mdadm wireguard tigervnc docker postfix
 
 InstallXorg
 InstallYubiKeyStuff
