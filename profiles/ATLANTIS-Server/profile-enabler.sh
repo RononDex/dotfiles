@@ -77,6 +77,7 @@ EnableService smbd
 EnableService wireguard
 EnableService docker
 EnableService cronie
+EnableService postfix
 
 crontab ~/.config/customCronConfig
 sudo crontab $scriptDir/overrides/defaultRootCronCfg
