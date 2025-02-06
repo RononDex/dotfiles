@@ -70,6 +70,7 @@ InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 echo "Enabling services ..."
 EnableService sshd
 EnableService mdadm
+EnableService smartd
 EnableService libvirtd
 EnableService virtlockd
 EnableService virtlogd
@@ -78,6 +79,12 @@ EnableService wireguard
 EnableService docker
 EnableService cronie
 EnableService postfix
+
+echo "Ensure smartctl watches RAID devices"
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sda 
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdb 
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdc 
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdd 
 
 crontab ~/.config/customCronConfig
 sudo crontab $scriptDir/overrides/defaultRootCronCfg
