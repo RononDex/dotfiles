@@ -7,6 +7,8 @@ sudo mkdir -p /etc/X11/xorg.conf.d/
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 mkdir -p ~/.ssh
+sudo mkdir /etc/dma
+sudo cp $scriptDir/overrides/dma/dma.conf /etc/dma/dma.conf
 sudo mkdir /etc/smartd
 sudo cp $scriptDir/overrides/smartd/smartd.conf /etc/smartd/smartd.conf
 cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
