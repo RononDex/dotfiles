@@ -70,6 +70,9 @@ InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 EnableService "lactd"
 StartService "lactd"
 
+echo "Installing Elite Dangerous stuff..."
+InstallAurPackage "edmarketconnector" "https://aur.archlinux.org/edmarketconnector.git"
+
 InstallWayland
 InstallHyprland
 InstallRustDev
