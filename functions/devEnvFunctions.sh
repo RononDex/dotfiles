@@ -118,7 +118,7 @@ SetupLatex() {
     if command -v pacman &> /dev/null
     then
         sudo pacman -Sy texlive texlive-langgerman texlive-doc --needed --noconfirm
-		InstallAurPackage "ltex-ls-bin" "https://aur.archlinux.org/packages/ltex-ls-bin"
+		InstallAurPackage "ltex-ls-bin" "https://aur.archlinux.org/ltex-ls-bin.git"
     fi
 
 	SetupLanguageModelForLtex
