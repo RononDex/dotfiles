@@ -130,6 +130,19 @@ require('mason-lspconfig').setup({
 					}
 				}
 			})
+		end,
+		ltex = function()
+			require("lspconfig").ltex.setup({
+				capabilities = lsp_zero.get_capabilities(),
+				settings = {
+					ltex = {
+						language = "en",
+						additionalRules = {
+							languageModel = "~/models/ngrams/",
+						},
+					},
+				},
+			})
 		end
 	},
 })

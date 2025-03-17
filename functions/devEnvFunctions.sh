@@ -29,13 +29,6 @@ SetupDotnet() {
 	rm netcoredbg-linux-amd64.tar.gz
 }
 
-SetupLatex() {
-		
-    if command -v pacman &> /dev/null
-    then
-        sudo pacman -Sy texlive texlive-langgerman texlive-doc --needed --noconfirm
-    fi
-}
 
 SetupMariaMySqlDb() {
     sudo xbps-install -y mariadb
@@ -94,6 +87,40 @@ BasicNvimInstall() {
     then
         sudo pacman -S ripgrep lazygit tree-sitter tree-sitter-cli python-pynvim fd --noconfirm --needed
     fi
+}
+
+SetupLanguageModelForLtex() {
+		if [ ! -d ~/.cache/ngram-data/ ]; then
+				mkdir -p ~/.cache/ngram-data
+		fi
+
+		if [ ! -d ~/.cache/ngram-data/de ]; then
+				echo "Downloading german ngram data..."
+				cd ~/Downloads/
+				curl --output ngrams-de.zip https://languagetool.org/download/ngram-data/ngrams-de-20150819.zip
+				unzip ngrams-de.zip
+				mv de ~/.cache/ngram-data/
+				rm ngrams-de.zip
+		fi
+
+		if [ ! -d ~/.cache/ngram-data/en ]; then
+				echo "Downloading english ngram data..."
+				cd ~/Downloads/
+				curl --output ngrams-en.zip https://languagetool.org/download/ngram-data/ngrams-en-20150817.zip
+				unzip ngrams-en.zip
+				mv en ~/.cache/ngram-data/
+				rm ngrams-en.zip
+		fi
+}
+
+SetupLatex() {
+		
+    if command -v pacman &> /dev/null
+    then
+        sudo pacman -Sy texlive texlive-langgerman texlive-doc --needed --noconfirm
+    fi
+
+	SetupLanguageModelForLtex
 }
 
 InstallGoDev() {
