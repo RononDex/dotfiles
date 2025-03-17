@@ -1,4 +1,15 @@
+local lsp_zero = require('lsp-zero')
+
 require("lspconfig").ltex.setup({
+	capabilities = lsp_zero.get_capabilities(),
+	settings = {
+		ltex = {
+			language = "en",
+			additionalRules = {
+				languageModel = "~/models/ngrams/",
+			},
+		},
+	},
 	on_attach = function(client, bufnr)
 		require("ltex-utils").on_attach(bufnr)
 	end,
