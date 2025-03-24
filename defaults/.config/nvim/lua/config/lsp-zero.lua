@@ -106,7 +106,6 @@ require('mason-lspconfig').setup({
 		"jdtls",
 		"cssls",
 		"yamlls",
-		"sqlls",
 		"vimls",
 		"basedpyright",
 		"gopls",
