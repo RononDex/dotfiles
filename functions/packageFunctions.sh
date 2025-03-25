@@ -83,7 +83,7 @@ InstallHyprland() {
     then
 		gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
 
-		yes | sudo pacman -S hyprland nwg-displays nwg-look xdg-desktop-portal-hyprland hyprutils wlr-randr hyprlock hypridle libdisplay-info waybar --needed --noconfirm
+		yes | sudo pacman -S hyprland nwg-displays nwg-look xdg-desktop-portal-hyprland hyprutils wlr-randr hyprlock hypridle libdisplay-info waybar hyprpolkitagent hyprland-protocols hyprsunset --needed --noconfirm
 		# InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
 		# InstallAurPackage "hyprutils-git" "https://aur.archlinux.org/hyprutils-git.git"
 		# InstallAurPackage "hyprland-git" "https://aur.archlinux.org/hyprland-git.git" "-f"
@@ -91,10 +91,10 @@ InstallHyprland() {
 		# InstallAurPackage "hypridle-git" "https://aur.archlinux.org/hypridle-git.git"
 		# InstallAurPackage "nwg-displays" "https://aur.archlinux.org/nwg-displays.git"
 		#
-		InstallAurPackage "hyprland-protocols" "https://aur.archlinux.org/hyprland-protocols.git"
-		InstallAurPackage "hyprsunset" "https://aur.archlinux.org/hyprsunset.git"
+		# InstallAurPackage "hyprland-protocols" "https://aur.archlinux.org/hyprland-protocols.git"
+		# InstallAurPackage "hyprsunset" "https://aur.archlinux.org/hyprsunset.git"
 
-		sudo pacman -Sy wofi swaybg --needed --noconfirm
+		sudo pacman -S wofi swaybg --needed --noconfirm
 	fi
 }
 
