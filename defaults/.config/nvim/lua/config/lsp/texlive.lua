@@ -7,7 +7,7 @@ require 'lspconfig'.texlab.setup {
 			auxDirectory = ".",
 			bibtexFormatter = "texlab",
 			build = {
-				executable = "pdflatex",
+				executable = "xelatex",
 				forwardSearchAfter = true,
 				onSave = true
 			},
