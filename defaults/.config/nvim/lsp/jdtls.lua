@@ -8,6 +8,12 @@ local root_files = {
 	'gradlew',
 	'build.gradle',
 }
+local root_dir = require("jdtls.setup").find_root(root_files)
+
+local function workspace_dir()
+	local project = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
+	return vim.fn.stdpath("data") .. "/jdtls-workspace/" .. project
+end
 
 local features = {
 	-- change this to `true` to enable codelens
@@ -272,11 +278,38 @@ local function jdtls_setup(event)
 			extendedClientCapabilities = extendedClientCapabilities
 		},
 	})
+
+	local jdtls_config = vim.lsp.config.make_config({
+		name = "jdtls",
+		cmd = cmd,
+		root_dir = root_dir,
+		filetypes = { "java" },
+		workspace_folders = {
+			{ uri = vim.uri_from_fname(workspace_dir()), name = "workspace" },
+		},
+		settings = lsp_settings,
+		on_attach = function(client, bufnr)
+			require("jdtls.setup").add_commands()
+		end,
+		flags = {
+			allow_incremental_sync = true,
+		},
+		init_options = {
+			bundles = path.bundles,
+			extendedClientCapabilities = extendedClientCapabilities
+		},
+	})
+
+	vim.lsp.config.jdtls = jdtls_config
 end
 
-vim.api.nvim_create_autocmd('FileType', {
-	group = java_cmds,
-	pattern = { 'java' },
-	desc = 'Setup jdtls',
-	callback = jdtls_setup,
-})
+-- vim.api.nvim_create_autocmd('FileType', {
+-- 	group = java_cmds,
+-- 	pattern = { 'java' },
+-- 	desc = 'Setup jdtls',
+-- 	callback = jdtls_setup,
+-- })
+
+if root_dir then
+	jdtls_setup()
+end
