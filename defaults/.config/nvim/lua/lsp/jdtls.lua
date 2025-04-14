@@ -262,28 +262,12 @@ local function jdtls_setup(event)
 
 	local extendedClientCapabilities = jdtls.extendedClientCapabilities;
 
-	-- This starts a new client & server,
-	-- or attaches to an existing client & server depending on the `root_dir`.
-	jdtls.start_or_attach({
-		cmd = cmd,
-		settings = lsp_settings,
-		on_attach = jdtls_on_attach,
-		capabilities = cache_vars.capabilities,
-		root_dir = jdtls.setup.find_root(root_files),
-		flags = {
-			allow_incremental_sync = true,
-		},
-		init_options = {
-			bundles = path.bundles,
-			extendedClientCapabilities = extendedClientCapabilities
-		},
-	})
-
 	local jdtls_config = {
 		name = "jdtls",
 		cmd = cmd,
 		root_dir = root_dir,
 		filetypes = { "java" },
+		capabilities = cache_vars.capabilities,
 		workspace_folders = {
 			{ uri = vim.uri_from_fname(workspace_dir()), name = "workspace" },
 		},
