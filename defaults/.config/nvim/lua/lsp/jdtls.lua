@@ -1,6 +1,6 @@
 local home = os.getenv("HOME")
 local java_cmds = vim.api.nvim_create_augroup('java_cmds', { clear = true })
-local lsp_utils = require("utils")
+local lsp_utils = require("lsp.utils")
 local cache_vars = {}
 
 local root_files = {
