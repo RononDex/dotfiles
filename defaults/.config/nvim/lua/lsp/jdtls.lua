@@ -1,5 +1,6 @@
 local home = os.getenv("HOME")
 local java_cmds = vim.api.nvim_create_augroup('java_cmds', { clear = true })
+local lsp_utils = require("utils")
 local cache_vars = {}
 
 local root_files = {
@@ -275,6 +276,7 @@ local function jdtls_setup(event)
 		on_attach = function(client, bufnr)
 			require("jdtls.setup").add_commands()
 			jdtls_on_attach()
+			lsp_utils.default_on_attach(client, bufnr)
 		end,
 		flags = {
 			allow_incremental_sync = true,
