@@ -274,6 +274,7 @@ local function jdtls_setup(event)
 		settings = lsp_settings,
 		on_attach = function(client, bufnr)
 			require("jdtls.setup").add_commands()
+			jdtls_on_attach()
 		end,
 		flags = {
 			allow_incremental_sync = true,
