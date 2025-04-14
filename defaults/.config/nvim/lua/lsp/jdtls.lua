@@ -279,7 +279,7 @@ local function jdtls_setup(event)
 		},
 	})
 
-	local jdtls_config = vim.lsp.config.make_config({
+	local jdtls_config = {
 		name = "jdtls",
 		cmd = cmd,
 		root_dir = root_dir,
@@ -298,7 +298,7 @@ local function jdtls_setup(event)
 			bundles = path.bundles,
 			extendedClientCapabilities = extendedClientCapabilities
 		},
-	})
+	}
 
 	vim.lsp.config.jdtls = jdtls_config
 end
