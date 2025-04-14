@@ -24,9 +24,9 @@ require("config/gitsigns")
 require("lsp.jdtls")
 vim.lsp.enable("jdtls")
 
-require("config/lsp/texlive")
-require("config/lsp/eslint")
-require("config/lsp/python")
-require("config/lsp/ltex")
+-- require("config/lsp/texlive")
+-- require("config/lsp/eslint")
+-- require("config/lsp/python")
+-- require("config/lsp/ltex")
 
 require("after/plugin/keymap")
