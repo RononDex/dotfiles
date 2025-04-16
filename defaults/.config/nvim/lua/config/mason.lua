@@ -1,3 +1,5 @@
 require("mason").setup()
 
-require("mason-registry").get_package("jdtls"):install()
+vim.cmd("MasonInstall jdtls")
+vim.cmd("MasonInstall java-test")
+vim.cmd("MasonInstall java-debug-adapter")
