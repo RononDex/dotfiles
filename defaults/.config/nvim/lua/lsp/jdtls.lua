@@ -288,6 +288,8 @@ local function jdtls_setup(event)
 	}
 
 	vim.lsp.config.jdtls = jdtls_config
+
+    require("jdtls").start_or_attach(jdtls_config)
 end
 
 -- vim.api.nvim_create_autocmd('FileType', {
