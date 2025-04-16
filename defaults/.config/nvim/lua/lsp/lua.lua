@@ -4,7 +4,7 @@ local root_files = {
 
 vim.lsp.config('lua', {
 		name = "lua",
-		cmd = "luals"
+		cmd = "luals",
 		filetypes = { "lua" },
 		root_markers = root_files,
 });
