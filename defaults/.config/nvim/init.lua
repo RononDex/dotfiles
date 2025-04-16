@@ -23,7 +23,8 @@ require("config/gitsigns")
 
 -- require("config/lsp/jdtls")
 require("lsp.jdtls")
-vim.lsp.enable("jdtls")
+require("lsp.lua")
+vim.lsp.enable({"jdtls", "lua"})
 
 -- require("config/lsp/texlive")
 -- require("config/lsp/eslint")
