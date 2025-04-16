@@ -274,7 +274,6 @@ local function jdtls_setup(event)
 		},
 		settings = lsp_settings,
 		on_attach = function(client, bufnr)
-			require("jdtls.setup").add_commands()
 			jdtls_on_attach()
 			lsp_utils.default_on_attach(client, bufnr)
 		end,
@@ -289,6 +288,7 @@ local function jdtls_setup(event)
 
 	vim.lsp.config.jdtls = jdtls_config
 
+	require("jdtls.setup").add_commands()
     require("jdtls").start_or_attach(jdtls_config)
 end
 
