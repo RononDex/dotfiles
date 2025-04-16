@@ -8,9 +8,8 @@ local root_files = {
 	'mvnw',
 	'gradlew',
 	'build.gradle',
-	'pom.xml',
 }
-local root_dir = require("jdtls.setup").find_root(root_files)
+local root_dir = vim.fn.expand(require("jdtls.setup").find_root(root_files))
 
 local function workspace_dir()
 	local project = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
@@ -264,22 +263,23 @@ local function jdtls_setup(event)
 
 	local extendedClientCapabilities = jdtls.extendedClientCapabilities;
 
-	print("[jdtls] workspace_dir: " .. workspace_dir())
-	print("[jdtls] workspace_uri: " .. vim.uri_from_fname(workspace_dir()))
+
+	local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
 
 	local jdtls_config = {
 		name = "jdtls",
 		cmd = cmd,
-		root_dir = root_dir,
+		root_markers = root_files,
 		filetypes = { "java" },
 		capabilities = cache_vars.capabilities,
-		workspace_folders = {
-			{ uri = vim.uri_from_fname(workspace_dir()), name = "workspace" },
-		},
+		-- workspace_folders = {
+		-- 	{ uri = vim.uri_from_fname(workspace_dir()), name = project_name },
+		-- },
 		settings = lsp_settings,
 		on_attach = function(client, bufnr)
 			jdtls_on_attach()
 			lsp_utils.default_on_attach(client, bufnr)
+
 		end,
 		flags = {
 			allow_incremental_sync = true,
@@ -290,18 +290,9 @@ local function jdtls_setup(event)
 		},
 	}
 
-	vim.lsp.config.jdtls = jdtls_config
+	vim.lsp.config('jdtls', jdtls_config)
 
-	require("jdtls.setup").add_commands()
-    require("jdtls").start_or_attach(jdtls_config)
 end
-
--- vim.api.nvim_create_autocmd('FileType', {
--- 	group = java_cmds,
--- 	pattern = { 'java' },
--- 	desc = 'Setup jdtls',
--- 	callback = jdtls_setup,
--- })
 
 if root_dir then
 	jdtls_setup()
