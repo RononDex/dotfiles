@@ -263,6 +263,9 @@ local function jdtls_setup(event)
 
 	local extendedClientCapabilities = jdtls.extendedClientCapabilities;
 
+	print("[jdtls] workspace_dir: " .. workspace_dir())
+	print("[jdtls] workspace_uri: " .. vim.uri_from_fname(workspace_dir()))
+
 	local jdtls_config = {
 		name = "jdtls",
 		cmd = cmd,
