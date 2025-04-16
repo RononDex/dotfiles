@@ -7,8 +7,12 @@ local function install_package_if_not_exists(name)
 		end
 end
 
-install_package_if_not_exists("jdtls")
-install_package_if_not_exists("java-test")
-install_package_if_not_exists("java-debug-adapter")
+mason_registry.refresh(function ()
 
-install_package_if_not_exists("lua-language-server")
+		install_package_if_not_exists("jdtls")
+		install_package_if_not_exists("java-test")
+		install_package_if_not_exists("java-debug-adapter")
+
+		install_package_if_not_exists("lua-language-server")
+end)
+
