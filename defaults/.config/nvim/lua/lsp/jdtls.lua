@@ -8,6 +8,7 @@ local root_files = {
 	'mvnw',
 	'gradlew',
 	'build.gradle',
+	'pom.xml',
 }
 local root_dir = require("jdtls.setup").find_root(root_files)
 
