@@ -1,5 +1,14 @@
-require("mason").setup()
+local mason = require("mason").setup()
+local mason_registry = require("mason-registry")
 
-vim.cmd("MasonInstall jdtls")
-vim.cmd("MasonInstall java-test")
-vim.cmd("MasonInstall java-debug-adapter")
+local function install_package_if_not_exists(name)
+		if not mason_registry.has_package(name) then
+				vim.cmd("MasonInstall " + name)
+		end
+end
+
+install_package_if_not_exists("jdtls")
+install_package_if_not_exists("java-test")
+install_package_if_not_exists("java-debug-adapter")
+
+install_package_if_not_exists("lua-language-server")
