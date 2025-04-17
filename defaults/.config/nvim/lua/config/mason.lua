@@ -3,6 +3,7 @@ local mason_registry = require("mason-registry")
 
 local function install_package_if_not_exists(name)
 	if not mason_registry.is_installed(name) then
+			
 		vim.cmd("MasonInstall " .. name)
 	end
 end
