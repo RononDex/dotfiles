@@ -25,4 +25,7 @@ mason_registry.refresh(function()
 
 	-- Python
 	install_package_if_not_exists("debugpy")
+
+	-- Go
+	install_package_if_not_exists("gopls")
 end)
