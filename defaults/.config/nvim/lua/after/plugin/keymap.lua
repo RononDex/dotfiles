@@ -70,3 +70,4 @@ vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>',
 vim.keymap.set({ 'n', 'x', 'v' }, '<leader>cf', function()
 	vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 end, { buffer = bufnr })
+vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
