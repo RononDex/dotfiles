@@ -1,4 +1,3 @@
-local mason = require("mason").setup()
 local mason_registry = require("mason-registry")
 
 local function install_package_if_not_exists(name)
@@ -21,5 +20,4 @@ mason_registry.refresh(function()
 
 	-- Latex
 	install_package_if_not_exists("ltex-ls")
-	
 end)
