@@ -20,4 +20,7 @@ mason_registry.refresh(function()
 
 	-- Latex
 	install_package_if_not_exists("ltex-ls")
+
+	-- Python
+	install_package_if_not_exists("debugpy")
 end)
