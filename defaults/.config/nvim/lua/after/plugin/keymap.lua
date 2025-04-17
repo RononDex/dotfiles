@@ -72,6 +72,6 @@ vim.keymap.set({ 'n', 'x', 'v' }, '<leader>cf', function()
 end, { buffer = bufnr })
 vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
 vim.keymap.set('v', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
-vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
-vim.keymap.set('v', '<leader><space>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
+vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
+vim.keymap.set('v', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
 
