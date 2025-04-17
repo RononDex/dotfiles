@@ -11,12 +11,10 @@ cmp.setup({
 		}
 	},
 	mapping = cmp.mapping.preset.insert({
-		['<CR>'] = cmp.mapping.confirm({ select = false }),
+		['<CR>'] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				cmp.select_next_item()
-				-- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
-				-- they way you will only jump inside the snippet region
 			elseif luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
 			else
@@ -33,7 +31,8 @@ cmp.setup({
 			end
 		end, { "i", "s" }),
 		['<C-j>'] = cmp.mapping.select_next_item({ behavior = 'select' }),
-		['<C-k>'] = cmp.mapping.select_prev_item({ behavior = 'select' })
+		['<C-k>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
+		['<C-Space>'] = cmp.mapping.complete()
 	}),
 	-- mapping = cmp.mapping.preset.insert({}),
 	preselect = 'item',
