@@ -10,7 +10,7 @@ print(luals_install)
 
 vim.lsp.config('lua', {
 		name = "lua",
-		cmd = { "luals" },
+		cmd = { vim.fs.joinpath(luals_install, "lua-language-server") },
 		filetypes = { "lua" },
 		root_markers = root_files,
 });
