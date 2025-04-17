@@ -4,6 +4,11 @@ local luasnip = require("luasnip")
 cmp.setup({
 	sources = {
 		{ name = 'nvim_lsp' },
+		{ name = 'luasnip' },
+		{
+			name = "lazydev",
+			group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+		}
 	},
 	mapping = cmp.mapping.preset.insert({
 		['<CR>'] = cmp.mapping.confirm({ select = false }),
