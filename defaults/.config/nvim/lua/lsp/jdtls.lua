@@ -9,7 +9,13 @@ local root_files = {
 	'gradlew',
 	'build.gradle',
 }
-local root_dir = vim.fn.expand(require("jdtls.setup").find_root(root_files))
+
+local found_root_dir = require("jdtls.setup").find_root(root_files)
+local root_dir = nil
+
+if found_root_dir then
+	root_dir = vim.fn.expand(found_root_dir)
+end
 
 local function workspace_dir()
 	local project = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
@@ -279,7 +285,6 @@ local function jdtls_setup(event)
 		on_attach = function(client, bufnr)
 			jdtls_on_attach()
 			lsp_utils.default_on_attach(client, bufnr)
-
 		end,
 		flags = {
 			allow_incremental_sync = true,
@@ -291,8 +296,8 @@ local function jdtls_setup(event)
 	}
 
 	vim.lsp.config('jdtls', jdtls_config)
-
 end
+
 
 if root_dir then
 	jdtls_setup()
