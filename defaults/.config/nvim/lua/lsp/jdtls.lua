@@ -243,10 +243,12 @@ local function jdtls_setup(event)
 				'org.hamcrest.MatcherAssert.assertThat',
 				'org.hamcrest.Matchers.*',
 				'org.hamcrest.CoreMatchers.*',
+				'org.junit.Assert.*',
 				'org.junit.jupiter.api.Assertions.*',
 				'java.util.Objects.requireNonNull',
 				'java.util.Objects.requireNonNullElse',
 				'org.mockito.Mockito.*',
+				'org.mockito.ArgumentMatchers.*'
 			},
 		},
 		contentProvider = {
