@@ -3,7 +3,6 @@ local mason_registry = require("mason-registry")
 
 local function install_package_if_not_exists(name)
 	if not mason_registry.is_installed(name) then
-			
 		vim.cmd("MasonInstall " .. name)
 	end
 end
@@ -28,4 +27,7 @@ mason_registry.refresh(function()
 
 	-- Go
 	install_package_if_not_exists("gopls")
+
+	-- XML
+	install_package_if_not_exists("lemminx")
 end)
