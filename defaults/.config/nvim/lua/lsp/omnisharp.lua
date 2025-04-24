@@ -12,7 +12,7 @@ vim.lsp.config('omnisharp', {
 		'utf-8',
 		'--languageserver' },
 	filetypes = { 'cs', 'vb' },
-	root_markers = { '.sln', '.csproj', 'omnisharp.json', 'function.json' },
+	root_markers = { '.git', '.sln', '.csproj', 'omnisharp.json', 'function.json' },
 	settings = {
 		RoslynExtensionsOptions = {
 			LocationPaths = { "/home/cobra/.omnisharp/Rozlynator" },
