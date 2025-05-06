@@ -24,10 +24,14 @@ mason_registry.refresh(function()
 
 	-- Python
 	install_package_if_not_exists("debugpy")
+	install_package_if_not_exists("pyright")
 
 	-- Go
 	install_package_if_not_exists("gopls")
 
 	-- XML
 	install_package_if_not_exists("lemminx")
+
+	-- Bash
+	install_package_if_not_exists("bashls")
 end)
