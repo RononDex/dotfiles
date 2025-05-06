@@ -19,3 +19,6 @@ function InstallFirefoxExtension() {
 		fi
 }
 
+function UpdateArkenFox() {
+		bash ~/.config/firefox-profile-cobra/updater.sh -s 
+}

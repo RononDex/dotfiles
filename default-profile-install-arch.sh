@@ -196,3 +196,4 @@ InstallFirefoxExtension "addon@darkreader.org" "https://addons.mozilla.org/firef
 InstallFirefoxExtension "78272b6fa58f4a1abaac99321d503a20@proton.me" "https://addons.mozilla.org/firefox/downloads/file/4474339/proton_pass-latest.xpi" "~/.config/firefox-profile-cobra/"
 InstallFirefoxExtension "@testpilot-containers" "https://addons.mozilla.org/firefox/downloads/file/4355970/multi_account_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
 InstallFirefoxExtension "{c607c8df-14a7-4f28-894f-29e8722976af}" "https://addons.mozilla.org/firefox/downloads/file/3723251/temporary_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
+UpdateArkenFox
