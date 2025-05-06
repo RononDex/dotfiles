@@ -5,6 +5,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/archPackagesFunctions.sh
 . ./functions/basicFunctions.sh
 . ./functions/systemDFunctions.sh
+. ./functions/firefoxFunctions.sh
 
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
@@ -188,3 +189,10 @@ InstallAurPackage "hyprcursor-dracula-kde-git" "https://aur.archlinux.org/hyprcu
 InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git"
 gpg --recv-keys 2C393E0F18A9236D
 InstallAurPackage "youtube-dl" "https://aur.archlinux.org/youtube-dl.git"
+
+# Install default Firefox extensions
+InstallFirefoxExtension "uBlock0@raymondhill.net" "https://addons.mozilla.org/firefox/downloads/file/4213060/ublock_origin-latest.xpi" "~/.config/firefox-profile-cobra/"
+InstallFirefoxExtension "addon@darkreader.org" "https://addons.mozilla.org/firefox/downloads/file/4439735/darkreader-latest.xpi" "~/.config/firefox-profile-cobra/"
+InstallFirefoxExtension "78272b6fa58f4a1abaac99321d503a20@proton.me" "https://addons.mozilla.org/firefox/downloads/file/4474339/proton_pass-latest.xpi" "~/.config/firefox-profile-cobra/"
+InstallFirefoxExtension "@testpilot-containers" "https://addons.mozilla.org/firefox/downloads/file/4355970/multi_account_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
+InstallFirefoxExtension "{c607c8df-14a7-4f28-894f-29e8722976af}" "https://addons.mozilla.org/firefox/downloads/file/3723251/temporary_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
