@@ -33,5 +33,5 @@ mason_registry.refresh(function()
 	install_package_if_not_exists("lemminx")
 
 	-- Bash
-	install_package_if_not_exists("bashls")
+	install_package_if_not_exists("bash-language-server")
 end)
