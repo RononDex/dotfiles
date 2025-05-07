@@ -1,9 +1,5 @@
-local omnisharp_install = require('mason-registry')
-    .get_package('omnisharp')
-    :get_install_path()
-
 vim.lsp.config('omnisharp', {
-	cmd = { vim.fs.joinpath(omnisharp_install, "omnisharp"),
+	cmd = { "omnisharp",
 		'-z',
 		'--hostPID',
 		tostring(vim.fn.getpid()),

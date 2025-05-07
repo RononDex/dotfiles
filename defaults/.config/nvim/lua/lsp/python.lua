@@ -12,13 +12,9 @@ local root_files = {
 	'.git',
 }
 
-local pyright_install = require('mason-registry')
-    .get_package('pyright')
-    :get_install_path()
-
 vim.lsp.config("pyright", {
 	name = "pyright",
-	cmd = { vim.fs.joinpath(pyright_install, 'pyright-langserver'), '--stdio' },
+	cmd = { 'pyright-langserver', '--stdio' },
 	filetypes = { 'python' },
 	root_dir = function(fname)
 		return util.root_pattern(unpack(root_files))(fname)

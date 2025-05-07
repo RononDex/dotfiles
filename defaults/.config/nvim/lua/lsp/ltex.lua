@@ -51,14 +51,10 @@ do
 	end
 end
 
-local ltexls_install = require('mason-registry')
-    .get_package('ltex-ls')
-    :get_install_path()
-
 local callback = function(success, version)
 	vim.lsp.config('latex', {
 		name = "ltex_ls",
-		cmd = { vim.fs.joinpath(ltexls_install, "ltex-ls-" .. version, "bin", "ltex-ls") },
+		cmd = { "ltex-ls" },
 		filetypes = filetypes,
 		root_markers = root_files,
 		get_language_id = get_language_id,
