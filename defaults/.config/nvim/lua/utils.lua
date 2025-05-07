@@ -47,12 +47,11 @@ end
 
 function utils.get_mason_dir(package_name)
 	local mason_registry = require("mason-registry")
-	local package = mason_registry.get_package(package_name)
-	if package ~= nil then
-			return package:get_install_path()
-	else
-			return "python"
+	if not mason_registry.is_installed(package_name) then
+			return "";
 	end
+	local package = mason_registry.get_package(package_name)
+	return package:get_install_path()
 end
 
 function utils.get_python_path()
