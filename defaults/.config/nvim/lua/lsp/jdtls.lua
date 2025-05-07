@@ -10,6 +10,7 @@ local root_files = {
 	'build.gradle',
 }
 
+local mason_dir = os.getenv("MASON")
 local found_root_dir = require("jdtls.setup").find_root(root_files)
 local root_dir = nil
 
@@ -40,7 +41,7 @@ local function get_jdtls_paths()
 
 	path.data_dir = vim.fn.stdpath('cache') .. '/nvim-jdtls'
 
-	local jdtls_install = vim.fn.expand("$MASON/share/jdtls")
+	local jdtls_install = vim.fs.joinpath(mason_dir, "/share/jdtls")
 
 	path.java_agent = jdtls_install .. '/lombok.jar'
 	path.launcher_jar = vim.fn.glob(jdtls_install .. '/plugins/org.eclipse.equinox.launcher_*.jar')
@@ -58,7 +59,7 @@ local function get_jdtls_paths()
 	---
 	-- Include java-test bundle if present
 	---
-	local java_test_path = vim.fn.expand("$MASON/share/java-test")
+	local java_test_path = vim.fn.joinpath(mason_dir, "/share/java-test")
 
 	local java_test_bundle = vim.split(
 		vim.fn.glob(java_test_path .. '/*.jar'),
@@ -72,10 +73,9 @@ local function get_jdtls_paths()
 	---
 	-- Include java-debug-adapter bundle if present
 	---
-	local java_debug_path = vim.fn.expand("$MASON/share/java-debug-adapter")
-
+	local java_debug_path = vim.fn.joinpath(mason_dir, "/share/java-test")
 	local java_debug_bundle = vim.split(
-		vim.fn.glob(java_debug_path .. '/com.microsoft.java.debug.plugin.jar'),
+		vim.fn.glob(java_debug_path .. '/*.jar'),
 		'\n'
 	)
 
