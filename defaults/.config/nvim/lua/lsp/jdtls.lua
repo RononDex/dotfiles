@@ -59,7 +59,7 @@ local function get_jdtls_paths()
 	---
 	-- Include java-test bundle if present
 	---
-	local java_test_path = vim.fn.joinpath(mason_dir, "/share/java-test")
+	local java_test_path = vim.fs.joinpath(mason_dir, "/share/java-test")
 
 	local java_test_bundle = vim.split(
 		vim.fn.glob(java_test_path .. '/*.jar'),
