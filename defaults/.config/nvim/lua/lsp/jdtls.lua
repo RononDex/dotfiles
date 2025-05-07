@@ -43,13 +43,14 @@ local function get_jdtls_paths()
 
 	local jdtls_install = vim.fs.joinpath(mason_dir, "/share/jdtls")
 
-	path.java_agent = jdtls_install .. '/lombok.jar'
-	path.launcher_jar = vim.fn.glob(jdtls_install .. '/plugins/org.eclipse.equinox.launcher_*.jar')
+	path.java_agent = vim.fs.joinpath(jdtls_install ,'lombok.jar')
+	path.launcher_jar = vim.fn.glob(vim.fs.joinpath(jdtls_install .. '/plugins/org.eclipse.equinox.launcher_*.jar'))
 
 	if vim.fn.has('mac') == 1 then
 		path.platform_config = jdtls_install .. '/config_mac'
 	elseif vim.fn.has('unix') == 1 then
-		path.platform_config = jdtls_install .. '/config_linux'
+		-- path.platform_config = jdtls_install .. '/config_linux'
+		path.platform_config = jdtls_install .. '/config'
 	elseif vim.fn.has('win32') == 1 then
 		path.platform_config = jdtls_install .. '/config_win'
 	end
@@ -126,8 +127,6 @@ end
 
 local function enable_debugger(bufnr)
 	require('jdtls').setup_dap({ hotcodereplace = 'auto' })
-
-	require('dap.ext.vscode').load_launchjs(nil, {})
 end
 
 local function jdtls_on_attach(client, bufnr)
