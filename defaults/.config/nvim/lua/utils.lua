@@ -45,15 +45,6 @@ function utils.is_neotree_open()
 	return window_exists
 end
 
-function utils.get_mason_dir(package_name)
-	local mason_registry = require("mason-registry")
-	if not mason_registry.is_installed(package_name) then
-			return "";
-	end
-	local package = mason_registry.get_package(package_name)
-	return package:get_install_path()
-end
-
 function utils.get_python_path()
 	local cwd = vim.fn.getcwd()
 	if vim.fn.executable(cwd .. "/venv/bin/python") == 1 then
@@ -61,7 +52,7 @@ function utils.get_python_path()
 	elseif vim.fn.executable(cwd .. "/.venv/bin/python") == 1 then
 		return cwd .. "/.venv/bin/python"
 	else
-		return utils.get_mason_dir("debugpy") .. "/venv/bin/python"
+		return "python"
 	end
 end
 
