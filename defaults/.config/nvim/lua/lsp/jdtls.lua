@@ -73,7 +73,7 @@ local function get_jdtls_paths()
 	---
 	-- Include java-debug-adapter bundle if present
 	---
-	local java_debug_path = vim.fs.joinpath(mason_dir, "/share/java-test")
+	local java_debug_path = vim.fs.joinpath(mason_dir, "/share/java-debug-adapter")
 	local java_debug_bundle = vim.split(
 		vim.fn.glob(java_debug_path .. '/*.jar'),
 		'\n'
