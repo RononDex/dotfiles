@@ -273,9 +273,6 @@ local function jdtls_setup(event)
 		root_markers = root_files,
 		filetypes = { "java" },
 		capabilities = cache_vars.capabilities,
-		-- workspace_folders = {
-		-- 	{ uri = vim.uri_from_fname(workspace_dir()), name = project_name },
-		-- },
 		settings = lsp_settings,
 		on_attach = function(client, bufnr)
 			jdtls_on_attach()
