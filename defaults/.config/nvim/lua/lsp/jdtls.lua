@@ -58,12 +58,10 @@ local function get_jdtls_paths()
 	---
 	-- Include java-test bundle if present
 	---
-	local java_test_path = require('mason-registry')
-	    .get_package('java-test')
-	    :get_install_path()
+	local java_test_path = "$MASON/share/java-test"
 
 	local java_test_bundle = vim.split(
-		vim.fn.glob(java_test_path .. '/extension/server/*.jar'),
+		vim.fn.glob(java_test_path .. '/*.jar'),
 		'\n'
 	)
 
@@ -74,12 +72,10 @@ local function get_jdtls_paths()
 	---
 	-- Include java-debug-adapter bundle if present
 	---
-	local java_debug_path = require('mason-registry')
-	    .get_package('java-debug-adapter')
-	    :get_install_path()
+	local java_debug_path = "$MASON/share/java-debug-adapter"
 
 	local java_debug_bundle = vim.split(
-		vim.fn.glob(java_debug_path .. '/extension/server/com.microsoft.java.debug.plugin-*.jar'),
+		vim.fn.glob(java_debug_path .. '/com.microsoft.java.debug.plugin.jar'),
 		'\n'
 	)
 
