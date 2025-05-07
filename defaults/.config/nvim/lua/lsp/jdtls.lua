@@ -40,9 +40,7 @@ local function get_jdtls_paths()
 
 	path.data_dir = vim.fn.stdpath('cache') .. '/nvim-jdtls'
 
-	local jdtls_install = require('mason-registry')
-	    .get_package('jdtls')
-	    :get_install_path()
+	local jdtls_install = "$MASON/share/jdtls"
 
 	path.java_agent = jdtls_install .. '/lombok.jar'
 	path.launcher_jar = vim.fn.glob(jdtls_install .. '/plugins/org.eclipse.equinox.launcher_*.jar')
