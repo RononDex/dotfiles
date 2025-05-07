@@ -51,7 +51,6 @@ do
 	end
 end
 
-local callback = function(success, version)
 	vim.lsp.config('latex', {
 		name = "ltex_ls",
 		cmd = { "ltex-ls" },
@@ -64,8 +63,4 @@ local callback = function(success, version)
 			},
 		}
 	});
-end
 
-require('mason-registry')
-    .get_package('ltex-ls')
-    :get_installed_version(callback)
