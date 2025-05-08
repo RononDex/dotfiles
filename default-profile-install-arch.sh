@@ -30,6 +30,8 @@ sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
+mkdir -p ~/.ssh
+cp ~/Nextcloud/Documents/ssh_config ~/.ssh/config
 
 isArm=$false
 echo "Configuring pacman ..."

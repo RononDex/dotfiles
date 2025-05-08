@@ -20,6 +20,8 @@ chmod +x ~/.xprofile
 chmod 700 ~/.gnupg -R
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
+mkdir -p ~/.ssh
+cp ~/Nextcloud/Documents/ssh_config ~/.ssh/config
 
 source ~/.profile
 
