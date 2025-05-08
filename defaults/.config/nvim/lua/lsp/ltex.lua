@@ -63,7 +63,7 @@ vim.lsp.config('latex', {
 		ltex = {
 			enabled = enabled_ids,
 			additionalRules = {
-				languageModel = vim.fs.joinpath(home, ".cache/ngram-data/",
+				languageModel = vim.fs.joinpath(home, ".cache/ngram-data/"),
 			},
 		},
 	}
