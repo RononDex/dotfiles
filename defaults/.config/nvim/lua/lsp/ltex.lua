@@ -2,6 +2,8 @@ local root_files = {
 	'.git',
 }
 
+local home = os.getenv('HOME')
+
 local filetypes = {
 	'bib',
 	'gitcommit',
@@ -51,16 +53,18 @@ do
 	end
 end
 
-	vim.lsp.config('latex', {
-		name = "ltex_ls",
-		cmd = { "ltex-ls" },
-		filetypes = filetypes,
-		root_markers = root_files,
-		get_language_id = get_language_id,
-		settings = {
-			ltex = {
-				enabled = enabled_ids,
+vim.lsp.config('latex', {
+	name = "ltex_ls",
+	cmd = { "ltex-ls" },
+	filetypes = filetypes,
+	root_markers = root_files,
+	get_language_id = get_language_id,
+	settings = {
+		ltex = {
+			enabled = enabled_ids,
+			additionalRules = {
+				languageModel = vim.fs.joinpath(home, ".cache/ngram-data/",
 			},
-		}
-	});
-
+		},
+	}
+});
