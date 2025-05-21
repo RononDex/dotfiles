@@ -32,4 +32,10 @@ cd /data
 
 rclone mkdir $rclone_remote:$remote_target_folder
 
+UploadToKDrive ConfigStoreAstroBot $targetGPGKey $rclone_remote "$remote_target_folder/ConfigStoreAstroBot.tar.xz.gpg"
 UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_target_folder/Backup.tar.xz.gpg"
+UploadToKDrive Documents $targetGPGKey $rclone_remote "$remote_target_folder/Documents.tar.xz.gpg"
+UploadToKDrive VirtualMachines $targetGPGKey $rclone_remote "$remote_target_folder/VirtualMachines.tar.xz.gpg"
+UploadToKDrive Astrophotography $targetGPGKey $rclone_remote "$remote_target_folder/Astrophotography.tar.xz.gpg" "--exclude 'Light' --exclude '*LIGHT*' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
+UploadToKDrive containers $targetGPGKey $rclone_remote "$remote_target_folder/containers.tar.xz.gpg"
+UploadToKDrive docker-data/volumes $targetGPGKey $rclone_remote "$remote_target_folder/docker-volumes.tar.xz.gpg"
