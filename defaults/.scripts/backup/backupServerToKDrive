@@ -65,3 +65,5 @@ UploadToKDrive VirtualMachines $targetGPGKey $rclone_remote "$remote_target_fold
 UploadToKDrive Astrophotography $targetGPGKey $rclone_remote "$remote_target_folder" "Astrophotography.tar.xz.gpg" $chunk_size "--exclude 'Light' --exclude '*LIGHT*' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
 UploadToKDrive containers $targetGPGKey $rclone_remote "$remote_target_folder" "containers.tar.xz.gpg" $chunk_size
 UploadToKDrive docker-data/volumes $targetGPGKey $rclone_remote "$remote_target_folder" "docker-volumes.tar.xz.gpg" $chunk_size
+
+rm -rf big-tmp
