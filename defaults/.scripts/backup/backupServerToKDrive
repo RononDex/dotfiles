@@ -1,0 +1,35 @@
+#!/bin/bash
+
+UploadToKDrive(){
+		# $4: remote target folder
+		# $5: rclone remote name
+		#
+		folder_to_backup=$1
+		targetGpgKey=$2
+		remote_name=$3
+		remote_target_file=$4
+		additional_tar_parameters=$5
+		echo "Uploading to File to kDrive"
+		cmd1="tar -cv -I \"xz -7 -T0\" $additional_tar_parameters -pf - $folder_to_backup" 
+		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | rclone rcat -P $remote_name:$remote_target_file
+}
+
+if [ -z "$(gpg --list-secret-keys)" ]; then
+		echo "No GPG key for encryption currently available."
+		echo "Generating one..."
+		gpg --default-new-key-algo rsa8192 --gen-key
+fi
+
+
+read -s -p "Password for rclone configuration store: " rclone_password
+echo
+export RCLONE_CONFIG_PASS=$rclone_password
+rclone_remote=kDrive
+remote_target_folder=backup
+targetGPGKey="tinoheuberger@protonmail.com"
+
+cd /data
+
+rclone mkdir $RCLONE_REMOTE:$remote_target_folder
+
+UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_target_folder/Backup.tar.xz.gpg"
