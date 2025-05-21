@@ -30,6 +30,6 @@ targetGPGKey="tinoheuberger@protonmail.com"
 
 cd /data
 
-rclone mkdir $RCLONE_REMOTE:$remote_target_folder
+rclone mkdir $rclone_remote:$remote_target_folder
 
 UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_target_folder/Backup.tar.xz.gpg"

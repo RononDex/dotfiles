@@ -144,10 +144,6 @@ InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
 InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 
-# Needed for librewolf
-gpg --keyserver keyserver.ubuntu.com --recv-keys 662E3CDD6FE329002D0CA5BB40339DD82B12EF16
-InstallAurPackage "librewolf-bin" "https://aur.archlinux.org/librewolf-bin.git"
-
 echo "Setting up Display Manager"
 InstallSddm
 
