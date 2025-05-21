@@ -1,18 +1,40 @@
 #!/bin/bash
 
+
+function stream_and_upload_chunks() {
+		basename=$1
+		chunk_size=$2
+		rclone_remote=$3
+		remote_folder=$4
+		local chunk_num=0
+
+		while true; do
+				# Read chunk of encrypted data from stdin
+				chunk=$(dd bs=$chunk_size count=1 status=none)
+
+				# If chunk is empty, break
+				[ -z "$chunk" ] && break
+
+				# Format chunk number and send to rclone
+				chunk_name=$(printf "%s.%03d" "$basename" "$chunk_num")
+				echo "$chunk" | rclone rcat -P "$rclone_remote/$remote_folder/$chunk_name"
+
+				((chunk_num++))
+		done
+}
+
 UploadToKDrive(){
-		# $4: remote target folder
-		# $5: rclone remote name
-		#
 		folder_to_backup=$1
 		targetGpgKey=$2
 		remote_name=$3
-		remote_target_file=$4
-		additional_tar_parameters=$5
-		echo "Uploading to File to kDrive"
+		remote_target_folder=$4
+		remote_file_name=$5
+		chunk_size=$6
+		additional_tar_parameters=$7
 		cmd1="tar -cv -I \"xz -7 -T0\" $additional_tar_parameters -pf - $folder_to_backup" 
-		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | rclone rcat -P $remote_name:$remote_target_file
+		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | stream_and_upload_chunks $remote_file_name $chunk_size $remote_name $remote_folder
 }
+
 
 if [ -z "$(gpg --list-secret-keys)" ]; then
 		echo "No GPG key for encryption currently available."
@@ -27,15 +49,16 @@ export RCLONE_CONFIG_PASS=$rclone_password
 rclone_remote=kDrive
 remote_target_folder=backup
 targetGPGKey="tinoheuberger@protonmail.com"
+chunkSize=$((20 * 1024 * 1024 * 1024)) # 20GB
 
 cd /data
 
 rclone mkdir $rclone_remote:$remote_target_folder
 
-UploadToKDrive ConfigStoreAstroBot $targetGPGKey $rclone_remote "$remote_target_folder/ConfigStoreAstroBot.tar.xz.gpg"
-UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_target_folder/Backup.tar.xz.gpg"
-UploadToKDrive Documents $targetGPGKey $rclone_remote "$remote_target_folder/Documents.tar.xz.gpg"
-UploadToKDrive VirtualMachines $targetGPGKey $rclone_remote "$remote_target_folder/VirtualMachines.tar.xz.gpg"
-UploadToKDrive Astrophotography $targetGPGKey $rclone_remote "$remote_target_folder/Astrophotography.tar.xz.gpg" "--exclude 'Light' --exclude '*LIGHT*' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
-UploadToKDrive containers $targetGPGKey $rclone_remote "$remote_target_folder/containers.tar.xz.gpg"
-UploadToKDrive docker-data/volumes $targetGPGKey $rclone_remote "$remote_target_folder/docker-volumes.tar.xz.gpg"
+UploadToKDrive ConfigStoreAstroBot $targetGPGKey $rclone_remote "$remote_target_folder" "ConfigStoreAstroBot.tar.xz.gpg" $chunk_size
+UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_folder" "Backup.tar.xz.gpg" $chunk_size
+UploadToKDrive Documents $targetGPGKey $rclone_remote "$remote_target_folder" "Documents.tar.xz.gpg" $chunk_size
+UploadToKDrive VirtualMachines $targetGPGKey $rclone_remote "$remote_target_folder" "VirtualMachines.tar.xz.gpg" $chunk_size
+UploadToKDrive Astrophotography $targetGPGKey $rclone_remote "$remote_target_folder" "Astrophotography.tar.xz.gpg" $chunk_size "--exclude 'Light' --exclude '*LIGHT*' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
+UploadToKDrive containers $targetGPGKey $rclone_remote "$remote_target_folder" "containers.tar.xz.gpg" $chunk_size
+UploadToKDrive docker-data/volumes $targetGPGKey $rclone_remote "$remote_target_folder" "docker-volumes.tar.xz.gpg" $chunk_size
