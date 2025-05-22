@@ -27,7 +27,7 @@ function stream_and_upload_chunks() {
 
         chunk_name=$(printf "%s.part%03d" "$base_name" "$chunk_num")
         echo "Uploading chunk $chunk_num ($chunk_name)..."
-        rclone rcat "$rclone_remote:$remote_folder/$chunk_name" < "$tmpfile"
+        rclone rcat -P "$rclone_remote:$remote_folder/$chunk_name" < "$tmpfile"
 
         rm -f "$tmpfile"
         ((chunk_num++))
