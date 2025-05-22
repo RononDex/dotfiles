@@ -50,7 +50,7 @@ export RCLONE_CONFIG_PASS=$rclone_password
 rclone_remote="kDrive"
 remote_target_folder=backup
 targetGPGKey="tinoheuberger@protonmail.com"
-chunkSize=$((49 * 1024 * 1024 * 1024)) # 49GB
+chunk_size=$((49 * 1024 * 1024 * 1024)) # 49GB
 
 cd /data
 mkdir big-tmp
