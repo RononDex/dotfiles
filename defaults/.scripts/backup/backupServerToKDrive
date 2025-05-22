@@ -2,25 +2,36 @@
 
 
 function stream_and_upload_chunks() {
-		basename=$1
-		chunk_size=$2
-		rclone_remote=$3
-		remote_folder=$4
-		local chunk_num=0
+	local base_name="$1"
+    local chunk_size="$2"  # in bytes
+    local rclone_remote="$3"
+    local remote_folder="$4"
 
-		while true; do
-				# Read chunk of encrypted data from stdin
-				chunk=$(dd bs=$chunk_size count=1 status=none)
+    local chunk_num=0
+    local tmpfile
 
-				# If chunk is empty, break
-				[ -z "$chunk" ] && break
+    while true; do
+        tmpfile=$(mktemp)
 
-				# Format chunk number and send to rclone
-				chunk_name=$(printf "%s.%03d" "$basename" "$chunk_num")
-				echo "$chunk" | rclone rcat -P "$rclone_remote:$remote_folder/$chunk_name"
+        # dd reads up to chunk_size bytes from stdin (fd 0)
+        # bs=1M count=... reads in megabytes; calculate count accordingly
+        # status=none suppresses dd output
+		# iflag=fullblock makes dd wait for stdin to fill the full block without exiting when there is a pause in data flow
+		dd bs=1M count=$(( chunk_size / 1024 / 1024 )) status=none of="$tmpfile" iflag=fullblock
 
-				((chunk_num++))
-		done
+        # Check if file has any data
+        if [ ! -s "$tmpfile" ]; then
+            rm -f "$tmpfile"
+            break
+        fi
+
+        chunk_name=$(printf "%s.part%03d" "$base_name" "$chunk_num")
+        echo "Uploading chunk $chunk_num ($chunk_name)..."
+        rclone rcat "$rclone_remote:$remote_folder/$chunk_name" < "$tmpfile"
+
+        rm -f "$tmpfile"
+        ((chunk_num++))
+    done
 }
 
 function UploadToKDrive(){
@@ -33,7 +44,7 @@ function UploadToKDrive(){
 		additional_tar_parameters=$7
 		cmd1="tar -cv -I \"xz -7 -T0\" $additional_tar_parameters -pf - $folder_to_backup" 
 		# eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | rclone rcat -P "$remote_name:$remote_target_folder/$remote_file_name"
-		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | stream_and_upload_chunks $remote_file_name $chunk_size $remote_name $remote_folder
+		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | stream_and_upload_chunks $remote_file_name $chunk_size $remote_name $remote_target_folder
 }
 
 
@@ -48,7 +59,7 @@ read -s -p "Password for rclone configuration store: " rclone_password
 echo
 export RCLONE_CONFIG_PASS=$rclone_password
 rclone_remote="kDrive"
-remote_target_folder=backup
+remote_target_folder="backup"
 targetGPGKey="tinoheuberger@protonmail.com"
 chunk_size=$((49 * 1024 * 1024 * 1024)) # 49GB
 
