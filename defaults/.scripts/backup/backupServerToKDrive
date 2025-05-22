@@ -54,12 +54,15 @@ if [ -z "$(gpg --list-secret-keys)" ]; then
 		gpg --default-new-key-algo rsa8192 --gen-key
 fi
 
+if [ x"${RCLONE_CONFIG_PASS}" == "x" ]; then
+		read -s -p "Password for rclone configuration store: " rclone_password
+		echo
 
-read -s -p "Password for rclone configuration store: " rclone_password
-echo
-export RCLONE_CONFIG_PASS=$rclone_password
+		export RCLONE_CONFIG_PASS=$rclone_password
+fi
+
 rclone_remote="kDrive"
-remote_target_folder="backup"
+remote_target_folder="backup-rclone"
 targetGPGKey="tinoheuberger@protonmail.com"
 chunk_size=$((49 * 1024 * 1024 * 1024)) # 49GB
 
@@ -67,6 +70,7 @@ cd /data
 mkdir big-tmp
 export TMPDIR=/data/big-tmp
 
+rclone purge $rclone_remote:$remote_target_folder
 rclone mkdir $rclone_remote:$remote_target_folder
 
 UploadToKDrive ConfigStoreAstroBot $targetGPGKey $rclone_remote "$remote_target_folder" "ConfigStoreAstroBot.tar.xz.gpg" $chunk_size
