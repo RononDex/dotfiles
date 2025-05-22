@@ -17,7 +17,7 @@ function stream_and_upload_chunks() {
 
 				# Format chunk number and send to rclone
 				chunk_name=$(printf "%s.%03d" "$basename" "$chunk_num")
-				echo "$chunk" | rclone rcat -P "$rclone_remote/$remote_folder/$chunk_name"
+				echo "$chunk" | rclone rcat -P "$rclone_remote:$remote_folder/$chunk_name"
 
 				((chunk_num++))
 		done
@@ -59,7 +59,7 @@ export TMPDIR=/data/big-tmp
 rclone mkdir $rclone_remote:$remote_target_folder
 
 UploadToKDrive ConfigStoreAstroBot $targetGPGKey $rclone_remote "$remote_target_folder" "ConfigStoreAstroBot.tar.xz.gpg" $chunk_size
-UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_folder" "Backup.tar.xz.gpg" $chunk_size
+UploadToKDrive Backup $targetGPGKey $rclone_remote "$remote_target_folder" "Backup.tar.xz.gpg" $chunk_size
 UploadToKDrive Documents $targetGPGKey $rclone_remote "$remote_target_folder" "Documents.tar.xz.gpg" $chunk_size
 UploadToKDrive VirtualMachines $targetGPGKey $rclone_remote "$remote_target_folder" "VirtualMachines.tar.xz.gpg" $chunk_size
 UploadToKDrive Astrophotography $targetGPGKey $rclone_remote "$remote_target_folder" "Astrophotography.tar.xz.gpg" $chunk_size "--exclude 'Light' --exclude '*LIGHT*' --exclude 'Lights' --exclude 'Night*' --exclude 'Flat*' --exclude '*DARKS*' --exclude 'Calib' --exclude '*Darks*' --exclude '*BIAS*' --exclude '*Bias*' --exclude 'gaia' --exclude '*.avi' --exclude '*.AVI'"
