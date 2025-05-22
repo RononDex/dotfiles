@@ -32,8 +32,8 @@ UploadToKDrive(){
 		chunk_size=$6
 		additional_tar_parameters=$7
 		cmd1="tar -cv -I \"xz -7 -T0\" $additional_tar_parameters -pf - $folder_to_backup" 
-		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | rclone rcat -P "$remote_name:$remote_target_folder/$remote_file_name"
-		# eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | stream_and_upload_chunks $remote_file_name $chunk_size $remote_name $remote_folder
+		# eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | rclone rcat -P "$remote_name:$remote_target_folder/$remote_file_name"
+		eval "$cmd1" | gpg --encrypt --recipient "$targetGpgKey" --yes | stream_and_upload_chunks $remote_file_name $chunk_size $remote_name $remote_folder
 }
 
 
@@ -50,7 +50,7 @@ export RCLONE_CONFIG_PASS=$rclone_password
 rclone_remote=kDrive
 remote_target_folder=backup
 targetGPGKey="tinoheuberger@protonmail.com"
-chunkSize=$((20 * 1024 * 1024 * 1024)) # 20GB
+chunkSize=$((49 * 1024 * 1024 * 1024)) # 49GB
 
 cd /data
 mkdir big-tmp
