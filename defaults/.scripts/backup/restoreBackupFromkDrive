@@ -1,0 +1,15 @@
+#!/bin/sh
+
+file_prefix=$1
+remote_name="kDrive"
+remote_folder="backup-rclone"
+target_folder=$2
+
+mkdir -p $target_folder
+
+rclone lsf $remote_name:$remote_folder --include "$file_prefix*" | sort -d | while read file_name 
+do
+		echo "Downloading, decrypting and unpacking $file_name"
+		rclone cat $remote_name:$remote_folder/$file_name | gpg -d | pv | tar -xJ --directory $target_folder
+		
+done

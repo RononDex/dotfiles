@@ -69,7 +69,7 @@ sudo pacman -S picom pipewire pipewire-pulse wireplumber pavucontrol arc-gtk-the
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python debugedit acpi python-pip samba opencv pkgconfig gtest gmock libmpdclient bc ranger xorg-server binutils keychain --needed --noconfirm
-sudo pacman -S htop imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
+sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf arandr pass --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S ueberzug autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
