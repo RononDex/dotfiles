@@ -85,6 +85,7 @@ SetupLatex
 InstallGrubTheme -s 4k
 PreSteamSetupVivePro2
 PostSteamSetupVivePro2
+SetupWordpressDev
 
 echo "Enabling services ..."
 EnableService ckb-next-daemon

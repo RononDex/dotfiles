@@ -127,3 +127,7 @@ InstallGoDev() {
 			InstallAurPackage "golangci-lint" "https://aur.archlinux.org/golangci-lint.git"
 	fi
 }
+
+SetupWordpressDev() {
+		sudo npm -g install @wordpress/env
+}
