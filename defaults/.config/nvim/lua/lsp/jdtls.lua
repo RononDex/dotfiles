@@ -18,11 +18,6 @@ if found_root_dir then
 	root_dir = vim.fn.expand(found_root_dir)
 end
 
-local function workspace_dir()
-	local project = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-	return vim.fn.stdpath("data") .. "/jdtls-workspace/" .. project
-end
-
 local features = {
 	-- change this to `true` to enable codelens
 	codelens = true,
