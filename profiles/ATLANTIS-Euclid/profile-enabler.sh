@@ -15,6 +15,7 @@ cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
+cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
@@ -65,6 +66,12 @@ echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
 InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
 InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
+
+echo "Setting up rootless docker..."
+InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
+echo "${USER}:165536:65536" | sudo tee /etc/subuid
+echo "${USER}:165536:65536" | sudo tee /etc/subgid
+systemctl enable docker.socket --user
 
 echo "Enabling services ..."
 sudo systemctl enable libvirtd

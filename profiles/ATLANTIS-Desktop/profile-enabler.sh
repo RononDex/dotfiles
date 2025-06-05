@@ -87,6 +87,12 @@ PreSteamSetupVivePro2
 PostSteamSetupVivePro2
 SetupWordpressDev
 
+echo "Setting up rootless docker..."
+InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
+echo "${USER}:165536:65536" | sudo tee /etc/subuid
+echo "${USER}:165536:65536" | sudo tee /etc/subgid
+systemctl enable docker.socket --user
+
 echo "Enabling services ..."
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
