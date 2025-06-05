@@ -130,4 +130,8 @@ InstallGoDev() {
 
 SetupWordpressDev() {
 		sudo npm -g install @wordpress/env
+		InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
+		echo "${USER}:165536:65536" | sudo tee /etc/subuid
+		echo "${USER}:165536:65536" | sudo tee /etc/subgid
+		systemctl enable docker.socket
 }

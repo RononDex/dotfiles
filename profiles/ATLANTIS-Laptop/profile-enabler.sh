@@ -56,6 +56,7 @@ SetupLatex
 InstallGrubTheme 
 InstallMpv
 InstallGoDev
+SetupWordpressDev
 
 echo "Installing AUR packages..."
 InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
