@@ -13,4 +13,7 @@ vim.lsp.config('css', {
 		scss = { validate = true },
 		less = { validate = true },
 	},
+	init_options = {
+		provideFormatter = true,
+	}
 });
