@@ -29,6 +29,7 @@ require("lsp.xml")
 require("lsp.omnisharp")
 require("lsp.python")
 require("lsp.bash")
-vim.lsp.enable({"jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls"})
+require("lsp.php")
+vim.lsp.enable({"jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor"})
 
 require("after/plugin/keymap")

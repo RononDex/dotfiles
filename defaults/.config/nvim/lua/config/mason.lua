@@ -34,4 +34,7 @@ mason_registry.refresh(function()
 
 	-- Bash
 	install_package_if_not_exists("bash-language-server")
+
+	-- PHP
+	install_package_if_not_exists("phpactor")
 end)
