@@ -33,6 +33,7 @@ require("lsp.php")
 require("lsp.html")
 require("lsp.css")
 require("lsp.javascript")
-vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor", "html", "css", "javascript" })
+require("lsp.json")
+vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor", "html", "css", "javascript", "json" })
 
 require("after/plugin/keymap")

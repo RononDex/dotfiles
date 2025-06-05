@@ -38,9 +38,10 @@ mason_registry.refresh(function()
 	-- PHP
 	install_package_if_not_exists("phpactor")
 
-	-- HTML / CSS
+	-- HTML / CSS / JSON
 	install_package_if_not_exists("html-lsp")
 	install_package_if_not_exists("css-lsp")
+	install_package_if_not_exists("json-lsp")
 
 	-- Javascript
 	install_package_if_not_exists("typescript-language-server")
