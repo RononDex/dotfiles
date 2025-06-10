@@ -30,8 +30,8 @@ sudo mkdir -p /etc/samba
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /data
 sudo cp ~/.scripts/utilities/updateAndReboot /root/updateAndReboot
-sudo cp ~/.scripts/networking/updateSslCertbot /usr/bin/updateSslCertbot
-sudo chmod +x /usr/bin/updateSslCertbot
+sudo cp $scriptDir/overrides/scripts/doBackupToKDrive /root/doBackupToKDrive
+sudo cp ~/.scripts/backup/backupServerToKDrive /root/backupServerToKDrive
 
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf

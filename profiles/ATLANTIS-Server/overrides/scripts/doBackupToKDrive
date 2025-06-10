@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "-------------------------------------------"
+echo "Starting backup on $(date +'%D %T')"
+echo "-------------------------------------------"
+
+bash /root/backupServerToKDrive
+
+echo "-------------------------------------------"
+echo "Backup finished on $(date +'%D %T')"
+echo "-------------------------------------------"
