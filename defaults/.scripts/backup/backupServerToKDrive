@@ -54,12 +54,12 @@ if [ -z "$(gpg --list-secret-keys)" ]; then
 		gpg --default-new-key-algo rsa8192 --gen-key
 fi
 
-if [ x"${RCLONE_CONFIG_PASS}" == "x" ]; then
-		read -s -p "Password for rclone configuration store: " rclone_password
-		echo
-
-		export RCLONE_CONFIG_PASS=$rclone_password
-fi
+# if [ x"${RCLONE_CONFIG_PASS}" == "x" ]; then
+# 		read -s -p "Password for rclone configuration store: " rclone_password
+# 		echo
+#
+# 		export RCLONE_CONFIG_PASS=$rclone_password
+# fi
 
 rclone_remote="kDrive"
 remote_target_folder="backup-rclone"
