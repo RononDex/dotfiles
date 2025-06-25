@@ -63,6 +63,8 @@ InstallAurPackage "i8kutils" "https://aur.archlinux.org/i8kutils.git"
 
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
+EnableService i8kmon
+StartService i8kmon
 
 echo "Installing screenkey"
 sudo pacman -Sy python2-setuptools --needed --noconfirm
