@@ -4,7 +4,9 @@ vim.lsp.config('xml', {
 	root_markers = { '.git' },
 	settings = {
 		xml = {
-			joinContentLines = false
+			format = {
+				joinContentLines = false
+			}
 		}
 	}
 })
