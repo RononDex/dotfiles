@@ -20,6 +20,7 @@ require("config/autopairs")
 require("config/neogit")
 require("config/neotest")
 require("config/gitsigns")
+require("config/diffview")
 
 require("lsp.jdtls")
 require("lsp.lua")
@@ -34,6 +35,7 @@ require("lsp.html")
 require("lsp.css")
 require("lsp.javascript")
 require("lsp.json")
-vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor", "html", "css", "javascript", "json" })
+vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor", "html", "css",
+	"javascript", "json" })
 
 require("after/plugin/keymap")
