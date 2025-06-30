@@ -3,7 +3,7 @@
 GRUB_DEFAULT=0
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet thunderbolt.host_reset=false"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet thunderbolt.host_reset=false ignore_dmi=1"
 GRUB_CMDLINE_LINUX="reboot=ahcl i915.enable_psr=0"
 
 # Preload both GPT and MBR modules so that they are not missed
