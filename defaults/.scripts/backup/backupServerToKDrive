@@ -58,7 +58,7 @@ function CleanTrashBin() {
 	curl -X DELETE \
 		-H "Authorization: Bearer $token" \
 		-H "Content-Type: application/json" \
-		'https://api.infomaniak.com/2/drive/$driveNumber/trash'
+		"https://api.infomaniak.com/2/drive/$driveNumber/trash"
 }
 
 function UploadToKDrive() {
