@@ -34,10 +34,10 @@ sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass socklog-void 
 sudo xbps-install -y vim neovim neovim-remote libftdi1 cfitsio void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient ranger binutils keychain lftp
 sudo xbps-install -y htop kitty ImageMagick zlib xdg-utils curl exfat-utils unzip shadow perl-AnyEvent-I3 perl-JSON-XS git-lfs pywal fzf arandr pass patch ncurses ncurses-devel
-sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf 
+sudo xbps-install -y zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
 sudo xbps-install -y dkms linux-headers linux-firmware gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils debootstrap inetutils-ftp
 sudo xbps-install -y ueberzug redshift nerd-fonts cava dcron nodejs quazip pinentry-gtk dracut-network psmisc base-devel openconnect NetworkManager-openconnect qt5-plugin-sqlite
-sudo xbps-install -y tar zip xz glibc-32bit keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3 vips
+sudo xbps-install -y tar zip xz glibc-32bit keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3 vips lm_sensors
 
 InstallXbpsMiniBuilder
 UpdateRestrictedPackages
@@ -54,29 +54,29 @@ git lfs pull
 
 echo "Changing default shell to zsh"
 if [[ "$SHELL" != "/bin/zsh" ]]; then
-    chsh -s /bin/zsh
+	chsh -s /bin/zsh
 fi
 
 echo "Setting up oh-my-zsh ..."
 if [ ! -d ${ZSH} ]; then
-    ZSH=${ZSH} bash -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
+	ZSH=${ZSH} bash -c "$(wget -O- https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" --unattended --keep-zshrc
 fi
 
 if [ ! -d ${ZSH}/themes/powerlevel10k ]; then
-    cd ${ZSH}/themes
-    echo "Cloning powerlevel10k"
-    git clone https://github.com/romkatv/powerlevel10k.git ${ZSH}/themes/powerlevel10k
+	cd ${ZSH}/themes
+	echo "Cloning powerlevel10k"
+	git clone https://github.com/romkatv/powerlevel10k.git ${ZSH}/themes/powerlevel10k
 else
-    cd ${ZSH}/themes/powerlevel10k
-    echo "Updating powerlevel10k"
-    git pull
+	cd ${ZSH}/themes/powerlevel10k
+	echo "Updating powerlevel10k"
+	git pull
 fi
 
 if [ ! -d ${ZPLUG_HOME} ]; then
-    git clone https://github.com/zplug/zplug $ZPLUG_HOME
+	git clone https://github.com/zplug/zplug $ZPLUG_HOME
 else
-    cd ${ZPLUG_HOME}
-    git pull
+	cd ${ZPLUG_HOME}
+	git pull
 fi
 
 zplug update
@@ -109,17 +109,17 @@ echo "Setting up vim..."
 BasicVimInstall
 
 echo "Setting up git"
-if grep -q "gitalias" "$HOME/.gitconfig" ; then
-    echo "Git aliases already set up"
+if grep -q "gitalias" "$HOME/.gitconfig"; then
+	echo "Git aliases already set up"
 else
-    echo "[include]" >> ~/.gitconfig
-    echo "    path = ~/.scripts/gitalias" >> ~/.gitconfig
+	echo "[include]" >>~/.gitconfig
+	echo "    path = ~/.scripts/gitalias" >>~/.gitconfig
 fi
-if grep -q "gitconfig" "$HOME/.gitconfig" ; then
-    echo "Git config already set up"
+if grep -q "gitconfig" "$HOME/.gitconfig"; then
+	echo "Git config already set up"
 else
-    echo "[include]" >> ~/.gitconfig
-    echo "    path = ~/.scripts/gitconfig" >> ~/.gitconfig
+	echo "[include]" >>~/.gitconfig
+	echo "    path = ~/.scripts/gitconfig" >>~/.gitconfig
 fi
 
 echo "Enabling services ..."
@@ -139,6 +139,11 @@ gpg2 --recv 0xB4B88025927E502D
 
 echo "Removing obsolete kernels"
 sudo vkpurge rm all
+
+echo "Scanning for fans"
+if [[ ! -f /etc/conf.d/lm_sensors ]]; then
+	sudo sensors-detect --auto
+fi
 
 echo "Updating Python packages ..."
 UpdatePipPackages

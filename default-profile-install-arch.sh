@@ -75,7 +75,7 @@ sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personaliza
 sudo pacman -S ueberzug autoconf keyutils automake bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp python-pip npm linux-firmware-marvell gtk2 ranger fwupd --needed --noconfirm
 sudo pacman -S tracker3 webkit2gtk tracker3-miners qt5ct qt6ct otf-font-awesome ddcutil jq polkit --needed --noconfirm
-sudo pacman -S gtk-engine-murrine sassc luarocks shfmt --needed --noconfirm
+sudo pacman -S gtk-engine-murrine sassc luarocks shfmt lm_sensors --needed --noconfirm
 
 # Install Architecture specific stuff
 if [ $isArm ]; then
@@ -146,6 +146,11 @@ InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 
 echo "Setting up Display Manager"
 InstallSddm
+
+echo "Scanning for fans"
+if [[ ! -f /etc/conf.d/lm_sensors ]]; then
+		sudo sensors-detect --auto
+fi
 
 # Needed key for autofs
 gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
