@@ -1,9 +1,8 @@
 require("neotest").setup({
 	adapters = {
 		require("neotest-java")({
-			-- ignore_wrapper = false, -- whether to ignore maven/gradle wrapper
-			-- junit_jar = "path/to/junit-standalone.jar",
-			-- default: .local/share/nvim/neotest-java/junit-platform-console-standalone-[version].jar
+			-- junit_jar = nil, -- default: stdpath("data") .. /nvim/neotest-java/junit-platform-console-standalone-[version].jar
+			incremental_build = true
 		}),
 		require("neotest-dotnet")
 	}
