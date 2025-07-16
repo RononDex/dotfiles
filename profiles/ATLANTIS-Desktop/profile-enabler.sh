@@ -1,6 +1,6 @@
 #!/bin/bash
 
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" 
+scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . $scriptDir/../../functions/htcVivePro2Functions.sh
 
 sudo mkdir -p /etc/X11/xorg.conf.d/
@@ -56,7 +56,8 @@ InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
 InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
 InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
 InstallAurPackage "wootility-appimage" "https://aur.archlinux.org/wootility-appimage.git"
-sudo pacman -Sy	linux-firmware-qlogic --needed --noconfirm
+InstallAurPackage "nct6687d-dkms-git" "https://aur.archlinux.org/nct6687d-dkms-git.git"
+sudo pacman -Sy linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
 InstallAurPackage "proton-vpn-gtk-app" "https://aur.archlinux.org/proton-vpn-gtk-app.git"
@@ -113,13 +114,13 @@ SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "D
 SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
 
 echo "Fixing SE clipboard copy and paste"
-if [ -d  ~/.steam/steam/steamapps/common/SpaceEngineers ]; then
-		CloneOrUpdateGitRepoToPackages "CosmicWineFixes" "https://github.com/opekope2/CosmicWineFixes"
-		cd ~/packages/CosmicWineFixes
-		ln -s ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64 Bin64
-		dotnet build
-		cp $scriptDir/overrides/SpaceEngineers/SpaceEngineersLauncher.py ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
-		chmod +x ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
-		# Also set launch options in steam to ./SpaceEngineersLauncher.py %command%
-		wget https://github.com/sepluginloader/SpaceEngineersLauncher/releases/download/v1.0.6/SpaceEngineersLauncher.exe -O ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.exe
+if [ -d ~/.steam/steam/steamapps/common/SpaceEngineers ]; then
+	CloneOrUpdateGitRepoToPackages "CosmicWineFixes" "https://github.com/opekope2/CosmicWineFixes"
+	cd ~/packages/CosmicWineFixes
+	ln -s ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64 Bin64
+	dotnet build
+	cp $scriptDir/overrides/SpaceEngineers/SpaceEngineersLauncher.py ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
+	chmod +x ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
+	# Also set launch options in steam to ./SpaceEngineersLauncher.py %command%
+	wget https://github.com/sepluginloader/SpaceEngineersLauncher/releases/download/v1.0.6/SpaceEngineersLauncher.exe -O ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.exe
 fi
