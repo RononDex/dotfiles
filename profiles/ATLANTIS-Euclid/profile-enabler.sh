@@ -98,7 +98,6 @@ sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
-chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Updating grub config"
 sudo cp $scriptDir/overrides/grub/grub /etc/default/grub

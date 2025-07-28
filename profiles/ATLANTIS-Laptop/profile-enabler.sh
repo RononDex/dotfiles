@@ -11,9 +11,6 @@ sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touch
 sudo cp $scriptDir/overrides/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio.conf
 sudo cp $scriptDir/overrides/modprobe/i915.conf /etc/modprobe.d/i915.conf
 sudo cp $scriptDir/overrides/tlp/10-laptop.conf /etc/tlp.d/10-laptop.conf
-cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
-cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
-cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
 cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
@@ -25,7 +22,7 @@ cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 sudo pacman -Syu --noconfirm
 
 echo "Installing stuff..."
-sudo pacman -Sy sof-firmware i3-gaps nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu flameshot teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
+sudo pacman -Sy sof-firmware nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
 sudo pacman -Sy texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy nomacs tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
@@ -105,7 +102,6 @@ sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
-chmod +x ~/.i3/workspaces/load-workspaces.sh
 
 echo "Updating grub config"
 sudo cp $scriptDir/overrides/grub/grub.cfg /etc/default/grub

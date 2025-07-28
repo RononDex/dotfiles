@@ -1,6 +1,6 @@
 #!/bin/bash
 # Void Linux Install
-scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 cp $scriptDir/overrides/packages.list ~/packages/xbps-mini-builder/packages.list
 sudo mkdir -p /etc/X11/xorg.conf.d/
@@ -23,7 +23,7 @@ sudo mkdir -p /etc/mdadm
 sudo cp $scriptDir/overrides/mdadm/mdadm.conf /etc/mdadm/mdadm.conf
 sudo cp $scriptDir/overrides/docker/daemon.json /etc/docker/daemon.json
 if [ ! -f /etc/wireguard/ATLANTIS-Net.conf]; then
-    sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
+	sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
 fi
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
 sudo mkdir -p /etc/samba
@@ -33,23 +33,14 @@ sudo cp ~/.scripts/utilities/updateAndReboot /root/updateAndReboot
 sudo cp $scriptDir/overrides/scripts/doBackupToKDrive /root/doBackupToKDrive
 sudo cp ~/.scripts/backup/backupServerToKDrive /root/backupServerToKDrive
 
-
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
 sudo sysctl -p
 
-mkdir ~/.i3
-mkdir ~/.i3/workspaces
-mkdir ~/.i3/scripts
-
-cp $scriptDir/overrides/.i3/workspaces/load-workspaces.sh ~/.i3/workspaces/load-workspaces.sh
-cp $scriptDir/overrides/.i3/workspaces/workspace-1.json ~/.i3/workspaces/workspace-1.json
-cp $scriptDir/overrides/.i3/scripts/launch-autostart.sh ~/.i3/scripts/launch-autostart.sh
-
 echo "Installing stuff..."
-sudo xbps-install -y linux-firmware-amd network-manager-applet firefox arc-theme arc-icon-theme nautilus 
-sudo xbps-install -y i3-gaps dunst libnotify notification-daemon dmenu pavucontrol flameshot nextcloud-client cabextract xf86-input-evdev
+sudo xbps-install -y linux-firmware-amd network-manager-applet firefox arc-theme arc-icon-theme nautilus
+sudo xbps-install -y dunst libnotify notification-daemon dmenu pavucontrol nextcloud-client cabextract xf86-input-evdev
 sudo xbps-install -y qemu virt-manager smartmontools
-sudo xbps-install -y polybar python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
+sudo xbps-install -y python3-vdf protontricks vscode ckb-next screenkey vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu vulkan-loader mesa cryptsetup tpm2-tss cronie mesa-vaapi mesa-vdpau mesa-vulkan-radeon mesa-dri
 sudo xbps-install -y nomacs breeze breeze-cursors samba
 sudo xbps-install -y mdadm wireguard tigervnc docker dma
@@ -84,14 +75,13 @@ EnableService docker
 EnableService cronie
 
 echo "Ensure smartctl watches RAID devices"
-sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sda 
-sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdb 
-sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdc 
-sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdd 
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sda
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdb
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdc
+sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sdd
 
 crontab ~/.config/customCronConfig
 sudo crontab $scriptDir/overrides/defaultRootCronCfg
-
 
 sudo groupadd ssh_access
 sudo groupadd basicfilesharing
@@ -111,8 +101,6 @@ sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 chmod +x ~/.scripts/xprofile
-chmod +x ~/.i3/workspaces/load-workspaces.sh
-
 
 echo "Setting up vnc server ..."
 sudo mkdir -p /etc/vnc/

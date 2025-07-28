@@ -20,8 +20,8 @@ cp $scriptDir/overrides/steam/steamvr.vrsettings ~/.steam/steam/config/steamvr.v
 mkdir -p ~/.local/share/applications
 
 echo "Installing stuff ..."
-sudo pacman -Sy nextcloud-client dunst libnotify notification-daemon vlc flameshot teamspeak3 blueman wireguard-tools --noconfirm --needed
-sudo pacman -Sy texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed polybar --noconfirm
+sudo pacman -Sy nextcloud-client dunst libnotify notification-daemon vlc teamspeak3 blueman wireguard-tools --noconfirm --needed
+sudo pacman -Sy texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -Sy prusa-slicer obs-studio libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
 sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
