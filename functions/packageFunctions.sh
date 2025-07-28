@@ -101,7 +101,7 @@ InstallHyprland() {
 InstallWayland() {
     if  command -v pacman &> /dev/null
     then
-		sudo pacman -S pipewire wlsunset polkit-kde-agent xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
+		sudo pacman -S pipewire wlsunset xorg-xwayland wireplumber qt5-wayland qt6-wayland slurp grim swappy wl-clipboard --needed --noconfirm
 	fi
 }
 
