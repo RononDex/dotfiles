@@ -1,3 +1,10 @@
 stylesheet=style.css
 show=drun
 insensitive=true
+show_icons=true
+allow_markup=true
+key_down=Ctrl-j
+key_up=Ctrl-k
+key_expand=Ctrl-l
+columns=1
+image_size=48
