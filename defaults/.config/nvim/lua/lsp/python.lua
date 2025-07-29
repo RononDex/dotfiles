@@ -1,7 +1,5 @@
 local util = require 'lspconfig.util'
 
-require("venv-selector").setup()
-
 local root_files = {
 	'pyproject.toml',
 	'setup.py',
