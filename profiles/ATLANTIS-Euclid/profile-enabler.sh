@@ -97,7 +97,6 @@ sudo usermod -a -G libvirt ${currentUser}
 sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
-chmod +x ~/.scripts/xprofile
 
 echo "Updating grub config"
 sudo cp $scriptDir/overrides/grub/grub /etc/default/grub

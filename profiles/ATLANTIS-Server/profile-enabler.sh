@@ -45,7 +45,6 @@ sudo xbps-install -y xf86-video-amdgpu vulkan-loader mesa cryptsetup tpm2-tss cr
 sudo xbps-install -y nomacs breeze breeze-cursors samba
 sudo xbps-install -y mdadm wireguard tigervnc docker dma
 
-InstallXorg
 InstallYubiKeyStuff
 SetupDotnet
 SetupWireguardServer
@@ -100,7 +99,6 @@ sudo usermod -a -G libvirt ${currentUser}
 sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
-chmod +x ~/.scripts/xprofile
 
 echo "Setting up vnc server ..."
 sudo mkdir -p /etc/vnc/

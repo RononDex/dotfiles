@@ -10,7 +10,6 @@ echo "Copying some files..."
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 sudo cp $scriptDir/overrides/ssh/sshd_config /etc/ssh/sshd_config
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
-chmod +x ~/.xinitrc
 mkdir -p ~/.local/share/kstars/astrometry
 cp $scriptDir/overrides/kstars/astrometry.cfg ~/.local/share/kstars/astrometry/astrometry.cfg
 mkdir ~/.indi
@@ -131,10 +130,7 @@ sudo smbpasswd -a ${currentUser}
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "Downloads" "://192.168.1.12/Downloads" "Software" "://192.168.1.12/Software" "Astrophotography" "://192.168.1.12/Astrophotography" "Backup" "://192.168.1.12/Backup"
 
-sudo chown ${currentUser} ~/.xinitrc
-
 chmod +x ~/.scripts/bashprofile
-chmod +x ~/.scripts/xprofile
 
 echo "ATLANTIS-ASTRO-PI" | sudo tee /etc/hostname
 sudo mkinitcpio -P

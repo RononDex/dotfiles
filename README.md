@@ -38,7 +38,7 @@ See [AstroPi-README](AstroPi-README.md)
 1. Runs `default-profile-install-<distro>.sh` which will install all the default stuff that is the same across all pc's
 1. Run profile-enabler.sh lcoated in your chosen profile folder `profiles/[profileName]/profile-enabler.sh`
 
-So to create your own profile, simply fork this repository and create your own profile in the `profiles` folder. The only mandatory files are `xprofile`, `bashprofile`, `distro` and `profile-enabler.sh`
+So to create your own profile, simply fork this repository and create your own profile in the `profiles` folder. The only mandatory files are `bashprofile`, `distro` and `profile-enabler.sh`
 
 ## Software installed by default (for all profiles)
 For an up to date list check the file itself here https://github.com/RononDex/dotfiles/raw/master/default-profile-install-void.sh

@@ -10,13 +10,10 @@ sudo xbps-install -Syu
 sudo xbps-install -Sy wget git
 
 echo "Updating file permissions ..."
-chmod +x ~/.xinitrc
-chmod +x ~/.config/.xinitrc
 chmod +x ~/.profile
 chmod +x ~/.zprofile
 chmod +x ~/.config/xfce4/terminal/terminalrc
 chmod -R +x ~/.scripts
-chmod +x ~/.xprofile
 chmod 700 ~/.gnupg -R
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/

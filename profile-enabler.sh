@@ -31,36 +31,36 @@ echo "--------------------------------------------"
 echo
 
 if [ -z "$1" ]; then
-    # List available profiles
-    echo "Available profiles: "
-    echo
+	# List available profiles
+	echo "Available profiles: "
+	echo
 
-    i=1
-    for d in $profilesFolder*; do
-        echo "      $i) $(basename $d)"
-        profiles+=("$d")
-        i=$((i + 1))
-    done
-    echo
-    printf "Enter number: "
+	i=1
+	for d in $profilesFolder*; do
+		echo "      $i) $(basename $d)"
+		profiles+=("$d")
+		i=$((i + 1))
+	done
+	echo
+	printf "Enter number: "
 
-    # Let user select a profile
-    read selectedProfile
+	# Let user select a profile
+	read selectedProfile
 
-    echo
+	echo
 
-    re='^[0-9]+$'
-    if ! [[ $selectedProfile =~ $re ]]; then
-        echo -n "$RED"
-        echo "error: Not a number$NC" >&2
-        exit -1
-    fi
+	re='^[0-9]+$'
+	if ! [[ $selectedProfile =~ $re ]]; then
+		echo -n "$RED"
+		echo "error: Not a number$NC" >&2
+		exit -1
+	fi
 
-    # Run profile specific profile installer if it exists
-    echo
-    profileName=${profiles[$selectedProfile - 1]}
+	# Run profile specific profile installer if it exists
+	echo
+	profileName=${profiles[$selectedProfile - 1]}
 else
-    profileName=$scriptDir/profiles/$1
+	profileName=$scriptDir/profiles/$1
 fi
 
 echo "ProfileName: ${profileName}"
@@ -79,12 +79,10 @@ echo "Copying profile files..."
 mkdir -p ~/.scripts
 
 rm ~/.profile
-rm ~/.xinitrc
 
 cp -ra ${profileName}/. ~/.scripts/
 
 ln -s ~/.zprofile ~/.profile
-ln -s ~/.config/.xinitrc ~/.xinitrc
 
 # Run default profile-installer
 echo
@@ -92,13 +90,13 @@ echo
 
 ProfileInstallScriptPath=${profileName}/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
-    . $ProfileInstallScriptPath
+	. $ProfileInstallScriptPath
 fi
 
 profileDirName=$(basename $profileName)
 echo "$profileDirName"
-echo "#!/bin/bash" > ~/.scripts/updateDotFiles
-echo "bash $scriptDirRoot/profile-enabler.sh $profileDirName" >> ~/.scripts/updateDotFiles
+echo "#!/bin/bash" >~/.scripts/updateDotFiles
+echo "bash $scriptDirRoot/profile-enabler.sh $profileDirName" >>~/.scripts/updateDotFiles
 chmod +x ~/.scripts/updateDotFiles
 
 echo
