@@ -85,6 +85,7 @@ InstallSddm() {
     then
 		sudo pacman -S sddm --needed --noconfirm
 		# InstallAurPackage "sddm-sugar-candy-git" "https://aur.archlinux.org/sddm-sugar-candy-git.git"
+		InstallAurPackage "redhat-fonts" "https://aur.archlinux.org/redhat-fonts.git"
 		InstallAurPackage "sddm-silent-theme" "https://aur.archlinux.org/sddm-silent-theme.git"
 
 		sudo systemctl enable sddm
