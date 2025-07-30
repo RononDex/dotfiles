@@ -20,15 +20,12 @@ cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/activ
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 
-sudo pacman -Syy
-sudo pacman -Syu --noconfirm
-
 echo "Installing stuff..."
-sudo pacman -Sy nextcloud-client light dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
-sudo pacman -Sy texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -Sy nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
-sudo pacman -Sy virt-manager qemu chromium xf86-video-vesa --needed --noconfirm
-sudo pacman -Syu sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -S nextcloud-client light dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
+sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
+sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
+sudo pacman -S virt-manager qemu chromium xf86-video-vesa --needed --noconfirm
+sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable tlp
@@ -52,7 +49,6 @@ InstallMpv
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-# InstallAurPackage "teams" "https://aur.archlinux.org/teams.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
@@ -66,11 +62,6 @@ EnableService ckb-next-daemon
 StartService ckb-next-daemon
 EnableService i8kmon
 StartService i8kmon
-
-echo "Installing screenkey"
-sudo pacman -Sy python2-setuptools --needed --noconfirm
-InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
-InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
 echo "Setting up rootless docker..."
 InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"

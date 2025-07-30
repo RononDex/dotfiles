@@ -20,18 +20,18 @@ cp $scriptDir/overrides/steam/steamvr.vrsettings ~/.steam/steam/config/steamvr.v
 mkdir -p ~/.local/share/applications
 
 echo "Installing stuff ..."
-sudo pacman -Sy nextcloud-client dunst libnotify notification-daemon vlc teamspeak3 blueman wireguard-tools --noconfirm --needed
-sudo pacman -Sy texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -Sy prusa-slicer obs-studio libreoffice breeze breeze-icons libvncserver --needed --noconfirm
-sudo pacman -Sy virt-manager qemu onboard --needed --noconfirm
-sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
-sudo pacman -Sy amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
-sudo pacman -Sy gamemode --needed --noconfirm
+sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc teamspeak3 blueman wireguard-tools --noconfirm --needed
+sudo pacman -S texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
+sudo pacman -S prusa-slicer obs-studio libreoffice breeze breeze-icons libvncserver --needed --noconfirm
+sudo pacman -S virt-manager qemu onboard --needed --noconfirm
+sudo pacman -S dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -S amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
+sudo pacman -S gamemode --needed --noconfirm
 
 echo "Installing video drivers ..."
-sudo pacman -Sy libva-mesa-driver lib32-mesa mesa mesa-vdpau vulkan-mesa-layers --needed --noconfirm
-sudo pacman -Sy vulkan-radeon lib32-vulkan-radeon --needed --noconfirm
-sudo pacman -Sy rocm-hip-sdk rocm-opencl-sdk rocm-hip-runtime hip-runtime-amd miopen-hip --needed --noconfirm
+sudo pacman -S libva-mesa-driver lib32-mesa mesa mesa-vdpau vulkan-mesa-layers --needed --noconfirm
+sudo pacman -S vulkan-radeon lib32-vulkan-radeon --needed --noconfirm
+sudo pacman -S rocm-hip-sdk rocm-opencl-sdk rocm-hip-runtime hip-runtime-amd miopen-hip --needed --noconfirm
 # InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-installer.git"
 InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
 InstallAurPackage "proton-ge-custom-bin" "https://aur.archlinux.org/proton-ge-custom-bin.git"
@@ -57,16 +57,12 @@ InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware
 InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
 InstallAurPackage "wootility-appimage" "https://aur.archlinux.org/wootility-appimage.git"
 InstallAurPackage "nct6687d-dkms-git" "https://aur.archlinux.org/nct6687d-dkms-git.git"
-sudo pacman -Sy linux-firmware-qlogic --needed --noconfirm
+sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
 InstallAurPackage "proton-vpn-gtk-app" "https://aur.archlinux.org/proton-vpn-gtk-app.git"
 InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
 
-echo "Installing screenkey"
-sudo pacman -Sy python2-setuptools --needed --noconfirm
-InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
-InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 EnableService "lactd"
 StartService "lactd"
 

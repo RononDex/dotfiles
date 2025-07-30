@@ -20,7 +20,7 @@ mkdir ~/.ssh
 cp $scriptDir/overrides/ssh/authorized_keys ~/.ssh/authorized_keys
 
 echo "Setting up gps and ntp"
-sudo pacman -Sy ntp --needed --noconfirm
+sudo pacman -S ntp --needed --noconfirm
 sudo cp $scriptDir/overrides/ntp/ntp.conf /etc/ntp.conf
 sudo cp $scriptDir/overrides/gpsd/gpsd.conf /etc/default/gpsd
 sudo cp $scriptDir/overrides/udev/09-pps.rules /etc/udev/rules.d/09-pps.rules
@@ -39,8 +39,8 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 
 echo "Installing stuff ..."
-sudo pacman -Sy firefox tigervnc dnsmasq linux-rpi-16k linux-rpi-16k-headers --noconfirm --needed
-sudo pacman -Sy lxde --noconfirm --needed
+sudo pacman -S firefox tigervnc dnsmasq linux-rpi-16k linux-rpi-16k-headers --noconfirm --needed
+sudo pacman -S lxde --noconfirm --needed
 # CompileFixedUBootForRpi4 $scriptDir
 
 # InstallWayland
@@ -65,8 +65,8 @@ sudo systemctl stop sddm
 sudo systemctl disable sddm
 
 echo "Setting up astronomy stuff .."
-sudo pacman -Sy gpsd libdc1394 sof-firmware xf86-video-fbdev --noconfirm --needed
-sudo pacman -Sy --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
+sudo pacman -S gpsd libdc1394 sof-firmware xf86-video-fbdev --noconfirm --needed
+sudo pacman -S --noconfirm --needed wcslib opencv ccfits netpbm breeze-icons binutils patch cmake make libraw gpsd gcc gsl
 
 echo "Setting up gpsd console"
 sudo stty -F /dev/ttyS1 raw 9600 cs8 clocal -cstopb
@@ -99,7 +99,7 @@ InstallIndiDriver "indi-gpsd"
 Install8814auDriver
 
 # InstallKstars
-sudo pacman -Sy --noconfirm --needed kstars
+sudo pacman -S --noconfirm --needed kstars
 InstallAstrometryNet
 DownloadIndexFiles
 #CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"

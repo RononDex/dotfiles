@@ -19,15 +19,13 @@ cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-
 cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-modules-top.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 
-sudo pacman -Syu --noconfirm
-
 echo "Installing stuff..."
-sudo pacman -Sy sof-firmware nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
-sudo pacman -Sy texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -Sy nomacs tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
-sudo pacman -Sy virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
-sudo pacman -Sy dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
-sudo pacman -Sy mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
+sudo pacman -S sof-firmware nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
+sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
+sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
+sudo pacman -S virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
+sudo pacman -S dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
+sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 
 echo "Setup auto screen rotation"
 InstallAurPackage "iio-hyprland" "https://aur.archlinux.org/iio-hyprland.git"
@@ -72,18 +70,13 @@ InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.g
 InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
 InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
 InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
-sudo pacman -Sy	linux-firmware-qlogic --needed --noconfirm
+sudo pacman -Slinux-firmware-qlogic --needed --noconfirm
 
 echo "Setting up rootless docker..."
 InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
 echo "${USER}:165536:65536" | sudo tee /etc/subuid
 echo "${USER}:165536:65536" | sudo tee /etc/subgid
 systemctl enable docker.socket --user
-
-echo "Installing screenkey"
-sudo pacman -Sy python2-setuptools --needed --noconfirm
-InstallAurPackage "python2-distutils-extra" "https://aur.archlinux.org/python2-distutils-extra.git"
-InstallAurPackage "screenkey" "https://aur.archlinux.org/screenkey.git"
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"

@@ -12,7 +12,6 @@ sudo xbps-install -Sy wget git
 echo "Updating file permissions ..."
 chmod +x ~/.profile
 chmod +x ~/.zprofile
-chmod +x ~/.config/xfce4/terminal/terminalrc
 chmod -R +x ~/.scripts
 chmod 700 ~/.gnupg -R
 

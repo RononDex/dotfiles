@@ -9,12 +9,11 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
-sudo pacman -Sy wget git --noconfirm --needed
+sudo pacman -S wget git --noconfirm --needed
 
 echo "Updating file permissions ..."
 chmod +x ~/.profile
 chmod +x ~/.zprofile
-chmod +x ~/.config/xfce4/terminal/terminalrc
 chmod -R +x ~/.scripts
 chmod 700 ~/.gnupg -R
 
@@ -74,9 +73,9 @@ sudo pacman -S gtk-engine-murrine sassc luarocks shfmt lm_sensors --needed --noc
 
 # Install Architecture specific stuff
 if [ $isArm ]; then
-    sudo pacman -Sy fakeroot --noconfirm --needed
+    sudo pacman -S fakeroot --noconfirm --needed
 else
-    sudo pacman -Sy gtop --noconfirm --needed
+    sudo pacman -S gtop --noconfirm --needed
 fi
 
 git lfs install
