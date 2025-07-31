@@ -20,6 +20,7 @@ chmod 700 ~/.gnupg -R
 echo "Copying default config files"
 sudo mkdir /etc/sddm.conf.d
 sudo cp ~/.files/sddm/* /etc/sddm.conf.d/
+sudo cp -r ~/.files/sddm/themes/* /usr/share/sddm/themes/
 sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
 sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 rm -rf ~/.files
