@@ -59,7 +59,7 @@ source ~/.profile
 echo "Installing stuff..."
 sudo pacman -S pkgconfig bc powerline-fonts fakeroot debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet firefox adobe-source-code-pro-fonts fastfetch xclip --noconfirm --needed
-sudo pacman -S picom pipewire pipewire-pulse wireplumber pavucontrol arc-gtk-theme arc-icon-theme nautilus --noconfirm --needed
+sudo pacman -S picom pipewire pipewire-pulse wireplumber pavucontrol nautilus --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient ranger binutils keychain --needed --noconfirm
@@ -194,3 +194,6 @@ InstallFirefoxExtension "78272b6fa58f4a1abaac99321d503a20@proton.me" "https://ad
 InstallFirefoxExtension "@testpilot-containers" "https://addons.mozilla.org/firefox/downloads/file/4355970/multi_account_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
 InstallFirefoxExtension "{c607c8df-14a7-4f28-894f-29e8722976af}" "https://addons.mozilla.org/firefox/downloads/file/3723251/temporary_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
 UpdateArkenFox
+
+echo "Applying security hardening..."
+ReplaceInFile "/etc/login.defs" "^UMASK.*" "UMASK\t077"
