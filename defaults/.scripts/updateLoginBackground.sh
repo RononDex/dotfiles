@@ -22,5 +22,5 @@ wget "http://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&uhd=1"
 mv "HPImageArchive.aspx?format=js&idx=0&n=1&uhd=1" /tmp/currentBingImage.json
 FILEURL=$(node -p "require('/tmp/currentBingImage.json').images[0].urlbase")
 wget "https://bing.com/${FILEURL}_UHD.jpg"
-mv "${FILEURL:1}_UHD.jpg" /usr/share/sddm/themes/silent/backgrounds/bing.jpg
-chmod 744 /usr/share/sddm/themes/silent/backgrounds/bing.jpg
+cp "${FILEURL:1}_UHD.jpg" /usr/share/sddm/themes/silent/backgrounds/bing.jpg
+rm "${FILEURL:1}_UHD.jpg"

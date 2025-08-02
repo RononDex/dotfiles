@@ -89,6 +89,13 @@ InstallSddm() {
 		InstallAurPackage "sddm-silent-theme" "https://aur.archlinux.org/sddm-silent-theme.git"
 
 		sudo systemctl enable sddm
+
+		sudo mkdir -p /usr/share/sddm/themes/silent/backgrounds
+		if [ ! -f /usr/share/sddm/themes/silent/backgrounds/bing.jpg ]; then
+				sudo touch /usr/share/sddm/themes/silent/backgrounds/bing.jpg
+		fi
+		sudo chown $USER:$USER /usr/share/sddm/themes/silent/backgrounds/bing.jpg
+		sudo chmod 744 /usr/share/sddm/themes/silent/backgrounds/bing.jpg
 	fi
 }
 
