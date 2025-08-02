@@ -3,16 +3,18 @@
 # Actions / exports when bash gets loaded
 # --------------------------------------------
 
+umask 0077
+
 export EDITOR=nvim
-export DOTNET_CLI_TELEMETRY_OPTOUT=1                                        # Opt out of dotnet telemtry
-(wal -R -e -n -q &)                                                        # Reload pywal theme
+export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Opt out of dotnet telemtry
+(wal -R -e -n -q &)                  # Reload pywal theme
 
 # Setup the gpg agent
 export GPG_TTY="$(tty)"
 unset SSH_AGENT_PID
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
-echo UPDATESTARTUPTTY | gpg-connect-agent -q > /dev/null 2>&1
+echo UPDATESTARTUPTTY | gpg-connect-agent -q >/dev/null 2>&1
 
 export PATH="$PATH:/usr/share/dotnet/"
 

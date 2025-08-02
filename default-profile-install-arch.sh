@@ -196,4 +196,4 @@ InstallFirefoxExtension "{c607c8df-14a7-4f28-894f-29e8722976af}" "https://addons
 UpdateArkenFox
 
 echo "Applying security hardening..."
-ReplaceInFile "/etc/login.defs" "^UMASK.*" "UMASK\t077"
+# ReplaceInFile "/etc/login.defs" "^UMASK.*" "UMASK\t077"
