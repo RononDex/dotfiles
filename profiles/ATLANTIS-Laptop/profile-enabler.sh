@@ -11,7 +11,6 @@ sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touch
 sudo cp $scriptDir/overrides/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio.conf
 sudo cp $scriptDir/overrides/modprobe/i915.conf /etc/modprobe.d/i915.conf
 sudo cp $scriptDir/overrides/tlp/10-laptop.conf /etc/tlp.d/10-laptop.conf
-cp $scriptDir/overrides/.Xresources ~/.Xresources
 sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
@@ -24,7 +23,7 @@ sudo pacman -S sof-firmware nextcloud-client light xf86-input-wacom dunst libnot
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -S virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
-sudo pacman -S dotnet-sdk aspnet-runtime aspnet-targeting-pack sof-firmware --needed --noconfirm
+sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware --needed --noconfirm
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 
 echo "Setup auto screen rotation"
@@ -63,7 +62,6 @@ InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/bree
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
-
 
 echo "Installing drivers for other devices"
 InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"

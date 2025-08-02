@@ -24,7 +24,7 @@ sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc teamspea
 sudo pacman -S texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S prusa-slicer obs-studio libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -S virt-manager qemu onboard --needed --noconfirm
-sudo pacman -S dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -S dotnet-sdk aspnet-targeting-pack --needed --noconfirm
 sudo pacman -S amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
 sudo pacman -S gamemode --needed --noconfirm
 
