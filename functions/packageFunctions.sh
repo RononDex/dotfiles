@@ -96,6 +96,8 @@ InstallSddm() {
 		fi
 		sudo chown $USER:$USER /usr/share/sddm/themes/silent/backgrounds/bing.jpg
 		sudo chmod 744 /usr/share/sddm/themes/silent/backgrounds/bing.jpg
+
+		sudo bash /usr/share/sddm/themes/silent/change_avatar.sh $USER ~/.face
 	fi
 }
 
