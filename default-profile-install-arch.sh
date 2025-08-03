@@ -7,6 +7,15 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/systemDFunctions.sh
 . ./functions/firefoxFunctions.sh
 
+InstallAurPackage "rate-mirrors-bin" "https://aur.archlinux.org/rate-mirrors-bin.git"
+
+echo "Setting up pacman mirror list:"
+if $isArm ; then
+		rate-mirrors archarm | sudo tee /etc/pacman.d/mirrorlist
+else
+		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+fi
+
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
 sudo pacman -S wget git --noconfirm --needed
@@ -131,14 +140,6 @@ InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
 InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
-InstallAurPackage "rate-mirrors-bin" "https://aur.archlinux.org/rate-mirrors-bin.git"
-
-echo "Setting up pacman mirror list:"
-if $isArm ; then
-		rate-mirrors archarm | sudo tee /etc/pacman.d/mirrorlist
-else
-		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
-fi
 
 echo "Setting up Display Manager"
 InstallSddm
