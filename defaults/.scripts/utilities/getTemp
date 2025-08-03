@@ -1,7 +1,0 @@
-#!/bin/bash
-
-for zone in `ls /sys/class/thermal/ | grep thermal_zone`
-do
-		echo -n "`cat /sys/class/thermal/$zone/type`: "
-		echo `cat /sys/class/thermal/$zone/temp | sed 's/\(.\)..$/.\1°C/'`
-done
