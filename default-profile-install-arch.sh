@@ -7,10 +7,26 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/systemDFunctions.sh
 . ./functions/firefoxFunctions.sh
 
+isArm=$false
+echo "Configuring pacman ..."
+architecture=$(uname -m | grep -E "arm|aarch")
+if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
+    echo -n "$RED"
+    echo "ARM system detected ..."
+    echo -n "$NC"
+	sudo cp ~/.files/makepkgARM.conf /etc/makepkg.conf
+    isArm=$true 
+else
+    sudo cp defaults/pacman.conf /etc/pacman.conf
+	sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
+    sudo chmod 744 /etc/pacman.conf
+    isArm=$false
+fi
+
 InstallAurPackage "rate-mirrors-bin" "https://aur.archlinux.org/rate-mirrors-bin.git"
 
 echo "Setting up pacman mirror list:"
-if $isArm ; then
+if [ $isArm ]; then
 		rate-mirrors archarm | sudo tee /etc/pacman.d/mirrorlist
 else
 		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
@@ -18,7 +34,6 @@ fi
 
 sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
-sudo pacman -S wget git --noconfirm --needed
 
 echo "Updating file permissions ..."
 chmod +x ~/.profile
@@ -38,21 +53,6 @@ cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
 mkdir -p ~/.ssh
 cp ~/Nextcloud/Documents/ssh_config ~/.ssh/config
 
-isArm=$false
-echo "Configuring pacman ..."
-architecture=$(uname -m | grep -E "arm|aarch")
-if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
-    echo -n "$RED"
-    echo "ARM system detected ..."
-    echo -n "$NC"
-	sudo cp ~/.files/makepkgARM.conf /etc/makepkg.conf
-    isArm=$true 
-else
-    sudo cp defaults/pacman.conf /etc/pacman.conf
-	sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
-    sudo chmod 744 /etc/pacman.conf
-    isArm=$false
-fi
 
 rm ~/pacman.conf
 rm ~/pacman.arm.conf
