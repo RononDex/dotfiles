@@ -98,6 +98,8 @@ InstallSddm() {
 		sudo chmod 744 /usr/share/sddm/themes/silent/backgrounds/bing.jpg
 
 		sudo bash /usr/share/sddm/themes/silent/change_avatar.sh $USER ~/.face
+
+		ReplaceInFile "/usr/share/sddm/themes/silent/metadata.desktop" "^ConfigFile=" "ConfigFile=daily-image.conf"
 	fi
 }
 
