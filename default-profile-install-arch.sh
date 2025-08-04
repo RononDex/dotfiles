@@ -7,7 +7,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/systemDFunctions.sh
 . ./functions/firefoxFunctions.sh
 
-isArm=$false
+isArm=false
 echo "Configuring pacman ..."
 architecture=$(uname -m | grep -E "arm|aarch")
 if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
@@ -15,18 +15,18 @@ if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
     echo "ARM system detected ..."
     echo -n "$NC"
 	sudo cp ~/.files/makepkgARM.conf /etc/makepkg.conf
-    isArm=$true 
+    isArm=true 
 else
     sudo cp defaults/pacman.conf /etc/pacman.conf
 	sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
     sudo chmod 744 /etc/pacman.conf
-    isArm=$false
+    isArm=false
 fi
 
 InstallAurPackage "rate-mirrors-bin" "https://aur.archlinux.org/rate-mirrors-bin.git"
 
 echo "Setting up pacman mirror list:"
-if [ $isArm ]; then
+if $isArm ; then
 		rate-mirrors archarm | sudo tee /etc/pacman.d/mirrorlist
 else
 		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
@@ -75,7 +75,7 @@ sudo pacman -S tracker3 webkit2gtk tracker3-miners qt5ct qt6ct otf-font-awesome 
 sudo pacman -S gtk-engine-murrine sassc luarocks shfmt lm_sensors --needed --noconfirm
 
 # Install Architecture specific stuff
-if [ $isArm ]; then
+if $isArm ; then
     sudo pacman -S fakeroot --noconfirm --needed
 else
     sudo pacman -S gtop --noconfirm --needed
