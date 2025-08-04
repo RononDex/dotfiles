@@ -165,6 +165,7 @@ sudo systemctl start polkit.service
 sudo systemctl enable polkit.service
 sudo systemctl enable NetworkManager
 sudo systemctl start NetworkManager
+sudo systemctl enable udisks2	# Needed for fwupd to be able to update bios
 
 echo "Applying default cron-config ..."
 crontab ~/.config/defaultCronConfig
