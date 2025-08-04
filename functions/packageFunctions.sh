@@ -99,7 +99,7 @@ InstallSddm() {
 
 		sudo bash /usr/share/sddm/themes/silent/change_avatar.sh $USER ~/.face
 
-		ReplaceInFile "/usr/share/sddm/themes/silent/metadata.desktop" "^ConfigFile=" "ConfigFile=daily-image.conf"
+		sudo ReplaceInFile "/usr/share/sddm/themes/silent/metadata.desktop" "^ConfigFile=" "ConfigFile=daily-image.conf"
 	fi
 }
 

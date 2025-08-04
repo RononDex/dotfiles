@@ -53,5 +53,5 @@ DownloadAndInstallGtkTheme() {
 # $2: regex to search for
 # $3: replacement string
 ReplaceInFile() {
-	sed -i "s/$2/$3" $1
+	sed -i "s/$2/$3/" $1
 }
