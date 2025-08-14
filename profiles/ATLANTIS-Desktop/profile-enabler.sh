@@ -91,8 +91,6 @@ echo "${USER}:165536:65536" | sudo tee /etc/subgid
 systemctl enable docker.socket --user
 
 echo "Enabling services ..."
-EnableService ckb-next-daemon
-StartService ckb-next-daemon
 EnableService bluetooth
 
 currentUser=$(whoami)
