@@ -7,6 +7,8 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/systemDFunctions.sh
 . ./functions/firefoxFunctions.sh
 
+sudo pacman -Sy archlinux-keyring fakeroot --noconfirm --needed
+
 isArm=false
 echo "Configuring pacman ..."
 architecture=$(uname -m | grep -E "arm|aarch")
@@ -32,7 +34,6 @@ else
 		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
 fi
 
-sudo pacman -Sy archlinux-keyring --noconfirm --needed
 sudo pacman -Syu --noconfirm --needed
 
 echo "Updating file permissions ..."
@@ -60,7 +61,7 @@ rm ~/pacman.arm.conf
 source ~/.profile
 
 echo "Installing stuff..."
-sudo pacman -S pkgconfig bc powerline-fonts fakeroot debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
+sudo pacman -S pkgconfig bc powerline-fonts debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet firefox adobe-source-code-pro-fonts fastfetch --noconfirm --needed
 sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
@@ -76,7 +77,6 @@ sudo pacman -S gtk-engine-murrine sassc luarocks shfmt lm_sensors --needed --noc
 
 # Install Architecture specific stuff
 if $isArm ; then
-    sudo pacman -S fakeroot --noconfirm --needed
 else
     sudo pacman -S gtop --noconfirm --needed
 fi
