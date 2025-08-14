@@ -66,7 +66,7 @@ sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-appl
 sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
-sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient ranger binutils keychain --needed --noconfirm
+sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient binutils keychain --needed --noconfirm
 sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
@@ -114,9 +114,6 @@ fi
 zplug update
 
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
-echo "Copying default ranger config ..."
-ranger --copy-config=all
 
 echo "Setting up vim..."
 BasicNvimInstall
