@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# Check if running as root
+if [ "$EUID" -ne 0 ]; then
+	echo "Please run this script as root" 1>&2
+	exit 1
+fi
+
+# Ensure no other backup process is running
+if pgrep -f "restic backup" >/dev/null; then
+	echo "Restic is already running..." 1>&2
+	exit 1
+fi
+
+repository="rclone:kDrive:/backups/server-backup"
+restic_key=$(cat /root/restic_pw)
+
+export RESTIC_CACHE_DIR="/root/.cache/restic"
+mkdir -p "${RESTIC_CACHE_DIR}"
+
+restic unlock
+restic backup -r $repository --tag=automated --pack-size=256 \
+	/data/ConfigStoreAstroBot \
+	/data/Backup \
+	/data/Documents \
+	/data/VirtualMachines \
+	/data/Astrophotography \
+	/data/containers \
+	/data/docker-data/volumes
+restic check --with-cache --read-data-subset=5G
+restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 3
+restic cache --cleanup
