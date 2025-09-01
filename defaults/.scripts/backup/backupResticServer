@@ -12,14 +12,21 @@ if pgrep -f "restic backup" >/dev/null; then
 	exit 1
 fi
 
-repository="rclone:kDrive:/backups/server-backup"
-restic_key=$(cat /root/restic_pw)
+if [ ! -f /root/restic_pw ]; then
+	echo "The file /root/restic_pw does not exist, exiting..."
+	exit 1
+fi
 
+export RESTIC_REPOSITORY="rclone:kDrive:/backups/server-backup"
 export RESTIC_CACHE_DIR="/root/.cache/restic"
-mkdir -p "${RESTIC_CACHE_DIR}"
+export RESTIC_PASSWORD=$(cat /root/restic_pw)
+
+if [ ! -d $RESTIC_CACHE_DIR ]; then
+	mkdir -p "${RESTIC_CACHE_DIR}"
+fi
 
 restic unlock
-restic backup -r $repository --tag=automated --pack-size=256 \
+restic backup --tag=automated --pack-size=256 --exclude-file=/root/server-exclude-list \
 	/data/ConfigStoreAstroBot \
 	/data/Backup \
 	/data/Documents \

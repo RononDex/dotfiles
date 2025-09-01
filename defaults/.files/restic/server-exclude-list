@@ -1,0 +1,12 @@
+/data/Astrophotography/**/Light
+/data/Astrophotography/**/*LIGHT*
+/data/Astrophotography/**/Lights
+/data/Astrophotography/**/Night*
+/data/Astrophotography/**/Flat*
+/data/Astrophotography/**/*DARKS*
+/data/Astrophotography/**/*Darks*
+/data/Astrophotography/**/*BIAS*
+/data/Astrophotography/**/*Bias*
+/data/Astrophotography/**/gaia
+/data/Astrophotography/**/*.avi
+/data/Astrophotography/**/*.AVI
