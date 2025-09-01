@@ -20,6 +20,7 @@ fi
 export RESTIC_REPOSITORY="rclone:kDrive:/backups/server-backup"
 export RESTIC_CACHE_DIR="/root/.cache/restic"
 export RESTIC_PASSWORD=$(cat /root/restic_pw)
+export GOMAXPROCS=4
 
 if [ ! -d $RESTIC_CACHE_DIR ]; then
 	mkdir -p "${RESTIC_CACHE_DIR}"
