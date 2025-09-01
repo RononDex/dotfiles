@@ -26,7 +26,7 @@ if [ ! -d $RESTIC_CACHE_DIR ]; then
 fi
 
 restic unlock
-restic backup --tag=automated --pack-size=128 --exclude-file=/root/server-exclude-list \
+restic backup --tag=automated --pack-size=128 --exclude-file=/root/server-exclude-list --compression=normal \
 	/data/ConfigStoreAstroBot \
 	/data/Backup \
 	/data/Documents \
