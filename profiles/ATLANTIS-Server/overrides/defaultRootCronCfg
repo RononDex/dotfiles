@@ -1,4 +1,4 @@
 # Auto update every tuesday at 03 AM
 0 3 7,14,21,28 * *	bash /root/updateAndReboot
-# Do Backup every two weeks (on 1st and 15th day in month)
-0 1 1,15 * * 		bash /root/doBackupToKDrive >> /root/backup.log
+# Do a backup snapshot every day at 04:00 in tne morning
+0 4 * * *			bash 
