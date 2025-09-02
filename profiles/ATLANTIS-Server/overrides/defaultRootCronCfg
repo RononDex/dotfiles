@@ -1,4 +1,4 @@
 # Auto update every tuesday at 03 AM
 0 3 7,14,21,28 * *	bash /root/updateAndReboot
 # Do a backup snapshot every day at 04:00 in tne morning
-0 4 * * *			bash 
+0 4 * * *			bash /root/doBackup > /root/backupLog.log

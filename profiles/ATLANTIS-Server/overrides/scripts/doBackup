@@ -1,10 +1,39 @@
 #!/bin/bash
 
+function CleanTrashBin() {
+
+	echo "Cleaning trash bin"
+	token=""
+
+	if [[ -f "/root/kDriveToken" ]]; then
+		token="$(cat /root/kDriveToken)"
+	else
+		echo "kDrive token file does not exist yet, please enter the token below:"
+		read -s token
+		echo "$token" >/root/kDriveToken
+	fi
+
+	driveNumber="0"
+	if [[ -f "/root/kDriveNumber" ]]; then
+		driveNumber="$(cat /root/kDriveNumber)"
+	else
+		echo "kDrive number file does not exist yet, please enter the drive number below:"
+		read -s driveNumber
+		echo "$driveNumber" >/root/kDriveNumber
+	fi
+
+	curl -X DELETE \
+		-H "Authorization: Bearer $token" \
+		-H "Content-Type: application/json" \
+		"https://api.infomaniak.com/2/drive/$driveNumber/trash"
+}
+
 echo "-------------------------------------------"
 echo "Starting backup on $(date +'%D %T')"
 echo "-------------------------------------------"
 
-bash /root/backupServer
+bash /root/backupResticServer
+CleanTrashBin
 
 echo "-------------------------------------------"
 echo "Backup finished on $(date +'%D %T')"

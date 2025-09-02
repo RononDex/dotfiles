@@ -32,7 +32,7 @@ sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /data
 sudo cp ~/.scripts/utilities/updateAndReboot /root/updateAndReboot
 sudo cp $scriptDir/overrides/scripts/doBackup /root/doBackup
-sudo cp ~/.scripts/backup/backupServerToKDrive /root/backupServerToKDrive
+sudo cp ~/.scripts/backup/backupResticServer /root/backupResticServer
 
 sudo cp $scriptDir/overrides/sysctl.conf /etc/sysctl.conf
 sudo sysctl -p
