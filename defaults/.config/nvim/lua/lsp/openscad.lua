@@ -8,5 +8,6 @@ vim.lsp.config('openscad', {
 	filetypes = { "openscad" },
 	root_markers = root_files,
 	settings = {
-	}
+	},
+	single_file_support = true
 });
