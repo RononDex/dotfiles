@@ -35,6 +35,7 @@ require("lsp.html")
 require("lsp.css")
 require("lsp.javascript")
 require("lsp.json")
+require("lsp.openscad")
 vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor", "html", "css",
 	"javascript", "json", "openscad" })
 
