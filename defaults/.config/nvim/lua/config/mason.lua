@@ -45,4 +45,7 @@ mason_registry.refresh(function()
 
 	-- Javascript
 	install_package_if_not_exists("typescript-language-server")
+
+	--OpenSCAD
+	install_package_if_not_exists("openscad-lsp")
 end)
