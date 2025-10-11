@@ -5,7 +5,7 @@ local root_files = {
 vim.lsp.config('openscad', {
 	name = "openscad_lsp",
 	cmd = { "openscad-lsp" },
-	filetypes = { "scad" },
+	filetypes = { "openscad" },
 	root_markers = root_files,
 	settings = {
 	}
