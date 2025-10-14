@@ -17,6 +17,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end
 
 		if client.name == "openscad_lsp" then
+			-- Unmap K
+			vim.keymap.del('n', '<F5>', { buffer = args.buf })
 			vim.keymap.set("n", "<F5>", exec_openscad)
 		end
 	end,
@@ -31,7 +33,7 @@ function exec_openscad()
 		jobCommand = '/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD ' .. filename
 	else
 		-- TODO: What about Windows?
-		jobCommand = 'openscad ' .. filename
+		jobCommand = 'openscad ' .. filename .. ' --autocenter --viewall'
 	end
 
 	vim.fn.jobstart(jobCommand)
