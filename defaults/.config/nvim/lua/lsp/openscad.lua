@@ -2,7 +2,10 @@ vim.lsp.config('openscad', {
 	name = "openscad_lsp",
 	cmd = { 'openscad-lsp', '--stdio' },
 	filetypes = { 'openscad' },
-	root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
+	root_dir = function(fname)
+		local git = vim.fs.find({ ".git" }, { upward = true, path = vim.fs.dirname(fname) })[1]
+		return git and vim.fs.dirname(git) or vim.fs.dirname(fname)
+	end,
 	settings = {
 	},
 	single_file_support = true
@@ -16,10 +19,10 @@ vim.api.nvim_create_autocmd('LspAttach', {
 			return
 		end
 
-		if client.name == "openscad_lsp" then
+		if client.name == "openscad" then
 			-- Unmap K
 			vim.keymap.del('n', '<F5>', { buffer = args.buf })
-			vim.keymap.set("n", "<F5>", exec_openscad)
+			vim.keymap.set("n", "<F5>", exec_openscad, { buffer = args.buf })
 		end
 	end,
 })
