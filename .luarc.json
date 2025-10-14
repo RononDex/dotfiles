@@ -1,0 +1,5 @@
+{
+    "diagnostics.globals": [
+        "exec_openscad"
+    ]
+}
