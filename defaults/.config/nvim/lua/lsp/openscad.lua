@@ -2,10 +2,7 @@ vim.lsp.config('openscad', {
 	name = "openscad_lsp",
 	cmd = { 'openscad-lsp', '--stdio' },
 	filetypes = { 'openscad' },
-	root_dir = function(fname)
-		local git = vim.fs.find({ ".git" }, { upward = true, path = vim.fs.dirname(fname) })[1]
-		return git and vim.fs.dirname(git) or vim.fs.dirname(fname)
-	end,
+	root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
 	settings = {
 	},
 	single_file_support = true
