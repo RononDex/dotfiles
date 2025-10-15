@@ -17,8 +17,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 		end
 
 		if client.name == "openscad" then
-			-- Unmap K
-			vim.keymap.del('n', '<F5>', { buffer = args.buf })
 			vim.keymap.set("n", "<F5>", exec_openscad, { buffer = args.buf })
 		end
 	end,
