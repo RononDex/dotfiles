@@ -82,4 +82,4 @@ vim.api.nvim_set_keymap('n', '<leader>dh', '<cmd>lua vim.diagnostic.open_float()
 vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 -- Todo List
-vim.keymap.set('n', '<leader>tl', '<cmd>TodoLocList<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>tdl', '<cmd>TodoLocList<CR>', { noremap = true, silent = true })
