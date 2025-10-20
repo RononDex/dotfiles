@@ -70,7 +70,6 @@ vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>',
 vim.keymap.set({ 'n', 'x', 'v' }, '<leader>cf', function()
 	vim.lsp.buf.format({ async = false, timeout_ms = 10000 })
 end, { buffer = bufnr })
-vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
 vim.keymap.set('v', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
 vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
 vim.keymap.set('v', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
@@ -81,3 +80,6 @@ vim.api.nvim_set_keymap('n', '<leader>dh', '<cmd>lua vim.diagnostic.open_float()
 -- vim.api.nvim_set_keymap('n', '<leader>d]', '<cmd>lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 -- The following command requires plug-ins "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim", and optionally "kyazdani42/nvim-web-devicons" for icon support
 vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
+
+-- Todo List
+vim.keympa.set('n', '<leader>tl', '<cmd>TodoLocList<CR>', { noremap = true, silent = true })
