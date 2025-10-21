@@ -17,6 +17,7 @@ cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 cp $scriptDir/overrides/steam/steamvr.vrsettings ~/.steam/steam/config/steamvr.vrsettings
+cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
 mkdir -p ~/.local/share/applications
 
 echo "Installing stuff ..."
