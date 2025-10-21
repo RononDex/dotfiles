@@ -33,6 +33,20 @@ InstallMpv() {
     fi
 }
 
+InstallRifeAiAmd() {
+    sudo pacman -S mesa base-devel cmake vulkan-icd-loader vulkan-tools --needed --noconfirm
+
+    CloneOrUpdateGitRepoToPackages "rife-ncnn-vulkan" "https://github.com/nihui/rife-ncnn-vulkan.git"
+	cd ~/packages/rife-ncnn-vulkan/
+	git submodule update --init --recursive
+
+	mkdir build 
+	cd build
+    cmake ../src -DCMAKE_POLICY_VERSION_MINIMUM=3.5 -DCMAKE_BUILD_TYPE=Release -DENABLE_10BIT=ON
+	make -j$(nproc)
+	sudo install -Dm755 rife-ncnn-vulkan /usr/local/bin/
+}
+
 InstallRustDev() {
     sudo xbps-install -Sy rust rust-analyzer racer cargo
 }
