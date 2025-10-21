@@ -36,7 +36,8 @@ require("lsp.css")
 require("lsp.javascript")
 require("lsp.json")
 require("lsp.openscad")
+require("lsp.clangd")
 vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "omnisharp", "pyright", "bashls", "phpactor", "html", "css",
-	"javascript", "json", "openscad" })
+	"javascript", "json", "openscad", "clangd" })
 
 require("after/plugin/keymap")

@@ -48,4 +48,9 @@ mason_registry.refresh(function()
 
 	--OpenSCAD
 	install_package_if_not_exists("openscad-lsp")
+
+	-- CPP
+	install_package_if_not_exists("clangd")
+	install_package_if_not_exists("clang-format")
+	install_package_if_not_exists("codelldb")
 end)
