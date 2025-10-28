@@ -33,7 +33,7 @@ sudo xbps-install -y htop kitty ImageMagick zlib xdg-utils curl exfat-utils unzi
 sudo xbps-install -y restic zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc NetworkManager-openvpn zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx dejavu-fonts-ttf
 sudo xbps-install -y dkms linux-headers linux-firmware gnupg2 gnupg2-scdaemon pcsclite pcsc-ccid eudev smbclient cifs-utils debootstrap inetutils-ftp
 sudo xbps-install -y ueberzug redshift nerd-fonts cava dcron nodejs quazip pinentry-gtk dracut-network psmisc base-devel openconnect NetworkManager-openconnect qt5-plugin-sqlite
-sudo xbps-install -y tar zip xz glibc-32bit keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3 vips lm_sensors
+sudo xbps-install -y tar zip xz glibc-32bit keyutils bc elfutils-devel flex gmp-devel kmod libmpc-devel openssl-devel perl uboot-mkimage cpio pahole python3 vips lm_sensors chroma
 
 InstallXbpsMiniBuilder
 UpdateRestrictedPackages
