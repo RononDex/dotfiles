@@ -83,3 +83,6 @@ vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { n
 
 -- Todo List
 vim.keymap.set('n', '<leader>tl', '<cmd>TodoLocList<CR>', { noremap = true, silent = true })
+
+-- Git blame
+vim.keymap.set('n', '<leader>gb', '<cmd>BlameToggle<CR>', { noremap = true, silent = true })
