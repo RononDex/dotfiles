@@ -1,5 +1,5 @@
 vim.lsp.config('omnisharp', {
-	cmd = { "omnisharp",
+	cmd = { "OmniSharp",
 		'-z',
 		'--hostPID',
 		tostring(vim.fn.getpid()),
