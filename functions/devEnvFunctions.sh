@@ -11,15 +11,6 @@ SetupDotnet() {
 	if command -v pacman &>/dev/null; then
 		sudo pacman -S graphviz --needed --noconfirm
 	fi
-
-	echo "Installing netcoredbg"
-	latest_netcoredbg_url=$(curl -sL https://api.github.com/repos/Samsung/netcoredbg/releases/latest | jq -r ".assets[].browser_download_url" | grep netcoredbg-linux-amd64.tar.gz)
-	cd ~/Downloads
-	wget $latest_netcoredbg_url
-	sudo mkdir -p /usr/local/bin/netcoredbg
-	sudo tar -xf netcoredbg-linux-amd64.tar.gz -C /usr/local/bin/
-	sudo chmod -R 755 /usr/local/bin/netcoredbg/
-	rm netcoredbg-linux-amd64.tar.gz
 }
 
 SetupMariaMySqlDb() {
