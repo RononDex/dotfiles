@@ -18,6 +18,7 @@ mason_registry.refresh(function()
 
 	-- C#
 	install_package_if_not_exists("omnisharp")
+	install_package_if_not_exists("netcoredbg")
 
 	-- Latex
 	install_package_if_not_exists("ltex-ls")
@@ -53,4 +54,7 @@ mason_registry.refresh(function()
 	install_package_if_not_exists("clangd")
 	install_package_if_not_exists("clang-format")
 	install_package_if_not_exists("codelldb")
+
+	-- Typos
+	install_package_if_not_exists("harper-ls")
 end)
