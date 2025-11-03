@@ -1,4 +1,9 @@
-require("mason").setup()
+require("mason").setup({
+	registries = {
+		"github:mason-org/mason-registry",
+		"github:Crashdummyy/mason-registry",
+	}
+})
 local mason_registry = require("mason-registry")
 
 local function install_package_if_not_exists(name)
@@ -17,8 +22,8 @@ mason_registry.refresh(function()
 	install_package_if_not_exists("lua-language-server")
 
 	-- C#
-	install_package_if_not_exists("omnisharp")
 	install_package_if_not_exists("netcoredbg")
+	install_package_if_not_exists("rzls")
 
 	-- Latex
 	install_package_if_not_exists("ltex-ls")
