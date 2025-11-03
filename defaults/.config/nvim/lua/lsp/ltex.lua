@@ -6,21 +6,7 @@ local home = os.getenv('HOME')
 
 local filetypes = {
 	'bib',
-	'gitcommit',
-	'markdown',
-	'org',
-	'plaintex',
-	'rst',
-	'rnoweb',
 	'tex',
-	'pandoc',
-	'quarto',
-	'rmd',
-	'context',
-	'html',
-	'xhtml',
-	'mail',
-	'text',
 }
 
 local language_id_mapping = {

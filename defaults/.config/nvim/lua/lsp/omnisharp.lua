@@ -3,7 +3,6 @@ vim.lsp.config('omnisharp', {
 		'-z',
 		'--hostPID',
 		tostring(vim.fn.getpid()),
-		'DotNet:enablePackageRestore=false',
 		'--encoding',
 		'utf-8',
 		'--languageserver' },
