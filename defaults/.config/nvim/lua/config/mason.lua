@@ -24,6 +24,7 @@ mason_registry.refresh(function()
 	-- C#
 	install_package_if_not_exists("netcoredbg")
 	install_package_if_not_exists("rzls")
+	install_package_if_not_exists("roslyn")
 
 	-- Latex
 	install_package_if_not_exists("ltex-ls")
