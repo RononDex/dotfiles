@@ -20,8 +20,8 @@ alias xq="xbps-query "
 alias xu="xbps-install -Syu"
 alias w=weather
 
-alias mount_cvmfs="sudo cvmfs_config mount euclid.in2p3.fr /cvmfs/euclid.in2p3.fr && sudo cvmfs_config mount euclid-dev.in2p3.fr /cvmfs/euclid-dev.in2p3.fr"
 alias mh="vim ~/Nextcloud/Documents/mh.md"
+alias rc="sudo cvmfs_config killall && sudo killall mount.cvmfs && sudo killall cvmfs2 && sudo systemctl restart autofs"
 
 # Fix for kitty and ssh
 alias ssh="kitty +kitten ssh"
