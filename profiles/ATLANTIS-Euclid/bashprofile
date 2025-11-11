@@ -3,8 +3,6 @@
 # Actions / exports when bash gets loaded
 # --------------------------------------------
 
-umask 0077
-
 export EDITOR=nvim
 export DOTNET_CLI_TELEMETRY_OPTOUT=1 # Opt out of dotnet telemtry
 (wal -R -e -n -q &)                  # Reload pywal theme
