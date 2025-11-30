@@ -35,3 +35,6 @@ alias signal-desktop="signal-desktop --ozone-platform-hint=auto"
 
 # VPN connect to fhnw
 alias vpn-fhnw="openconnect-sso --server vpn.fhnw.ch --user tino.heuberger@fhnw.ch"
+
+# Joystick management
+alias joystick-ctrl="jstest-gtk"
