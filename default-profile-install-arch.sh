@@ -140,6 +140,7 @@ InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
 InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 InstallAurPackage "go-chroma-bin" "https://aur.archlinux.org/go-chroma-bin.git"
+InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
 
 echo "Setting up Display Manager"
 InstallSddm
@@ -194,13 +195,3 @@ InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git
 gpg --recv-keys 2C393E0F18A9236D
 InstallAurPackage "youtube-dl" "https://aur.archlinux.org/youtube-dl.git"
 
-# Install default Firefox extensions
-InstallFirefoxExtension "uBlock0@raymondhill.net" "https://addons.mozilla.org/firefox/downloads/file/4213060/ublock_origin-latest.xpi" "~/.config/firefox-profile-cobra/"
-InstallFirefoxExtension "addon@darkreader.org" "https://addons.mozilla.org/firefox/downloads/file/4439735/darkreader-latest.xpi" "~/.config/firefox-profile-cobra/"
-InstallFirefoxExtension "78272b6fa58f4a1abaac99321d503a20@proton.me" "https://addons.mozilla.org/firefox/downloads/file/4474339/proton_pass-latest.xpi" "~/.config/firefox-profile-cobra/"
-InstallFirefoxExtension "@testpilot-containers" "https://addons.mozilla.org/firefox/downloads/file/4355970/multi_account_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
-InstallFirefoxExtension "{c607c8df-14a7-4f28-894f-29e8722976af}" "https://addons.mozilla.org/firefox/downloads/file/3723251/temporary_containers-latest.xpi" "~/.config/firefox-profile-cobra/"
-UpdateArkenFox
-
-echo "Applying security hardening..."
-# ReplaceInFile "/etc/login.defs" "^UMASK.*" "UMASK\t077"
