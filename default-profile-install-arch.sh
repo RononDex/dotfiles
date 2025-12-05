@@ -48,6 +48,7 @@ sudo cp ~/.files/sddm/* /etc/sddm.conf.d/
 sudo cp -r ~/.files/sddm/themes/* /usr/share/sddm/themes/
 sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
 sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
+sudo cp  ~/.files/zram-config /etc/systemd/zram-generator.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
@@ -64,7 +65,7 @@ echo "Installing stuff..."
 sudo pacman -S pkgconfig bc powerline-fonts debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet firefox adobe-source-code-pro-fonts fastfetch --noconfirm --needed
 sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus --noconfirm --needed
-sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
+sudo pacman -S java-runtime-common jre-openjdk xdotool zram-generator --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient binutils keychain --needed --noconfirm
 sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf --needed --noconfirm
