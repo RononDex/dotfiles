@@ -64,8 +64,8 @@ source ~/.profile
 echo "Installing stuff..."
 sudo pacman -S pkgconfig bc powerline-fonts debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager gnome-keyring network-manager-applet firefox adobe-source-code-pro-fonts fastfetch --noconfirm --needed
-sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus --noconfirm --needed
-sudo pacman -S java-runtime-common jre-openjdk xdotool zram-generator --noconfirm --needed
+sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus zram-generator --noconfirm --needed
+sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient binutils keychain --needed --noconfirm
 sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf --needed --noconfirm
