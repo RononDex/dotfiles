@@ -49,6 +49,7 @@ sudo cp -r ~/.files/sddm/themes/* /usr/share/sddm/themes/
 sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
 sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 sudo cp  ~/.files/zram-config /etc/systemd/zram-generator.conf
+sudo cp ~/.files/vm-zram-settings.conf /etc/sysctl.d/99-vm-zram-parameters.conf
 rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
