@@ -38,6 +38,7 @@ vim.lsp.config("roslyn", {
 		},
 		["csharp|code_lens"] = {
 			dotnet_enable_references_code_lens = true,
+dotnet_enable_tests_code_lens=true,
 		},
 		["csharp|formatting"] = {
 			dotnet_organize_imports_on_format = true,

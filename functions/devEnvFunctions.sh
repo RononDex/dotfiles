@@ -24,7 +24,7 @@ SetupJavaDevEnv() {
 	fi
 
 	if command -v pacman &>/dev/null; then
-		sudo pacman -S jdk11-openjdk jdk-openjdk intellij-idea-community-edition maven gradle --needed --noconfirm
+		sudo pacman -S jdk11-openjdk jdk-openjdk maven gradle --needed --noconfirm
 	fi
 
 	mkdir -p ~/.local/share/jdtls/extensions/lombok
