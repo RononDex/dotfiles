@@ -6,6 +6,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/archPackagesFunctions.sh
 . ./functions/systemDFunctions.sh
 . ./functions/firefoxFunctions.sh
+. ./functions/devEnvFunction.sh
 
 sudo pacman -Sy archlinux-keyring fakeroot --noconfirm --needed
 
