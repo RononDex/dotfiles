@@ -79,8 +79,7 @@ sudo pacman -S webkit2gtk qt5ct qt6ct otf-font-awesome ddcutil jq polkit --neede
 sudo pacman -S gtk-engine-murrine sassc luarocks shfmt lm_sensors thefuck --needed --noconfirm
 
 # Install Architecture specific stuff
-if [ "$isArm" = true ] ; then
-else
+if [ "$isArm" = false ] ; then
     sudo pacman -S gtop --noconfirm --needed
 fi
 
