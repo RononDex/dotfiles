@@ -43,7 +43,7 @@ sudo xbps-install -y dunst libnotify notification-daemon dmenu pavucontrol nextc
 sudo xbps-install -y qemu virt-manager smartmontools
 sudo xbps-install -y python3-vdf protontricks vscode ckb-next vscode gnuplot
 sudo xbps-install -y xf86-video-amdgpu vulkan-loader mesa cryptsetup tpm2-tss cronie mesa-vaapi mesa-vdpau mesa-vulkan-radeon mesa-dri
-sudo xbps-install -y nomacs breeze breeze-cursors samba
+sudo xbps-install -y breeze breeze-cursors samba
 sudo xbps-install -y mdadm wireguard tigervnc docker dma
 
 InstallYubiKeyStuff

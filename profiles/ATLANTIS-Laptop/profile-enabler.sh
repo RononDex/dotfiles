@@ -19,9 +19,9 @@ cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-m
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 
 echo "Installing stuff..."
-sudo pacman -S sof-firmware nextcloud-client light xf86-input-wacom dunst libnotify notification-daemon vlc dmenu teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
+sudo pacman -S sof-firmware nextcloud-client xf86-input-wacom dunst libnotify notification-daemon vlc dmenu teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
+sudo pacman -S tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -S virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware --needed --noconfirm
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm

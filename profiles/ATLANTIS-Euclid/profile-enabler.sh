@@ -20,7 +20,7 @@ cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 
 echo "Installing stuff..."
-sudo pacman -S nextcloud-client light dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
+sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
 sudo pacman -S virt-manager qemu chromium xf86-video-vesa --needed --noconfirm
