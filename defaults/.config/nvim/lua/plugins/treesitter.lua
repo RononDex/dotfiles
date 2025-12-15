@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	dependencies = { "windwp/nvim-ts-autotag", "JoosepAlviste/nvim-ts-context-commentstring" },
 	event = "User AstroFile",
-	branch = "main"
+	branch = "main",
 	cmd = {
 		"TSBufDisable",
 		"TSBufEnable",
@@ -25,8 +25,8 @@ return {
 		indent = { enable = true },
 		autotag = { enable = true },
 		context_commentstring = { enable = true, enable_autocmd = false },
-		install = {           -- not working
+		install = {        -- not working
 			compilers = { "clang", "gcc" }, -- not working
-		},                    -- not working
+		},                 -- not working
 	},
 }
