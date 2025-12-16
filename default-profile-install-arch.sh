@@ -75,7 +75,7 @@ sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosugge
 sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S keyutils bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp npm linux-firmware-marvell fwupd --needed --noconfirm
-sudo pacman -S webkit2gtk qt5ct qt6ct otf-font-awesome ddcutil jq polkit --needed --noconfirm
+sudo pacman -S webkit2gtk qt5ct qt6ct kvantum kvantum-qt5 otf-font-awesome ddcutil jq polkit --needed --noconfirm
 sudo pacman -S sassc luarocks shfmt lm_sensors thefuck --needed --noconfirm
 
 # Install Architecture specific stuff
