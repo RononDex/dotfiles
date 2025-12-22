@@ -144,7 +144,9 @@ button {
 /* Merge utilities together */
 #custom-displays,
 #custom-wvkbd,
-#custom-sunset {
+#custom-dunst,
+#custom-light,
+#custom-temperature {
 	border-radius: 0px;
 	margin: 0px;
 	background-color: @nord10;
@@ -163,7 +165,7 @@ button {
 	padding-left: 10px;
 }
 
-#custom-sunset {
+#custom-dunst {
 	border-bottom-right-radius: 15px;
 	padding-right: 10px;
 }

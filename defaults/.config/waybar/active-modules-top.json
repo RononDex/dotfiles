@@ -5,6 +5,8 @@
 		"backlight",
 		"pulseaudio",
 		"custom/displays",
+		"custom/light",
+		"custom/temperature",
 		"custom/dunst"
 	],
 	"modules-center": [
