@@ -73,7 +73,6 @@
 		"format-time": "{H}h {M}min",
 		"tooltip": true
 	},
-	// waybar-clock
 	"clock": {
 		"interval": 60,
 		"align": 0,
@@ -82,12 +81,6 @@
 		"format": "󰥔  {:%H:%M}",
 		"format-alt": " {:%a %b %d, %G}"
 	},
-	// waybar-cpu
-	"cpu": {
-		"interval": 2,
-		"format": " LOAD: {usage}%"
-	},
-	// waybar-custom
 	"custom/menu": {
 		"format": "",
 		"tooltip": false,
@@ -98,12 +91,10 @@
 		"tooltip": false,
 		"on-click": "$HOME/.config/hypr/scripts/wlogout"
 	},
-	// waybar-disk
 	"disk": {
 		"interval": 30,
 		"format": " FREE: {free}"
 	},
-	// waybar-mpd
 	"mpd": {
 		"interval": 2,
 		"unknown-tag": "N/A",
@@ -117,7 +108,6 @@
 		},
 		"tooltip-format": "MPD (connected)",
 		"tooltip-format-disconnected": "MPD (disconnected)",
-		// Commands to execute on events
 		"on-click": "mpc toggle",
 		"on-click-middle": "mpc prev",
 		"on-click-right": "mpc next",
@@ -126,10 +116,8 @@
 		"on-scroll-down": "mpc seek -00:00:01",
 		"smooth-scrolling-threshold": 1
 	},
-	// waybar-network
 	"network": {
 		"interval": 5,
-		//"interface": "wlan*", // (Optional) To force the use of this interface, set it for netspeed to work
 		"format-wifi": "  {essid}",
 		"format-ethernet": "   {ipaddr}/{cidr}",
 		"format-linked": "   {ifname} (No IP)",
@@ -138,19 +126,7 @@
 		"format-alt": "  {bandwidthUpBits} |  {bandwidthDownBits}",
 		"tooltip-format": "  {ifname} via {gwaddr}"
 	},
-	// weather-custom
-	"custom/weather": {
-		"format": "{}",
-		"format-alt": "{alt}: {}",
-		"format-alt-click": "click-right",
-		"interval": 1800,
-		"return-type": "json",
-		"exec": "~/.config/hypr/scripts/weather.sh",
-		"exec-if": "ping wttr.in -c1"
-	},
-	// waybar-pulseaudio
 	"pulseaudio": {
-		//"format": "{volume}% {icon} {format_source}",
 		"format": "{icon} {volume}%",
 		"format-muted": " Mute",
 		"format-bluetooth": " {volume}% {format_source}",
@@ -171,12 +147,10 @@
 			]
 		},
 		"scroll-step": 5.0,
-		// Commands to execute on events
 		"on-click": "pactl -- set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click-right": "pavucontrol",
 		"smooth-scrolling-threshold": 1
 	},
-	// waybar-tray
 	"tray": {
 		"icon-size": 20,
 		"spacing": 10
@@ -208,10 +182,7 @@
 		"format": "  {}% "
 	},
 	"temperature": {
-		// "thermal-zone": 2,
-		// "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
 		"critical-threshold": 90,
-		// "format-critical": "{temperatureC}°C {icon}",
 		"format": "{icon} {temperatureC}°C",
 		"format-icons": [
 			"",
@@ -243,5 +214,25 @@
 		"exec": "~/.config/waybar/scripts/dunst.sh",
 		"on-click": "dunstctl set-paused toggle",
 		"restart-interval": 1
+	},
+	"custom/light": {
+		"format": "{icon} ",
+		"format-source": "{icon} ",
+		"tooltip": false,
+		"format-icons": [
+			"󰛨 "
+		],
+		"on-scroll-up": "bash ~/.config/waybar/scripts/light_control.sh up",
+		"on-scroll-down": "bash ~/.config/waybar/scripts/light_control.sh down"
+	},
+	"custom/temperature": {
+		"format": "{icon} ",
+		"format-source": "{icon} ",
+		"tooltip": false,
+		"format-icons": [
+			"󱩌 "
+		],
+		"on-scroll-up": "bash ~/.config/waybar/scripts/temperature_control.sh up",
+		"on-scroll-down": "bash ~/.config/waybar/scripts/temperature_control.sh down"
 	}
 }
