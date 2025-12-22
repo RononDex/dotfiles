@@ -213,14 +213,16 @@
 	"custom/dunst": {
 		"exec": "~/.config/waybar/scripts/dunst.sh",
 		"on-click": "dunstctl set-paused toggle",
+		"tooltip": false,
 		"restart-interval": 1
 	},
 	"custom/light": {
 		"format": "{icon} ",
 		"format-source": "{icon} ",
 		"tooltip": false,
+		"on-click": "hyprctl hyprsunset reset gamma",
 		"format-icons": [
-			"󰛨 "
+			"󰛨"
 		],
 		"on-scroll-up": "bash ~/.config/waybar/scripts/hyprsunset_light_control.sh up",
 		"on-scroll-down": "bash ~/.config/waybar/scripts/hyprsunset_light_control.sh down"
@@ -229,8 +231,9 @@
 		"format": "{icon} ",
 		"format-source": "{icon} ",
 		"tooltip": false,
+		"on-click": "hyprctl hyprsunset reset temperature",
 		"format-icons": [
-			"󱩌 "
+			"󱩌"
 		],
 		"on-scroll-up": "bash ~/.config/waybar/scripts/hyprsunset_temp_control.sh up",
 		"on-scroll-down": "bash ~/.config/waybar/scripts/hyprsunset_temp_control.sh down"
