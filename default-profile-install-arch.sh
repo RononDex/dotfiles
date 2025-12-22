@@ -40,6 +40,7 @@ sudo pacman -Syu --noconfirm --needed
 echo "Updating file permissions ..."
 chmod +x ~/.profile
 chmod +x ~/.zprofile
+chmod -R +x ~/.config/waybar/scripts
 chmod -R +x ~/.scripts
 chmod 700 ~/.gnupg -R
 

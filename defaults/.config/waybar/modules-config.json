@@ -222,8 +222,8 @@
 		"format-icons": [
 			"󰛨 "
 		],
-		"on-scroll-up": "bash ~/.config/waybar/scripts/light_control.sh up",
-		"on-scroll-down": "bash ~/.config/waybar/scripts/light_control.sh down"
+		"on-scroll-up": "bash ~/.config/waybar/scripts/hyprsunset_light_control.sh up",
+		"on-scroll-down": "bash ~/.config/waybar/scripts/hyprsunset_light_control.sh down"
 	},
 	"custom/temperature": {
 		"format": "{icon} ",
@@ -232,7 +232,7 @@
 		"format-icons": [
 			"󱩌 "
 		],
-		"on-scroll-up": "bash ~/.config/waybar/scripts/temperature_control.sh up",
-		"on-scroll-down": "bash ~/.config/waybar/scripts/temperature_control.sh down"
+		"on-scroll-up": "bash ~/.config/waybar/scripts/hyprsunset_temp_control.sh up",
+		"on-scroll-down": "bash ~/.config/waybar/scripts/hyprsunset_temp_control.sh down"
 	}
 }
