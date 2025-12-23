@@ -89,11 +89,12 @@ CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/ind
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "libatik"
+InstallIndiDriver "libtoupcam"
 InstallIndiDriver "indi-atik"
 InstallIndiDriver "indi-asi"
-InstallIndiDriver "libqhy"
-InstallIndiDriver "indi-qhy"
 InstallIndiDriver "indi-gpsd"
+InstallIndiDriver "indi-gpsd"
+InstallIndiDriver "indi-toupbase"
 
 # Install wifi dongle driver
 Install8814auDriver
