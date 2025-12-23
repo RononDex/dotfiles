@@ -220,7 +220,7 @@
 		"format": "{icon} ",
 		"format-source": "{icon} ",
 		"tooltip": false,
-		"on-click": "hyprctl hyprsunset reset gamma",
+		"on-click": "hyprctl hyprsunset gamma reset",
 		"format-icons": [
 			"󰛨"
 		],
@@ -231,7 +231,7 @@
 		"format": "{icon} ",
 		"format-source": "{icon} ",
 		"tooltip": false,
-		"on-click": "hyprctl hyprsunset reset temperature",
+		"on-click": "hyprctl hyprsunset temperature reset",
 		"format-icons": [
 			"󱩌"
 		],
