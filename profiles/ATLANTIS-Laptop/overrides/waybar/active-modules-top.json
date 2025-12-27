@@ -5,7 +5,6 @@
 		"backlight",
 		"pulseaudio",
 		"custom/displays",
-		"custom/light",
 		"custom/temperature",
 		"custom/wvkbd",
 		"custom/dunst"
