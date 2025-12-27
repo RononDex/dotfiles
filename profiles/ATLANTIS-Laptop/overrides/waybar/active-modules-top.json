@@ -1,19 +1,25 @@
 {
-  "modules-left": [
-		  "custom/archicon", 
-		  "idle_inhibitor", 
-		  "backlight", 
-		  "pulseaudio", 
-          "custom/displays",
-		  "custom/wvkbd",
-		  "custom/sunset"],
-  "modules-center": ["hyprland/workspaces"],
-  "modules-right": [
-          "cpu",
-          "memory",
-          "temperature",
-		  "battery", 
-		  "network", 
-		  "clock", 
-		  "tray"]
+	"modules-left": [
+		"custom/archicon",
+		"idle_inhibitor",
+		"backlight",
+		"pulseaudio",
+		"custom/displays",
+		"custom/light",
+		"custom/temperature",
+		"custom/wvkbd",
+		"custom/dunst"
+	],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"temperature",
+		"battery",
+		"network",
+		"clock",
+		"tray"
+	]
 }

@@ -17,6 +17,7 @@ cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
 cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-modules-top.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
+cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
 
 echo "Installing stuff..."
 sudo pacman -S sof-firmware nextcloud-client xf86-input-wacom dunst libnotify notification-daemon vlc dmenu teamspeak3 blueman qt6-virtualkeyboard wireguard-tools --noconfirm --needed
