@@ -25,7 +25,7 @@ echo "Installing stuff..."
 InstallPowerLineFonts
 sudo xbps-install -y fakeroot gcc boost ffmpeg make cmake bash-completion zsh zsh-completions automake m4 autoconf
 sudo xbps-install -y NetworkManager dbus dbus-x11 elogind accountsservice gnome-keyring font-adobe-source-code-pro neofetch xclip
-sudo xbps-install -y feh picom libspa-bluetooth netcat
+sudo xbps-install -y libspa-bluetooth netcat
 sudo xbps-install -y openjdk-jre autofs xdotool chrony ksshaskpass socklog-void rsync rclone
 sudo xbps-install -y vim neovim neovim-remote libftdi1 cfitsio void-repo-nonfree void-repo-multilib void-repo-multilib-nonfree
 sudo xbps-install -y python python3 python-pip samba opencv gtest wxWidgets-gtk3 libmpdclient ranger binutils keychain lftp
