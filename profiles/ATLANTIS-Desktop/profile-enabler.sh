@@ -45,7 +45,7 @@ InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "jellyfin-media-player" "https://aur.archlinux.org/jellyfin-media-player.git"
+InstallAurPackage "jellyfin-desktop" "https://aur.archlinux.org/jellyfin-desktop.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 sudo cvmfs_config setup
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
