@@ -40,7 +40,7 @@ gpg --keyserver keyserver.ubuntu.com --recv-keys 61ECEABBF2BB40E3A35DF30A9F72CDB
 
 echo "Installing stuff ..."
 sudo pacman -S firefox tigervnc dnsmasq linux-rpi-16k linux-rpi-16k-headers --noconfirm --needed
-sudo pacman -S lxde --noconfirm --needed
+sudo pacman -S lxqt --noconfirm --needed
 # CompileFixedUBootForRpi4 $scriptDir
 
 # InstallWayland

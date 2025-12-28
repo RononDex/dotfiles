@@ -14,7 +14,7 @@
 # geometry=2000x1200
 # localhost
 # alwaysshared
-session=LXDE
+session=lxqt
 securitytypes=vncauth,tlsvnc
 geometry=1920x1080
 alwaysshared
