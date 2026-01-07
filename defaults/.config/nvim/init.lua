@@ -28,7 +28,7 @@ require("lsp.lua")
 require("lsp.go")
 require("lsp.ltex")
 require("lsp.xml")
-require("lsp.roslyn")
+-- require("lsp.roslyn")
 require("lsp.python")
 require("lsp.bash")
 require("lsp.php")
@@ -39,7 +39,7 @@ require("lsp.json")
 require("lsp.openscad")
 require("lsp.clangd")
 require("lsp.harper")
-vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "roslyn", "pyright", "bashls", "phpactor", "html",
+vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", --[[ "roslyn", ]] "pyright", "bashls", "phpactor", "html",
 	"css",
 	"javascript", "json", "openscad", "clangd", "harper" })
 
