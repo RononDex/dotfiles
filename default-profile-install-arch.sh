@@ -7,6 +7,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/systemDFunctions.sh
 . ./functions/firefoxFunctions.sh
 . ./functions/devEnvFunction.sh
+. ./functions/themingFunctions.sh
 
 sudo pacman -Sy archlinux-keyring fakeroot --noconfirm --needed
 
@@ -196,3 +197,5 @@ InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git
 gpg --recv-keys 2C393E0F18A9236D
 InstallAurPackage "youtube-dl" "https://aur.archlinux.org/youtube-dl.git"
 
+echo "Updating QT theming"
+SetupQTTheming
