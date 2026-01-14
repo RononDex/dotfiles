@@ -5,7 +5,6 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/basicFunctions.sh
 . ./functions/archPackagesFunctions.sh
 . ./functions/systemDFunctions.sh
-. ./functions/firefoxFunctions.sh
 . ./functions/devEnvFunction.sh
 . ./functions/themingFunctions.sh
 
