@@ -55,6 +55,7 @@ InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.g
 InstallAurPackage "lug-helper" "https://aur.archlinux.org/lug-helper.git"
 InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
 InstallAurPackage "jstest-gtk-git" "https://aur.archlinux.org/jstest-gtk-git.git"
+InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
 
 echo "Installing drivers for other devices"
 InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"

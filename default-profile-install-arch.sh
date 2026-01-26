@@ -5,7 +5,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/basicFunctions.sh
 . ./functions/archPackagesFunctions.sh
 . ./functions/systemDFunctions.sh
-. ./functions/devEnvFunction.sh
+. ./functions/devEnvFunctions.sh
 . ./functions/themingFunctions.sh
 
 sudo pacman -Sy archlinux-keyring fakeroot --noconfirm --needed

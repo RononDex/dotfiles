@@ -17,6 +17,7 @@ cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
 cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-modules-top.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
+cp $scriptDir/overrides/waybar/bar-output-2.json ~/.config/waybar/bar-output-2.json
 cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
 
 echo "Installing stuff..."
@@ -63,6 +64,7 @@ InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/bree
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "jellyfin-desktop" "https://aur.archlinux.org/jellyfin-desktop.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
+InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
 
 echo "Installing drivers for other devices"
 InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"

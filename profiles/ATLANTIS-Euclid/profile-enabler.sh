@@ -57,6 +57,7 @@ InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.g
 InstallAurPackage "tcllib" "https://aur.archlinux.org/tcllib.git"
 InstallAurPackage "i8kutils" "https://aur.archlinux.org/i8kutils.git"
 InstallAurPackage "dell-bios-fan-control-git" "https://aur.archlinux.org/dell-bios-fan-control-git.git"
+InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
 
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
