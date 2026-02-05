@@ -38,7 +38,7 @@ local function get_jdtls_paths()
 
 	local jdtls_install = vim.fs.joinpath(mason_dir, "/share/jdtls")
 
-	path.java_agent = vim.fs.joinpath(jdtls_install ,'lombok.jar')
+	path.java_agent = vim.fs.joinpath(jdtls_install, 'lombok.jar')
 	path.launcher_jar = vim.fn.glob(vim.fs.joinpath(jdtls_install .. '/plugins/org.eclipse.equinox.launcher_*.jar'))
 
 	if vim.fn.has('mac') == 1 then
@@ -98,8 +98,12 @@ local function get_jdtls_paths()
 		{
 			name = "JavaSE-21",
 			path = "/usr/lib/jvm/java-21-openjdk",
+		},
+		{
+			name = "JavaSE-25",
+			path = "/usr/lib/jvm/java-25-openjdk",
 			default = true
-		}
+		},
 	}
 
 	cache_vars.paths = path
