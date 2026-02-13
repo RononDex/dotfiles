@@ -56,7 +56,7 @@ rm -rf ~/.files
 
 cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
 mkdir -p ~/.ssh
-cp ~/Nextcloud/Documents/ssh_config ~/.ssh/config
+ln -sf ~/Nextcloud/Documents/ssh_config ~/.ssh/config
 
 
 rm ~/pacman.conf
