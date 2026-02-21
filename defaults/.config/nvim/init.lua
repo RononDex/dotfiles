@@ -40,7 +40,7 @@ require("lsp.json")
 require("lsp.openscad")
 require("lsp.clangd")
 require("lsp.harper")
-vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "roslyn", "pyright", "bashls", "phpactor", "html",
+vim.lsp.enable({ "jdtls", "lua", "go", "ltex_ls", "xml", "roslyn", "pyright", "bashls", "phpactor", "html",
 	"css", "texlab",
 	"javascript", "json", "openscad", "clangd", --[[ "harper" ]] })
 
