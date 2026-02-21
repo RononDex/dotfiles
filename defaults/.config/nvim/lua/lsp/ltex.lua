@@ -45,6 +45,7 @@ vim.lsp.config('latex', {
 	end,
 	settings = {
 		ltex = {
+			format = { enable = true },
 			enabled = {
 				'asciidoc',
 				'bib',
