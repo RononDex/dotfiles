@@ -27,6 +27,7 @@ mason_registry.refresh(function()
 
 	-- Latex
 	install_package_if_not_exists("ltex-ls-plus")
+	install_package_if_not_exists("texlab")
 
 	-- Python
 	install_package_if_not_exists("debugpy")

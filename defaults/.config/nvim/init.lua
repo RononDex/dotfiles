@@ -27,6 +27,7 @@ require("lsp.jdtls")
 require("lsp.lua")
 require("lsp.go")
 require("lsp.ltex")
+require("lsp.texlab")
 require("lsp.xml")
 require("lsp.roslyn")
 require("lsp.python")
@@ -40,7 +41,7 @@ require("lsp.openscad")
 require("lsp.clangd")
 require("lsp.harper")
 vim.lsp.enable({ "jdtls", "lua", "go", "latex", "xml", "roslyn", "pyright", "bashls", "phpactor", "html",
-	"css",
+	"css", "texlab",
 	"javascript", "json", "openscad", "clangd", --[[ "harper" ]] })
 
 require("after/plugin/keymap")
