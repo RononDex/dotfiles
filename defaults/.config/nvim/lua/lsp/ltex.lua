@@ -41,7 +41,7 @@ end
 
 vim.lsp.config('latex', {
 	name = "ltex_ls",
-	cmd = { "ltex-ls" },
+	cmd = { "ltex-ls-plus" },
 	filetypes = filetypes,
 	root_markers = root_files,
 	get_language_id = get_language_id,

@@ -26,7 +26,7 @@ mason_registry.refresh(function()
 	install_package_if_not_exists("roslyn")
 
 	-- Latex
-	install_package_if_not_exists("ltex-ls")
+	install_package_if_not_exists("ltex-ls-plus")
 
 	-- Python
 	install_package_if_not_exists("debugpy")
