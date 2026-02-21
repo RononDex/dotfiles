@@ -9,16 +9,6 @@ local filetypes = {
 	'tex',
 }
 
-local language_id_mapping = {
-	bib = 'bibtex',
-	plaintex = 'tex',
-	rnoweb = 'rsweave',
-	rst = 'restructuredtext',
-	tex = 'latex',
-	pandoc = 'markdown',
-	text = 'plaintext',
-}
-
 local function get_language_id(_, filetype)
 	local language_id = language_id_mapping[filetype]
 	if language_id then
@@ -47,7 +37,28 @@ vim.lsp.config('latex', {
 	get_language_id = get_language_id,
 	settings = {
 		ltex = {
-			enabled = enabled_ids,
+			enabled = {
+				'asciidoc',
+				'bib',
+				'context',
+				'gitcommit',
+				'html',
+				'markdown',
+				'org',
+				'pandoc',
+				'plaintex',
+				'quarto',
+				'mail',
+				'mdx',
+				'rmd',
+				'rnoweb',
+				'rst',
+				'tex',
+				'latex',
+				'text',
+				'typst',
+				'xhtml',
+			},
 			additionalRules = {
 				languageModel = vim.fs.joinpath(home, ".cache/ngram-data/"),
 			},
