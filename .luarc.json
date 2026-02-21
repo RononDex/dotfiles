@@ -1,5 +1,6 @@
 {
     "diagnostics.globals": [
-        "exec_openscad"
+        "exec_openscad",
+        "switchLtexLanguage"
     ]
 }
