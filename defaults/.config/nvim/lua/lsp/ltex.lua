@@ -9,6 +9,16 @@ local filetypes = {
 	'tex',
 }
 
+local language_id_mapping = {
+	bib = 'bibtex',
+	pandoc = 'markdown',
+	plaintex = 'tex',
+	rnoweb = 'rsweave',
+	rst = 'restructuredtext',
+	tex = 'latex',
+	text = 'plaintext',
+}
+
 local function get_language_id(_, filetype)
 	local language_id = language_id_mapping[filetype]
 	if language_id then
