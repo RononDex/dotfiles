@@ -1,7 +1,12 @@
+local lsp_utils = require("lsp.utils")
+
 vim.lsp.config('clang', {
 	name = "clang",
 	cmd = { 'clangd' },
 	filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
+	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
+	end,
 	root_markers = {
 		'.clangd',
 		'.clang-tidy',

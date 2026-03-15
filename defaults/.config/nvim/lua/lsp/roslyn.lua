@@ -1,3 +1,5 @@
+local lsp_utils = require("lsp.utils")
+
 local cmd = {
 	"roslyn",
 	"--stdio",
@@ -108,6 +110,7 @@ vim.lsp.config("roslyn", {
 		},
 	},
 	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
 		-- avoid duplicate autocmds for same buffer
 		if vim.api.nvim_get_autocmds({ buffer = bufnr, group = group })[1] then
 			return

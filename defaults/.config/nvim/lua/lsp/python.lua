@@ -1,4 +1,4 @@
-local util = require 'lspconfig.util'
+local lsp_utils = require("lsp.utils")
 
 local root_files = {
 	'pyproject.toml',
@@ -14,8 +14,11 @@ vim.lsp.config("pyright", {
 	name = "pyright",
 	cmd = { 'pyright-langserver', '--stdio' },
 	filetypes = { 'python' },
+	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
+	end,
 	root_dir = function(fname)
-		return util.root_pattern(unpack(root_files))(fname)
+		return lsp_utils.root_pattern(unpack(root_files))(fname)
 	end,
 	single_file_support = true,
 	settings = {

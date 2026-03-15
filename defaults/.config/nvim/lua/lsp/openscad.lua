@@ -1,7 +1,12 @@
+local lsp_utils = require("lsp.utils")
+
 vim.lsp.config('openscad', {
 	name = "openscad_lsp",
 	cmd = { 'openscad-lsp', '--stdio' },
 	filetypes = { 'openscad' },
+	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
+	end,
 	root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
 	settings = {
 	},

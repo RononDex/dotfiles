@@ -1,3 +1,5 @@
+local lsp_utils = require("lsp.utils")
+
 local root_files = {
 	'tsconfig.json',
 	'"jsconfig.json',
@@ -15,6 +17,9 @@ vim.lsp.config('javascript', {
 		'typescript',
 		'typescriptreact',
 		'typescript.tsx', },
+	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
+	end,
 	root_markers = root_files,
 	init_options = { hostInfo = 'neovim' },
 });

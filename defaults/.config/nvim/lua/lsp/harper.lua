@@ -1,3 +1,5 @@
+local lsp_utils = require("lsp.utils")
+
 local root_files = {
 	'.git',
 }
@@ -33,6 +35,9 @@ vim.lsp.config('harper', {
 		'clojure',
 		'sh',
 	},
+	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
+	end,
 	root_markers = root_files,
 	settings = {
 	}

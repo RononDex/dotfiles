@@ -1,3 +1,5 @@
+local lsp_utils = require("lsp.utils")
+
 local root_files = {
 	'.git',
 }
@@ -39,6 +41,9 @@ local function createLtexConfig(lang)
 			'typst',
 			'xhtml',
 		},
+		on_attach = function(client, bufnr)
+			lsp_utils.default_on_attach(client, bufnr)
+		end,
 		root_markers = root_files,
 		get_language_id = function(_, filetype)
 			return language_id_mapping[filetype] or filetype
