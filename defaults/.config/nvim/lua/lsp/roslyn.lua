@@ -120,7 +120,9 @@ vim.lsp.config("roslyn", {
 			group = group,
 			buffer = bufnr,
 			callback = function()
-				refresh_diagnostics(client)
+				if client then
+					refresh_diagnostics(client)
+				end
 			end,
 			desc = 'roslyn_ls: refresh diagnostics',
 		})
