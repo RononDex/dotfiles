@@ -19,6 +19,7 @@ cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 cp $scriptDir/overrides/steam/steamvr.vrsettings ~/.steam/steam/config/steamvr.vrsettings
 cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
+cp $scriptDir/overrides/mpv/hdr-custom.conf ~/.config/mpv/hdr-custom.conf
 mkdir -p ~/.local/share/applications
 
 echo "Installing stuff ..."
