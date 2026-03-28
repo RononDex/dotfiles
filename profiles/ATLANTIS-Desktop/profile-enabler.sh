@@ -29,7 +29,7 @@ sudo pacman -S prusa-slicer obs-studio libreoffice breeze breeze-icons libvncser
 sudo pacman -S virt-manager qemu onboard --needed --noconfirm
 sudo pacman -S dotnet-sdk aspnet-targeting-pack --needed --noconfirm
 sudo pacman -S amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
-sudo pacman -S gamemode --needed --noconfirm
+sudo pacman -S gamemode neomutt --needed --noconfirm
 
 echo "Installing video drivers ..."
 sudo pacman -S libva-mesa-driver lib32-mesa mesa mesa-vdpau vulkan-mesa-layers --needed --noconfirm

@@ -25,6 +25,7 @@ sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp -
 sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
 sudo pacman -S virt-manager qemu chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -S neomutt --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable tlp
