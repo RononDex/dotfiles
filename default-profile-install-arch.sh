@@ -78,7 +78,7 @@ sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personaliza
 sudo pacman -S keyutils bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp npm linux-firmware-marvell fwupd --needed --noconfirm
 sudo pacman -S webkit2gtk qt5ct qt6ct kvantum kvantum-qt5 otf-font-awesome ddcutil jq polkit --needed --noconfirm
-sudo pacman -S sassc luarocks shfmt lm_sensors thefuck --needed --noconfirm
+sudo pacman -S sassc cargo luarocks shfmt lm_sensors thefuck --needed --noconfirm
 
 # Install Architecture specific stuff
 if [ "$isArm" = false ] ; then
