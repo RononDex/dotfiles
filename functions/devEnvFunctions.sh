@@ -104,7 +104,6 @@ InstallGoDev() {
 
 	if command -v pacman &>/dev/null; then
 		sudo pacman -S gopls --noconfirm --needed
-		InstallAurPackage "golangci-lint" "https://aur.archlinux.org/golangci-lint.git"
 	fi
 }
 
