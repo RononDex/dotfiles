@@ -18,3 +18,6 @@ export PATH="$PATH:/usr/share/dotnet/"
 
 # setup dotnet language server
 export PATH="$PATH:/home/cobra/.dotnet/tools"
+
+# Add cargo packages to bin path
+export PATH="$PATH:/home/cobra/.local/share/cargo/bin"
