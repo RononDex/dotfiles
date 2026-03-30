@@ -54,7 +54,8 @@ sudo cp  ~/.files/zram-config /etc/systemd/zram-generator.conf
 sudo cp ~/.files/vm-zram-settings.conf /etc/sysctl.d/99-vm-zram-parameters.conf
 rm -rf ~/.files
 
-cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
+rm -rf ~/wallpapers
+ln -sf ~/Nextcloud/Wallpapers ~/wallpapers
 mkdir -p ~/.ssh
 ln -sf ~/Nextcloud/Documents/ssh_config ~/.ssh/config
 
