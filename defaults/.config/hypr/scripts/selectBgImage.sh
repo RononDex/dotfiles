@@ -6,4 +6,4 @@ mkdir -p ~/.cache/wal
 echo $backgroundImage >~/.cache/wal/bgImage
 
 wallust run $(cat ~/.cache/wal/bgImage)
-awww img $(cat ~/.cache/wal/bgImage) --transition-type right
+awww img $(cat ~/.cache/wal/bgImage) --transition-type right --transition-fps 60
