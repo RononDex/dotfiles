@@ -15,11 +15,6 @@ gpgconf --launch gpg-agent
 
 (wal -R -e -n -q &) # Reload pywal theme
 
-# Turn off screensaver
-xset s off
-xset s noblank
-xset -dpms
-
 export PATH="$PATH:/usr/share/dotnet/"
 
 # Add cargo packages to bin path
