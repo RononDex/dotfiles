@@ -71,7 +71,7 @@ sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus zram-gen
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S vim neovim libftdi ccfits network-manager-applet adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient binutils keychain --needed --noconfirm
-sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs python-pywal fzf --needed --noconfirm
+sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs fzf --needed --noconfirm
 sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S keyutils bison openconnect ksshaskpass --needed --noconfirm
@@ -142,6 +142,7 @@ InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 InstallAurPackage "go-chroma-bin" "https://aur.archlinux.org/go-chroma-bin.git"
 InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
+InstallAurPackage "wallust" "https://aur.archlinux.org/wallust.git"
 
 echo "Setting up Display Manager"
 InstallSddm
