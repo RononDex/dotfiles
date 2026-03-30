@@ -63,7 +63,6 @@ InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
 InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
-InstallAurPackage "proton-pass-cli-bin" "https://aur.archlinux.org/proton-pass-cli-bin.git"
 
 EnableService ckb-next-daemon
 StartService ckb-next-daemon

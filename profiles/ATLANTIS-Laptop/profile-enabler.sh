@@ -77,7 +77,6 @@ sudo pacman -Slinux-firmware-qlogic --needed --noconfirm
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
 InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
-InstallAurPackage "proton-pass-cli-bin" "https://aur.archlinux.org/proton-pass-cli-bin.git"
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"
