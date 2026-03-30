@@ -52,13 +52,14 @@ InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/bree
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 sudo cvmfs_config setup
-InstallAurPackage "jellyfin-desktop" "https://aur.archlinux.org/jellyfin-desktop.git"
+InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
 InstallAurPackage "tcllib" "https://aur.archlinux.org/tcllib.git"
 InstallAurPackage "i8kutils" "https://aur.archlinux.org/i8kutils.git"
 InstallAurPackage "dell-bios-fan-control-git" "https://aur.archlinux.org/dell-bios-fan-control-git.git"
 InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
+InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-authenticator-bin.git"
 
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
