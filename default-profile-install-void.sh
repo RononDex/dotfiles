@@ -15,9 +15,10 @@ chmod +x ~/.zprofile
 chmod -R +x ~/.scripts
 chmod 700 ~/.gnupg -R
 
-cp ~/Nextcloud/Wallpapers/* -r ~/wallpapers/
+rm -rf ~/wallpapers
+ln -sf ~/Nextcloud/Wallpapers ~/wallpapers
 mkdir -p ~/.ssh
-cp ~/Nextcloud/Documents/ssh_config ~/.ssh/config
+ln -sf ~/Nextcloud/Documents/ssh_config ~/.ssh/config
 
 source ~/.profile
 
