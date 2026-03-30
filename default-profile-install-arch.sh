@@ -143,7 +143,11 @@ InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 InstallAurPackage "go-chroma-bin" "https://aur.archlinux.org/go-chroma-bin.git"
 InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
+
+echo "Installing wallust"
 cargo install wallust
+sudo cp /home/cobra/.local/share/cargo/bin/wallust /usr/bin
+sudo chown root:root /usr/bin/wallust
 
 echo "Setting up Display Manager"
 InstallSddm
