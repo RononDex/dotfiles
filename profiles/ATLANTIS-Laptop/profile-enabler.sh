@@ -74,11 +74,9 @@ InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware
 InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
 sudo pacman -Slinux-firmware-qlogic --needed --noconfirm
 
-echo "Setting up rootless docker..."
-InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
-echo "${USER}:165536:65536" | sudo tee /etc/subuid
-echo "${USER}:165536:65536" | sudo tee /etc/subgid
-systemctl enable docker.socket --user
+echo "Installing Proton Stuff"
+sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
+InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"

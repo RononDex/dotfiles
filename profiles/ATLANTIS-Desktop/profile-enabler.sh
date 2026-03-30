@@ -68,7 +68,7 @@ InstallAurPackage "nct6687d-dkms-git" "https://aur.archlinux.org/nct6687d-dkms-g
 sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
-InstallAurPackage "proton-vpn-gtk-app" "https://aur.archlinux.org/proton-vpn-gtk-app.git"
+sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
 InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
 
 EnableService "lactd"
