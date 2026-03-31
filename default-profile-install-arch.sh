@@ -42,6 +42,7 @@ chmod +x ~/.profile
 chmod +x ~/.zprofile
 chmod -R +x ~/.config/waybar/scripts
 chmod -R +x ~/.scripts
+chmod -R +x ~/.config/neomutt/scripts
 chmod 700 ~/.gnupg -R
 
 echo "Copying default config files"
