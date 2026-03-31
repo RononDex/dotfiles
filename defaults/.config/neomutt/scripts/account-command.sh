@@ -27,6 +27,6 @@ while [[ $# -gt 0 ]]; do
 done
 
 if [[ $hostname == *"mail.hostpoint.ch"* ]] && [ "$username" = "tino.heuberger@sag-sas.ch" ]; then
-	decrypted=$(cat $scriptDir/../crypt-store/tino-sag-sas.hostpoint.ch | gpg --quiet --decrypt)
+	decrypted=$(cat $scriptDir/../crypt-store/tino-sag-sas.hostpoint.ch | gpg --for-your-eyes-only --no-tty --quiet --decrypt)
 	echo "password: $decrypted"
 fi

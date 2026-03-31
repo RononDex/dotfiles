@@ -1,5 +1,11 @@
 # vim:ft=neomuttrc
-folder-hook imaps://imap.mail.hostpoint.ch/ "set folder=imaps://imap.mail.hostpoint.ch; set spoolfile=+INBOX; set record=+Sent; set from=tino.heuberger@sag-sas.com;" 
+
 account-hook imaps://imap.mail.hostpoint.ch/ "set imap_user=tino.heuberger@sag-sas.ch"
+
+set folder = "imaps://imap.mail.hostpoint.ch"
+set spoolfile = "+INBOX"
+set record = "+Sent"
+
 mailboxes imaps://imap.mail.hostpoint.ch/INBOX
+
 named-mailboxes "SAG/SAS INBOX" "imaps://imap.mail.hostpoint.ch/INBOX"
