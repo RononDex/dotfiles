@@ -57,6 +57,9 @@ InstallAurPackage "lug-helper" "https://aur.archlinux.org/lug-helper.git"
 InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
 InstallAurPackage "jstest-gtk-git" "https://aur.archlinux.org/jstest-gtk-git.git"
 InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
+
+echo "Installing Yubico Authenticator..."
+curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
 InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-authenticator-bin.git"
 
 echo "Installing drivers for other devices"

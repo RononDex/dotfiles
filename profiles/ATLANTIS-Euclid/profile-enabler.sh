@@ -59,6 +59,9 @@ InstallAurPackage "tcllib" "https://aur.archlinux.org/tcllib.git"
 InstallAurPackage "i8kutils" "https://aur.archlinux.org/i8kutils.git"
 InstallAurPackage "dell-bios-fan-control-git" "https://aur.archlinux.org/dell-bios-fan-control-git.git"
 InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
+
+echo "Installing Yubico Authenticator..."
+curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
 InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-authenticator-bin.git"
 
 echo "Installing Proton Stuff"
