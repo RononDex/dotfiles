@@ -4,7 +4,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 hostname=""
 username=""
-type=""
+accountType=""
 
 while [[ $# -gt 0 ]]; do
 	case $1 in
@@ -19,7 +19,7 @@ while [[ $# -gt 0 ]]; do
 		shift
 		;;
 	--type)
-		username="$2"
+		accountType="$2"
 		shift
 		shift
 		;;

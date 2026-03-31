@@ -4,5 +4,3 @@ set ssl_force_tls = yes
 set account_command = "~/.config/neomutt/scripts/account-command.sh"
 
 source accounts/tino-sag-sas.muttrc
-
-mailboxes =INBOX =Sent =Trash =Drafts
