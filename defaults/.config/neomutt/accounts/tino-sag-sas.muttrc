@@ -5,7 +5,6 @@ account-hook imaps://imap.mail.hostpoint.ch/ "set imap_user=tino.heuberger@sag-s
 set folder = "imaps://imap.mail.hostpoint.ch"
 set spoolfile = "+INBOX"
 set record = "+Sent"
-
-mailboxes imaps://imap.mail.hostpoint.ch/INBOX
+set mail_check = 60
 
 named-mailboxes "SAG/SAS INBOX" "imaps://imap.mail.hostpoint.ch/INBOX"

@@ -7,5 +7,7 @@ set ssl_force_tls = yes
 set account_command = "~/.config/neomutt/scripts/account-command.sh"
 
 source accounts/tino-sag-sas.muttrc
-folder-hook imaps://imap.mail.hostpoint.ch/ "source accounts/tino-sag-sas.muttrc" 
-folder-hook imaps://127.0.0.1/ "source accounts/tino-proton.muttrc" 
+folder-hook $folder "source accounts/tino-sag-sas.muttrc" 
+
+source accounts/tino-sag-sas.muttrc
+folder-hook $folder "source accounts/tino-proton.muttrc" 

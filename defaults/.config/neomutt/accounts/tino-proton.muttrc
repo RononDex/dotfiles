@@ -5,7 +5,6 @@ account-hook imaps://127.0.0.1:1143/ "set imap_user=tinoheuberger@protonmail.com
 set folder = "imaps://127.0.0.1:1143"
 set spoolfile = "+INBOX"
 set record = "+Sent"
-
-mailboxes imaps://127.0.0.1:1143/INBOX
+set mail_check = 60
 
 named-mailboxes "Personal INBOX" "imaps://127.0.0.1:1143/INBOX"

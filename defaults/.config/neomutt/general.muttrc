@@ -34,3 +34,4 @@ set thorough_search      # strip headers and eval mimes before searching
 set mailcap_path = ~/.config/neomutt/mailcap
 set header_cache = "~/.cache/neomutt"
 set message_cachedir = "~/.cache/neomutt"
+set mbox_type = maildir
