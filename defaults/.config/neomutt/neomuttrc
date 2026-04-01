@@ -1,4 +1,6 @@
-source sidebar.conf
+source general.muttrc
+source sidebar.muttrc
+source keymappings.muttrc
 
 set ssl_force_tls = yes
 set account_command = "~/.config/neomutt/scripts/account-command.sh"
