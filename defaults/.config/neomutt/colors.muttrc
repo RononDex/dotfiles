@@ -1,89 +1,70 @@
 # vim:ft=neomuttrc
-# Monokai Pro – NeoMutt adaptation
-#
-# Generated automatically from iTerm2-Color-Schemes
-# Source: Monokai Pro
-#
-# Base palette
-# bg:  #2d2a2e
-# fg:  #fcfcfa
-# grey:#727072
 
-set color_directcolor = yes
+# Header colors:
+color header blue default ".*"
+color header brightmagenta default "^(From)"
+color header brightcyan default "^(Subject)"
+color header brightwhite default "^(CC|BCC)"
 
-########################################
-# Global Defaults
-########################################
+mono bold bold
+mono underline underline
+mono indicator reverse
+mono error bold
+color normal default default
+color indicator brightyellow default # currently selected message. default makes bar clear, disabled arrow to save space.
+color sidebar_highlight red default
+color sidebar_divider brightblack black
+color sidebar_flagged red black
+color sidebar_new green black
+color normal brightyellow default
+color error red default
+color tilde black default
+color message cyan default
+color markers red white
+color attachment white default
+color search brightmagenta default
+color status brightyellow black
+color hdrdefault brightgreen default
+color quoted green default
+color quoted1 blue default
+color quoted2 cyan default
+color quoted3 yellow default
+color quoted4 red default
+color quoted5 brightred default
+color signature brightgreen default
+color bold black default
+color underline black default
+color normal default default
 
-color normal        #fcfcfa #2d2a2e
-color error         #ff6188 #2d2a2e
-color message       #fc9867 #2d2a2e
-color indicator     #2d2a2e #ffd866
-color tree          #727072 #2d2a2e
+color body brightred default "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+" # Email addresses
+color body brightblue default "(https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+" # URL
+color body green default "\`[^\`]*\`" # Green text between ` and `
+color body brightblue default "^# \.*" # Headings as bold blue
+color body brightcyan default "^## \.*" # Subheadings as bold cyan
+color body brightgreen default "^### \.*" # Subsubheadings as bold green
+color body yellow default "^(\t| )*(-|\\*) \.*" # List items as yellow
+color body brightcyan default "[;:][-o][)/(|]" # emoticons
+color body brightcyan default "[;:][)(|]" # emoticons
+color body brightcyan default "[ ][*][^*]*[*][ ]?" # more emoticon?
+color body brightcyan default "[ ]?[*][^*]*[*][ ]" # more emoticon?
+color body red default "(BAD signature)"
+color body cyan default "(Good signature)"
+color body brightblack default "^gpg: Good signature .*"
+color body brightyellow default "^gpg: "
+color body brightyellow red "^gpg: BAD signature from.*"
+mono body bold "^gpg: Good signature"
+#mohttps://neomutt.org/code/config_vars.htmlno body bold "^gpg: BAD signature from.*"
+color body red default "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
 
-########################################
-# Status Bar
-########################################
+# Default index colors:
+color index yellow default '.*'
+color index_author brightmagenta  default '.*'
+color index_number blue default
+color index_subject cyan default '.*'
 
-color status        #fcfcfa #727072
+# For new mail:
+color index brightyellow default "~N"
+color index_author brightred default "~N"
+color index_subject brightcyan default "~N"
 
-########################################
-# Index View
-########################################
-
-color index         #fcfcfa #2d2a2e
-color index_number  #727072 #2d2a2e
-color index_author  #fc9867 #2d2a2e
-color index_subject #fcfcfa #2d2a2e
-color index_date    #ffd866 #2d2a2e
-color index_flags   #ff6188 #2d2a2e
-
-color index #ff6188 #2d2a2e "~D"
-color index #ffd866 #2d2a2e "~T"
-
-########################################
-# Headers
-########################################
-
-color hdrdefault    #fcfcfa #2d2a2e
-color header #fc9867 #2d2a2e "^From:"
-color header #fc9867 #2d2a2e "^To:"
-color header #ffd866 #2d2a2e "^Subject:"
-color header #ffd866 #2d2a2e "^Date:"
-color header #78dce8 #2d2a2e "^Reply-To:"
-color header #78dce8 #2d2a2e "^Message-ID:"
-
-########################################
-# Body
-########################################
-
-color body          #fcfcfa #2d2a2e ".*"
-color quoted0       #a9dc76 #2d2a2e
-color quoted1       #78dce8 #2d2a2e
-color signature     #727072 #2d2a2e
-color body #fc9867 #2d2a2e "(https?|ftp)://[^ ]+"
-
-########################################
-# Search
-########################################
-
-color search #2d2a2e #ffd866
-
-########################################
-# Compose
-########################################
-
-color compose_header #fc9867 #2d2a2e
-color compose_security_encrypt #ff6188 #2d2a2e
-color compose_security_sign #a9dc76 #2d2a2e
-color compose_security_both #78dce8 #2d2a2e
-
-########################################
-# Diff / Patch
-########################################
-
-color body #2d2a2e #a9dc76 "^\\+.*"
-color body #2d2a2e #ff6188 "^-.*"
-color body #2d2a2e #ffd866 "^@@.*"
-
-# vim: ft=neomuttrc
+color progress black cyan
