@@ -27,7 +27,6 @@ sudo pacman -S tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed
 sudo pacman -S virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware --needed --noconfirm
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
-sudo pacman -S neomutt --needed --noconfirm
 
 echo "Setup auto screen rotation"
 InstallAurPackage "iio-hyprland" "https://aur.archlinux.org/iio-hyprland.git"
