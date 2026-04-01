@@ -1,10 +1,10 @@
 # vim:ft=neomuttrc
 
-account-hook imaps://127.0.0.1:1143/ "set imap_user=tinoheuberger@protonmail.com"
+account-hook imap://127.0.0.1:1143/ "set imap_user=tinoheuberger@protonmail.com"
 
-set folder = "imaps://127.0.0.1:1143"
+set folder = "imap://127.0.0.1:1143"
 set spoolfile = "+INBOX"
 set record = "+Sent"
 set mail_check = 60
 
-named-mailboxes "Personal INBOX" "imaps://127.0.0.1:1143/INBOX"
+named-mailboxes "Personal INBOX" "imap://127.0.0.1:1143/INBOX"
