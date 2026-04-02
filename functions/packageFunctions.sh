@@ -15,8 +15,6 @@ SetupClamAV() {
 	sudo mkdir -p /etc/clamav && sudo cp ~/.files/clamav/clamd.conf /etc/clamav/clamd.conf
 	sudo mkdir -p /etc/clamav && sudo cp ~/.files/clamav/notify.sh /etc/clamav/notify.sh
 	sudo cp ~/.files/clamav/sudoers-config /etc/sudoers.d/clamav
-	sudo chown -R root:root /etc/clamav/
-	sudo chmod -R 644 /etc/clamav/
 	sudo chmod +x /etc/clamav/clamav/notify.sh
 	sudo mkdir -p /etc/systemd/system/clamav-clamonacc.service.d && sudo cp ~/.files/clamav/clmonacc.service-override /etc/systemd/system/clamav-clamonacc.service.d/override.conf
 
