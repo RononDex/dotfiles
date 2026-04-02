@@ -1,10 +1,10 @@
 require('onedark').setup {
 	style = 'darker',
 	colors = {
-		bg0 = "#16171a",
-		bg1 = "#1f2124",
-		bg2 = "#292c30",
-		bg3 = "#2b2d33",
+		bg0 = "#1b1d21",
+		bg1 = "#24272b",
+		bg2 = "#2e3238",
+		bg3 = "#30323b",
 	}
 }
 require('onedark').load()
