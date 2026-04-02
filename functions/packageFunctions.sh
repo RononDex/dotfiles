@@ -17,6 +17,9 @@ SetupClamAV() {
 	sudo cp ~/.files/clamav/sudoers-config /etc/sudoers.d/clamav
 	sudo chmod +x /etc/clamav/notify.sh
 	sudo mkdir -p /etc/systemd/system/clamav-clamonacc.service.d && sudo cp ~/.files/clamav/clamonacc.service-override /etc/systemd/system/clamav-clamonacc.service.d/override.conf
+
+	echo "fs.inotify.max_user_watches = 524288" | sudo tee /etc/sysctl.d/90-inotify.conf
+	sudo sysctl --system
 	
 	sudo mkdir -p /var/log/clamav
 	sudo mkdir -p /root/quarantine
