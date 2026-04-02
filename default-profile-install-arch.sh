@@ -54,8 +54,6 @@ sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
 sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 sudo cp  ~/.files/zram-config /etc/systemd/zram-generator.conf
 sudo cp ~/.files/vm-zram-settings.conf /etc/sysctl.d/99-vm-zram-parameters.conf
-SetupClamAV
-rm -rf ~/.files
 
 rm -rf ~/wallpapers
 ln -sf ~/Nextcloud/Wallpapers ~/wallpapers
@@ -211,3 +209,7 @@ InstallAurPackage "youtube-dl" "https://aur.archlinux.org/youtube-dl.git"
 
 echo "Updating QT theming"
 SetupQTTheming
+
+SetupClamAV
+
+rm -rf ~/.files
