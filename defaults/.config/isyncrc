@@ -1,0 +1,39 @@
+IMAPStore astrophotography-proton-remote
+   Port 1143
+   Host 127.0.0.1
+   User astrofotografie@protonmail.com
+   PassCmd "gpg --for-your-eyes-only --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/astrophotography-proton"
+   TLSType NONE
+
+MaildirStore astrophotography-proton-local
+   SubFolders Verbatim
+   Path ~/.config/neomutt/astrophotography-proton/
+   Inbox ~/.config/neomutt/astrophotography-proton/Inbox
+
+Channel proton
+   Far :astrophotography-proton-remote:
+   Near :astrophotography-proton-local:
+   Patterns * !Labels* !"All Mail"
+   Create Both
+   Expunge Both
+   SyncState *
+
+IMAPStore tino-proton-remote
+   Port 1143
+   Host 127.0.0.1
+   User tinoheuberger@protonmail.com
+   PassCmd "gpg --for-your-eyes-only --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-proton"
+   TLSType NONE
+
+MaildirStore tino-proton-local
+   SubFolders Verbatim
+   Path ~/.config/neomutt/tino-proton/
+   Inbox ~/.config/neomutt/tino-proton/Inbox
+
+Channel proton
+   Far :tino-proton-remote:
+   Near :tino-proton-local:
+   Patterns * !Labels* !"All Mail"
+   Create Both
+   Expunge Both
+   SyncState *
