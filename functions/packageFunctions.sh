@@ -10,7 +10,13 @@ InstallPowerLineFonts() {
 
 SetupClamAV() {
 	echo "Setting up ClamAV"
+
+    if  command -v pacman &> /dev/null
+    then
 	sudo pacman -S clamav --needed --noconfirm
+else
+		sudo xbps-install -Sy clamav
+	fi
 
 	sudo mkdir -p /etc/clamav && sudo cp ~/.files/clamav/clamd.conf /etc/clamav/clamd.conf
 	sudo mkdir -p /etc/clamav && sudo cp ~/.files/clamav/notify.sh /etc/clamav/notify.sh
