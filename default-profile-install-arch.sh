@@ -53,6 +53,7 @@ sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
 sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 sudo cp  ~/.files/zram-config /etc/systemd/zram-generator.conf
 sudo cp ~/.files/vm-zram-settings.conf /etc/sysctl.d/99-vm-zram-parameters.conf
+SetupClamAV
 rm -rf ~/.files
 
 rm -rf ~/wallpapers
@@ -178,6 +179,7 @@ sudo systemctl start NetworkManager
 sudo systemctl enable udisks2	# Needed for fwupd to be able to update bios
 sudo systemctl enable pcscd
 sudo systemctl start pcscd
+
 
 echo "Enabled ntp timesync"
 sudo timedatectl set-ntp 1
