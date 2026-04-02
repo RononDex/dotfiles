@@ -19,6 +19,7 @@ SetupClamAV() {
 	sudo mkdir -p /etc/systemd/system/clamav-clamonacc.service.d && sudo cp ~/.files/clamav/clamonacc.service-override /etc/systemd/system/clamav-clamonacc.service.d/override.conf
 	
 	sudo mkdir -p /var/log/clamav
+	sudo mkdir -p /root/quarantine
 	sudo touch /var/log/clamav/freshclam.log
 	sudo chmod 600 /var/log/clamav/freshclam.log
 	sudo chown clamav /var/log/clamav/freshclam.log
