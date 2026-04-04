@@ -51,6 +51,8 @@ InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/bree
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 sudo cvmfs_config setup
+InstallAurPackage "jellyfin-desktop-libcef-bin" "https://aur.archlinux.org/jellyfin-desktop-libcef-bin.git"
+InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"

@@ -46,6 +46,8 @@ InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
+InstallAurPackage "jellyfin-desktop-libcef-bin" "https://aur.archlinux.org/jellyfin-desktop-libcef-bin.git"
+InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 sudo cvmfs_config setup
