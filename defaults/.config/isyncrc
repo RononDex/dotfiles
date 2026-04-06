@@ -7,8 +7,8 @@ IMAPStore astrophotography-proton-remote
 
 MaildirStore astrophotography-proton-local
    SubFolders Verbatim
-   Path ~/.config/neomutt/astrophotography-proton/
-   Inbox ~/.config/neomutt/astrophotography-proton/Inbox
+   Path ~/.config/neomutt/mail/astrophotography-proton/
+   Inbox ~/.config/neomutt/mail/astrophotography-proton/Inbox
 
 Channel proton
    Far :astrophotography-proton-remote:
@@ -27,8 +27,8 @@ IMAPStore tino-proton-remote
 
 MaildirStore tino-proton-local
    SubFolders Verbatim
-   Path ~/.config/neomutt/tino-proton/
-   Inbox ~/.config/neomutt/tino-proton/Inbox
+   Path ~/.config/neomutt/mail/tino-proton/
+   Inbox ~/.config/neomutt/mail/tino-proton/Inbox
 
 Channel proton
    Far :tino-proton-remote:
