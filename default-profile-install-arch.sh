@@ -167,7 +167,7 @@ gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0
 InstallAurPackage "autofs" "https://aur.archlinux.org/autofs.git"
 
 echo "Downloading your public key"
-gpg2 --recv 0xB4B88025927E502D
+gpg --recv 0xC7EDA753BB012095
 
 echo "Enabling services ..."
 sudo systemctl enable dcron

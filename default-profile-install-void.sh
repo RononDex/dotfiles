@@ -133,7 +133,7 @@ SetupBackgroundsFolderForBing
 bash ~/.scripts/updateLoginBackground.sh # Execute it ones, to get a new background
 
 echo "Downloading your public key"
-gpg2 --recv 0xB4B88025927E502D
+gpg --recv 0xC7EDA753BB012095
 
 echo "Removing obsolete kernels"
 sudo vkpurge rm all
