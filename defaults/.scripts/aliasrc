@@ -9,7 +9,7 @@ alias up=updateDotFiles
 alias chromium=chromium --ozone-platform-hint=auto
 alias signal-desktop="signal-desktop -ozone-platform=wayland"
 # Reset smart card mapping for personal gpg key (if different yubikey is plugged in)
-alias resetKey="remove-keygrips 0xB4B88025927E502D"
+alias resetKey="remove-keygrips 0xC7EDA753BB012095"
 alias rk=resetKey
 alias cat=colorize_cat
 alias less=colorize_less
