@@ -22,6 +22,7 @@ require("config/neotest")
 require("config/gitsigns")
 require("config/diffview")
 require("config/image")
+require("config/conform")
 
 require("lsp.jdtls")
 require("lsp.lua")

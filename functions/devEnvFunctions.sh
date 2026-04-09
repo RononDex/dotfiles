@@ -3,6 +3,7 @@
 SetupDotnet() {
 	mkdir -p ~/Downloads
 	dotnet new install BenchmarkDotNet.Templates
+	dotnet tool install --global csharpier
 
 	if command -v xbps-install &>/dev/null; then
 		sudo xbps-install -y graphviz
