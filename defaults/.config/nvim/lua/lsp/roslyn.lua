@@ -97,6 +97,7 @@ vim.lsp.config("roslyn", {
 		},
 	},
 	on_attach = function(client, bufnr)
+		client.server_capabilities.diagnosticProvider = { workspaceDiagnostics = true }
 		lsp_utils.default_on_attach(client, bufnr)
 		-- avoid duplicate autocmds for same buffer
 		if vim.api.nvim_get_autocmds({ buffer = bufnr, group = group })[1] then
@@ -105,6 +106,10 @@ vim.lsp.config("roslyn", {
 	end,
 	root_markers = { '.git', '.sln', '.csproj' },
 	settings = {
+		["csharp|background_analysis"] = {
+			dotnet_analyzer_diagnostics_scope = "fullSolution",
+			dotnet_compiler_diagnostics_scope = "fullSolution",
+		},
 		["csharp|inlay_hints"] = {
 			csharp_enable_inlay_hints_for_implicit_object_creation = true,
 			csharp_enable_inlay_hints_for_implicit_variable_types = true,
