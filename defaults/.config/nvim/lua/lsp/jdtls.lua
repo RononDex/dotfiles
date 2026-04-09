@@ -104,14 +104,14 @@ local function get_jdtls_paths()
 end
 
 local function enable_codelens(bufnr)
-	pcall(vim.lsp.codelens.refresh)
+	vim.lsp.codelens.enable(true)
 
 	vim.api.nvim_create_autocmd('BufWritePost', {
 		buffer = bufnr,
 		group = java_cmds,
 		desc = 'refresh codelens',
 		callback = function()
-			pcall(vim.lsp.codelens.refresh)
+			vim.lsp.codelens.enable(true)
 		end,
 	})
 end
