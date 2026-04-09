@@ -8,9 +8,9 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 		bigfile = { enabled = true },
-		dashboard = { require("config.snacks.dashboard") },
+		dashboard = require("config.snacks.dashboard"),
 		explorer = { enabled = true },
-		indent = { enabled = true },
+		indent = require("config.snacks.indent"),
 		input = { enabled = true },
 		picker = { enabled = true },
 		notifier = { enabled = true },
