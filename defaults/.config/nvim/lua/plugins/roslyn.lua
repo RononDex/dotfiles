@@ -3,6 +3,6 @@ return {
 	---@module 'roslyn.config'
 	---@type RoslynNvimConfig
 	opts = {
-
+		filewatching = "roslyn"
 	},
 }

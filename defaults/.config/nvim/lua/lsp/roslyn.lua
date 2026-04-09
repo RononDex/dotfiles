@@ -1,6 +1,17 @@
+local lsp_utils = require("lsp.utils")
+
 vim.lsp.config("roslyn", {
-	on_attach = function()
+	on_attach = function(client, bufnr)
+		lsp_utils.default_on_attach(client, bufnr)
 	end,
+	capabilities = {
+		-- HACK: Doesn't show any diagnostics if we do not set this to true
+		textDocument = {
+			diagnostic = {
+				dynamicRegistration = true,
+			},
+		},
+	},
 	settings = {
 		["csharp|inlay_hints"] = {
 			csharp_enable_inlay_hints_for_implicit_object_creation = true,

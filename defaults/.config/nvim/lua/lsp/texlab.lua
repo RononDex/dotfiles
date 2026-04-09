@@ -1,3 +1,5 @@
+local lsp_utils = require("lsp.utils")
+
 vim.lsp.config('texlab', {
 	name = "texlab",
 	cmd = { "texlab" },
