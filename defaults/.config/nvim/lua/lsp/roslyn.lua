@@ -9,19 +9,6 @@ local cmd = {
 
 local group = vim.api.nvim_create_augroup('lspconfig.roslyn_ls', { clear = true })
 
----@param client vim.lsp.Client
-local function refresh_diagnostics(client)
-	for buf, _ in pairs(vim.lsp.get_client_by_id(client.id).attached_buffers) do
-		if vim.api.nvim_buf_is_loaded(buf) then
-			client:request(
-				vim.lsp.protocol.Methods.textDocument_diagnostic,
-				{ textDocument = vim.lsp.util.make_text_document_params(buf) },
-				nil,
-				buf
-			)
-		end
-	end
-end
 
 local function roslyn_handlers()
 	return {
@@ -115,17 +102,6 @@ vim.lsp.config("roslyn", {
 		if vim.api.nvim_get_autocmds({ buffer = bufnr, group = group })[1] then
 			return
 		end
-
-		vim.api.nvim_create_autocmd({ 'BufWritePost', 'InsertLeave' }, {
-			group = group,
-			buffer = bufnr,
-			callback = function()
-				if client then
-					refresh_diagnostics(client)
-				end
-			end,
-			desc = 'roslyn_ls: refresh diagnostics',
-		})
 	end,
 	root_markers = { '.git', '.sln', '.csproj' },
 	settings = {
