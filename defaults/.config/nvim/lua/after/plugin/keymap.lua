@@ -1,5 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
-local default_opts = { noremap = true, silent = true }
+ocal
+default_opts = { noremap = true, silent = true }
 local expr_opts = { noremap = true, expr = true, silent = true }
 
 
@@ -55,7 +56,6 @@ keymap("n", "ss", "<cmd>split<cr><C-w>w", default_opts)
 keymap("n", "sv", "<cmd>vsplit<cr><C-w>w", default_opts)
 
 -- List available commands
-local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<C-F1>', builtin.commands, {})
 vim.keymap.set('n', '<C-c>', builtin.commands, {})
 
