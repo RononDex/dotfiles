@@ -17,12 +17,6 @@ function utils.start_debugger(autoclose_windows)
 		if utils.is_editable() then
 			vim.cmd("silent! wall")
 		end
-
-		local cwd = vim.fn.getcwd()
-		local config_path = cwd .. "/.vscode/launch.json"
-		if vim.fn.filereadable(config_path) then
-			require("dap.ext.vscode").load_launchjs(config_path, {})
-		end
 	end
 	require("dap").continue()
 end
