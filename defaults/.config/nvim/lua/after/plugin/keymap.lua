@@ -55,10 +55,6 @@ keymap("n", "<leader>nt", "ss<cmd>terminal<cr>20su", default_opts)
 keymap("n", "ss", "<cmd>split<cr><C-w>w", default_opts)
 keymap("n", "sv", "<cmd>vsplit<cr><C-w>w", default_opts)
 
--- List available commands
-vim.keymap.set('n', '<C-F1>', builtin.commands, {})
-vim.keymap.set('n', '<C-c>', builtin.commands, {})
-
 -- Custom lsp commands
 vim.keymap.set('n', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
 vim.keymap.set('v', '<leader><space>', '<cmd>lua vim.lsp.buf.code_action()<cr>', { buffer = bufnr })
