@@ -121,6 +121,8 @@ local function enable_debugger(bufnr)
 end
 
 local function jdtls_on_attach(client, bufnr)
+	-- Disable semantic tokens (causes color flickering with treesitter)
+	client.server_capabilities.semanticTokensProvider = nil
 	if features.debugger then
 		enable_debugger(bufnr)
 	end
@@ -266,7 +268,7 @@ local function jdtls_setup(event)
 		capabilities = cache_vars.capabilities,
 		settings = lsp_settings,
 		on_attach = function(client, bufnr)
-			jdtls_on_attach()
+			jdtls_on_attach(client, bufnr)
 			lsp_utils.default_on_attach(client, bufnr)
 		end,
 		flags = {
