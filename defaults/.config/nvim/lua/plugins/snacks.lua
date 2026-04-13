@@ -20,4 +20,5 @@ return {
 		statuscolumn = { enabled = true },
 		words = { enabled = true },
 	},
+	keys = require("config.snacks.keys")
 }

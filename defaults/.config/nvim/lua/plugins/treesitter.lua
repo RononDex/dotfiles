@@ -1,5 +1,5 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
+	"neovim-treesitter/nvim-treesitter",
 	dependencies = { "windwp/nvim-ts-autotag", "JoosepAlviste/nvim-ts-context-commentstring" },
 	event = "User AstroFile",
 	branch = "main",
