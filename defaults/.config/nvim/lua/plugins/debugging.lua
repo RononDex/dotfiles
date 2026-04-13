@@ -1,4 +1,4 @@
 return {
 	'mfussenegger/nvim-dap',
-	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
+	{ "rcarriga/nvim-dap-ui", dependencies = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio", "thehamsta/nvim-dap-virtual-text" } }
 }
