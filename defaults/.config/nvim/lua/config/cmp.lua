@@ -2,6 +2,52 @@ local cmp = require('cmp')
 local luasnip = require("luasnip")
 local lspkind = require('lspkind')
 
+-- setup() is also available as an alias
+require('lspkind').init({
+	-- defines how annotations are shown
+	-- default: symbol
+	-- options: 'text', 'text_symbol', 'symbol_text', 'symbol'
+	mode = 'symbol_text',
+
+	-- default symbol map
+	-- can be either 'default' (requires nerd-fonts font) or
+	-- 'codicons' for codicon preset (requires vscode-codicons font)
+	--
+	-- default: 'default'
+	preset = 'default',
+
+	-- override preset symbols
+	--
+	-- default: {}
+	symbol_map = {
+		Text = "󰉿",
+		Method = "󰆧",
+		Function = "󰊕",
+		Constructor = "",
+		Field = "󰜢",
+		Variable = "󰀫",
+		Class = "󰠱",
+		Interface = "",
+		Module = "",
+		Property = "󰜢",
+		Unit = "󰑭",
+		Value = "󰎠",
+		Enum = "",
+		Keyword = "󰌋",
+		Snippet = "",
+		Color = "󰏘",
+		File = "󰈙",
+		Reference = "󰈇",
+		Folder = "󰉋",
+		EnumMember = "",
+		Constant = "󰏿",
+		Struct = "󰙅",
+		Event = "",
+		Operator = "󰆕",
+		TypeParameter = "",
+	},
+})
+
 cmp.setup({
 	sources = {
 		{ name = 'nvim_lsp' },
@@ -52,7 +98,7 @@ cmp.setup({
 	},
 	formatting = {
 		fields = { 'abbr', 'kind', 'menu' },
-		format = require('lspkind').cmp_format({
+		format = lspkind.cmp_format({
 			fields = { 'abbr', 'icon', 'kind', 'menu' },
 			format = lspkind.cmp_format({
 				maxwidth = {
