@@ -86,6 +86,9 @@ sudo pacman -S webkit2gtk qt5ct qt6ct kvantum kvantum-qt5 otf-font-awesome ddcut
 sudo pacman -S sassc cargo luarocks shfmt lm_sensors thefuck --needed --noconfirm
 sudo pacman -S neomutt isync mailcap w3m github-cli --needed --noconfirm
 
+gh ext install meiji163/gh-notify
+gh ext upgrade meiji163/gh-notify
+
 # Install Architecture specific stuff
 if [ "$isArm" = false ] ; then
     sudo pacman -S gtop --noconfirm --needed
