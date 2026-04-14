@@ -12,7 +12,7 @@ return {
 		explorer = { enabled = true },
 		indent = require("config.snacks.indent"),
 		input = { enabled = true },
-		picker = { enabled = true },
+		picker = require("config.snacks.picker"),
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = true },
