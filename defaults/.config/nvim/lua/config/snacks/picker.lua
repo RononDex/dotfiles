@@ -7,7 +7,7 @@ return {
 				preset = 'sidebar',
 				preview = false,
 				layout = {
-					width = 25,
+					width = 65,
 				},
 			},
 		}
