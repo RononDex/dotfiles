@@ -1,6 +1,6 @@
 local language_list = { "c", "c_sharp", "lua", "vim", "vimdoc", "query", "java", "cpp", "json", "xml",
 	"bash", "html", "javascript", "markdown", "make", "sql", "hyprlang", "javadoc", "python",
-	"yaml", "rust", "razor", "latex", "regex" }
+	"yaml", "rust", "razor", "latex", "regex", "jsx", "ecma", "html_tags" }
 
 require('nvim-treesitter').install(language_list)
 require('nvim-treesitter').update()
