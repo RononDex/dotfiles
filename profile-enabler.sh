@@ -99,5 +99,7 @@ echo "#!/bin/bash" >~/.scripts/updateDotFiles
 echo "bash $scriptDirRoot/profile-enabler.sh $profileDirName" >>~/.scripts/updateDotFiles
 chmod +x ~/.scripts/updateDotFiles
 
+rm -rf ~/.files
+
 echo
 echo "DONE!"

@@ -8,6 +8,13 @@ InstallPowerLineFonts() {
     sh ./install.sh
 }
 
+SetupPodman() {
+    if  command -v pacman &> /dev/null
+    then
+        sudo pacman -S podman podman-compose --needed --noconfirm
+    fi
+}
+
 SetupClamAV() {
 	echo "Setting up ClamAV"
 

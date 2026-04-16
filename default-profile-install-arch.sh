@@ -219,6 +219,5 @@ SetupQTTheming
 
 SetupClamAV
 
-rm -rf ~/.files
 
 SetupMachineGpgKey
