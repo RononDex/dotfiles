@@ -24,10 +24,10 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 		utils.close_debugger()
 	end
 end
-
+local install_dir = path.concat { vim.fn.stdpath "data", "mason" }
 dap.adapters.netcoredbg = {
 	type = 'executable',
-	command = '/usr/local/bin/netcoredbg/netcoredbg',
+	command = install_dir .. '/packages/netcoredbg/netcoredbg',
 	args = { '--interpreter=vscode' }
 }
 
