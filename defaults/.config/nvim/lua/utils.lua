@@ -4,9 +4,9 @@ local utils = {
 }
 
 function utils.is_editable()
-	local current_buffer = vim.fn.bufnr("%")
-	local is_modifiable = vim.api.nvim_buf_get_option(current_buffer, "modifiable")
-	local is_readonly = vim.api.nvim_buf_get_option(current_buffer, "readonly")
+	local current_buffer = vim.api.nvim_get_current_buf()
+	local is_modifiable = vim.api.nvim_get_option_value("modifiable", { scope = "local", buf = current_buffer })
+	local is_readonly = vim.api.nvim_get_option_value("readonly", { scope = "local", buf = current_buffer })
 	return is_modifiable and not is_readonly
 end
 
