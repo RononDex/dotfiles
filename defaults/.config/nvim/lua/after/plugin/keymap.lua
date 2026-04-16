@@ -63,6 +63,9 @@ vim.keymap.set({ 'n', 'x', 'v' }, '<leader>cf', function()
 end, { buffer = bufnr })
 vim.keymap.set('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
 vim.keymap.set('v', '<F2>', '<cmd>lua vim.lsp.buf.rename()<cr>', { buffer = bufnr })
+vim.keymap.set('n', 'K', function()
+	vim.lsp.buf.hover { border = "single", max_height = 25, max_width = 120 }
+end, { desc = "Hover documentation" })
 
 -- Diagnostics keybinds
 vim.api.nvim_set_keymap('n', '<leader>dh', '<cmd>lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
