@@ -132,3 +132,5 @@ if [ -d ~/.steam/steam/steamapps/common/SpaceEngineers ]; then
 	# Also set launch options in steam to ./SpaceEngineersLauncher.py %command%
 	wget https://github.com/sepluginloader/SpaceEngineersLauncher/releases/download/v1.0.6/SpaceEngineersLauncher.exe -O ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.exe
 fi
+
+SetupWinBoat

@@ -156,6 +156,4 @@ sudo -H pip install --upgrade youtube-dl
 
 SetupClamAV
 
-rm -rf ~/.files
-
 SetupMachineGpgKey

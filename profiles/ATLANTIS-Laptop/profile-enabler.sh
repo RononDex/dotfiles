@@ -106,3 +106,5 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "Regenerating initramfs"
 sudo mkinitcpio -P
+
+SetupWinBoat

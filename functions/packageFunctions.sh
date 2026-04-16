@@ -13,6 +13,22 @@ SetupPodman() {
     then
         sudo pacman -S podman podman-compose --needed --noconfirm
     fi
+
+	sudo mkdir -p /etc/containers/registries.conf.d
+	sudo cp ~/.files/podman/10-unqualified-search-registries.conf /etc/containers/registries.conf.d/10-unqualified-search-registries.conf
+	sudo usermod --add-subuids 10000-75535 $USER
+	sudo usermod --add-subgids 10000-75535 $USER
+}
+
+SetupWinBoat() {
+	SetupPodman
+
+    if  command -v pacman &> /dev/null
+    then
+        sudo pacman -S freerdp --needed --noconfirm
+		InstallAurPackage "winboat-bin" "https://aur.archlinux.org/winboat-bin.git"
+    fi
+
 }
 
 SetupClamAV() {
