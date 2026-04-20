@@ -24,25 +24,15 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 		utils.close_debugger()
 	end
 end
-local install_dir = path.concat { vim.fn.stdpath "data", "mason" }
 dap.adapters.netcoredbg = {
 	type = 'executable',
-	command = install_dir .. '/packages/netcoredbg/netcoredbg',
+	command = 'netcoredbg',
 	args = { '--interpreter=vscode' }
 }
 
 dap.adapters.coreclr = dap.adapters.netcoredbg
 
-dap.configurations.cs = {
-	{
-		type = "netcoredbg",
-		name = "launch - netcoredbg",
-		request = "launch",
-		program = function()
-			return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/", "file")
-		end,
-	}
-}
+dap.configurations.cs = dap.adapters.netcoredbg
 
 require('dap-python').setup(utils.get_python_path())
 
