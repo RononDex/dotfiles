@@ -65,8 +65,6 @@ BasicNvimInstall() {
 	if command -v pacman &>/dev/null; then
 		sudo pacman -S ripgrep lazygit tree-sitter tree-sitter-cli python-pynvim fd --noconfirm --needed
 	fi
-
-	npm install -g @mermaid-js/mermaid-cli
 }
 
 SetupLanguageModelForLtex() {
