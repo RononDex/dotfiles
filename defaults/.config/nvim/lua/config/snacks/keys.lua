@@ -1,6 +1,6 @@
 return {
 	-- General
-	{ "<C-p>",         function() Snacks.picker.smart() end,                 desc = "Smart Find Files" },
+	{ "<C-p>",         function() Snacks.picker.files() end,                 desc = "Find Files" },
 	{ "<leader><tab>", function() Snacks.picker.buffers() end,               desc = "Find open buffers" },
 	{ "fg",            function() Snacks.picker.grep() end,                  desc = "Grep Files" },
 	{ "<C-c>",         function() Snacks.picker.commands() end,              desc = "Commands" },

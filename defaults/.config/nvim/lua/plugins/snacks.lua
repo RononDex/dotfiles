@@ -9,7 +9,7 @@ return {
 		-- refer to the configuration section below
 		bigfile = { enabled = true },
 		dashboard = require("config.snacks.dashboard"),
-		explorer = { enabled = true },
+		explorer = require("config.snacks.explorer"),
 		indent = require("config.snacks.indent"),
 		input = { enabled = true },
 		picker = require("config.snacks.picker"),
