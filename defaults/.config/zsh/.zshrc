@@ -31,7 +31,7 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Basic auto/tab complete:
-autoload -U compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
