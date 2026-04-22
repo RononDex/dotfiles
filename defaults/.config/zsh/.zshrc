@@ -7,6 +7,7 @@ source ~/.zprofile
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+ZSH_CUSTOM="/usr/share/zsh"
 
 # Load and execute custom profiles
 if [ -d ~/.scripts ]; then
@@ -37,7 +38,5 @@ if [ -d ~/.scripts ]; then
     source ~/.scripts/aliasrc
   fi
 fi
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
