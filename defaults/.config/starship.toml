@@ -38,7 +38,7 @@ style = "bg:red fg:crust"
 [hostname]
 disabled = false
 style = "bg:red fg:crust"
-format = '[@$hostname]($style)'
+format = '[@$hostname](bold $style)'
 
 [os.symbols]
 Windows = ""
