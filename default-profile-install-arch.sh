@@ -78,7 +78,7 @@ sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
 sudo pacman -S neovim libftdi ccfits adobe-source-code-pro-fonts noto-fonts-extra --noconfirm --needed
 sudo pacman -S python acpi python-pip samba opencv gtest gmock libmpdclient binutils keychain --needed --noconfirm
 sudo pacman -S htop pv imagemagick zlib curl exfat-utils unzip zip shadow perl-json-xs git-lfs --needed --noconfirm
-sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
+sudo pacman -S zsh-syntax-highlighting xfce4-power-manager openvpn zsh-autosuggestions starship calc diff-so-fancy networkmanager-openvpn powerline-fonts zathura zathura-cb zathura-pdf-mupdf zathura-ps lynx ttf-dejavu --needed --noconfirm
 sudo pacman -S dkms btop gnupg pcsclite ccid yubikey-manager yubikey-personalization --needed --noconfirm
 sudo pacman -S keyutils bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp npm linux-firmware-marvell fwupd --needed --noconfirm
@@ -102,31 +102,6 @@ if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
     chsh -s /usr/bin/zsh
 fi
 
-echo "Setting up oh-my-zsh ..."
-if [ ! -d ${ZSH} ]; then
-		sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-fi
-
-if [ ! -d ${ZSH}/themes/powerlevel10k ]; then
-    cd ${ZSH}/themes
-    echo "Cloning powerlevel10k"
-    git clone https://github.com/romkatv/powerlevel10k.git ${ZSH}/themes/powerlevel10k
-else
-    cd ${ZSH}/themes/powerlevel10k
-    echo "Updating powerlevel10k"
-    git pull
-fi
-
-if [ ! -d ${ZPLUG_HOME} ]; then
-    git clone https://github.com/zplug/zplug $ZPLUG_HOME
-else
-    cd ${ZPLUG_HOME}
-    git pull
-fi
-
-zplug update
-
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 echo "Setting up vim..."
 BasicNvimInstall
