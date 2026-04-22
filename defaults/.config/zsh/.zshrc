@@ -20,7 +20,7 @@ fi
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git vi-mode zsh-autosuggestions z extract thefuck)
+plugins=(git vi-mode zsh-autosuggestions zsh-syntax-highlighting z extract thefuck)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -31,8 +31,6 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-
 # All default aliases
 if [ -d ~/.scripts ]; then
   if [ -f ~/.scripts/aliasrc ]; then
@@ -40,14 +38,7 @@ if [ -d ~/.scripts ]; then
   fi
 fi
 
-# Load zsh-syntax-highlighting; should be last.
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
-ZSH_COLORIZE_TOOL=chroma
-ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 eval "$(starship init zsh)"
