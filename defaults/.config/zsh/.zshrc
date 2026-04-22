@@ -22,12 +22,8 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/tino/.zshrc'
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 # All default aliases
 if [ -d ~/.scripts ]; then
@@ -45,4 +41,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ZSH_COLORIZE_TOOL=chroma
 ZSH_COLORIZE_CHROMA_FORMATTER=terminal256
 
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
 eval "$(starship init zsh)"
