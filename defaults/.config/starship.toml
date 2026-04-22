@@ -3,6 +3,7 @@
 format = """
 [](red)\
 $os\
+$hostname\
 $username\
 [](bg:peach fg:red)\
 $directory\
@@ -33,6 +34,9 @@ palette = 'catppuccin_mocha'
 [os]
 disabled = false
 style = "bg:red fg:crust"
+
+[hostname]
+disabled = false
 
 [os.symbols]
 Windows = ""
