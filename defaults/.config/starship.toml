@@ -37,6 +37,8 @@ style = "bg:red fg:crust"
 
 [hostname]
 disabled = false
+style = "bg:red fg:crust"
+format = '[$ssh_symbol$hostname@]($style)'
 
 [os.symbols]
 Windows = ""
