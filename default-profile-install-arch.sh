@@ -102,6 +102,10 @@ if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
     chsh -s /usr/bin/zsh
 fi
 
+echo "Setting up oh-my-zsh ..."
+if [ ! -d ${ZSH} ]; then
+		sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+fi
 
 echo "Setting up vim..."
 BasicNvimInstall

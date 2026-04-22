@@ -1,5 +1,12 @@
 # Load all env variables
+export ZSH="$ZDOTDIR/ohmyzsh"
 source ~/.zprofile
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
 
 # Load and execute custom profiles
 if [ -d ~/.scripts ]; then
@@ -8,13 +15,14 @@ if [ -d ~/.scripts ]; then
   fi
 fi
 
-# ZPLUG config
-source ${ZPLUG_HOME}/init.zsh
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git vi-mode zsh-autosuggestions z extract thefuck)
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    echo; zplug install
-fi
+source $ZSH/oh-my-zsh.sh
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
