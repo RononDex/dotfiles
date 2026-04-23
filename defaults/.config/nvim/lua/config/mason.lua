@@ -60,6 +60,9 @@ mason_registry.refresh(function()
 	install_package_if_not_exists("clangd")
 	install_package_if_not_exists("codelldb")
 
+	-- CMAKE
+	install_package_if_not_exists("neocmakelsp")
+
 	-- Typos
 	install_package_if_not_exists("harper-ls")
 end)
