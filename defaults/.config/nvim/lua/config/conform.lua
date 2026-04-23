@@ -8,6 +8,7 @@ require("conform").setup({
 		-- Conform will run the first available formatter
 		javascript = { "prettierd", "prettier", stop_after_first = true },
 		cs = { "csharpier" },
+		cpp = { "astyle" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()

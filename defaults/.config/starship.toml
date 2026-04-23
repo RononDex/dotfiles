@@ -17,6 +17,8 @@ $golang\
 $nodejs\
 $php\
 $java\
+$mason\
+$dotnet\
 $kotlin\
 $haskell\
 $python\

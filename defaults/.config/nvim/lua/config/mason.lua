@@ -58,7 +58,6 @@ mason_registry.refresh(function()
 
 	-- CPP
 	install_package_if_not_exists("clangd")
-	install_package_if_not_exists("clang-format")
 	install_package_if_not_exists("codelldb")
 
 	-- Typos
