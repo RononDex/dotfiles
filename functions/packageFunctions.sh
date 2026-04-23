@@ -105,7 +105,7 @@ InstallHyprland() {
     if  command -v pacman &> /dev/null
     then
 
-		yes | sudo pacman -S hyprland nwg-displays nwg-look xdg-desktop-portal-hyprland hyprutils wlr-randr hyprlock hypridle libdisplay-info waybar hyprpolkitagent hyprland-protocols hyprsunset awww --needed --noconfirm
+		yes | sudo pacman -S hyprland waypipe nwg-displays nwg-look xdg-desktop-portal-hyprland hyprutils wlr-randr hyprlock hypridle libdisplay-info waybar hyprpolkitagent hyprland-protocols hyprsunset awww --needed --noconfirm
 		# gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
 		# InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
 		# InstallAurPackage "hyprutils-git" "https://aur.archlinux.org/hyprutils-git.git"
