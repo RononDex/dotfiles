@@ -10,7 +10,7 @@ MaildirStore astrophotography-proton-local
    Path ~/.config/neomutt/mail/astrophotography-proton/
    Inbox ~/.config/neomutt/mail/astrophotography-proton/Inbox
 
-Channel proton
+Channel astrophotography-proton
    Far :astrophotography-proton-remote:
    Near :astrophotography-proton-local:
    Patterns * !Labels* !"All Mail"
@@ -30,10 +30,30 @@ MaildirStore tino-proton-local
    Path ~/.config/neomutt/mail/tino-proton/
    Inbox ~/.config/neomutt/mail/tino-proton/Inbox
 
-Channel proton
+Channel tino-proton
    Far :tino-proton-remote:
    Near :tino-proton-local:
    Patterns * !Labels* !"All Mail"
+   Create Both
+   Expunge Both
+   SyncState *
+
+IMAPStore tino-sag-remote
+   Port 1143
+   Host imap.mail.hostpoint.ch
+   User tino.heuberger@sag-sas.ch
+   PassCmd "gpg --for-your-eyes-only --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-sag"
+   TLSType STARTTLS
+   CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore tino-sag-local
+   SubFolders Verbatim
+   Path ~/.config/neomutt/mail/tino-sag/
+   Inbox ~/.config/neomutt/mail/tino-sag/Inbox
+
+Channel tino-sag
+   Far :tino-sag-remote:
+   Near :tino-sag-local:
    Create Both
    Expunge Both
    SyncState *
