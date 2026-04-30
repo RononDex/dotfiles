@@ -122,6 +122,11 @@ symbol = " "
 style = "bg:green"
 format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
 
+[dotnet]
+symbol = " "
+style = "bg:green"
+format = '[[ $symbol( $version) ](fg:crust bg:green)]($style)'
+
 [kotlin]
 symbol = ""
 style = "bg:green"
