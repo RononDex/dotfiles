@@ -22,6 +22,10 @@ cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
 cp $scriptDir/overrides/mpv/hdr-custom.conf ~/.config/mpv/hdr-custom.conf
 mkdir -p ~/.local/share/applications
 
+cp $scriptDir/overrides/neomutt/crypt-store/astrophotography-proton ~/.config/neomutt/crypt-store/astrophotography-proton
+cp $scriptDir/overrides/neomutt/crypt-store/tino-proton ~/.config/neomutt/crypt-store/tino-proton
+cp $scriptDir/overrides/neomutt/crypt-store/tino-sag ~/.config/neomutt/crypt-store/tino-sag
+
 echo "Installing stuff ..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc teamspeak3 blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
