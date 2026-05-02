@@ -45,6 +45,7 @@ IMAPStore tino-sag-remote
    PassCmd "gpg --for-your-eyes-only --passphrase '$(cat /etc/hostname):$(cat /etc/machine-id)' --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-sag"
    TLSType STARTTLS
    CertificateFile /etc/ssl/certs/ca-certificates.crt
+   AuthMechs LOGIN
 
 MaildirStore tino-sag-local
    SubFolders Verbatim
