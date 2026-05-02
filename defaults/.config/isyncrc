@@ -2,7 +2,7 @@ IMAPStore astrophotography-proton-remote
    Port 1143
    Host 127.0.0.1
    User astrofotografie@protonmail.com
-   PassCmd "gpg --for-your-eyes-only --passphrase '$(cat /etc/hostname):$(cat /etc/machine-id)' --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/astrophotography-proton"
+   PassCmd "gpg --for-your-eyes-only --passphrase ""$(cat /etc/hostname):$(cat /etc/machine-id)"" --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/astrophotography-proton"
    TLSType NONE
 
 MaildirStore astrophotography-proton-local
@@ -22,7 +22,7 @@ IMAPStore tino-proton-remote
    Port 1143
    Host 127.0.0.1
    User tinoheuberger@protonmail.com
-   PassCmd "gpg --for-your-eyes-only --passphrase '$(cat /etc/hostname):$(cat /etc/machine-id)' --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-proton"
+   PassCmd "gpg --for-your-eyes-only --passphrase ""$(cat /etc/hostname):$(cat /etc/machine-id)"" --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-proton"
    TLSType NONE
 
 MaildirStore tino-proton-local
@@ -39,11 +39,11 @@ Channel tino-proton
    SyncState *
 
 IMAPStore tino-sag-remote
-   Port 995
+   Port 993
    Host imap.mail.hostpoint.ch
    User tino.heuberger@sag-sas.ch
-   PassCmd "gpg --for-your-eyes-only --passphrase '$(cat /etc/hostname):$(cat /etc/machine-id)' --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-sag"
-   TLSType SSL
+   PassCmd "gpg --for-your-eyes-only --passphrase ""$(cat /etc/hostname):$(cat /etc/machine-id)"" --no-tty --quiet --decrypt ~/.config/neomutt/crypt-store/tino-sag"
+   TLSType IMAPS
    CertificateFile /etc/ssl/certs/ca-certificates.crt
    AuthMechs LOGIN
 
