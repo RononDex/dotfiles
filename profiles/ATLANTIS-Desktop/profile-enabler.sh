@@ -25,6 +25,10 @@ mkdir -p ~/.local/share/applications
 cp $scriptDir/overrides/neomutt/crypt-store/astrophotography-proton ~/.config/neomutt/crypt-store/astrophotography-proton
 cp $scriptDir/overrides/neomutt/crypt-store/tino-proton ~/.config/neomutt/crypt-store/tino-proton
 cp $scriptDir/overrides/neomutt/crypt-store/tino-sag ~/.config/neomutt/crypt-store/tino-sag
+mkdir -p ~/.config/neomutt/mail/astrophotography-proton/
+mkdir -p ~/.config/neomutt/mail/tino-proton/
+mkdir -p ~/.config/neomutt/mail/tino-sag/
+chmod -R 700 ~/.config/neomutt/mail/
 
 echo "Installing stuff ..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc teamspeak3 blueman wireguard-tools --noconfirm --needed
