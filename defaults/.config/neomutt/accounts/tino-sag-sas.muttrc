@@ -1,10 +1,11 @@
 # vim:ft=neomuttrc
 
-account-hook imaps://imap.mail.hostpoint.ch/ "set imap_user=tino.heuberger@sag-sas.ch"
-
-set folder = "imaps://imap.mail.hostpoint.ch"
-set spoolfile = "+INBOX"
-set record = "+Sent"
-set mail_check = 60
+set folder     = "~/.config/neomutt/mail/tino-sag"
+set spoolfile  = "+INBOX"
+set postponed  = +Drafts
+set record     = "+Sent"
+set trash      = +Trash
+set from       = tino.heuberger@sag-sas.ch
+set real_name  = "Tino Heuberger"
 
 named-mailboxes "SAG/SAS INBOX" "imaps://imap.mail.hostpoint.ch/INBOX"

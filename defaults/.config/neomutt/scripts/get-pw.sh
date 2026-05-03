@@ -1,15 +1,11 @@
 #!/bin/bash
-set -euo pipefail
 
 mailBox=$1
-pass_phrase="$(cat /etc/hostname):$(cat /etc/machine-id)"
-
-exec gpg \
-	--batch \
-	--yes \
+gpg \
+	--for-your-eyes-only \
 	--pinentry-mode loopback \
-	--passphrase "$pass_phrase" \
+	--default-key MachineKey \
+	--passphrase "$(cat /etc/hostname):$(cat /etc/machine-id)" \
 	--no-tty \
 	--quiet \
-	--decrypt "$HOME/.config/neomutt/crypt-store/$mailBox" \
-	2>/dev/null
+	--decrypt ~/.config/neomutt/crypt-store/$mailBox

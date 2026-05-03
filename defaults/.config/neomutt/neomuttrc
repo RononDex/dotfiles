@@ -5,6 +5,7 @@ source colors.muttrc
 
 set ssl_force_tls = yes
 set account_command = "~/.config/neomutt/scripts/account-command.sh"
+set mbox_type = Maildir
 
 source accounts/tino-sag-sas.muttrc
 folder-hook $folder "source accounts/tino-sag-sas.muttrc" 
