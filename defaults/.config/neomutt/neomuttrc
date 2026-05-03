@@ -3,8 +3,8 @@ source sidebar.muttrc
 source keymappings.muttrc
 source colors.muttrc
 
-set ssl_force_tls = yes
 set account_command = "~/.config/neomutt/scripts/account-command.sh"
+set use_threads = yes
 set mbox_type = Maildir
 
 source accounts/tino-sag-sas.muttrc

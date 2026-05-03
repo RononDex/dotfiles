@@ -8,3 +8,4 @@ set trash      = +Trash
 set from       = tinoheuberger@protonmail.com
 set real_name  = "Tino Heuberger"
 
+named-mailboxes "Proton INBOX" "~/.config/neomutt/mail/tino-proton/INBOX"
