@@ -4,7 +4,10 @@ source keymappings.muttrc
 source colors.muttrc
 
 set folder = "~/.config/neomutt/mail"
+set spoolfile = "+tino-sag/Inbox"
 
-folder-hook "^tino-sag/" "source accounts/tino-sag-sas.muttrc" 
+folder-hook "tino-sag/" "source accounts/tino-sag-sas.muttrc" 
+mailboxes +tino-sag/Inbox +tino-sag/Sent +tino-sag/Drafts +tino-sag/Trash
 
-folder-hook "^tino-proton/" "source accounts/tino-proton.muttrc" 
+folder-hook "tino-proton/" "source accounts/tino-proton.muttrc" 
+mailboxes +tino-proton/Inbox +tino-proton/Sent +tino-proton/Drafts +tino-proton/Trash
