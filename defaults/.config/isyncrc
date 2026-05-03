@@ -55,6 +55,7 @@ MaildirStore tino-sag-local
 Channel tino-sag
    Far :tino-sag-remote:
    Near :tino-sag-local:
+   Patterns *
    Create Both
    Expunge Both
    SyncState *
