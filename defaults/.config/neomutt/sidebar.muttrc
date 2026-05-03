@@ -47,7 +47,7 @@ set sidebar_format = '%B%<F? [%F]>%* %<N?%N/>%S'
 #       unread   – number of unread messages
 #       path     – mailbox path
 #       unsorted – do not sort the mailboxes
-set sidebar_sort_method = 'path'
+set sidebar_sort = 'path'
 
 # --------------------------------------------------------------------------
 # FUNCTIONS – shown with an example mapping
