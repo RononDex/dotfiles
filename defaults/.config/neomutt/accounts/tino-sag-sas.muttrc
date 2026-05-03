@@ -1,11 +1,9 @@
 # vim:ft=neomuttrc
 
-set folder     = "~/.config/neomutt/mail/tino-sag"
-set spoolfile  = "+INBOX"
+set spoolfile  = "+Inbox"
 set postponed  = +Drafts
 set record     = "+Sent"
 set trash      = +Trash
 set from       = tino.heuberger@sag-sas.ch
 set real_name  = "Tino Heuberger"
 
-named-mailboxes "SAG/SAS INBOX" "~/.config/neomutt/mail/tino-sag/INBOX"

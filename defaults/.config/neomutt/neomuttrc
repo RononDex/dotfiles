@@ -3,12 +3,8 @@ source sidebar.muttrc
 source keymappings.muttrc
 source colors.muttrc
 
-set account_command = "~/.config/neomutt/scripts/account-command.sh"
-set use_threads = yes
-set mbox_type = Maildir
+set folder = "~/.config/neomutt/mail"
 
-source accounts/tino-sag-sas.muttrc
-folder-hook $folder "source accounts/tino-sag-sas.muttrc" 
+folder-hook "^tino-sag/" "source accounts/tino-sag-sas.muttrc" 
 
-source accounts/tino-sag-sas.muttrc
-folder-hook $folder "source accounts/tino-proton.muttrc" 
+folder-hook "^tino-proton/" "source accounts/tino-proton.muttrc" 

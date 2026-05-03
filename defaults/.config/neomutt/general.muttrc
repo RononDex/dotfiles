@@ -35,3 +35,4 @@ set mailcap_path = ~/.config/neomutt/mailcap
 set header_cache = "~/.cache/neomutt"
 set message_cachedir = "~/.cache/neomutt"
 set mbox_type = maildir
+set use_threads = yes
