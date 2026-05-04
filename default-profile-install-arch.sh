@@ -58,6 +58,7 @@ sudo cp ~/.files/vm-zram-settings.conf /etc/sysctl.d/99-vm-zram-parameters.conf
 mkdir -p ~/.config/neomutt/mail/astrophotography-proton
 mkdir -p ~/.config/neomutt/mail/tino-proton
 sudo chmod -R 700 ~/.config/neomutt/mail
+chmod 600 /home/cobra/.config/aerc/accounts.conf
 
 rm -rf ~/wallpapers
 ln -sf ~/Nextcloud/Wallpapers ~/wallpapers
