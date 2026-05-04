@@ -2,13 +2,13 @@ IMAPStore astrophotography-proton-remote
    Port 1143
    Host 127.0.0.1
    User astrofotografie@protonmail.com
-   PassCmd "bash ~/.config/neomutt/scripts/get-pw.sh astrophotography-proton"
+   PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh astrophotography-proton"
    TLSType NONE
 
 MaildirStore astrophotography-proton-local
    SubFolders Verbatim
-   Path ~/.config/neomutt/mail/astrophotography-proton/
-   Inbox ~/.config/neomutt/mail/astrophotography-proton/Inbox
+   Path ~/Mail/astrophotography-proton/
+   Inbox ~/Mail/astrophotography-proton/Inbox
 
 Channel astrophotography-proton
    Far :astrophotography-proton-remote:
@@ -22,13 +22,13 @@ IMAPStore tino-proton-remote
    Port 1143
    Host 127.0.0.1
    User tinoheuberger@protonmail.com
-   PassCmd "bash ~/.config/neomutt/scripts/get-pw.sh tino-proton"
+   PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh tino-proton"
    TLSType NONE
 
 MaildirStore tino-proton-local
    SubFolders Verbatim
-   Path ~/.config/neomutt/mail/tino-proton/
-   Inbox ~/.config/neomutt/mail/tino-proton/Inbox
+   Path ~/Mail/tino-proton/
+   Inbox ~/Mail/tino-proton/Inbox
 
 Channel tino-proton
    Far :tino-proton-remote:
@@ -42,15 +42,15 @@ IMAPStore tino-sag-remote
    Port 993
    Host imap.mail.hostpoint.ch
    User tino.heuberger@sag-sas.ch
-   PassCmd "bash ~/.config/neomutt/scripts/get-pw.sh tino-sag"
+   PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh tino-sag"
    TLSType IMAPS
    CertificateFile /etc/ssl/certs/ca-certificates.crt
    AuthMechs LOGIN
 
 MaildirStore tino-sag-local
    SubFolders Verbatim
-   Path ~/.config/neomutt/mail/tino-sag/
-   Inbox ~/.config/neomutt/mail/tino-sag/Inbox
+   Path ~/Mail/tino-sag/
+   Inbox ~/Mail/tino-sag/Inbox
 
 Channel tino-sag
    Far :tino-sag-remote:

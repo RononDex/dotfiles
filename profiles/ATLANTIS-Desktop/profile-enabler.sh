@@ -22,13 +22,13 @@ cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
 cp $scriptDir/overrides/mpv/hdr-custom.conf ~/.config/mpv/hdr-custom.conf
 mkdir -p ~/.local/share/applications
 
-cp $scriptDir/overrides/neomutt/crypt-store/astrophotography-proton ~/.config/neomutt/crypt-store/astrophotography-proton
-cp $scriptDir/overrides/neomutt/crypt-store/tino-proton ~/.config/neomutt/crypt-store/tino-proton
-cp $scriptDir/overrides/neomutt/crypt-store/tino-sag ~/.config/neomutt/crypt-store/tino-sag
-mkdir -p ~/.config/neomutt/mail/astrophotography-proton/
-mkdir -p ~/.config/neomutt/mail/tino-proton/
-mkdir -p ~/.config/neomutt/mail/tino-sag/
-chmod -R 700 ~/.config/neomutt/mail/
+cp $scriptDir/overrides/mbsync/crypt-store/astrophotography-proton ~/.config/mbsync/crypt-store/astrophotography-proton
+cp $scriptDir/overrides/mbsync/crypt-store/tino-proton ~/.config/mbsync/crypt-store/tino-proton
+cp $scriptDir/overrides/mbsync/crypt-store/tino-sag ~/.config/mbsync/crypt-store/tino-sag
+mkdir -p ~/Mail/astrophotography-proton/
+mkdir -p ~/Mail/tino-proton/
+mkdir -p ~/Mail/tino-sag/
+chmod -R 700 ~/Mail/
 
 echo "Installing stuff ..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc teamspeak3 blueman wireguard-tools --noconfirm --needed
