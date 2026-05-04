@@ -11,3 +11,6 @@ mailboxes +tino-sag/Inbox +tino-sag/Sent +tino-sag/Drafts +tino-sag/Trash
 
 folder-hook "tino-proton/" "source accounts/tino-proton.muttrc" 
 mailboxes +tino-proton/Inbox +tino-proton/Sent +tino-proton/Drafts +tino-proton/Trash
+
+folder-hook "astrophotography-proton/" "source accounts/astrophotography.muttrc" 
+mailboxes +astrophotography-proton/Inbox +astrophotography-proton/Sent +astrophotography-proton/Drafts +astrophotography-proton/Trash
