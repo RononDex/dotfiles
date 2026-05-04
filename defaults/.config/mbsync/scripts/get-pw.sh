@@ -8,4 +8,4 @@ gpg \
 	--passphrase "$(cat /etc/hostname):$(cat /etc/machine-id)" \
 	--no-tty \
 	--quiet \
-	--decrypt ~/.config/neomutt/crypt-store/$mailBox
+	--decrypt ~/.config/mbsync/crypt-store/$mailBox
