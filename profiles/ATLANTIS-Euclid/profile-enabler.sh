@@ -23,7 +23,7 @@ echo "Installing stuff..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
-sudo pacman -S virt-manager qemu chromium xf86-video-vesa --needed --noconfirm
+sudo pacman -S virt-manager qemu chromium xf86-video-vesa cef --needed --noconfirm
 sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
@@ -51,7 +51,6 @@ InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/bree
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
 sudo cvmfs_config setup
-InstallAurPackage "jellyfin-desktop-libcef-bin" "https://aur.archlinux.org/jellyfin-desktop-libcef-bin.git"
 InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"

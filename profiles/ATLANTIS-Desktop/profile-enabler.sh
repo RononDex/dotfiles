@@ -35,7 +35,7 @@ sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc teamspea
 sudo pacman -S texlive biber aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S prusa-slicer obs-studio libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -S virt-manager qemu onboard --needed --noconfirm
-sudo pacman -S dotnet-sdk aspnet-targeting-pack --needed --noconfirm
+sudo pacman -S dotnet-sdk aspnet-targeting-pack cef --needed --noconfirm
 sudo pacman -S amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd --needed --noconfirm
 sudo pacman -S gamemode --needed --noconfirm
 
@@ -54,7 +54,6 @@ InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
 InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "jellyfin-desktop-libcef-bin" "https://aur.archlinux.org/jellyfin-desktop-libcef-bin.git"
 InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"

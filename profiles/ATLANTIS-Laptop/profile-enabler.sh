@@ -33,7 +33,7 @@ sudo pacman -S sof-firmware nextcloud-client xf86-input-wacom dunst libnotify no
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -S virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
-sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware --needed --noconfirm
+sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware cef --needed --noconfirm
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 
 echo "Setup auto screen rotation"
@@ -70,7 +70,6 @@ InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
-InstallAurPackage "jellyfin-desktop-libcef-bin" "https://aur.archlinux.org/jellyfin-desktop-libcef-bin.git"
 InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
