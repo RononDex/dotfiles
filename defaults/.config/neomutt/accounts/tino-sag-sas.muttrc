@@ -1,9 +1,0 @@
-# vim:ft=neomuttrc
-
-set spoolfile  = "+Inbox"
-set postponed  = +Drafts
-set record     = "+Sent"
-set trash      = +Trash
-set from       = tino.heuberger@sag-sas.ch
-set real_name  = "Tino Heuberger"
-

@@ -1,8 +1,0 @@
-# vim:ft=neomuttrc
-
-set spoolfile  = "+Inbox"
-set postponed  = +Drafts
-set record     = "+Sent"
-set trash      = +Trash
-set from       = astrofotografie@protonmail.com
-set real_name  = "Fachgruppe für Astrofotografie Schweiz"
