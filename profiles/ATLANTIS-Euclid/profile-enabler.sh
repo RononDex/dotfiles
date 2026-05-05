@@ -81,6 +81,8 @@ systemctl enable docker.socket --user
 
 echo "Enabling services ..."
 sudo systemctl enable libvirtd
+systemctl --user daemon-reload
+systemctl --user enable --now sync-mail.timer
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"

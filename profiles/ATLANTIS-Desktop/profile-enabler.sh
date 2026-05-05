@@ -113,6 +113,8 @@ echo "Setting up rootless docker..."
 
 echo "Enabling services ..."
 EnableService bluetooth
+systemctl --user daemon-reload
+systemctl --user enable --now sync-mail.timer
 
 currentUser=$(whoami)
 sudo usermod -a -G lp ${currentUser}

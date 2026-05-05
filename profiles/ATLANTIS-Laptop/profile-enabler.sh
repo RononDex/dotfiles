@@ -50,6 +50,9 @@ sudo systemctl enable NetworkManager-dispatcher.service
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
 
+systemctl --user daemon-reload
+systemctl --user enable --now sync-mail.timer
+
 InstallWayland
 InstallHyprland
 SetupWireguardClient
