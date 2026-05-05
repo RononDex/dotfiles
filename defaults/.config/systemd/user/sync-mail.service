@@ -1,0 +1,6 @@
+[Unit]
+Description=Sync mail
+
+[Service]
+Type=oneshot
+ExecStart=%h/.scripts/mail/sync-mail.sh

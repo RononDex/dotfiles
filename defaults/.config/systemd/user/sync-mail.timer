@@ -1,0 +1,10 @@
+[Unit]
+Description=Sync mail every few minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2min
+Unit=sync-mail.service
+
+[Install]
+WantedBy=timers.target
