@@ -38,6 +38,7 @@ local function createLtexConfig(lang)
 			'rst',
 			'tex',
 			'text',
+			'mail',
 			'typst',
 			'xhtml',
 		},
