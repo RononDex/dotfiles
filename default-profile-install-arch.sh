@@ -126,8 +126,8 @@ else
 fi
 
 echo "Installing AUR packages"
-InstallAurPackage "dcron" "https://aur.archlinux.org/dcron.git"
 InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
+InstallAurPackage "nvimpager-git" "https://aur.archlinux.org/nvimpager-git.git"
 InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
 InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
 InstallAurPackage "go-chroma-bin" "https://aur.archlinux.org/go-chroma-bin.git"
