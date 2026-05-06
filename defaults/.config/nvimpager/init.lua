@@ -16,6 +16,9 @@ vim.opt.undofile = true
 --Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
+vim.opt_local.wrap = true
+vim.opt_local.linebreak = true
+vim.opt_local.breakat = ' \t;,!?'
 
 vim.opt.rtp:append(vim.fn.expand('~/.local/share/nvim/lazy/hop.nvim'))
 
@@ -43,3 +46,8 @@ vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter" }, {
 		vim.defer_fn(set_hop_map, 100)
 	end
 })
+
+vim.api.nvim_set_hl(0, 'UrlHighlight', { fg = '#756025', underline = true })
+vim.fn.matchadd('UrlHighlight', 'https\\?://[^ )>\\]]*')
+vim.fn.matchadd('UrlHighlight', 'http\\?://[^ )>\\]]*')
+vim.fn.matchadd('UrlHighlight', 'mailto\\?://[^ )>\\]]*')
