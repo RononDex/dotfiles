@@ -14,7 +14,7 @@ fi
 echo "Deleting messages tagged as *deleted*"
 notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-empty rm -v
 
-mbsync $CHANNEL
+mbsync -a
 
 # capture new messages before notmuch new runs (and triggers post-new hook)
 before=$(notmuch count tag:unread and tag:inbox)
