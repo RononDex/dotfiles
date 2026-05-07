@@ -19,6 +19,16 @@ cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/activ
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 
+cp $scriptDir/overrides/mbsync/crypt-store/astrophotography-proton ~/.config/mbsync/crypt-store/astrophotography-proton
+cp $scriptDir/overrides/mbsync/crypt-store/tino-proton ~/.config/mbsync/crypt-store/tino-proton
+cp $scriptDir/overrides/mbsync/crypt-store/tino-sag ~/.config/mbsync/crypt-store/tino-sag
+mkdir -p ~/Mail/astrophotography-proton/
+mkdir -p ~/Mail/tino-proton/
+mkdir -p ~/Mail/tino-sag/
+chmod -R 700 ~/Mail/
+
+
+
 echo "Installing stuff..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
