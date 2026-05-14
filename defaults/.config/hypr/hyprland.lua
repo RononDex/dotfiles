@@ -1,6 +1,6 @@
----
----
----
+local home = os.getenv("HOME")
+
+package.path = home .. "/.config/hypr/configs/?.lua;" .. package.path
 ------------------------------------------
 -- Variables
 ------------------------------------------
@@ -76,14 +76,15 @@ hl.gesture({
 -- Group settings
 ------------------------------------------
 hl.config({
-	groupbar = {
-
-		font_size = 14,
-		height = 24,
-		gradients = true,
-		col = {
-			inactive = { colors = { "rgba(40, 40, 40, 0.7)", "rgba(80, 80, 80, 0.7)" }, angle = 90 },
-			active = "rgba(142, 103, 25, 0.7)"
+	group = {
+		groupbar = {
+			font_size = 14,
+			height = 24,
+			gradients = true,
+			col = {
+				inactive = { colors = { "rgba(40, 40, 40, 0.7)", "rgba(80, 80, 80, 0.7)" }, angle = 90 },
+				active = "rgba(142, 103, 25, 0.7)"
+			}
 		}
 	}
 })
@@ -104,9 +105,9 @@ hl.config({
 	master = {}
 })
 
-require("configs.monitors")
-require("configs.envs")
-require("configs.execs")
-require("configs.key-bindings")
-require("configs.window-rules")
-require("configs.custom-config")
+require("monitors")
+require("envs")
+require("execs")
+require("key-bindings")
+require("window-rules")
+require("custom-config")
