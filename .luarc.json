@@ -1,6 +1,12 @@
 {
-    "diagnostics.globals": [
-        "exec_openscad",
-        "switchLtexLanguage"
-    ]
+	"workspace": {
+		"library": [
+			"/usr/share/hypr/stubs"
+		]
+	},
+	"diagnostics.globals": [
+		"exec_openscad",
+		"switchLtexLanguage",
+		"hl"
+	]
 }
