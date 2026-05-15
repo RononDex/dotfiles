@@ -1,7 +1,7 @@
 --------------------------
 -- Custom envs
 --------------------------
-hl.env("PATH", "$PATH:$GOPATH/bin");
+hl.env("PATH", os.getenv("PATH") .. ":" .. os.getenv("GOPATH") .. "/bin");
 
 --------------------------
 -- Custom Autostarts
