@@ -60,7 +60,8 @@ hl.config({
 		touchpad = {
 			natural_scroll = true
 		},
-		accel_profile = "flat"
+		accel_profile = "flat",
+		sensitivity = -0.3
 	},
 	cursor = {
 		no_hardware_cursors = true

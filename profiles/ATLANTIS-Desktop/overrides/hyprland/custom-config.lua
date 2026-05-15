@@ -1,4 +1,12 @@
 --------------------------
+-- Custom config
+--------------------------
+hl.config({
+	xwayland = {
+		force_zero_scaling = true
+	},
+})
+--------------------------
 -- Custom envs
 --------------------------
 hl.env("MAKEFLAGS", "-j 16");
