@@ -16,7 +16,7 @@ hl.window_rule({
 	opacity = "0.95 0.8 1.0"
 })
 hl.window_rule({
-	name = "signal-transperency",
+	name = "nautilus-transperency",
 	match = {
 		class = "org.gnome.Nautilus"
 	},
