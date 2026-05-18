@@ -1,0 +1,14 @@
+[Unit]
+Description=Restic Server Backup
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+
+ExecStart=/root/scripts/backupServerRestic.sh
+
+# Redirect stdout and stderr to a log file.
+# systemd creates the file; make sure the directory is writable by User=.
+StandardOutput=append:/var/log/restic-backup.log
+StandardError=append:/var/log/restic-backup.log

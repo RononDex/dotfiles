@@ -1,0 +1,17 @@
+[Unit]
+Description=Daily backup at 02:30
+
+[Timer]
+# Run once a day at 02:30 local time.
+# Other examples:
+#   OnCalendar=hourly
+#   OnCalendar=weekly
+#   OnCalendar=Mon..Fri 08:00
+#   OnCalendar=*:0/15        (every 15 minutes)
+OnCalendar=*-*-* 02:30:00
+
+# If the system was off at the scheduled time, run once it comes back up.
+Persistent=true
+
+[Install]
+WantedBy=timers.target
