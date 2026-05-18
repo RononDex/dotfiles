@@ -17,6 +17,10 @@ if [ ! -f /root/restic_pw ]; then
 	exit 1
 fi
 
+echo "--------------------------------"
+echo "Starting backup on $(date)"
+echo "--------------------------------"
+
 export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/pollux-server-backup"
 export RESTIC_CACHE_DIR="/root/.cache/restic"
 export RESTIC_PASSWORD=$(cat /root/restic_pw)
