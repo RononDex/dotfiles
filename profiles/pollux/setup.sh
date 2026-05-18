@@ -6,5 +6,5 @@ sudo rm -rf /root/scripts
 sudo cp -r $scriptDir/scripts /root/scripts
 
 sudo chmod -R +x /root/scripts/
-sudo cp $scriptDir/restic-backup.service /etc/systemd/system/restic-backup.service
-sudo cp restic-backup.timer /etc/systemd/system/restic-backup.timer
+sudo cp $scriptDir/systemD/restic-backup.service /etc/systemd/system/restic-backup.service
+sudo cp $scriptDir/systemD/restic-backup.timer /etc/systemd/system/restic-backup.timer
