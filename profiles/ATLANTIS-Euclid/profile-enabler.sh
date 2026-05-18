@@ -23,6 +23,7 @@ cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custo
 cp $scriptDir/overrides/mbsync/crypt-store/astrophotography-proton ~/.config/mbsync/crypt-store/astrophotography-proton
 cp $scriptDir/overrides/mbsync/crypt-store/tino-proton ~/.config/mbsync/crypt-store/tino-proton
 cp $scriptDir/overrides/mbsync/crypt-store/tino-sag ~/.config/mbsync/crypt-store/tino-sag
+cp $scriptDir/overrides/mbsync/certs/proton-bridge.pem ~/.config/mbsync/certs/proton-bridge.pem
 mkdir -p ~/Mail/astrophotography-proton/
 mkdir -p ~/Mail/tino-proton/
 mkdir -p ~/Mail/tino-sag/

@@ -4,6 +4,7 @@ IMAPStore astrophotography-proton-remote
    User astrofotografie@protonmail.com
    PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh astrophotography-proton"
    TLSType NONE
+   CertificateFile ~/.config/mbsync/certs/proton-bridge.pem
 
 MaildirStore astrophotography-proton-local
    SubFolders Verbatim
@@ -24,6 +25,7 @@ IMAPStore tino-proton-remote
    User tinoheuberger@protonmail.com
    PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh tino-proton"
    TLSType NONE
+   CertificateFile ~/.config/mbsync/certs/proton-bridge.pem
 
 MaildirStore tino-proton-local
    SubFolders Verbatim
