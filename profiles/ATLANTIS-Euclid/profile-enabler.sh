@@ -15,6 +15,7 @@ sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
 cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
 cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
+cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
