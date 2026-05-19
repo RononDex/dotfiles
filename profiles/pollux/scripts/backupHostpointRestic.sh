@@ -28,3 +28,6 @@ export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/hostpoint-backup"
 export RESTIC_CACHE_DIR="/root/.cache/restic-hostpoint"
 export RESTIC_PASSWORD=$(cat /root/restic_pw_hostpoint)
 export GOMAXPROCS=4
+
+echo "Unmounting Hostpoint..."
+umount /root/hostpoint-mnt
