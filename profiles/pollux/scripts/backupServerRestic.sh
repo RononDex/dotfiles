@@ -12,8 +12,8 @@ if pgrep -f "restic backup" >/dev/null; then
 	exit 1
 fi
 
-if [ ! -f /root/restic_pw ]; then
-	echo "The file /root/restic_pw does not exist, exiting..."
+if [ ! -f /root/restic_pw_pollux ]; then
+	echo "The file /root/restic_pw_pollux does not exist, exiting..."
 	exit 1
 fi
 
@@ -23,7 +23,7 @@ echo "--------------------------------"
 
 export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/pollux-server-backup"
 export RESTIC_CACHE_DIR="/root/.cache/restic"
-export RESTIC_PASSWORD=$(cat /root/restic_pw)
+export RESTIC_PASSWORD=$(cat /root/restic_pw_pollux)
 export GOMAXPROCS=4
 
 if [ ! -d $RESTIC_CACHE_DIR ]; then
