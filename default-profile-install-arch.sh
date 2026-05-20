@@ -89,7 +89,7 @@ sudo pacman -S keyutils bison openconnect ksshaskpass --needed --noconfirm
 sudo pacman -S ttf-liberation kitty libvips lftp npm linux-firmware-marvell fwupd --needed --noconfirm
 sudo pacman -S webkit2gtk qt5ct qt6ct kvantum kvantum-qt5 otf-font-awesome ddcutil jq polkit --needed --noconfirm
 sudo pacman -S sassc cargo luarocks shfmt lm_sensors thefuck --needed --noconfirm
-sudo pacman -S aerc isync mailcap notmuch vdirsyncer khard lynx github-cli mermaid-cli astyle --needed --noconfirm
+sudo pacman -S aerc isync mailcap notmuch vdirsyncer khard khal lynx github-cli mermaid-cli astyle --needed --noconfirm
 
 gh ext install meiji163/gh-notify
 gh ext upgrade meiji163/gh-notify
