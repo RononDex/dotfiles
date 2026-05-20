@@ -21,7 +21,9 @@ vim.opt_local.linebreak = true
 vim.opt_local.breakat = ' \t;,!?'
 
 vim.opt.rtp:append(vim.fn.expand('~/.local/share/nvim/lazy/hop.nvim'))
+vim.opt.rtp:append(vim.fn.expand('~/.local/share/nvim/lazy/onedark.nvim'))
 
+-- Configure hop
 local window = require('hop.window')
 local orig_clip = window.clip_line_context
 window.clip_line_context = function(line_ctx, win_ctx)
@@ -40,6 +42,18 @@ require('hop').setup({
 local function set_hop_map()
 	vim.keymap.set("n", " ", "<cmd>HopWord<cr>", { buffer = true, nowait = true })
 end
+
+-- Configure color scheme
+require('onedark').setup {
+	style = 'darker',
+	colors = {
+		bg0 = "#1b1d21",
+		bg1 = "#24272b",
+		bg2 = "#2e3238",
+		bg3 = "#30323b",
+	}
+}
+require('onedark').load()
 
 vim.api.nvim_create_autocmd({ "CursorMoved", "BufWinEnter" }, {
 	callback = function()

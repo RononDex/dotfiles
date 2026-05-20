@@ -1,0 +1,14 @@
+[Unit]
+Description=Hostpoint Server Backup
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+
+ExecStart=/root/scripts/backupHostpointRestic.sh
+
+# Redirect stdout and stderr to a log file.
+# systemd creates the file; make sure the directory is writable by User=.
+StandardOutput=append:/var/log/hostpoint-backup.log
+StandardError=append:/var/log/hostpoint-backup.log
