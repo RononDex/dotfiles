@@ -7,9 +7,9 @@ notmuch tag +spam "folder:/Spam/" and not tag:spam
 
 # Notify on new mails
 notmuch search --output=messages tag:unread and tag:new | while read id; do
-	sender=$(echo "$line" | grep -oP '(?<=\] ).*?(?=;)')
-	subject=$(echo "$line" | grep -oP '(?<=; ).*?(?= \()')
-	notify-send --app-name "Mail" "New Mail from $sender:" "$subject"
+	sender=$(notmuch show --format=json "$id" | jq -r '.[0][0][0].headers.From')
+	subject=$(notmuch show --format=json "$id" | jq -r '.[0][0][0].headers.Subject')
+	notify-send --app-name "Mail" "New Mail from $sender" "$subject"
 done
 
 notmuch tag -new tag:new
