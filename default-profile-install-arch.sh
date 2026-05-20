@@ -46,6 +46,7 @@ chmod -R +x ~/.config/waybar/scripts
 chmod -R +x ~/.scripts
 chmod -R +x ~/.config/neomutt/scripts
 chmod 700 ~/.gnupg -R
+chmod 700 ~/.contacts -R
 
 echo "Copying default config files"
 sudo mkdir /etc/sddm.conf.d
