@@ -60,6 +60,9 @@ mkdir -p ~/.config/neomutt/mail/astrophotography-proton
 mkdir -p ~/.config/neomutt/mail/tino-proton
 sudo chmod -R 700 ~/.config/neomutt/mail
 chmod 600 /home/cobra/.config/aerc/accounts.conf
+mkdir -p ~/Mail/.notmuch/hooks
+cp ~/.files/notmuch/post-new ~/Mail/.notmuch/hooks/post-new
+chmod +x ~/Mail/.notmuch/hooks/post-new
 
 rm -rf ~/wallpapers
 ln -sf ~/Nextcloud/Wallpapers ~/wallpapers

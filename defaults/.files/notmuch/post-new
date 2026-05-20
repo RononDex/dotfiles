@@ -1,0 +1,4 @@
+# Handle sent and spam mail by IMAP folders
+# Marks the mail as Sent or spam according to mail server
+notmuch tag +sent "folder:/Sent/" and not tag:sent
+notmuch tag +spam "folder:/Spam/" and not tag:spam
