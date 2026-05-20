@@ -2,7 +2,7 @@ IMAPStore astrophotography-proton-remote
    Port 1143
    Host 127.0.0.1
    User astrofotografie@protonmail.com
-   PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh astrophotography-proton"
+   PassCmd "bash ~/.scripts/get-pw.sh ~/.config/mbsync/crypt-store/astrophotography-proton"
    TLSType NONE
    CertificateFile ~/.config/mbsync/certs/proton-bridge.pem
 
@@ -23,7 +23,7 @@ IMAPStore tino-proton-remote
    Port 1143
    Host 127.0.0.1
    User tinoheuberger@protonmail.com
-   PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh tino-proton"
+   PassCmd "bash ~/.scripts/get-pw.sh ~/.config/mbsync/crypt-store/tino-proton"
    TLSType NONE
    CertificateFile ~/.config/mbsync/certs/proton-bridge.pem
 
@@ -44,7 +44,7 @@ IMAPStore tino-sag-remote
    Port 993
    Host imap.mail.hostpoint.ch
    User tino.heuberger@sag-sas.ch
-   PassCmd "bash ~/.config/mbsync/scripts/get-pw.sh tino-sag"
+   PassCmd "bash ~/.scripts/get-pw.sh ~/.config/mbsync/crypt-store/tino-sag"
    TLSType IMAPS
    CertificateFile /etc/ssl/certs/ca-certificates.crt
    AuthMechs LOGIN
