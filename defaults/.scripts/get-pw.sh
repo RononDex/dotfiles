@@ -8,4 +8,4 @@ gpg \
 	--passphrase "$(cat /etc/hostname):$(cat /etc/machine-id)" \
 	--no-tty \
 	--quiet \
-	--decrypt ~/.config/mbsync/crypt-store/$encryptedPwFile
+	--decrypt $encryptedPwFile
