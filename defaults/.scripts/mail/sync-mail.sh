@@ -16,21 +16,4 @@ notmuch search --format=text0 --output=files tag:deleted | xargs -0 --no-run-if-
 
 mbsync -a
 
-# capture new messages before notmuch new runs (and triggers post-new hook)
-before=$(notmuch count tag:unread and tag:inbox)
-
 notmuch new
-
-after=$(notmuch count tag:unread and tag:inbox)
-
-if [[ "$after" -gt "$before" ]]; then
-	count=$((after - before))
-	# query the most recent unread messages
-	notmuch search --format=text --output=summary \
-		--limit="$count" "tag:unread and tag:inbox" |
-		while read -r line; do
-			sender=$(echo "$line" | grep -oP '(?<=\] ).*?(?=;)')
-			subject=$(echo "$line" | grep -oP '(?<=; ).*?(?= \()')
-			notify-send --app-name "New Mail" "$sender:" "$subject"
-		done
-fi

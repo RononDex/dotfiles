@@ -1,4 +1,15 @@
+#!/bin/bash
+
 # Handle sent and spam mail by IMAP folders
 # Marks the mail as Sent or spam according to mail server
 notmuch tag +sent "folder:/Sent/" and not tag:sent
 notmuch tag +spam "folder:/Spam/" and not tag:spam
+
+# Notify on new mails
+notmuch search --output=messages tag:unread and tag:new | while read id; do
+	sender=$(echo "$line" | grep -oP '(?<=\] ).*?(?=;)')
+	subject=$(echo "$line" | grep -oP '(?<=; ).*?(?= \()')
+	notify-send --app-name "Mail" "New Mail from $sender:" "$subject"
+done
+
+notmuch tag -new tag:new

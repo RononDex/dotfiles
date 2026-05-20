@@ -56,7 +56,7 @@ other_email=tino.heuberger@fhnw.ch;tino.heuberger@sag-sas.ch;astrofotografie@pro
 #		search results by default.  Using an excluded tag in a
 #		query will override that exclusion.
 #
-tags=unread;inbox;
+tags=unread;inbox;new
 ignore=
 
 [search]
