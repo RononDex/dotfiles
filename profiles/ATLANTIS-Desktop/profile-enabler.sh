@@ -27,6 +27,7 @@ cp $scriptDir/overrides/mbsync/crypt-store/astrophotography-proton ~/.config/mbs
 cp $scriptDir/overrides/mbsync/crypt-store/tino-proton ~/.config/mbsync/crypt-store/tino-proton
 cp $scriptDir/overrides/mbsync/crypt-store/tino-sag ~/.config/mbsync/crypt-store/tino-sag
 cp $scriptDir/overrides/vdirsyncer/crypt-store/nextcloud-cobra.pw ~/.config/vdirsyncer/crypt-store/nextcloud-cobra.pw
+cp $scriptDir/overrides/vdirsyncer/crypt-store/nextcloud-sag.pw ~/.config/vdirsyncer/crypt-store/nextcloud-sag.pw
 mkdir -p ~/Mail/astrophotography-proton/
 mkdir -p ~/Mail/tino-proton/
 mkdir -p ~/Mail/tino-sag/
