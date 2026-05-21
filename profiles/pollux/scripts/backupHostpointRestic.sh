@@ -24,7 +24,7 @@ echo "--------------------------------"
 echo "Starting Hostpoint backup on $(date)"
 echo "--------------------------------"
 
-echo "Mounting Hostpoint through rclone..."
+echo "Mounting Hostpoint through sshfs..."
 sshfs -o ro hostpoint-sag: $HOSTPOINT_MOUNT
 
 export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/hostpoint-backup"
