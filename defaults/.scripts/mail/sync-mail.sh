@@ -1,10 +1,11 @@
 #!/bin/sh
+set -e
 
 export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
 
 CHANNEL=$1
-MBSYNC=$(pgrep mbsync)
-NOTMUCH=$(pgrep notmuch)
+MBSYNC=$(pgrep mbsync || true)
+NOTMUCH=$(pgrep notmuch || true)
 
 if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
 	echo "Already running one instance of mbsync or notmuch. Exiting..."
@@ -12,7 +13,6 @@ if [ -n "$MBSYNC" -o -n "$NOTMUCH" ]; then
 fi
 
 echo "Syncing with vdirsyncer ..."
-y | vdirsyncer discover
 vdirsyncer sync
 
 echo "Deleting messages tagged as *deleted*"
