@@ -2,9 +2,15 @@
 
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
-sudo rm -rf /root/scripts
-sudo cp -r $scriptDir/scripts /root/scripts
+sudo apt install sshfs restic rclone
 
+sudo rm -rf /root/scripts
+
+sudo cp -r $scriptDir/scripts /root/scripts
 sudo chmod -R +x /root/scripts/
+
+sudo cp -r $scriptDir/.ssh /root/.ssh
+sudo chmod -R 700 /root/.ssh
+
 sudo cp $scriptDir/systemD/restic-backup.service /etc/systemd/system/restic-backup.service
 sudo cp $scriptDir/systemD/restic-backup.timer /etc/systemd/system/restic-backup.timer
