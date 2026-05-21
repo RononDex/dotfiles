@@ -14,3 +14,6 @@ sudo chmod -R 700 /root/.ssh
 
 sudo cp $scriptDir/systemD/restic-backup.service /etc/systemd/system/restic-backup.service
 sudo cp $scriptDir/systemD/restic-backup.timer /etc/systemd/system/restic-backup.timer
+
+sudo cp $scriptDir/systemD/hostpoint-backup.service /etc/systemd/system/hostpoint-backup.service
+sudo cp $scriptDir/systemD/hostpoint-backup.timer /etc/systemd/system/hostpoint-backup.timer
