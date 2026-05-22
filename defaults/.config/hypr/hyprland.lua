@@ -61,7 +61,7 @@ hl.config({
 			natural_scroll = true
 		},
 		accel_profile = "flat",
-		sensitivity = -0.5
+		sensitivity = 0.0
 	},
 	cursor = {
 		no_hardware_cursors = true
