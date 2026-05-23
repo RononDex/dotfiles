@@ -25,7 +25,7 @@ echo "Starting Hostpoint backup on $(date)"
 echo "--------------------------------"
 
 echo "Mounting Hostpoint through sshfs..."
-sshfs -o ro,compression=yes,compression_level=6,workaround=fstat hostpoint-sag: $HOSTPOINT_MOUNT
+sshfs -o ro,compression=yes,workaround=fstat hostpoint-sag: $HOSTPOINT_MOUNT
 
 export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/hostpoint-backup"
 export RESTIC_CACHE_DIR="/root/.cache/restic-hostpoint"
