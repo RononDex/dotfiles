@@ -24,9 +24,6 @@ alias rc="sudo cvmfs_config killall && sudo killall mount.cvmfs && sudo killall 
 # Fix for kitty and ssh
 alias ssh="kitty +kitten ssh"
 
-# Fix PixInsight on wayland
-alias PixInsight="env -u WAYLAND_DISPLAY PixInsight"
-
 # Use wayland when available
 alias chromium="chromium --ozone-platform-hint=auto"
 alias signal-desktop="signal-desktop --ozone-platform-hint=auto"
