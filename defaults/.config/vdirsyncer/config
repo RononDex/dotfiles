@@ -30,5 +30,5 @@ fileext = ".vcf"
 [storage nextcloud_contacts_sag_remote]
 type = "carddav"
 url = "https://archiv.sag-sas.ch"
-username = "tino"
+username = "tinoheuberger@protonmail.com"
 password.fetch = ["command", "bash", "~/.scripts/get-pw.sh", "~/.config/vdirsyncer/crypt-store/nextcloud-sag.pw"]
