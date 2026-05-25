@@ -5,6 +5,8 @@
 notmuch tag +sent "folder:/Sent/" and not tag:sent
 notmuch tag +spam "folder:/Spam/" and not tag:spam
 
+notmuch tag +astro-agsol "from:*agsol.ch"
+
 # Notify on new mails
 notmuch search --output=messages tag:unread and tag:new | while read id; do
 	sender=$(notmuch show --format=json "$id" | jq -r '.[0][0][0].headers.From')
