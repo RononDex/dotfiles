@@ -33,7 +33,7 @@ export RESTIC_PASSWORD=$(cat /root/restic_pw_hostpoint)
 export GOMAXPROCS=4
 
 $RESTIC_PATH unlock
-$RESTIC_PATH backup --tag=automated --pack-size=128 --compression=auto \
+$RESTIC_PATH backup --tag=automated --pack-size=128 --compression=auto --ignore-inode=true \
 	$HOSTPOINT_MOUNT/www \
 	$HOSTPOINT_MOUNT/www-inaktiv \
 	$HOSTPOINT_MOUNT/scripts \
