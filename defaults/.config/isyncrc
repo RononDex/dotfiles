@@ -61,3 +61,25 @@ Channel tino-sag
    Create Both
    Expunge Both
    SyncState *
+
+IMAPStore webmaster-sag-remote
+   Port 993
+   Host imap.mail.hostpoint.ch
+   User webmaster@sag-sas.ch
+   PassCmd "bash ~/.scripts/get-pw.sh ~/.config/mbsync/crypt-store/webmaster-sag"
+   TLSType IMAPS
+   CertificateFile /etc/ssl/certs/ca-certificates.crt
+   AuthMechs LOGIN
+
+MaildirStore webmaster-sag-local
+   SubFolders Verbatim
+   Path ~/Mail/webmaster-sag/
+   Inbox ~/Mail/webmaster-sag/Inbox
+
+Channel webmaster-sag
+   Far :webmaster-sag-remote:
+   Near :webmaster-sag-local:
+   Patterns *
+   Create Both
+   Expunge Both
+   SyncState *
