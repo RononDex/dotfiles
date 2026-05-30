@@ -28,6 +28,7 @@ sudo trust anchor --store ~/.config/mbsync/certs/proton-bridge.pem
 mkdir -p ~/Mail/astrophotography-proton/
 mkdir -p ~/Mail/tino-proton/
 mkdir -p ~/Mail/tino-sag/
+mkdir -p ~/Mail/webmaster-sag/
 chmod -R 700 ~/Mail/
 
 

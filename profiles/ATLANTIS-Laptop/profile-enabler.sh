@@ -29,6 +29,7 @@ cp $scriptDir/overrides/vdirsyncer/crypt-store/nextcloud-sag.pw ~/.config/vdirsy
 mkdir -p ~/Mail/astrophotography-proton/
 mkdir -p ~/Mail/tino-proton/
 mkdir -p ~/Mail/tino-sag/
+mkdir -p ~/Mail/webmaster-sag/
 chmod -R 700 ~/Mail/
 
 echo "Installing stuff..."

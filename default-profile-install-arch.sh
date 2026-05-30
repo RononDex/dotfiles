@@ -56,8 +56,6 @@ sudo cp ~/.files/default-sudo-timeout /etc/sudoers.d/default-sudo-timeout
 sudo cp ~/.files/modprobe.d/regdom.conf /etc/modprobe.d/regdom.conf
 sudo cp  ~/.files/zram-config /etc/systemd/zram-generator.conf
 sudo cp ~/.files/vm-zram-settings.conf /etc/sysctl.d/99-vm-zram-parameters.conf
-mkdir -p ~/.config/neomutt/mail/astrophotography-proton
-mkdir -p ~/.config/neomutt/mail/tino-proton
 sudo chmod -R 700 ~/.config/neomutt/mail
 chmod 600 /home/cobra/.config/aerc/accounts.conf
 mkdir -p ~/Mail/.notmuch/hooks
