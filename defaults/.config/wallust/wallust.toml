@@ -51,7 +51,7 @@ kitty.template = 'colors-kitty.conf'
 kitty.target = '~/.config/kitty/kitty-colors.conf'
 
 hypr.template = 'colors-hyprland.conf'
-hypr.target = '~/.config/hypr/wallust/wallust-hyprland.conf'
+hypr.target = '~/.config/hypr/configs/wallust-hyprland.lua'
 
 [hooks]
 # Run commands when wallust is invoked. Useful to avoid scripting.

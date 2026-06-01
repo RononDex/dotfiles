@@ -1,6 +1,9 @@
 local home = os.getenv("HOME")
 
 package.path = home .. "/.config/hypr/configs/?.lua;" .. package.path
+
+local status, module = pcall(require, "wallust-hyprland")
+
 ------------------------------------------
 -- Variables
 ------------------------------------------
@@ -11,8 +14,6 @@ fileExplorer = "nautilus"
 ------------------------------------------
 -- General settings
 ------------------------------------------
-
-
 hl.config({
 	general = {
 		border_size = 3,
@@ -36,7 +37,20 @@ hl.config({
 	}
 })
 
-
+------------------------------------------
+-- Grouping settings
+------------------------------------------
+hl.config({
+	group = {
+		groupbar = {
+			gradients = true,
+			font_size = 10,
+			height = 18,
+			rounding = 10,
+			gradient_rounding = 10
+		}
+	}
+})
 ------------------------------------------
 -- Rendering settings
 ------------------------------------------

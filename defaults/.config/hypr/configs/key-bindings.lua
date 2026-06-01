@@ -38,6 +38,20 @@ hl.bind(mainMod .. " + SHIFT + Q", function()
 	hl.dispatch(hl.dsp.window.close())
 end)
 
+
+----------------------------------
+-- Manage groups
+----------------------------------
+hl.bind(mainMod .. " + G", function()
+	hl.dispatch(hl.dsp.group.toggle())
+end)
+hl.bind(mainMod .. " + SHIFT + L", function()
+	hl.dispatch(hl.dsp.group.next())
+end)
+hl.bind(mainMod .. " + SHIFT + H", function()
+	hl.dispatch(hl.dsp.group.prev())
+end)
+
 ----------------------------------
 -- Workspace bindings
 ----------------------------------
