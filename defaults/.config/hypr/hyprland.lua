@@ -20,7 +20,7 @@ hl.config({
 		gaps_in = 5,
 		gaps_out = 20,
 		col = {
-			active_border = { colors = { "rgba(33ccffee)", "rgba(00ff99ee)" }, angle = 45 },
+			active_border = { colors = { "rgba(" .. color14 .. "ee)", "rgba(" .. color13 .. "ee)" }, angle = 45 },
 			inactive_border = "rgba(595959aa)",
 		}
 	},
@@ -92,13 +92,20 @@ hl.gesture({
 ------------------------------------------
 hl.config({
 	group = {
+		col = {
+			border_active = { colors = { "rgba(" .. color14 .. "ee)", "rgba(" .. color13 .. "ee)" }, angle = 45 },
+		},
 		groupbar = {
-			font_size = 14,
+			font_size = 16,
+			gradient_rounding = 5,
 			height = 24,
 			gradients = true,
+			text_color = "rgba(" .. foreground .. "ee)",
+			font_weight_active = "bold",
+			indicator_gap = 0,
 			col = {
-				inactive = { colors = { "rgba(40, 40, 40, 0.7)", "rgba(80, 80, 80, 0.7)" }, angle = 90 },
-				active = "rgba(142, 103, 25, 0.7)"
+				active = "rgba(" .. color1 .. "ee)",
+				inactive = "rgba(" .. background .. "ee)",
 			}
 		}
 	}
