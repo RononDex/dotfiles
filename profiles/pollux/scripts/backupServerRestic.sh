@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 # Check if running as root
 if [ "$EUID" -ne 0 ]; then
@@ -34,7 +35,12 @@ restic unlock
 restic backup --tag=automated --pack-size=128 --compression=auto \
 	/opt/sag/nextcloud \
 	/opt/sag/meteorastronomie.ch \
+	/opt/sag/reverse-proxy \
+	/opt/sag/uptime-kuma \
 	/var/lib/docker/volumes
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 2
 restic cache --cleanup
+
+PUSH_URL=$(cat /root/push-urls/root-server-bakup)
+curl -s -o /dev/null $PUSH_URL

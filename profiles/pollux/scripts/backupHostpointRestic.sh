@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 HOSTPOINT_MOUNT=/root/hostpoint-mnt
 RESTIC_PATH=/root/bin/restic
@@ -45,3 +46,6 @@ $RESTIC_PATH cache --cleanup
 
 echo "Unmounting Hostpoint..."
 umount /root/hostpoint-mnt
+
+PUSH_URL=$(cat /root/push-urls/hostpoint-bakup)
+curl -s -o /dev/null $PUSH_URL
