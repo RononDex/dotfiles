@@ -107,7 +107,8 @@ fi
 
 echo "Setting up oh-my-zsh ..."
 if [ ! -d ${ZSH} ]; then
-		sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+		export ZSH="$HOME/.config/oh-my-zsh"
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
 echo "Setting up vim..."
