@@ -82,6 +82,7 @@ InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jelly
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
 InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
+InstallAurPackage "light" "https://aur.archlinux.org/light.git"
 
 echo "Installing Yubico Authenticator..."
 curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
