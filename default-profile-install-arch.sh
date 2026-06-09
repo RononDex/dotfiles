@@ -75,7 +75,7 @@ rm ~/pacman.arm.conf
 source ~/.profile
 
 echo "Installing stuff..."
-sudo pacman -S pkgconfig man-db bc powerline-fonts debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
+sudo pacman -S pkgconfig man-db wget bc powerline-fonts debugedit ttf-firacode-nerd ttf-arimo-nerd gcc boost ffmpeg make cmake otf-fira-mono otf-fira-sans ttf-fira-code ttf-fira-mono ttf-fira-sans zsh zsh-completions automake m4 autoconf --noconfirm --needed
 sudo pacman -S bash-completion networkmanager network-manager-applet firefox fastfetch --noconfirm --needed
 sudo pacman -S pipewire pipewire-pulse wireplumber pavucontrol nautilus zram-generator --noconfirm --needed
 sudo pacman -S java-runtime-common jre-openjdk xdotool --noconfirm --needed
