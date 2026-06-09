@@ -8,7 +8,10 @@ hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("bash ~/.config/hypr/scripts/selectBg
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("wofi --show drun --allow-images --insensitive"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
+
+local satty_command =
+"satty --filename - --fullscreen --output-filename ~/screens/satty-$(date '+%Y%m%d-%H:%M:%S').png"
+hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | ' .. satty_command))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd('grim ~/screens/$(date +"%s_grim.png")'))
 
 ----------------------------------
