@@ -51,6 +51,12 @@ end)
 hl.bind(mainMod .. " + SHIFT + H", function()
 	hl.dispatch(hl.dsp.group.prev())
 end)
+hl.bind(mainMod .. " + Tab", function()
+	hl.dispatch(hl.dsp.group.next())
+end)
+hl.bind(mainMod .. " + SHIFT + Tab", function()
+	hl.dispatch(hl.dsp.group.prev())
+end)
 
 ----------------------------------
 -- Workspace bindings
