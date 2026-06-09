@@ -38,6 +38,10 @@ hl.bind(mainMod .. " + SHIFT + Q", function()
 	hl.dispatch(hl.dsp.window.close())
 end)
 
+----------------------------------
+-- Clipboard management
+----------------------------------
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("cliphist list | wofi -S dmenu | cliphist decode | wl-copy"))
 
 ----------------------------------
 -- Manage groups
