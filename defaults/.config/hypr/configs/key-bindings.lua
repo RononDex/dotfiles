@@ -44,7 +44,7 @@ end)
 ----------------------------------
 -- Clipboard management
 ----------------------------------
-hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("cliphist list | wofi -S dmenu | cliphist decode | wl-copy"))
+hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("cliphist list | wofi -S dmenu | cliphist decode | wl-copy && wl-paste"))
 
 ----------------------------------
 -- Manage groups
