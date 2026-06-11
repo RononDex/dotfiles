@@ -6,7 +6,7 @@ hl.window_rule({
 	match = {
 		class = "kitty"
 	},
-	opacity = "0.95 0.83"
+	opacity = "0.96 0.83"
 })
 hl.window_rule({
 	name = "signal-transperency",
