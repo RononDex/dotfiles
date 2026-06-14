@@ -42,7 +42,7 @@ sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware cef --needed --noco
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 
 echo "Setup auto screen rotation"
-InstallAurPackage "iio-hyprland" "https://aur.archlinux.org/iio-hyprland.git"
+InstallAurPackage "iio-hyprland-git" "https://aur.archlinux.org/iio-hyprland-git.git"
 
 echo "Setting up virtual keyboard"
 InstallAurPackage "wvkdb" "https://aur.archlinux.org/wvkbd.git"
@@ -72,8 +72,6 @@ InstallGoDev
 SetupWordpressDev
 
 echo "Installing AUR packages..."
-InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
-InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
@@ -97,7 +95,6 @@ sudo pacman -Slinux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
-InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"

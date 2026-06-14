@@ -72,9 +72,6 @@ InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jelly
 InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
 InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
 InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
-InstallAurPackage "tcllib" "https://aur.archlinux.org/tcllib.git"
-InstallAurPackage "i8kutils" "https://aur.archlinux.org/i8kutils.git"
-InstallAurPackage "dell-bios-fan-control-git" "https://aur.archlinux.org/dell-bios-fan-control-git.git"
 InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
 
 echo "Installing Yubico Authenticator..."
@@ -89,12 +86,6 @@ EnableService ckb-next-daemon
 StartService ckb-next-daemon
 EnableService i8kmon
 StartService i8kmon
-
-echo "Setting up rootless docker..."
-InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
-echo "${USER}:165536:65536" | sudo tee /etc/subuid
-echo "${USER}:165536:65536" | sudo tee /etc/subgid
-systemctl enable docker.socket --user
 
 echo "Enabling services ..."
 sudo systemctl enable libvirtd
