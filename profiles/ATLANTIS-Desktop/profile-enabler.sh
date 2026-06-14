@@ -55,8 +55,6 @@ InstallAurPackage "proton-ge-custom-bin" "https://aur.archlinux.org/proton-ge-cu
 
 echo "Installing AUR packages..."
 InstallMpv
-InstallAurPackage "nvm" "https://aur.archlinux.org/nvm.git"
-InstallAurPackage "mons" "https://aur.archlinux.org/mons.git"
 InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
 InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
 InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
@@ -87,7 +85,6 @@ sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
-InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
 
 EnableService "lactd"
 StartService "lactd"
@@ -109,12 +106,6 @@ InstallGrubTheme -s 4k
 PreSteamSetupVivePro2
 PostSteamSetupVivePro2
 SetupWordpressDev
-
-echo "Setting up rootless docker..."
-# InstallAurPackage "docker-rootless-extras" "https://aur.archlinux.org/docker-rootless-extras.git"
-# echo "${USER}:165536:65536" | sudo tee /etc/subuid
-# echo "${USER}:165536:65536" | sudo tee /etc/subgid
-# systemctl enable docker.socket --user
 
 echo "Enabling services ..."
 EnableService bluetooth
