@@ -10,7 +10,7 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + SHIFT + A", hl.dsp.exec_cmd("hyprlock"))
 
 local satty_command =
-"satty --filename - --fullscreen --output-filename ~/screens/satty-$(date '+%Y%m%d-%H:%M:%S').png"
+"satty --filename - --fullscreen --copy-command wl-copy --output-filename ~/screens/satty-$(date '+%Y%m%d-%H:%M:%S').png"
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd('grim -g "$(slurp)" - | ' .. satty_command))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd('grim ~/screens/$(date +"%s_grim.png")'))
 
