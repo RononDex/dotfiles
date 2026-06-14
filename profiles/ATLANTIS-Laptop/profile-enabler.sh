@@ -91,7 +91,7 @@ InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.g
 InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
 InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
 InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
-sudo pacman -Slinux-firmware-qlogic --needed --noconfirm
+sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm

@@ -45,10 +45,9 @@ sudo pacman -S amd-ucode steam libdrm mesa lib32-libdrm lib32-libglvnd libglvnd 
 sudo pacman -S gamemode --needed --noconfirm
 
 echo "Installing video drivers ..."
-sudo pacman -S libva-mesa-driver lib32-mesa mesa mesa-vdpau vulkan-mesa-layers --needed --noconfirm
+sudo pacman -S libva-mesa-driver lib32-mesa mesa vulkan-mesa-layers --needed --noconfirm
 sudo pacman -S vulkan-radeon lib32-vulkan-radeon --needed --noconfirm
 sudo pacman -S rocm-hip-sdk rocm-opencl-sdk rocm-hip-runtime hip-runtime-amd miopen-hip --needed --noconfirm
-# InstallAurPackage "amdgpu-pro-installer" "https://aur.archlinux.org/amdgpu-pro-installer.git"
 InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
 InstallAurPackage "proton-ge-custom-bin" "https://aur.archlinux.org/proton-ge-custom-bin.git"
 # sudo pacman -R vulkan-amdgpu-pro --noconfirm --needed

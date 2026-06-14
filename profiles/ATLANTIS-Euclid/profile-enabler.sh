@@ -80,7 +80,6 @@ InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-a
 
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
-InstallAurPackage "proton-pass-bin" "https://aur.archlinux.org/proton-pass-bin.git"
 
 EnableService ckb-next-daemon
 StartService ckb-next-daemon
