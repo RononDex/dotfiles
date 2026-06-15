@@ -17,5 +17,5 @@ BasicVimInstall() {
 InstallAurScanner() {
 	CloneOrUpdateGitRepoToPackages aurscan https://github.com/manticore-projects/aurscan
 	cd ~/packages/aurscan
-	./install.sh
+	bash ./install.sh
 }
