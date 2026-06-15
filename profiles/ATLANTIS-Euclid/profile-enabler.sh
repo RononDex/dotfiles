@@ -11,10 +11,6 @@ sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboa
 sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
 sudo cp $scriptDir/overrides/tlp/10-laptop.conf /etc/tlp.d/10-laptop.conf
 cp $scriptDir/overrides/.Xresources ~/.Xresources
-sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
-cp $scriptDir/overrides/hyprland/monitors.conf ~/.config/hypr/monitors.conf
-cp $scriptDir/overrides/hyprland/custom-execs.conf ~/.config/hypr/configs/custom-execs.conf
-cp $scriptDir/overrides/hyprland/custom-envs.conf ~/.config/hypr/configs/custom-envs.conf
 cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
