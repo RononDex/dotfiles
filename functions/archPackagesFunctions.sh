@@ -20,7 +20,7 @@ InstallAurScanner() {
 }
 
 InstallYay() {
-	sudo pacman -S --needed git base-devel
+	sudo pacman -S --needed --noconfirm git base-devel
 	CloneOrUpdateGitRepoToPackages yay https://aur.archlinux.org/yay.git
 	cd ~/packages/yay
 	makepkg -si
