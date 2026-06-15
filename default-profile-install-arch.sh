@@ -2,19 +2,17 @@
 
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
-. ./functions/basicFunctions.sh
-. ./functions/securityFunctions.sh
-. ./functions/archPackagesFunctions.sh
-. ./functions/systemDFunctions.sh
-. ./functions/devEnvFunctions.sh
-. ./functions/themingFunctions.sh
-. ./functions/packageFunctions.sh
-
+. ${scriptDir}/functions/basicFunctions.sh
+. ${scriptDir}/functions/securityFunctions.sh
+. ${scriptDir}/functions/archPackagesFunctions.sh
+. ${scriptDir}/functions/systemDFunctions.sh
+. ${scriptDir}/functions/devEnvFunctions.sh
+. ${scriptDir}/functions/themingFunctions.sh
+. ${scriptDir}/functions/packageFunctions.sh
 
 sudo pacman -Sy archlinux-keyring fakeroot go --noconfirm --needed
 
 InstallAurScanner
-
 
 isArm=false
 echo "Configuring pacman ..."

@@ -88,11 +88,16 @@ cp -ra ${profileName}/. ~/.scripts/
 ln -s ~/.zprofile ~/.profile
 
 # Run default profile-installer
-echo
+echo "------------------------------------------"
+echo "Running default distro install"
+echo "------------------------------------------"
 . ${scriptDir}/default-profile-install-$distro.sh
 
 ProfileInstallScriptPath=$profileName/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
+	echo "------------------------------------------"
+	echo "Running profile install"
+	echo "------------------------------------------"
 	. $ProfileInstallScriptPath
 fi
 
