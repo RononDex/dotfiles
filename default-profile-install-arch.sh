@@ -23,7 +23,7 @@ if [[ $architecture == *"arm"* || $architecture == *"aarch"* ]]; then
 	sudo cp ~/.files/makepkgARM.conf /etc/makepkg.conf
     isArm=true 
 else
-    sudo cp defaults/pacman.conf /etc/pacman.conf
+    sudo cp $scriptDir/defaults/pacman.conf /etc/pacman.conf
 	sudo cp ~/.files/makepkg.conf /etc/makepkg.conf
     sudo chmod 744 /etc/pacman.conf
     isArm=false
