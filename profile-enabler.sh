@@ -24,6 +24,7 @@ NC='\033[0m' # No Color
 export MAKEFLAGS="-j $(nproc)"
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 profilesFolder="$scriptDir/profiles/"
+profileName=$1
 
 # Welcome message
 echo
@@ -32,7 +33,7 @@ echo "   Tino's Profile enabler"
 echo "--------------------------------------------"
 echo
 
-if [ -z "$1" ]; then
+if [ -z "$profileName" ]; then
 	# List available profiles
 	echo "Available profiles: "
 	echo
@@ -62,7 +63,7 @@ if [ -z "$1" ]; then
 	echo
 	profileName=${profiles[$selectedProfile - 1]}
 else
-	profileName=$scriptDir/profiles/$1
+	profileName=$scriptDir/profiles/$profileName
 fi
 
 echo "ProfileName: ${profileName}"
