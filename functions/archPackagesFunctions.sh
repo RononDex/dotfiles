@@ -3,7 +3,7 @@
 InstallAurPackage() {
 	packageName=$1
 	buildParams=${2:-}
-	yay $1
+	yay $1 --noconfirm --needed
 }
 
 BasicVimInstall() {
