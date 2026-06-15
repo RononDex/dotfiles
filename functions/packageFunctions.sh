@@ -122,7 +122,6 @@ InstallSddm() {
     if  command -v pacman &> /dev/null
     then
 		sudo pacman -S sddm --needed --noconfirm
-		# InstallAurPackage "sddm-sugar-candy-git"
 		InstallAurPackage "redhat-fonts"
 		InstallAurPackage "sddm-silent-theme"
 
