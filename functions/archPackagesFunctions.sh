@@ -5,7 +5,6 @@ InstallAurPackage() {
 	buildParams=${2:-}
 	CloneOrUpdateGitRepoToPackages $packageName https://aur.archlinux.org/$packageName.git
 	cd ~/packages/$packageName
-	aurscan $packageName
 	makepkg -sic $buildParams --noconfirm --needed
 }
 
