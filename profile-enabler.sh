@@ -24,7 +24,7 @@ NC='\033[0m' # No Color
 export MAKEFLAGS="-j $(nproc)"
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 profilesFolder="$scriptDir/profiles/"
-profileName=$1
+profileName=${1:-}
 
 # Welcome message
 echo
