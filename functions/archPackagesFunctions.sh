@@ -1,10 +1,12 @@
 #!/bin/sh
 
 InstallAurPackage() {
-	CloneOrUpdateGitRepoToPackages $1 https://aur.archlinux.org/$1.git $2
-	cd ~/packages/$1
-	aurscan $1
-	makepkg -sic $2 --noconfirm --needed
+	packageName=$1
+	buildParams=${2:-}
+	CloneOrUpdateGitRepoToPackages $packageName https://aur.archlinux.org/$packageName.git
+	cd ~/packages/$packageName
+	aurscan $packageName
+	makepkg -sic $buildParams --noconfirm --needed
 }
 
 BasicVimInstall() {

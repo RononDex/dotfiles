@@ -1,16 +1,19 @@
 #!/bin/sh
 
 CloneOrUpdateGitRepoToPackages() {
-	echo "Cloning / updating " $2
+	folderName = $1
+	repoUrl = $2
+	cloneParams = ${3:-}
+	echo "Cloning / updating " $repoUrl
 	if [ ! -d ~/packages ]; then
 		mkdir -p ~/packages
 	fi
 
-	if [ ! -d ~/packages/$1 ]; then
+	if [ ! -d ~/packages/$folderName ]; then
 		cd ~/packages
-		git clone $3 $2 $1
+		git clone $cloneParams $repoUrl $folderName
 	else
-		cd ~/packages/$1
+		cd ~/packages/$folderName
 		git stash
 		git pull
 		git stash pop
