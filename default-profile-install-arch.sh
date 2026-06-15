@@ -10,7 +10,11 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/themingFunctions.sh
 . ./functions/packageFunctions.sh
 
-sudo pacman -Sy archlinux-keyring fakeroot --noconfirm --needed
+
+sudo pacman -Sy archlinux-keyring fakeroot go --noconfirm --needed
+
+InstallAurScanner
+
 
 isArm=false
 echo "Configuring pacman ..."
@@ -28,7 +32,7 @@ else
     isArm=false
 fi
 
-InstallAurPackage "rate-mirrors-bin" "https://aur.archlinux.org/rate-mirrors-bin.git"
+InstallAurPackage "rate-mirrors-bin"
 
 echo "Setting up pacman mirror list:"
 if $isArm ; then
@@ -130,12 +134,12 @@ else
 fi
 
 echo "Installing AUR packages"
-InstallAurPackage "nomacs" "https://aur.archlinux.org/nomacs.git"
-InstallAurPackage "nvimpager-git" "https://aur.archlinux.org/nvimpager-git.git"
-InstallAurPackage "ddcui" "https://aur.archlinux.org/ddcui.git"
-InstallAurPackage "svp-bin" "https://aur.archlinux.org/svp-bin.git"
-InstallAurPackage "go-chroma-bin" "https://aur.archlinux.org/go-chroma-bin.git"
-InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
+InstallAurPackage "nomacs"
+InstallAurPackage "nvimpager-git"
+InstallAurPackage "ddcui"
+InstallAurPackage "svp-bin"
+InstallAurPackage "go-chroma-bin"
+InstallAurPackage "zen-browser-bin"
 
 echo "Installing wallust"
 cargo install wallust
@@ -152,7 +156,7 @@ fi
 
 # Needed key for autofs
 gpg --fetch-keys https://keyserver.ubuntu.com/pks/lookup\?op\=get\&search\=0xcd0a6e3cbb6768800b0736a8e7677380f54fd8a9
-InstallAurPackage "autofs" "https://aur.archlinux.org/autofs.git"
+InstallAurPackage "autofs"
 
 echo "Downloading your public key"
 gpg --recv 0xC7EDA753BB012095
@@ -188,13 +192,13 @@ echo "UPDATESTARTUPTTY" | gpg-connect-agent > /dev/null 2>&1
 # Install GTK themes
 gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
-InstallAurPackage "colloid-gtk-theme-git" "https://aur.archlinux.org/colloid-gtk-theme-git.git"
-InstallAurPackage "colloid-icon-theme-git" "https://aur.archlinux.org/colloid-icon-theme-git.git"
-InstallAurPackage "kanagawa-gtk-theme-git" "https://aur.archlinux.org/kanagawa-gtk-theme-git.git"
-InstallAurPackage "rose-pine-hyprcursor" "https://aur.archlinux.org/rose-pine-hyprcursor.git"
-InstallAurPackage "rose-pine-cursor" "https://aur.archlinux.org/rose-pine-cursor.git"
-InstallAurPackage "hyprcursor-dracula-kde-git" "https://aur.archlinux.org/hyprcursor-dracula-kde-git.git"
-InstallAurPackage "adwaita-qt-git" "https://aur.archlinux.org/adwaita-qt-git.git"
+InstallAurPackage "colloid-gtk-theme-git"
+InstallAurPackage "colloid-icon-theme-git"
+InstallAurPackage "kanagawa-gtk-theme-git"
+InstallAurPackage "rose-pine-hyprcursor"
+InstallAurPackage "rose-pine-cursor"
+InstallAurPackage "hyprcursor-dracula-kde-git"
+InstallAurPackage "adwaita-qt-git"
 
 echo "Updating QT theming"
 SetupQTTheming

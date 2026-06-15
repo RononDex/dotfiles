@@ -48,38 +48,38 @@ echo "Installing video drivers ..."
 sudo pacman -S libva-mesa-driver lib32-mesa mesa vulkan-mesa-layers --needed --noconfirm
 sudo pacman -S vulkan-radeon lib32-vulkan-radeon --needed --noconfirm
 sudo pacman -S rocm-hip-sdk rocm-opencl-sdk rocm-hip-runtime hip-runtime-amd miopen-hip --needed --noconfirm
-InstallAurPackage "lact" "https://aur.archlinux.org/lact.git"
-InstallAurPackage "proton-ge-custom-bin" "https://aur.archlinux.org/proton-ge-custom-bin.git"
+InstallAurPackage "lact"
+InstallAurPackage "proton-ge-custom-bin"
 # sudo pacman -R vulkan-amdgpu-pro --noconfirm --needed
 
 echo "Installing AUR packages..."
 InstallMpv
-InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
-InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
-InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
-InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
+InstallAurPackage "visual-studio-code-bin"
+InstallAurPackage "breeze-obsidian-cursor-theme"
+InstallAurPackage "jellyfin-desktop-libmpv-git"
+InstallAurPackage "jellyfin-desktop-git"
+InstallAurPackage "cvmfs"
 sudo cvmfs_config setup
-InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
-InstallAurPackage "ledger-udev" "https://aur.archlinux.org/ledger-udev.git"
-InstallAurPackage "ledger-live-bin" "https://aur.archlinux.org/ledger-live-bin.git"
-InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
-InstallAurPackage "lug-helper" "https://aur.archlinux.org/lug-helper.git"
-InstallAurPackage "zen-browser-bin" "https://aur.archlinux.org/zen-browser-bin.git"
-InstallAurPackage "jstest-gtk-git" "https://aur.archlinux.org/jstest-gtk-git.git"
-InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
+InstallAurPackage "slack-desktop"
+InstallAurPackage "ledger-udev"
+InstallAurPackage "ledger-live-bin"
+InstallAurPackage "openconnect-sso"
+InstallAurPackage "lug-helper"
+InstallAurPackage "zen-browser-bin"
+InstallAurPackage "jstest-gtk-git"
+InstallAurPackage "onlyoffice-bin"
 
 echo "Installing Yubico Authenticator..."
 curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
-InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-authenticator-bin.git"
+InstallAurPackage "yubico-authenticator-bin"
 
 echo "Installing drivers for other devices"
-InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
-InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
-InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
-InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
-InstallAurPackage "wootility-appimage" "https://aur.archlinux.org/wootility-appimage.git"
-InstallAurPackage "nct6687d-dkms-git" "https://aur.archlinux.org/nct6687d-dkms-git.git"
+InstallAurPackage "wd719x-firmware"
+InstallAurPackage "upd72020x-fw"
+InstallAurPackage "aic94xx-firmware"
+InstallAurPackage "ast-firmware"
+InstallAurPackage "wootility-appimage"
+InstallAurPackage "nct6687d-dkms-git"
 sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
@@ -89,7 +89,7 @@ EnableService "lactd"
 StartService "lactd"
 
 echo "Installing Elite Dangerous stuff..."
-InstallAurPackage "edmarketconnector" "https://aur.archlinux.org/edmarketconnector.git"
+InstallAurPackage "edmarketconnector"
 
 InstallWayland
 InstallHyprland

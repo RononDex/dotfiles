@@ -62,21 +62,21 @@ SetupWordpressDev
 
 echo "Installing AUR packages..."
 InstallMpv
-InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
-InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
-InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
-InstallAurPackage "cvmfs" "https://aur.archlinux.org/cvmfs.git"
+InstallAurPackage "steam-fonts"
+InstallAurPackage "visual-studio-code-bin"
+InstallAurPackage "breeze-obsidian-cursor-theme"
+InstallAurPackage "slack-desktop"
+InstallAurPackage "cvmfs"
 sudo cvmfs_config setup
-InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
-InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
-InstallAurPackage "ckb-next" "https://aur.archlinux.org/ckb-next.git"
-InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
-InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
+InstallAurPackage "jellyfin-desktop-libmpv-git"
+InstallAurPackage "jellyfin-desktop-git"
+InstallAurPackage "ckb-next"
+InstallAurPackage "openconnect-sso"
+InstallAurPackage "onlyoffice-bin"
 
 echo "Installing Yubico Authenticator..."
 curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
-InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-authenticator-bin.git"
+InstallAurPackage "yubico-authenticator-bin"
 
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm

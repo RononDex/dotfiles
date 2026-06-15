@@ -42,10 +42,10 @@ sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware cef --needed --noco
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 
 echo "Setup auto screen rotation"
-InstallAurPackage "iio-hyprland-git" "https://aur.archlinux.org/iio-hyprland-git.git"
+InstallAurPackage "iio-hyprland-git"
 
 echo "Setting up virtual keyboard"
-InstallAurPackage "wvkdb" "https://aur.archlinux.org/wvkbd.git"
+InstallAurPackage "wvkdb"
 
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
@@ -72,25 +72,25 @@ InstallGoDev
 SetupWordpressDev
 
 echo "Installing AUR packages..."
-InstallAurPackage "steam-fonts" "https://aur.archlinux.org/steam-fonts.git"
-InstallAurPackage "visual-studio-code-bin" "https://aur.archlinux.org/visual-studio-code-bin.git"
-InstallAurPackage "breeze-obsidian-cursor-theme" "https://aur.archlinux.org/breeze-obsidian-cursor-theme.git"
-InstallAurPackage "slack-desktop" "https://aur.archlinux.org/slack-desktop.git"
-InstallAurPackage "jellyfin-desktop-libmpv-git" "https://aur.archlinux.org/jellyfin-desktop-libmpv-git.git"
-InstallAurPackage "jellyfin-desktop-git" "https://aur.archlinux.org/jellyfin-desktop-git.git"
-InstallAurPackage "openconnect-sso" "https://aur.archlinux.org/openconnect-sso.git"
-InstallAurPackage "onlyoffice-bin" "https://aur.archlinux.org/onlyoffice-bin.git"
-InstallAurPackage "light" "https://aur.archlinux.org/light.git"
+InstallAurPackage "steam-fonts" 
+InstallAurPackage "visual-studio-code-bin"
+InstallAurPackage "breeze-obsidian-cursor-theme"
+InstallAurPackage "slack-desktop"
+InstallAurPackage "jellyfin-desktop-libmpv-git"
+InstallAurPackage "jellyfin-desktop-git"
+InstallAurPackage "openconnect-sso"
+InstallAurPackage "onlyoffice-bin"
+InstallAurPackage "light"
 
 echo "Installing Yubico Authenticator..."
 curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
-InstallAurPackage "yubico-authenticator-bin" "https://aur.archlinux.org/yubico-authenticator-bin.git"
+InstallAurPackage "yubico-authenticator-bin"
 
 echo "Installing drivers for other devices"
-InstallAurPackage "wd719x-firmware" "https://aur.archlinux.org/wd719x-firmware.git"
-InstallAurPackage "upd72020x-fw" "https://aur.archlinux.org/upd72020x-fw.git"
-InstallAurPackage "aic94xx-firmware" "https://aur.archlinux.org/aic94xx-firmware.git"
-InstallAurPackage "ast-firmware" "https://aur.archlinux.org/ast-firmware.git"
+InstallAurPackage "wd719x-firmware"
+InstallAurPackage "upd72020x-fw"
+InstallAurPackage "aic94xx-firmware"
+InstallAurPackage "ast-firmware"
 sudo pacman -S linux-firmware-qlogic --needed --noconfirm
 
 echo "Installing Proton Stuff"
