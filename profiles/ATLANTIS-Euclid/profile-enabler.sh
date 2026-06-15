@@ -35,7 +35,7 @@ chmod -R 700 ~/Mail/
 echo "Installing stuff..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -S nomacs tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
+sudo pacman -S tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
 sudo pacman -S virt-manager qemu chromium xf86-video-vesa cef --needed --noconfirm
 sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo systemctl enable bluetooth
