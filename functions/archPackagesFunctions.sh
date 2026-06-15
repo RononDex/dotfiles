@@ -3,9 +3,7 @@
 InstallAurPackage() {
 	packageName=$1
 	buildParams=${2:-}
-	CloneOrUpdateGitRepoToPackages $packageName https://aur.archlinux.org/$packageName.git
-	cd ~/packages/$packageName
-	makepkg -sic $buildParams --noconfirm --needed
+	yay $1
 }
 
 BasicVimInstall() {
@@ -19,4 +17,11 @@ InstallAurScanner() {
 	CloneOrUpdateGitRepoToPackages aurscan https://github.com/manticore-projects/aurscan
 	cd ~/packages/aurscan
 	bash ./install.sh
+}
+
+InstallYay() {
+	sudo pacman -S --needed git base-devel
+	CloneOrUpdateGitRepoToPackages yay https://aur.archlinux.org/yay.git
+	cd ~/packages/yay
+	makepkg -si
 }

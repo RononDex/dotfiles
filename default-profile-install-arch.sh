@@ -11,7 +11,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ${scriptDir}/functions/themingFunctions.sh
 . ${scriptDir}/functions/packageFunctions.sh
 
-sudo pacman -Sy archlinux-keyring fakeroot go --noconfirm --needed
+InstallYay
 
 isArm=false
 echo "Configuring pacman ..."
@@ -39,6 +39,7 @@ else
 fi
 
 sudo pacman -Syu --noconfirm --needed
+sudo yay -Syu --noconfirm --needed
 
 echo "Updating file permissions ..."
 chmod +x ~/.profile
