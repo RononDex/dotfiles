@@ -3,12 +3,12 @@
 InstallAurPackage() {
 	packageName=$1
 	buildParams=${2:-}
-	yay -Sy $1 --noconfirm --needed
+	yay -Sy $1 --needed --answerclean None --answerdiff A --answeredit None --answerupgrade None
 }
 
 BasicVimInstall() {
 	sudo pacman -Sy the_silver_searcher --noconfirm --needed
-	InstallAurPackage "neovim-plug" "https://aur.archlinux.org/neovim-plug.git"
+	InstallAurPackage "neovim-plug"
 	pip3 install pynvim
 	python ~/.config/nvim/plugged/vimspector/install_gadget.py --force-enable-csharp
 }

@@ -39,7 +39,7 @@ else
 fi
 
 sudo pacman -Syu --noconfirm --needed
-sudo yay -Syu --noconfirm --needed
+sudo yay -Syu --needed --answerclean None --answerdiff A --answeredit None --answerupgrade None
 
 echo "Updating file permissions ..."
 chmod +x ~/.profile

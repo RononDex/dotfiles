@@ -2,7 +2,7 @@
 
 
 InstallPowerLineFonts() {
-    CloneOrUpdateGitRepoToPackages "powerline-fonts" "https://github.com/powerline/fonts.git"
+    CloneOrUpdateGitRepoToPackages "powerline-fonts"
     # install
     cd ~/packages/powerline-fonts
     sh ./install.sh
@@ -26,7 +26,7 @@ SetupWinBoat() {
     if  command -v pacman &> /dev/null
     then
         sudo pacman -S freerdp --needed --noconfirm
-		InstallAurPackage "winboat-bin" "https://aur.archlinux.org/winboat-bin.git"
+		InstallAurPackage "winboat-bin"
     fi
 
 }
@@ -107,17 +107,6 @@ InstallHyprland() {
 
 		sudo pacman -S hyprland waypipe nwg-displays nwg-look xdg-desktop-portal-hyprland hyprutils wlr-randr hyprlock hypridle libdisplay-info waybar hyprpolkitagent hyprland-protocols hyprsunset awww --needed --noconfirm
 		sudo pacman -S wl-clipboard cliphist satty --needed --noconfirm
-		# gpg --receive-keys 0FDE7BE0E88F5E48 # Adds needed key for AUR packages
-		# InstallAurPackage "wlr-randr" "https://aur.archlinux.org/wlr-randr.git"
-		# InstallAurPackage "hyprutils-git" "https://aur.archlinux.org/hyprutils-git.git"
-		# InstallAurPackage "hyprland-git" "https://aur.archlinux.org/hyprland-git.git" "-f"
-		# InstallAurPackage "hyprlock-git" "https://aur.archlinux.org/hyprlock-git.git"
-		# InstallAurPackage "hypridle-git" "https://aur.archlinux.org/hypridle-git.git"
-		# InstallAurPackage "nwg-displays" "https://aur.archlinux.org/nwg-displays.git"
-		#
-		# InstallAurPackage "hyprland-protocols" "https://aur.archlinux.org/hyprland-protocols.git"
-		# InstallAurPackage "hyprsunset" "https://aur.archlinux.org/hyprsunset.git"
-
 		sudo pacman -S wofi --needed --noconfirm
 	fi
 }
@@ -133,9 +122,9 @@ InstallSddm() {
     if  command -v pacman &> /dev/null
     then
 		sudo pacman -S sddm --needed --noconfirm
-		# InstallAurPackage "sddm-sugar-candy-git" "https://aur.archlinux.org/sddm-sugar-candy-git.git"
-		InstallAurPackage "redhat-fonts" "https://aur.archlinux.org/redhat-fonts.git"
-		InstallAurPackage "sddm-silent-theme" "https://aur.archlinux.org/sddm-silent-theme.git"
+		# InstallAurPackage "sddm-sugar-candy-git"
+		InstallAurPackage "redhat-fonts"
+		InstallAurPackage "sddm-silent-theme"
 
 		sudo systemctl enable sddm
 
@@ -155,7 +144,7 @@ InstallSddm() {
 InstallEruption() {
     if  command -v pacman &> /dev/null
     then
-		InstallAurPackage "eruption" "https://aur.archlinux.org/eruption.git"
+		InstallAurPackage "eruption"
 
 		systemctl --user enable --now eruption-fx-proxy.service
 		systemctl --user enable --now eruption-audio-proxy.service
@@ -166,7 +155,7 @@ InstallEruption() {
 }
 
 CompileFixedUBootForRpi4() {
-	CloneOrUpdateGitRepoToPackages "PKGBUILDs-archlinux-arm" "https://github.com/RononDex/PKGBUILDs-archlinux-arm.git" 
+	CloneOrUpdateGitRepoToPackages "PKGBUILDs-archlinux-arm"
 	cd ~/packages/PKGBUILDs-archlinux-arm/alarm/uboot-raspberrypi
 
 	makepkg -sic

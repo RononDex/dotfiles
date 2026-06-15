@@ -54,7 +54,7 @@ sudo cp $scriptDir/overrides/hotspot.service /etc/systemd/system/hotspot.service
 sudo systemctl daemon-reload
 sudo systemctl enable mymonitor.service
 sudo chmod u+x /usr/share/scripts/startHotspot.sh
-InstallAurPackage "libhdf5" "https://aur-dev.archlinux.org/libhdf5.git"
+InstallAurPackage "libhdf5"
 
 echo "Enabling services"
 sudo systemctl enable smb.service
@@ -79,7 +79,7 @@ vncpasswd
 sudo systemctl enable vncserver@:1
 sudo systemctl start vncserver@:1
 
-InstallAurPackage "astrometry.net" "https://aur.archlinux.org/astrometry.net.git"
+InstallAurPackage "astrometry.net"
 InstallIndi
 InstallFxLoad
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
@@ -112,10 +112,7 @@ Install8814auDriver
 sudo pacman -S --noconfirm --needed kstars
 InstallAstrometryNet
 DownloadIndexFiles
-#CloneOrUpdateGitRepoToPackages "phd2" "https://github.com/OpenPHDGuiding/phd2.git"
-InstallAurPackage "phd2" "https://aur.archlinux.org/phd2.git"
-# InstallAurPackage "astap" "https://aur.archlinux.org/astap.git"
-# InstallAurPackage "d50-star-db-astap" "https://aur.archlinux.org/d50-star-db-astap.git"
+InstallAurPackage "phd2"
 
 # Install missing firmwares for hardware devices
 sudo pacman -S linux-firmware-qlogic --needed --noconfirm
