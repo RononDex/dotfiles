@@ -3,7 +3,7 @@
 InstallAurPackage() {
 	CloneOrUpdateGitRepoToPackages $1 https://aur.archlinux.org/$1.git $2
 	cd ~/packages/$1
-	aurscan ./
+	aurscan $1
 	makepkg -sic $2 --noconfirm --needed
 }
 
