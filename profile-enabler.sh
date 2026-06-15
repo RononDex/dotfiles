@@ -89,9 +89,9 @@ ln -s ~/.zprofile ~/.profile
 
 # Run default profile-installer
 echo
-. ./default-profile-install-${distro}.sh
+. ${scriptDir}/default-profile-install-$distro.sh
 
-ProfileInstallScriptPath=${profileName}/profile-enabler.sh
+ProfileInstallScriptPath=$profileName/profile-enabler.sh
 if [ -f "$ProfileInstallScriptPath" ]; then
 	. $ProfileInstallScriptPath
 fi
