@@ -1,10 +1,10 @@
 #!/bin/sh
 
 CloneOrUpdateGitRepoToPackages() {
-	folderName = $1
-	repoUrl = $2
-	cloneParams = ${3:-}
-	echo "Cloning / updating " $repoUrl
+	folderName=$1
+	repoUrl=$2
+	cloneParams=${3:-}
+	echo "Cloning / updating $repoUrl"
 	if [ ! -d ~/packages ]; then
 		mkdir -p ~/packages
 	fi
