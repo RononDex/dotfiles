@@ -91,6 +91,7 @@ sudo pacman -S ttf-liberation kitty libvips lftp npm linux-firmware-marvell fwup
 sudo pacman -S qt5ct qt6ct kvantum kvantum-qt5 otf-font-awesome ddcutil jq polkit --needed --noconfirm
 sudo pacman -S sassc cargo luarocks shfmt lm_sensors thefuck --needed --noconfirm
 sudo pacman -S aerc isync mailcap notmuch vdirsyncer khard khal lynx github-cli mermaid-cli astyle --needed --noconfirm
+sudo pacman -S apparmor --needed --noconfirm
 
 gh ext install meiji163/gh-notify
 gh ext upgrade meiji163/gh-notify
@@ -171,6 +172,8 @@ sudo systemctl start NetworkManager
 sudo systemctl enable udisks2	# Needed for fwupd to be able to update bios
 sudo systemctl enable pcscd
 sudo systemctl start pcscd
+sudo systemctl enable apparmor
+sudo systemctl start apparmor
 
 
 echo "Enabled ntp timesync"
