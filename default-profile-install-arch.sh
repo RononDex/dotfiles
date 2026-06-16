@@ -198,8 +198,8 @@ InstallAurPackage "colloid-icon-theme-git"
 InstallAurPackage "kanagawa-gtk-theme-git"
 InstallAurPackage "rose-pine-hyprcursor"
 InstallAurPackage "rose-pine-cursor"
-InstallAurPackage "hyprcursor-dracula-kde-git"
-InstallAurPackage "adwaita-qt-git"
+InstallAurPackage "adwaita-qt5"
+InstallAurPackage "adwaita-qt6"
 
 echo "Updating QT theming"
 SetupQTTheming

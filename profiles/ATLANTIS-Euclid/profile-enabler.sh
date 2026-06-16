@@ -58,16 +58,13 @@ SetupWordpressDev
 
 echo "Installing AUR packages..."
 InstallMpv
-InstallAurPackage "steam-fonts"
 InstallAurPackage "visual-studio-code-bin"
 InstallAurPackage "breeze-obsidian-cursor-theme"
 InstallAurPackage "slack-desktop"
 InstallAurPackage "cvmfs"
 sudo cvmfs_config setup
-InstallAurPackage "jellyfin-desktop-libmpv-git"
 InstallAurPackage "jellyfin-desktop-git"
 InstallAurPackage "ckb-next"
-InstallAurPackage "openconnect-sso"
 InstallAurPackage "onlyoffice-bin"
 
 echo "Installing Yubico Authenticator..."

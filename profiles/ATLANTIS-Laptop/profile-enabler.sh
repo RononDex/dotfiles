@@ -69,13 +69,11 @@ InstallGoDev
 SetupWordpressDev
 
 echo "Installing AUR packages..."
-InstallAurPackage "steam-fonts" 
 InstallAurPackage "visual-studio-code-bin"
 InstallAurPackage "breeze-obsidian-cursor-theme"
 InstallAurPackage "slack-desktop"
 InstallAurPackage "jellyfin-desktop-libmpv-git"
 InstallAurPackage "jellyfin-desktop-git"
-InstallAurPackage "openconnect-sso"
 InstallAurPackage "onlyoffice-bin"
 InstallAurPackage "light"
 

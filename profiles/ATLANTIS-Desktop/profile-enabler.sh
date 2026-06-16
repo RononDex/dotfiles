@@ -51,17 +51,12 @@ InstallAurPackage "proton-ge-custom-bin"
 echo "Installing AUR packages..."
 InstallMpv
 InstallAurPackage "visual-studio-code-bin"
-InstallAurPackage "breeze-obsidian-cursor-theme"
-InstallAurPackage "jellyfin-desktop-libmpv-git"
 InstallAurPackage "jellyfin-desktop-git"
 InstallAurPackage "cvmfs"
 sudo cvmfs_config setup
 InstallAurPackage "slack-desktop"
-InstallAurPackage "ledger-udev"
 InstallAurPackage "ledger-live-bin"
-InstallAurPackage "openconnect-sso"
 InstallAurPackage "lug-helper"
-InstallAurPackage "zen-browser-bin"
 InstallAurPackage "jstest-gtk-git"
 InstallAurPackage "onlyoffice-bin"
 
