@@ -38,6 +38,10 @@ else
 		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
 fi
 
+echo "Removing unused dependencies"
+sudo pacman -Rns $(pacman -Qdtq)
+
+echo "Updating system"
 sudo pacman -Syu --noconfirm --needed
 yay -Syu --needed --noconfirm --answerclean None --answerdiff A --answeredit None --answerupgrade None
 
@@ -195,7 +199,6 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 
 InstallAurPackage "colloid-gtk-theme-git"
 InstallAurPackage "colloid-icon-theme-git"
-InstallAurPackage "kanagawa-gtk-theme-git"
 InstallAurPackage "rose-pine-hyprcursor"
 InstallAurPackage "rose-pine-cursor"
 InstallAurPackage "adwaita-qt5"
