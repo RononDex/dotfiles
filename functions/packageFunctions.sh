@@ -92,7 +92,7 @@ InstallYubiKeyStuff() {
 InstallGrubTheme() {
     CloneOrUpdateGitRepoToPackages "grub2-themes" "https://github.com/vinceliuice/grub2-themes"
     cd ~/packages/grub2-themes
-    sudo ./install.sh -b -t tela $1
+    sudo ./install.sh -b -t tela ${1:-}
 
     if  command -v os-prober &> /dev/null
     then
