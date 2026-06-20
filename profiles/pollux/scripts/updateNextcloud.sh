@@ -16,3 +16,4 @@ sleep 30s
 sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ upgrade
 sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ maintenance:repair --include-expensive
 sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ db:add-missing-indices
+sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ maintenance:mode --off
