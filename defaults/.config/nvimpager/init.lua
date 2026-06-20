@@ -12,6 +12,7 @@ vim.opt.tabstop = 4
 vim.opt.termguicolors = true
 --Save undo history
 vim.opt.undofile = true
+vim.opt.encoding = "utf-8"
 
 --Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
@@ -37,7 +38,7 @@ window.clip_line_context = function(line_ctx, win_ctx)
 end
 
 require('hop').setup({
-	keys = 'etvxpdygfblzhckisuran',
+	keys = 'etvxpdygfblzhckisuan',
 })
 local function set_hop_map()
 	vim.keymap.set("n", " ", "<cmd>HopWord<cr>", { buffer = true, nowait = true })
