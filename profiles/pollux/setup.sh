@@ -17,3 +17,8 @@ sudo cp $scriptDir/systemD/restic-backup.timer /etc/systemd/system/restic-backup
 
 sudo cp $scriptDir/systemD/hostpoint-backup.service /etc/systemd/system/hostpoint-backup.service
 sudo cp $scriptDir/systemD/hostpoint-backup.timer /etc/systemd/system/hostpoint-backup.timer
+
+bash $scriptDir/updateNextcloud.sh
+bash $scriptDir/updateNginxProxy.sh
+bash $scriptDir/updateUptimeKuma.sh
+bash $scriptDir/updateMeteorastronomie.sh

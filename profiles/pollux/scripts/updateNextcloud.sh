@@ -13,6 +13,6 @@ sudo docker compose up -d
 echo "Waiting for containers to be online"
 sleep 30s
 
-docker exec --user www-data nextcloud-app-1 /var/www/html/occ upgrade
-docker exec --user www-data nextcloud-app-1 /var/www/html/occ maintenance:repair --include-expensive
-docker exec --user www-data nextcloud-app-1 /var/www/html/occ db:add-missing-indices
+sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ upgrade
+sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ maintenance:repair --include-expensive
+sudo docker exec --user www-data nextcloud-app-1 /var/www/html/occ db:add-missing-indices
