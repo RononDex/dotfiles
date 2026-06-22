@@ -1,16 +1,12 @@
 #!/bin/sh
 QUERY="$1"
+GROUPS=~/Nextcloud/mail-aliases.conf
 
-# Check if query matches a khard category exactly
-GROUP=$(khard email --remove-first-line --parsable --search-in-source-files "$QUERY" 2>/dev/null)
+# Check if query exactly matches a group name
+MATCH=$(grep -i "^$QUERY=" "$GROUPS" | cut -d'=' -f2)
 
-COUNT=$(echo "$GROUP" | wc -l)
-
-if [ "$COUNT" -gt 1 ]; then
-	# Output group as a single selectable line
-	EMAILS=$(echo "$GROUP" | awk '{print $1}' | tr '\n' ',' | sed 's/,$//')
-	echo "$EMAILS\tGroup: $QUERY"
+if [ -n "$MATCH" ]; then
+	printf "%s\tGroup: %s\n" "$MATCH" "$QUERY"
 else
-	# Normal single address lookup
 	khard email --parsable --remove-first-line "$QUERY"
 fi
