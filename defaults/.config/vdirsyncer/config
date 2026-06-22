@@ -16,19 +16,3 @@ type = "carddav"
 url = "https://nextcloud.theuberger.ch"
 username = "cobra"
 password.fetch = ["command", "bash", "~/.scripts/get-pw.sh", "~/.config/vdirsyncer/crypt-store/nextcloud-cobra.pw"]
-
-[pair nextcloud_contacts_sag]
-a = "nextcloud_contacts_sag_local"
-b = "nextcloud_contacts_sag_remote"
-collections = ["from a", "from b"]
-
-[storage nextcloud_contacts_sag_local]
-type = "filesystem"
-path = "~/.contacts/nextcloud-sag/"
-fileext = ".vcf"
-
-[storage nextcloud_contacts_sag_remote]
-type = "carddav"
-url = "https://archiv.sag-sas.ch"
-username = "tino"
-password.fetch = ["command", "bash", "~/.scripts/get-pw.sh", "~/.config/vdirsyncer/crypt-store/nextcloud-sag.pw"]
