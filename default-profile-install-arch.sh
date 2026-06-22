@@ -50,6 +50,7 @@ chmod +x ~/.profile
 chmod +x ~/.zprofile
 chmod -R +x ~/.config/waybar/scripts
 chmod -R +x ~/.scripts
+chmod -R +x ~/.config/aerc/scripts
 chmod 700 ~/.gnupg -R
 chmod 700 ~/.contacts -R
 
