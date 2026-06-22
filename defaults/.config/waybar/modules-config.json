@@ -23,7 +23,7 @@
 		"on-scroll-down": "light -U 5%",
 		"smooth-scrolling-threshold": 1
 	},
-	"hyprland/workspaces": {
+	"ext/workspaces": {
 		"format": "{name}",
 		"on-click": "activate",
 		"all-outputs": true,
