@@ -1,9 +1,11 @@
 {
-  "modules-left": ["hyprland/workspaces"],
-  "modules-right": [
-    "cpu",
-    "memory",
-    "temperature",
-    "custom/displays",
-  ]
+	"modules-left": [
+		"ext/workspaces"
+	],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"temperature",
+		"custom/displays",
+	]
 }

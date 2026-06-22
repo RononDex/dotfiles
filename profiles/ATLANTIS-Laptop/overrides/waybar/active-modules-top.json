@@ -10,7 +10,7 @@
 		"custom/dunst"
 	],
 	"modules-center": [
-		"hyprland/workspaces"
+		"ext/workspaces"
 	],
 	"modules-right": [
 		"cpu",
