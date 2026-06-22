@@ -10,9 +10,6 @@ vim.opt.smartcase = true
 vim.opt.mouse = 'a'               -- Enable all mouse features
 vim.opt.tabstop = 4
 vim.opt.termguicolors = true
---Save undo history
-vim.opt.encoding = "utf-8,ucs-bom,cp1252,latin1"
-vim.opt.fileencodings = "utf-8,ucs-bom,cp1252,latin1"
 
 --Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
