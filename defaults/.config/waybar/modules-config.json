@@ -27,6 +27,7 @@
 		"format": "{name}",
 		"on-click": "activate",
 		"all-outputs": true,
+		"sort-by-coordinates": false,
 		"sort-by-number": true,
 		"format-icons": {
 			"1": "",

@@ -6,6 +6,6 @@
 		"cpu",
 		"memory",
 		"temperature",
-		"custom/displays",
+		"custom/displays"
 	]
 }
