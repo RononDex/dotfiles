@@ -1,13 +1,13 @@
 #!/bin/sh
 QUERY="$1"
-GROUPS=~/.config/aerc/groups
+ALIASFILE="$HOME/Nextcloud/mail-aliases.conf"
+echo "$GROUPS"
 
-# Find all groups starting with the query
-while IFS='=' read -r name emails; do
-	case "$name" in
-	$QUERY*) printf "%s\tGroup: %s\n" "$emails" "$name" ;;
-	esac
-done <"$GROUPS"
+# Check if query exactly matches a group name
+MATCH=$(grep -i "^$QUERY" "$ALIASFILE" | cut -d'=' -f2)
 
-# Also do normal khard lookup
-khard email --parsable "$QUERY"
+if [ -n "$MATCH" ]; then
+	printf "%s\tGroup: %s\n" "$MATCH" "$QUERY"
+fi
+
+khard email --parsable --remove-first-line "$QUERY"
