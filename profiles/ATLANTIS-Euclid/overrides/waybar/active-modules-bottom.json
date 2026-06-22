@@ -1,6 +1,6 @@
 {
 	"modules-left": [
-		"ext/workspaces"
+		"hyprland/workspaces"
 	],
 	"modules-right": [
 		"cpu",
