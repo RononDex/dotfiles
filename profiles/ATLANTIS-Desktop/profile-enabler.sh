@@ -131,5 +131,5 @@ fi
 SetupWinBoat
 
 echo "Updating grub config"
-sudo cp $scriptDir/overrides/grub/grub.cfg /etc/default/grub
+sudo cp $scriptDir/overrides/grub/grub /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
