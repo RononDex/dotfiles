@@ -106,7 +106,7 @@ InstallHyprland() {
     then
 
 		sudo pacman -S hyprland waypipe nwg-displays nwg-look xdg-desktop-portal-hyprland hyprutils wlr-randr hyprlock hypridle libdisplay-info waybar hyprpolkitagent hyprland-protocols hyprsunset awww --needed --noconfirm
-		sudo pacman -S wl-clipboard cliphist satty --needed --noconfirm
+		sudo pacman -S wl-clipboard satty --needed --noconfirm
 		sudo pacman -S wofi --needed --noconfirm
 	fi
 }
