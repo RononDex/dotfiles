@@ -20,12 +20,16 @@ hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd('grim ~/screens/$(date +"%s_g
 -- Move focus around
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
+hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.move({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + L", hl.dsp.focus({ direction = "right" }))
+hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + K", hl.dsp.focus({ direction = "up" }))
+hl.bind(mainMod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
 hl.bind(mainMod .. " + J", hl.dsp.focus({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
