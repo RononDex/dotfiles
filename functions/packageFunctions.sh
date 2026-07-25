@@ -1,8 +1,7 @@
 #!/bin/sh
 
-
 InstallPowerLineFonts() {
-    CloneOrUpdateGitRepoToPackages "powerline-fonts"
+    CloneOrUpdateGitRepoToPackages "powerline-fonts" "https://github.com/powerline/fonts.git" "--depth=1"
     # install
     cd ~/packages/powerline-fonts
     sh ./install.sh
