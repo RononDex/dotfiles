@@ -50,17 +50,13 @@ InstallYubiKeyStuff
 SetupDotnet
 SetupWireguardServer
 SetupMariaMySqlDb
+InstallDucDynDnsUpdateClient
 
 echo "Setting default apps overrides"
 xdg-mime default nomacs.desktop image/jpeg
 xdg-mime default nomacs.desktop image/png
 xdg-mime default nomacs.desktop image/tiff
 xdg-mime default nomacs.desktop image/jpg
-
-echo "Installing restricted packages ..."
-InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teams-bin
-InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree pritunl-client
-InstallRestrictedPackageFromCache hostdir/binpkgs/nonfree teamspeak3
 
 echo "Enabling services ..."
 EnableService sshd
