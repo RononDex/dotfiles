@@ -52,7 +52,7 @@ SetupWireguardServer
 SetupMariaMySqlDb
 InstallDucDynDnsUpdateClient
 
-if [ ! -d sudo mkdir -p /etc/sv/dyndns-updater/ ]; then
+if [ ! -d /etc/sv/dyndns-updater/ ]; then
 	echo "Setting up dyndns user"
 	sudo useradd -r dyndns
 
