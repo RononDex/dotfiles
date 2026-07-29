@@ -52,6 +52,28 @@ SetupWireguardServer
 SetupMariaMySqlDb
 InstallDucDynDnsUpdateClient
 
+if [ ! -d sudo mkdir -p /etc/sv/dyndns-updater/ ]; then
+	echo "Setting up dyndns user"
+	sudo useradd -r dyndns
+
+	sudo mkdir -p /etc/sv/dyndns-updater/
+
+	echo "DynDns Domain: "
+	read dyndns_domain # read the password
+
+	echo "DynDns User: "
+	read dyndns_user # read the password
+
+	echo "Password for $1 DynDns: "
+	stty_orig=$(stty -g) # save original terminal setting.
+	stty -echo           # turn-off echoing.
+	read dyndns_passwd   # read the password
+
+	sudo echo "#!/bin/sh" | sudo tee --append /etc/sv/dyndns-updater/run
+	sudo echo "exec chpst -u dyndns /usr/local/bin/noip-duc -g $dyndns_domain -u $dyndns_user -p $dyndns_passwd" | sudo tee --append $targetRunitFile
+
+fi
+
 echo "Setting default apps overrides"
 xdg-mime default nomacs.desktop image/jpeg
 xdg-mime default nomacs.desktop image/png
@@ -69,6 +91,7 @@ EnableService smbd
 EnableService wireguard
 EnableService docker
 EnableService cronie
+EnableService dyndns-updater
 
 echo "Ensure smartctl watches RAID devices"
 sudo smartctl --smart=on --offlineauto=on --saveauto=on /dev/sda
