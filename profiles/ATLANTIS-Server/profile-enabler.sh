@@ -70,7 +70,7 @@ if [ ! -d /etc/sv/dyndns-updater/ ]; then
 	read dyndns_passwd   # read the password
 
 	sudo echo "#!/bin/sh" | sudo tee --append /etc/sv/dyndns-updater/run
-	sudo echo "exec chpst -u dyndns /usr/local/bin/noip-duc -g $dyndns_domain -u $dyndns_user -p $dyndns_passwd" | sudo tee --append $targetRunitFile
+	sudo echo "exec chpst -u dyndns /usr/local/bin/noip-duc -g $dyndns_domain -u $dyndns_user -p $dyndns_passwd" | sudo tee --append /etc/sv/dyndns-updater/run
 
 fi
 
