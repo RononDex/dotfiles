@@ -85,7 +85,7 @@ InstallFxLoad
 CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
 
 # InstallIndi drivers
-CloneOrUpdateGitRepoToPackages "indi-3rdparty" "--depth=1 https://github.com/indilib/indi-3rdparty"
+CloneOrUpdateGitRepoToPackages "indi-3rdparty" "https://github.com/indilib/indi-3rdparty" "--depth=1"
 InstallIndiDriver "indi-gphoto"
 InstallIndiDriver "libasi"
 InstallIndiDriver "libatik"
