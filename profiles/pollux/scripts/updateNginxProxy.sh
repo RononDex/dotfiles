@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "----------------------------"
 echo "Updating reverse proxy"
 echo "----------------------------"

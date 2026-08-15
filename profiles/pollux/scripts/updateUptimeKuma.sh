@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "----------------------------"
 echo "Updating Kuma Uptime tracker"
 echo "----------------------------"

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "----------------------------"
 echo "Updating Meteorastronomie Db"
 echo "----------------------------"
