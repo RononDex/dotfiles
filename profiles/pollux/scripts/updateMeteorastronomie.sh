@@ -6,5 +6,6 @@ echo "----------------------------"
 
 cd /opt/sag/meteorastronomie.ch
 
+sudo docker compose pull
 sudo docker compose build --pull
 sudo docker compose up -d --force-recreate

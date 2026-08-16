@@ -7,6 +7,7 @@ echo "----------------------------"
 
 cd /opt/sag/nextcloud
 
+sudo docker compose pull
 sudo docker compose build --pull
 sudo docker compose up -d --force-recreate
 
