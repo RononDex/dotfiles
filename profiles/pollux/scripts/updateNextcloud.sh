@@ -8,7 +8,7 @@ echo "----------------------------"
 cd /opt/sag/nextcloud
 
 sudo docker compose build --pull
-sudo docker compose up -d
+sudo docker compose up -d --force-recreate
 
 echo "Waiting for containers to be online"
 sleep 30s
