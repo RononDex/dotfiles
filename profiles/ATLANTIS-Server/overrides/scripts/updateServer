@@ -5,3 +5,6 @@ echo "Starting server update on $(date +'%D %T')"
 echo "-------------------------------------------"
 
 sudo xbps-install -Syu
+updateDockerContainersServer
+
+reboot
