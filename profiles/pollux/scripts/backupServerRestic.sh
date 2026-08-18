@@ -37,6 +37,7 @@ restic backup --tag=automated --pack-size=128 --compression=auto \
 	/opt/sag/meteorastronomie.ch \
 	/opt/sag/reverse-proxy \
 	/opt/sag/uptime-kuma \
+	/opt/sag/authentik \
 	/var/lib/docker/volumes
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 2
