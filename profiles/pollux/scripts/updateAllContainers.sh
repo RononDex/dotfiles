@@ -10,5 +10,6 @@ echo "--------------------------------------------"
 
 bash /root/scripts/updateMeteorastronomie.sh
 bash /root/scripts/updateUptimeKuma.sh
+bash /root/scripts/authentik.sh
 bash /root/scripts/updateNextcloud.sh
 bash /root/scripts/updateNginxProxy.sh
