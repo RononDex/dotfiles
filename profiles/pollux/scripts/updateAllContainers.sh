@@ -9,7 +9,19 @@ echo " Updating all containers at $(date)"
 echo "--------------------------------------------"
 
 bash /root/scripts/updateMeteorastronomie.sh
+
+sleep 30s
+
 bash /root/scripts/updateUptimeKuma.sh
+
+sleep 30s
+
 bash /root/scripts/authentik.sh
+
+sleep 30s
+
 bash /root/scripts/updateNextcloud.sh
+
+sleep 30s
+
 bash /root/scripts/updateNginxProxy.sh
