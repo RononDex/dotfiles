@@ -10,18 +10,18 @@ echo "--------------------------------------------"
 
 bash /root/scripts/updateMeteorastronomie.sh
 
-sleep 30s
+sleep 60s
 
 bash /root/scripts/updateUptimeKuma.sh
 
-sleep 30s
+sleep 60s
 
 bash /root/scripts/authentik.sh
 
-sleep 30s
+sleep 60s
 
 bash /root/scripts/updateNextcloud.sh
 
-sleep 30s
+sleep 60s
 
 bash /root/scripts/updateNginxProxy.sh
