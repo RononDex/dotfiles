@@ -16,7 +16,7 @@ bash /root/scripts/updateUptimeKuma.sh
 
 sleep 60s
 
-bash /root/scripts/authentik.sh
+bash /root/scripts/updateAuthentik.sh
 
 sleep 60s
 
