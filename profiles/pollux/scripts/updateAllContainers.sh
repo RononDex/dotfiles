@@ -25,3 +25,7 @@ bash /root/scripts/updateNextcloud.sh
 sleep 60s
 
 bash /root/scripts/updateNginxProxy.sh
+
+sleep 60s
+
+bash /root/scripts/updateNginxProxy.sh
