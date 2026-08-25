@@ -1,6 +1,5 @@
 return {
-	'neovim-treesitter/nvim-treesitter',
-	dependencies = { 'neovim-treesitter/treesitter-parser-registry' },
+	'nvim-treesitter/nvim-treesitter',
 	lazy = false,
-	build = ':TSUpdate',
+	build = ':TSUpdate'
 }
