@@ -28,14 +28,14 @@ hl.monitor({
 	position = "0x0",
 	scale = 1.5,
 	bitdepth = 10,
-	sdrbrightness = 1.2,
+	sdrbrightness = 1.3,
 	sdrsaturation = 1.1,
 	supports_wide_color = 1,
 	supports_hdr = 1,
 	cm = "hdredid",
 	sdr_min_luminance = 0.05,
-	sdr_max_luminance = 220,
-	max_luminance = 1300,
+	sdr_max_luminance = 250,
+	max_luminance = 1400,
 	min_luminance = 0
 })
 hl.monitor({
