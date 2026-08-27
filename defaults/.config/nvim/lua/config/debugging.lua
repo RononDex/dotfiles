@@ -8,10 +8,6 @@ local utils = require("utils")
 
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
-	if utils.is_neotree_open() then
-		utils.neotree_open_before_debug = true
-		vim.cmd("Neotree close")
-	end
 end
 dap.listeners.before.event_terminated["dapui_config"] = function()
 	dapui.close()
