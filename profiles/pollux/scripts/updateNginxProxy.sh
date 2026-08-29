@@ -8,4 +8,4 @@ cd /opt/sag/reverse-proxy
 
 sudo docker compose pull
 sudo docker compose build --pull
-sudo docker compose up -d --force-recreate
+sudo docker compose up -d
