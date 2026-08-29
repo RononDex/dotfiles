@@ -7,4 +7,4 @@ echo "----------------------------"
 cd /opt/sag/authentik
 
 sudo docker compose pull
-sudo docker compose up -d --force-recreate --wait
+sudo docker compose up -d --wait
