@@ -35,7 +35,7 @@ window.clip_line_context = function(line_ctx, win_ctx)
 end
 
 require('hop').setup({
-	keys = 'etvxpdygfblzhckisuan',
+	keys = 'etvxpdygblzhckisuan',
 })
 local function set_hop_map()
 	vim.keymap.set("n", " ", "<cmd>HopWord<cr>", { buffer = true, nowait = true })
