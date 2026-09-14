@@ -67,6 +67,7 @@ InstallGrubTheme
 InstallMpv
 InstallGoDev
 SetupWordpressDev
+SetupClaudeVm
 
 echo "Installing AUR packages..."
 InstallAurPackage "visual-studio-code-bin"

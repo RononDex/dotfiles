@@ -96,6 +96,7 @@ InstallGrubTheme -s 4k
 PreSteamSetupVivePro2
 PostSteamSetupVivePro2
 SetupWordpressDev
+SetupClaudeVm
 
 echo "Enabling services ..."
 EnableService bluetooth

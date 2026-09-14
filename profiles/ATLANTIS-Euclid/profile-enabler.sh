@@ -55,6 +55,7 @@ InstallGrubTheme -s 1080p
 InstallEruption
 InstallGoDev
 SetupWordpressDev
+SetupClaudeVm
 
 echo "Installing AUR packages..."
 InstallMpv
