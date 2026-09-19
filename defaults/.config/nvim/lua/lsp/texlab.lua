@@ -28,7 +28,7 @@ vim.lsp.config('texlab', {
 				modifyLineBreaks = false,
 			},
 			bibtexFormatter = 'texlab',
-			formatterLineLength = 80,
+			formatterLineLength = 120,
 		},
 	},
 });
