@@ -92,8 +92,8 @@ local function get_jdtls_paths()
 			path = "/usr/lib/jvm/java-25-openjdk",
 		},
 		{
-			name = "JavaSE-26",
-			path = "/usr/lib/jvm/java-26-openjdk",
+			name = "JavaSE-27",
+			path = "/usr/lib/jvm/java-27-openjdk",
 			default = true
 		},
 	}
