@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if claude-vm list | grep -q -E "${PWD}$"; then
+	claude-vm rebase
+else
+	claude-vm build
+fi
+
+claude-vm config set CLAUDE_ARGS ""
+claude-vm &
+
+echo "Waiting for vm to come online"
+sleep 30s
+
+claude-vm ssh "claude plugin marketplace add DietrichGebert/ponytail"
+claude-vm ssh "claude plugin install ponytail@ponytail"
