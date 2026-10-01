@@ -9,7 +9,8 @@ vim.lsp.config('texlab', {
 		texlab = {
 			rootDirectory = nil,
 			build = {
-				executable = 'pdflatex',
+				executable = 'latexmk',
+				args = { '%f' },
 				onSave = true,
 				forwardSearchAfter = true,
 			},
