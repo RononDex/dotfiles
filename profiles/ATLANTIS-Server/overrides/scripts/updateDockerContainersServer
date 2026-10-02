@@ -1,6 +1,8 @@
 #!/bin/bash
 
-updateJellyfin
-updateNextcloud
-updateSatisfactory
-updateTriliumNotes
+scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+
+${scriptDir}/updateJellyfin
+${scriptDir}/updateNextcloud
+${scriptDir}/updateSatisfactory
+${scriptDir}/updateTriliumNotes
