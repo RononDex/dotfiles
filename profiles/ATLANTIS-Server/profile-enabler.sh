@@ -27,6 +27,7 @@ if [ ! -f /etc/wireguard/ATLANTIS-Net.conf]; then
 	sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
 fi
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
+sudo chmod -R +x /root/scripts/*
 sudo mkdir -p /etc/samba
 sudo cp $scriptDir/overrides/samba/smb.conf /etc/samba/smb.conf
 sudo mkdir -p /data
