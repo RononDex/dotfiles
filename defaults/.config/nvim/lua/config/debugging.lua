@@ -1,6 +1,8 @@
 require("dapui").setup()
 require("nvim-dap-virtual-text").setup()
 
+require('dap.ext.vscode').json_decode = require 'json5'.parse
+
 local home = os.getenv("HOME")
 
 local dap, dapui = require("dap"), require("dapui")
