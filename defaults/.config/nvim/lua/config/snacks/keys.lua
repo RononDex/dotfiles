@@ -24,4 +24,7 @@ return {
 	-- Diagnostics keybinds
 	{ "<leader>dh",    function() Snacks.picker.diagnostics_buffer() end,    desc = "Buffer Diagnostics" },
 	{ "<leader>dd",    function() Snacks.picker.diagnostics() end,           desc = "Diagnostics" },
+
+	-- Notifications keybinds
+	{ "<leader>ns",    function() Snacks.notifier.show_history() end,        desc = "Shows past notifications" }
 }
