@@ -40,10 +40,6 @@ SetupJavaScriptDevEnv() {
 	npm i -g typescript
 }
 
-InstallJupyterNotebooks() {
-	pip3 install jupyter
-}
-
 SetupPythonDev() {
 	pip3 install matplotlib
 	pip3 install pylint

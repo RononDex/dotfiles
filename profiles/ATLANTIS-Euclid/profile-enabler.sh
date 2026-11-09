@@ -6,16 +6,19 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . $scriptDir/../../functions/astroFunctions.sh
 
-sudo cp $scriptDir/overrides/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio.conf
+# Bootloader
+sudo mkdir -p /boot/EFI/limine
+sudo cp /usr/share/limine/BOOTX64.EFI /boot/EFI/limine/
+# TODO: update conf with partition UUIDS
+sudo cp $scriptDir/overrides/limine/limine.conf /boot/EFI/limine/
+
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
-sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touchpad.conf
-sudo cp $scriptDir/overrides/tlp/10-laptop.conf /etc/tlp.d/10-laptop.conf
-cp $scriptDir/overrides/.Xresources ~/.Xresources
 cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
 cp $scriptDir/overrides/waybar/custom-modules-config.json ~/.config/waybar/custom-modules-config.json
 
+# TODO: Update crypt store on new laptop
 cp $scriptDir/overrides/mbsync/crypt-store/astrophotography-proton ~/.config/mbsync/crypt-store/astrophotography-proton
 cp $scriptDir/overrides/mbsync/crypt-store/tino-proton ~/.config/mbsync/crypt-store/tino-proton
 cp $scriptDir/overrides/mbsync/crypt-store/tino-sag ~/.config/mbsync/crypt-store/tino-sag
@@ -31,27 +34,25 @@ mkdir -p ~/Mail/webmaster-sag/
 chmod -R 700 ~/Mail/
 
 
-
 echo "Installing stuff..."
-sudo pacman -S nextcloud-client dunst libnotify notification-daemon vlc blueman wireguard-tools --noconfirm --needed
+sudo pacman -S nextcloud-client dunst libnotify notification-daemon blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
-sudo pacman -S tlp tlp-rdw libreoffice breeze breeze-icons --needed --noconfirm
+sudo pacman -S power-profiles-daemon libreoffice breeze breeze-icons --needed --noconfirm
 sudo pacman -S virt-manager qemu chromium xf86-video-vesa cef --needed --noconfirm
 sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
+sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
-sudo systemctl enable tlp
-sudo systemctl start tlp
+sudo systemctl enable power-profiles-daemon
+sudo systemctl start power-profiles-daemon
 
 SetupDotnet
 InstallWayland
 InstallHyprland
 SetupWireguardClient
 SetupJavaDevEnv
-InstallJupyterNotebooks
 SetupPythonDev
 SetupLatex
-InstallGrubTheme -s 1080p
 InstallEruption
 InstallGoDev
 SetupWordpressDev
@@ -75,15 +76,9 @@ InstallAurPackage "yubico-authenticator-bin"
 echo "Installing Proton Stuff"
 sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
 
-EnableService ckb-next-daemon
-StartService ckb-next-daemon
-EnableService i8kmon
-StartService i8kmon
 
 echo "Enabling services ..."
 sudo systemctl enable libvirtd
-systemctl --user daemon-reload
-systemctl --user enable --now sync-mail.timer
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"
@@ -102,8 +97,7 @@ sudo usermod -a -G wheel ${currentUser}
 
 chmod +x ~/.scripts/bashprofile
 
-echo "Updating grub config"
-sudo cp $scriptDir/overrides/grub/grub /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg  
-
 SetupWinBoat
+
+echo "Regenerating initramfs"
+sudo mkinitcpio -P

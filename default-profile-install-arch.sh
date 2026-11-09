@@ -39,7 +39,7 @@ else
 fi
 
 echo "Removing unused dependencies"
-sudo pacman -Rns $(pacman -Qdtq)
+sudo pacman -Rns $(pacman -Qdtq) --noconfirm
 
 echo "Updating system"
 sudo pacman -Syu --noconfirm --needed
@@ -144,6 +144,7 @@ InstallAurPackage "ddcui"
 InstallAurPackage "svp-bin"
 InstallAurPackage "go-chroma-bin"
 InstallAurPackage "zen-browser-bin"
+InstallAurPackage "limine-mkinitcpio-hook"
 
 echo "Installing wallust"
 cargo install wallust

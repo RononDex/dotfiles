@@ -86,7 +86,6 @@ InstallWayland
 InstallHyprland
 InstallRustDev
 InstallGoDev
-InstallJupyterNotebooks
 SetupDotnet
 SetupJavaDevEnv
 SetupJavaScriptDevEnv
