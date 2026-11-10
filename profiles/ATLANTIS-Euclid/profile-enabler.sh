@@ -6,12 +6,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 . $scriptDir/../../functions/astroFunctions.sh
 
-# Bootloader
-sudo mkdir -p /boot/EFI/limine
-sudo cp /usr/share/limine/BOOTX64.EFI /boot/EFI/limine/
-# TODO: update conf with partition UUIDS
-sudo cp $scriptDir/overrides/limine/limine.conf /boot/EFI/limine/
-
+sudo cp $scriptDir/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio/mkinitcpio.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
 cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
