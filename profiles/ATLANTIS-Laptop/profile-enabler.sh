@@ -76,7 +76,6 @@ InstallAurPackage "slack-desktop"
 InstallAurPackage "jellyfin-desktop-libmpv-git"
 InstallAurPackage "jellyfin-desktop-git"
 InstallAurPackage "onlyoffice-bin"
-InstallAurPackage "light"
 
 echo "Installing Yubico Authenticator..."
 curl https://keys.openpgp.org/vks/v1/by-fingerprint/20EE325B86A81BCBD3E56798F04367096FBA95E8 | gpg --import
