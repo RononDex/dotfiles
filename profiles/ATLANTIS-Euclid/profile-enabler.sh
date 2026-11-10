@@ -33,9 +33,11 @@ echo "Installing stuff..."
 sudo pacman -S nextcloud-client dunst libnotify notification-daemon blueman wireguard-tools --noconfirm --needed
 sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp --needed --noconfirm
 sudo pacman -S power-profiles-daemon libreoffice breeze breeze-icons --needed --noconfirm
-sudo pacman -S virt-manager qemu chromium xf86-video-vesa cef --needed --noconfirm
+sudo pacman -S virt-manager brightnessctl qemu chromium xf86-video-vesa cef --needed --noconfirm
 sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
 sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
+sudo pacman -S fprintd brightnessctl framework-system --needed --confirm
+
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
 sudo systemctl enable power-profiles-daemon
