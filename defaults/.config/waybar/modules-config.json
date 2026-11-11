@@ -19,8 +19,8 @@
 		"on-click-middle": "",
 		"on-click-right": "",
 		"on-update": "",
-		"on-scroll-up": "brightnessctl s +5%",
-		"on-scroll-down": "brightnessctl s -5%",
+		"on-scroll-up": "brightnessctl s +3%",
+		"on-scroll-down": "brightnessctl s 3%-",
 		"smooth-scrolling-threshold": 1
 	},
 	"hyprland/workspaces": {
