@@ -12,6 +12,6 @@ StartService() {
     sudo systemctl start $1
 }
 
-DiableService() {
+StopService() {
     sudo systemctl stop $1
 }

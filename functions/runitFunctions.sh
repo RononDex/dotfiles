@@ -12,6 +12,6 @@ StartService() {
     sudo sv up $1
 }
 
-DiableService() {
+StopService() {
     sudo sv down $1
 }

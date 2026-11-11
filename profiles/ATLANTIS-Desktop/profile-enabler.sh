@@ -3,11 +3,6 @@
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . $scriptDir/../../functions/htcVivePro2Functions.sh
 
-sudo mkdir -p /etc/X11/xorg.conf.d/
-sudo cp $scriptDir/overrides/xorg/10-monitor.conf /etc/X11/xorg.conf.d/10-monitor.conf
-sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
-sudo cp $scriptDir/overrides/xorg/21-amdgpu.conf /etc/X11/xorg.conf.d/21-amdgpu.conf
-sudo cp $scriptDir/overrides/xorg/30-mouse.conf /etc/X11/xorg.conf.d/30-mouse.conf
 sudo cp $scriptDir/overrides/grub/grub /etc/default/grub
 sudo cp $scriptDir/overrides/udev/30-amdgpu-pm.rules /etc/udev/rules.d/30-amdgpu-pm.rules
 sudo cp $scriptDir/overrides/udev/60-virpil-controls.rules /etc/udev/rules.d/60-virpil-controls.rules
@@ -119,9 +114,11 @@ SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
 echo "Fixing SE clipboard copy and paste"
 if [ -d ~/.steam/steam/steamapps/common/SpaceEngineers ]; then
 	CloneOrUpdateGitRepoToPackages "CosmicWineFixes" "https://github.com/opekope2/CosmicWineFixes"
-	cd ~/packages/CosmicWineFixes
-	ln -s ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64 Bin64
-	dotnet build
+	(
+		cd ~/packages/CosmicWineFixes
+		ln -sfn ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64 Bin64
+		dotnet build
+	)
 	cp $scriptDir/overrides/SpaceEngineers/SpaceEngineersLauncher.py ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
 	chmod +x ~/.steam/steam/steamapps/common/SpaceEngineers/Bin64/SpaceEngineersLauncher.py
 	# Also set launch options in steam to ./SpaceEngineersLauncher.py %command%

@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # $1: Name of share / server
-# $2: shares to mount (command)
-# $3: custom cifs parameters for mount
+# $2..: pairs of <mount name> <share path>
 SetupAutofsForSmbShare() {
 
     if [ ! -d /shares ]
@@ -10,7 +9,7 @@ SetupAutofsForSmbShare() {
         sudo mkdir /shares
     fi
 
-    if ! grep -q "$1" "/etc/autofs/auto.master"; then
+    if ! grep -q "^/shares/$1 " "/etc/autofs/auto.master"; then
         sudo mkdir -p /shares/$1 
         echo "/shares/$1 /etc/autofs/auto.$1 --timeout=10 --ghost" | sudo tee -a /etc/autofs/auto.master
 
@@ -32,8 +31,8 @@ SetupAutofsForSmbShare() {
         sudo touch /etc/autofs/$1-credentials  
         sudo chmod 700 /etc/autofs/$1-credentials
 
-        sudo systemctl restart autofs
-        sudo sv restart autofs
+        StopService autofs
+        StartService autofs
     fi
 }
 
@@ -86,11 +85,11 @@ SetupWireguardClient() {
     fi
 }
 
-Install8814auDriver() {
+Install8814auDriver() (
 	if [ ! -d ~/packages/8814au ]; then
 		cd ~/packages
 		git clone https://github.com/morrownr/8814au
 		cd 8814au
 		sudo ./install-driver.sh
 	fi
-}
+)

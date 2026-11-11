@@ -74,8 +74,10 @@ sudo stty -F /dev/ttyS1 raw 9600 cs8 clocal -cstopb
 echo "Setting up VNC server"
 sudo cp $scriptDir/overrides/vnc/vncserver.users /etc/tigervnc/vncserver.users
 sudo cp $scriptDir/overrides/vnc/vncserver-config-mandatory /etc/tigervnc/vncserver-config-mandatory
-echo "Setting vnc password:"
-vncpasswd
+if [ ! -f ~/.vnc/passwd ] && [ ! -f ~/.config/tigervnc/passwd ]; then
+	echo "Setting vnc password:"
+	vncpasswd
+fi
 sudo systemctl enable vncserver@:1
 sudo systemctl start vncserver@:1
 
@@ -132,7 +134,7 @@ sudo usermod -a -G wheel ${currentUser}
 sudo usermod -a -G disk ${currentUser}
 sudo usermod -a -G radio ${currentUser}
 sudo usermod -a -G audio ${currentUser}
-sudo smbpasswd -a ${currentUser}
+sudo pdbedit -L | grep -q "^${currentUser}:" || sudo smbpasswd -a ${currentUser}
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://192.168.1.12/Documents" "Downloads" "://192.168.1.12/Downloads" "Software" "://192.168.1.12/Software" "Astrophotography" "://192.168.1.12/Astrophotography" "Backup" "://192.168.1.12/Backup"

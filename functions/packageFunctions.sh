@@ -1,11 +1,11 @@
 #!/bin/sh
 
-InstallPowerLineFonts() {
+InstallPowerLineFonts() (
     CloneOrUpdateGitRepoToPackages "powerline-fonts" "https://github.com/powerline/fonts.git" "--depth=1"
     # install
     cd ~/packages/powerline-fonts
     sh ./install.sh
-}
+)
 
 SetupPodman() {
     if  command -v pacman &> /dev/null
@@ -64,13 +64,13 @@ else
 	sudo systemctl restart clamav-freshclam.service
 }
 
-MakePackage() {
+MakePackage() (
     cd ~/packages/$1
     mkdir build
     cd build
     cmake ..
     make
-}
+)
 
 InstallMpv() {
     # Arch
@@ -81,14 +81,16 @@ InstallMpv() {
 }
 
 InstallRustDev() {
-    sudo xbps-install -Sy rust rust-analyzer racer cargo
+    if  command -v pacman &> /dev/null
+    then
+        # cargo/rust come from the base install (or rustup), only add the LSP
+        sudo pacman -S rust-analyzer --needed --noconfirm
+    else
+        sudo xbps-install -Sy rust rust-analyzer racer cargo
+    fi
 }
 
-InstallYubiKeyStuff() {
- sudo xbps-install -Sy yubikey-manager u2f-hidraw-policy ykpers ykpers-gui
-}
-
-InstallGrubTheme() {
+InstallGrubTheme() (
     CloneOrUpdateGitRepoToPackages "grub2-themes" "https://github.com/vinceliuice/grub2-themes"
     cd ~/packages/grub2-themes
     sudo ./install.sh -b -t tela ${1:-}
@@ -98,7 +100,7 @@ InstallGrubTheme() {
 			sudo os-prober
 			sudo grub-mkconfig -o /boot/grub/grub.cfg
 	fi
-}
+)
 
 InstallHyprland() {
     if  command -v pacman &> /dev/null
@@ -152,9 +154,9 @@ InstallEruption() {
 	fi
 }
 
-CompileFixedUBootForRpi4() {
+CompileFixedUBootForRpi4() (
 	CloneOrUpdateGitRepoToPackages "PKGBUILDs-archlinux-arm"
 	cd ~/packages/PKGBUILDs-archlinux-arm/alarm/uboot-raspberrypi
 
-	makepkg -sic
-}
+	makepkg -sic --noconfirm
+)

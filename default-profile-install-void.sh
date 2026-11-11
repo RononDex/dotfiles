@@ -9,7 +9,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/runitFunctions.sh
 . ./functions/packageFunctions.sh
 
-sudo xbps-install -Su xbps
+sudo xbps-install -Syu xbps
 sudo xbps-install -Syu
 sudo xbps-install -Sy wget git
 
@@ -55,12 +55,12 @@ git lfs pull
 
 echo "Changing default shell to zsh"
 if [[ "$SHELL" != "/bin/zsh" ]]; then
-	chsh -s /bin/zsh
+	sudo chsh -s /bin/zsh "$USER"
 fi
 
 echo "Setting up oh-my-zsh ..."
 if [ ! -d ${ZSH} ]; then
-	sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+	RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 EnableService dbus
@@ -132,9 +132,6 @@ UpdatePipPackages
 
 # Dark Theme by default
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-
-echo "Installing python packages"
-sudo -H pip install --upgrade youtube-dl
 
 SetupClamAV
 

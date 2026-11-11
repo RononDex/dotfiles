@@ -1,5 +1,5 @@
 
-InstallIndiDriver() {
+InstallIndiDriver() (
     mkdir ~/packages/indi-3rdparty/build/
     cd ~/packages/indi-3rdparty/build/
     mkdir $1
@@ -7,9 +7,9 @@ InstallIndiDriver() {
     cmake -DCMAKE_INSTALL_PREFIX=/usr ~/packages/indi-3rdparty/$1
     make -j4
     sudo make install
-}
+)
 
-InstallIndi() {
+InstallIndi() (
     CloneOrUpdateGitRepoToPackages "indi" "https://github.com/indilib/indi"
     cd ~/packages/indi
     mkdir build
@@ -17,26 +17,26 @@ InstallIndi() {
     cmake -DCMAKE_INSTALL_PREFIX=/usr ..
     make -j4
     sudo make install
-}
+)
 
-InstallPlanetaryImager() {
+InstallPlanetaryImager() (
     cd ~/packages/PlanetaryImager
     mkdir build
     cd build
     cmake .. -DCMAKE_INSTALL_PREFIX=/usr
     make all && sudo make install
-}
+)
 
-InstallAstroPy() {
+InstallAstroPy() (
     if [ ! -d ${HOME}/packages/astropy ]; then
         cd ~/packages
         git clone --recursive git://github.com/astropy/astropy.git
         cd astropy
         pip3 install . -v
     fi
-}
+)
 
-InstallKstars() {
+InstallKstars() (
     mkdir -p ~/packages/kde
     cd ~/packages/kde
     sudo pacman -S eigen wcslib xplanet cmake kf5 extra-cmake-modules --needed --noconfirm
@@ -57,9 +57,9 @@ InstallKstars() {
     cmake ../kstars -DCMAKE_INSTALL_PREFIX=/usr
     make
     sudo make install
-}
+)
 
-InstallAstrometryNet() {
+InstallAstrometryNet() (
     pip install numpy
     pip install fitsio
     cd ~/packages
@@ -73,18 +73,18 @@ InstallAstrometryNet() {
     sudo make py
     sudo make extra
     sudo make install  # to put it in /usr/local/astrometry
-}
+)
 
-InstallPHD2() {
+InstallPHD2() (
     cd ~/packages/phd2
     mkdir -p compiled
     cd compiled
     cmake ..
     make
     sudo make install
-}
+)
 
-DownloadIndexFiles() {
+DownloadIndexFiles() (
     if [ ! -d ~/AstrometryIndexes ]; then
         echo "Downloading astrometry index files ..."
         mkdir ~/AstrometryIndexes
@@ -124,12 +124,12 @@ DownloadIndexFiles() {
             wget http://data.astrometry.net/4200/index-4202-$i.fits
        done
     fi
-}
+)
 
-InstallFxLoad() {
+InstallFxLoad() (
     CloneOrUpdateGitRepoToPackages "fx3load-code" "https://git.code.sf.net/p/fx3load/code"
     cd ~/packages/fx3load-code
     make clean
     make fxload
     sudo make install
-}
+)

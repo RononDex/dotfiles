@@ -23,7 +23,7 @@ SetupGitRepo() {
 	CloneOrUpdateGitRepoToPackages "vive-pro-2-on-linux" "https://github.com/RononDex/vive-pro-2-on-linux"
 }
 
-BuildAndInstallKernel() {
+BuildAndInstallKernel() (
 	cd ~/packages/vive-pro-2-on-linux/kernel
 
 	# Import gpg keys
@@ -31,25 +31,25 @@ BuildAndInstallKernel() {
 
 	# Build kernel
 	export MAKEFLAGS="-j $(nproc)"
-	makepkg -sc
+	makepkg -sc --noconfirm
 
 	# Install kernel
 	makepkg -si --noconfirm --needed
 	sudo grub-mkconfig -o /boot/grub/grub.cfg
-}
+)
 
-InstallPolkitRule() {
+InstallPolkitRule() (
 	cd ~/packages/vive-pro-2-on-linux/
 	sudo cp ./polkit-vr-setcap-nice.rules /etc/polkit-1/rules.d/90-vr-setcap-nice.rules
 
 	sudo systemctl restart polkit.service
-}
+)
 
 PostSteamSetupVivePro2() {
 	SetupDriver
 }
 
-SetupDriver() {
+SetupDriver() (
 	sudo pacman -S git rsync rustup --needed --noconfirm
 	sudo pacman -S mingw-w64-binutils mingw-w64-crt mingw-w64-gcc mingw-w64-headers mingw-w64-winpthreads --needed --noconfirm
 	rustup toolchain install nightly
@@ -82,4 +82,4 @@ SetupDriver() {
 	cp $VIVEPRO2DRVDIR/target/release/libdriver_proxy.so ./driver_lighthouse.so
 
 	bash ./install.sh
-}
+)

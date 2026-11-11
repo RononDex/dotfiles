@@ -11,11 +11,9 @@ sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touch
 sudo cp $scriptDir/overrides/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio.conf
 sudo cp $scriptDir/overrides/modprobe/i915.conf /etc/modprobe.d/i915.conf
 sudo cp $scriptDir/overrides/tlp/10-laptop.conf /etc/tlp.d/10-laptop.conf
-sudo cp $scriptDir/overrides/pacman.conf /etc/pacman.conf
 cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-modules-top.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
-cp $scriptDir/overrides/waybar/bar-output-2.json ~/.config/waybar/bar-output-2.json
 cp $scriptDir/overrides/mpv/custom.conf ~/.config/mpv/custom.conf
 
 cp $scriptDir/overrides/mbsync/crypt-store/astrophotography-proton ~/.config/mbsync/crypt-store/astrophotography-proton
@@ -36,8 +34,8 @@ sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp -
 sudo pacman -S tlp tlp-rdw libreoffice breeze breeze-icons libvncserver --needed --noconfirm
 sudo pacman -S virt-manager qemu onboard chromium xf86-video-vesa --needed --noconfirm
 sudo pacman -S dotnet-sdk aspnet-targeting-pack sof-firmware cef --needed --noconfirm
-sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
-sudo pacman -S fprintd brightnessctl --needed --confirm
+sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --noconfirm
+sudo pacman -S fprintd brightnessctl --needed --noconfirm
 
 echo "Setup auto screen rotation"
 InstallAurPackage "iio-hyprland-git"
@@ -93,7 +91,7 @@ sudo pacman -S protonmail-bridge proton-vpn-gtk-app --needed --noconfirm
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"
-SetupAutofsForSmbShare "FHNW" "data" "" "://fs.edu.ds.fhnw.ch/data"
+SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
 
 echo "Adjust user permissions"
 currentUser=$(whoami)

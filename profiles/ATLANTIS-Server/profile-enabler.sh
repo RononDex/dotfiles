@@ -69,6 +69,7 @@ if [ ! -d /etc/sv/dyndns-updater/ ]; then
 	stty_orig=$(stty -g) # save original terminal setting.
 	stty -echo           # turn-off echoing.
 	read dyndns_passwd   # read the password
+	stty "$stty_orig"    # restore terminal setting.
 
 	sudo echo "#!/bin/sh" | sudo tee --append /etc/sv/dyndns-updater/run
 	sudo echo "exec chpst -u dyndns /usr/local/bin/noip-duc -g $dyndns_domain -u $dyndns_user -p $dyndns_passwd" | sudo tee --append /etc/sv/dyndns-updater/run

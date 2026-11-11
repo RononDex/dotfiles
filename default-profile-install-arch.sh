@@ -32,14 +32,18 @@ fi
 InstallAurPackage "rate-mirrors-bin"
 
 echo "Setting up pacman mirror list:"
-if $isArm ; then
-		rate-mirrors archarm | sudo tee /etc/pacman.d/mirrorlist
+mirrorTarget=arch
+$isArm && mirrorTarget=archarm
+mirrorTmp=$(mktemp)
+if rate-mirrors "$mirrorTarget" >"$mirrorTmp" && grep -q '^Server' "$mirrorTmp"; then
+	sudo install -m644 "$mirrorTmp" /etc/pacman.d/mirrorlist
 else
-		rate-mirrors arch | sudo tee /etc/pacman.d/mirrorlist
+	echo "rate-mirrors failed, keeping existing mirrorlist"
 fi
+rm -f "$mirrorTmp"
 
 echo "Removing unused dependencies"
-sudo pacman -Rns $(pacman -Qdtq) --noconfirm
+orphans=$(pacman -Qdtq) && sudo pacman -Rns --noconfirm $orphans
 
 echo "Updating system"
 sudo pacman -Syu --noconfirm --needed
@@ -107,17 +111,17 @@ if [ "$isArm" = false ] ; then
 fi
 
 git lfs install
-git lfs pull
+git -C "$scriptDir" lfs pull
 
 echo "Changing default shell to zsh"
 if [[ "$SHELL" != "/usr/bin/zsh" ]]; then
-    chsh -s /usr/bin/zsh
+    sudo chsh -s /usr/bin/zsh "$USER"
 fi
 
 echo "Setting up oh-my-zsh ..."
 if [ ! -d ${ZSH} ]; then
 		export ZSH="$HOME/.config/oh-my-zsh"
-		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+		RUNZSH=no CHSH=no KEEP_ZSHRC=yes sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 echo "Setting up vim..."

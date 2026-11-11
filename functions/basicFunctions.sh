@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CloneOrUpdateGitRepoToPackages() {
+CloneOrUpdateGitRepoToPackages() (
 	folderName=$1
 	repoUrl=$2
 	cloneParams=${3:-}
@@ -14,11 +14,9 @@ CloneOrUpdateGitRepoToPackages() {
 		git clone $cloneParams $repoUrl $folderName
 	else
 		cd ~/packages/$folderName
-		git stash
-		git pull
-		git stash pop
+		git pull --autostash
 	fi
-}
+)
 
 SetupBackgroundsFolderForBing() {
 	if [ ! -d /usr/share/backgrounds/currentBingImage ]; then
@@ -33,7 +31,7 @@ UpdatePipPackages() {
 }
 
 # $1: Theme number from gnome-looks
-DownloadAndInstallGtkTheme() {
+DownloadAndInstallGtkTheme() (
 	cd ~/packages
 	mkdir Gtk-Themes-$1
 	cd Gtk-Themes-$1
@@ -50,7 +48,7 @@ DownloadAndInstallGtkTheme() {
 		sudo tar -xf "$f" -C "/usr/share/themes/"
 	done
 
-}
+)
 
 # $1: filePath
 # $2: regex to search for

@@ -3,7 +3,10 @@ set -uo pipefail
 
 scriptDirRoot="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 cd "$scriptDirRoot"
-git pull
+
+# Ask for sudo once and keep the timestamp fresh until this script exits
+sudo -v
+while sleep 60; do sudo -n true; kill -0 $$ 2>/dev/null || exit; done &
 . ./functions/basicFunctions.sh
 . ./functions/packageFunctions.sh
 . ./functions/networkingFunctions.sh
@@ -104,7 +107,7 @@ fi
 profileDirName=$(basename $profileName)
 echo "$profileDirName"
 echo "#!/bin/bash" >~/.scripts/updateDotFiles
-echo "bash $scriptDirRoot/profile-enabler.sh $profileDirName" >>~/.scripts/updateDotFiles
+echo "git -C \"$scriptDirRoot\" pull --ff-only && exec bash \"$scriptDirRoot/profile-enabler.sh\" \"$profileDirName\"" >>~/.scripts/updateDotFiles
 chmod +x ~/.scripts/updateDotFiles
 
 rm -rf ~/.files

@@ -41,9 +41,11 @@ SetupJavaScriptDevEnv() {
 }
 
 SetupPythonDev() {
-	pip3 install matplotlib
-	pip3 install pylint
-	pip3 install autopep8
+	if command -v pacman &>/dev/null; then
+		sudo pacman -S python-matplotlib python-pylint autopep8 --needed --noconfirm
+	else
+		pip3 install matplotlib pylint autopep8
+	fi
 }
 
 BasicVimInstall() {
@@ -63,7 +65,7 @@ BasicNvimInstall() {
 	fi
 }
 
-SetupLanguageModelForLtex() {
+SetupLanguageModelForLtex() (
 	if [ ! -d ~/.cache/ngram-data/ ]; then
 		mkdir -p ~/.cache/ngram-data
 	fi
@@ -85,7 +87,7 @@ SetupLanguageModelForLtex() {
 		mv en ~/.cache/ngram-data/
 		rm ngrams-en.zip
 	fi
-}
+)
 
 SetupLatex() {
 
@@ -108,10 +110,10 @@ SetupWordpressDev() {
 	sudo npm -g install @wordpress/env
 }
 
-SetupClaudeVm() {
-	sudo pacman -S qemu-full virtiofsd cdrtools curl rsync jq
+SetupClaudeVm() (
+	sudo pacman -S qemu-full virtiofsd cdrtools curl rsync jq --needed --noconfirm
 	CloneOrUpdateGitRepoToPackages "claude-vm" "https://github.com/shudza/claude-vm.git"
 	cd ~/packages/claude-vm
 	sudo make install
 
-}
+)

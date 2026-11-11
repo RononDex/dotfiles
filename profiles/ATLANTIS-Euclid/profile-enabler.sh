@@ -35,8 +35,8 @@ sudo pacman -S texlive aspnet-runtime xournalpp remmina signal-desktop freerdp -
 sudo pacman -S power-profiles-daemon libreoffice breeze breeze-icons --needed --noconfirm
 sudo pacman -S virt-manager brightnessctl qemu chromium xf86-video-vesa cef --needed --noconfirm
 sudo pacman -S sof-firmware dotnet-sdk aspnet-runtime aspnet-targeting-pack --needed --noconfirm
-sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --confirm
-sudo pacman -S fprintd brightnessctl framework-system --needed --confirm
+sudo pacman -S mesa steam lib32-mesa vulkan-intel intel-ucode intel-media-driver libva-intel-driver --needed --noconfirm
+sudo pacman -S fprintd brightnessctl framework-system --needed --noconfirm
 
 sudo systemctl enable bluetooth
 sudo systemctl start bluetooth
@@ -79,7 +79,7 @@ sudo systemctl enable libvirtd
 
 echo "Setting up shares ..."
 SetupAutofsForSmbShare "ATLANTIS-SRV" "Documents" "://10.142.0.1/Documents" "Downloads" "://10.142.0.1/Downloads" "Software" "://10.142.0.1/Software" "Astrophotography" "://10.142.0.1/Astrophotography" "Backup" "://10.142.0.1/Backup"
-SetupAutofsForSmbShare "FHNW" "data" "" "://fs.edu.ds.fhnw.ch/data"
+SetupAutofsForSmbShare "FHNW" "data" "://fs.edu.ds.fhnw.ch/data"
 
 echo "Adjust user permissions"
 currentUser=$(whoami)
