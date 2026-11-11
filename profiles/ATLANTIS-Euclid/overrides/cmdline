@@ -1,0 +1,1 @@
+rd.luks.name=44827492-c362-4b1e-b80c-0082c56aa37c=root root=/dev/mapper/root rw rd.luks.options=fido2-device=auto

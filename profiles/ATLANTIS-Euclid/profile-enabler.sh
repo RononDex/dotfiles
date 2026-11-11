@@ -8,6 +8,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 
 sudo cp $scriptDir/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio/mkinitcpio.conf
 sudo cp $scriptDir/overrides/xorg/20-keybord.conf /etc/X11/xorg.conf.d/20-keyboard.conf
+sudo cp $scriptDir/overrides/cmdline /etc/kernel/cmdline
 cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-bottom.json ~/.config/waybar/active-modules-bottom.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json
