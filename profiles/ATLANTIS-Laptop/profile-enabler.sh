@@ -11,6 +11,7 @@ sudo cp $scriptDir/overrides/xorg/21-touchpad.conf /etc/X11/xorg.conf.d/21-touch
 sudo cp $scriptDir/overrides/mkinitcpio/mkinitcpio.conf /etc/mkinitcpio.conf
 sudo cp $scriptDir/overrides/modprobe/i915.conf /etc/modprobe.d/i915.conf
 sudo cp $scriptDir/overrides/tlp/10-laptop.conf /etc/tlp.d/10-laptop.conf
+sudo cp $scriptDir/overrides/cmdline /etc/kernel/cmdline
 cp $scriptDir/overrides/hyprland/custom-config.lua ~/.config/hypr/configs/custom-config.lua
 cp $scriptDir/overrides/waybar/active-modules-top.json ~/.config/waybar/active-modules-top.json
 cp $scriptDir/overrides/waybar/bar-output.json ~/.config/waybar/bar-output.json

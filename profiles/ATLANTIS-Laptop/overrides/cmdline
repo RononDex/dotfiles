@@ -1,0 +1,1 @@
+rd.luks.name=4ee44620-ecd7-4485-bded-983a0f04e410=root root=/dev/mapper/cryptlvm rw rd.luks.options=fido2-device=auto
