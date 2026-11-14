@@ -1,0 +1,217 @@
+### OS Entry Targeting
+### If TARGET_OS_NAME is not set, or if the default distro name is not found in $ESP_PATH/limine.conf,
+### the tool will create a new OS entry using the default distro name (PRETTY_NAME or NAME from /etc/os-release) and machine-ID.
+###
+### Tips:
+### If your custom OS entry already exists in $ESP_PATH/limine.conf, please add "comment: machine-id=<copy ID from /etc/machine-id>" under its name.
+### The machine-ID helps the tool to automatically target the correct OS entry, so changing the OS name does not matter.
+###
+#TARGET_OS_NAME="Arch Linux"
+
+
+### EFI System Partition Path
+### If not set, it is found automatically by checking /efi, /boot, /boot/efi, and /limine.
+### Set this to skip the automatic search or if your EFI system partition uses a different mount path.
+#ESP_PATH="/boot"
+
+
+### Boot Partition Path
+### If not set, /boot is checked for a FAT partition.
+### If none is found, the EFI System Partition is assumed to also serve as the boot partition.
+### Set this to skip the automatic search or if your boot partition uses a different mount path.
+### Note:
+### Not relevant for MBR
+#BOOT_PATH="/boot"
+
+
+### Skip UEFI Check and Registration
+### Skip UEFI check and bootloader registration on certain non-compliant UEFI boards (e.g., some MSI boards) (yes|no)
+### If skipped, Limine will be used as the fallback bootloader on the standard UEFI path for all UEFI systems.
+### Note:
+### When set to yes, run 'limine-install' and manually set the BIOS boot order to make the standard UEFI path the default boot.
+SKIP_UEFI=no
+
+
+### UEFI Boot Order
+### Choose where 'limine-install' places the Limine UEFI boot entry in the UEFI boot order when it creates the entry. (first|last|keep)
+### It has no effect while the entry exists; it only applies when the entry is missing, e.g. after a firmware or Windows update removed it.
+###
+### Options:
+### * "first" or commented out -> Put Limine first, so it becomes the default boot option.
+### * "last"                   -> Put Limine at the end; the current default boot option stays unchanged.
+### * "keep"                   -> Put Limine where an older Limine entry for the same EFI file still is in the boot order, otherwise like "last".
+###
+### Note:
+### "last" and "keep" set the boot order with 'efibootmgr --bootorder'. Some UEFI firmware ignores or rewrites a boot order set this way,
+### or creates duplicate boot entries after a reboot. 'limine-install' reports a boot order that differs from the requested one, but does not retry.
+### If your firmware does this, use "first" and adjust the boot order in the BIOS/UEFI setup instead.
+UEFI_BOOT_ORDER=first
+
+
+### Kernel Command Line Configuration
+### Define one or more kernel command lines (parameters) for specific kernel entries.
+### If unset, the tool will try to read them from '/etc/kernel/cmdline' or '/proc/cmdline'.
+###
+### Rules:
+### * KERNEL_CMDLINE[default] applies to any kernel entries without specific configuration.
+### * KERNEL_CMDLINE[fallback] applies to kernel entries with names containing *fallback*
+### * KERNEL_CMDLINE[kernel name] applies to a specific kernel entry.
+###
+### Operators:
+### * `+=` appends parameters to an existing cmdline for the same KERNEL_CMDLINE[<key>]
+###    Commonly used in drop-in configs: /etc/limine-entry-tool.d/*.conf
+###    Ignores /etc/kernel/cmdline and /proc/cmdline
+### * `=` replaces an existing cmdline for the same KERNEL_CMDLINE[<key>]
+###    Note: /etc/default/limine overrides any drop-in configs, so `+=` is recommended there.
+###
+### Tips:
+### - If unsure which parameters to use, copy them from `/proc/cmdline` into KERNEL_CMDLINE[default],
+###   but make sure your system is not a live ISO, temporary environment, or snapshot.
+### - Multiple `initrd=` parameters are automatically converted into Limine module paths for non-UKI entries.
+### - No quotes are needed at the start or end of command lines, since quotes inside are not escaped.
+### - Do not add `#` as a comment at the end of command lines.
+###
+### Examples:
+#KERNEL_CMDLINE[default]+=rw root=UUID=...
+#KERNEL_CMDLINE[default]+=quiet splash acpi_osi="..."
+#KERNEL_CMDLINE[default]+=initrd=/amd-ucode.img
+#KERNEL_CMDLINE[fallback]=
+#KERNEL_CMDLINE[linux-zen]=
+
+
+### Formatting Boot Entry
+### Define the number of spaces to indent each line of the boot entry in '$ESP_PATH/limine.conf'.
+### If not set, the default is 2.
+#SPACE_NUMBER=2
+
+
+### Boot Integrity Check
+### Enable BLAKE2 checksum verification for bootable files. (yes|no)
+ENABLE_VERIFICATION=yes
+
+
+### Automatic Config Backup
+### Creates a backup of '$ESP_PATH/limine.conf' before saving any changes,
+### but only if '$ESP_PATH/limine.conf.old' is older than the specified time (in hours).
+### Default: 6 hours if unset.
+#CONFIG_BACKUP_THRESHOLD=6
+
+
+### Kernel Entries Order
+### Wildcard "*" matches any letter in kernel-entry name 
+### If ENABLE_SORT is set to "yes", only wildcard "*" entries are sorted alphabetically.
+BOOT_ORDER="*, *fallback, Snapshots"
+ENABLE_SORT=no
+
+
+### Limine UEFI Binary Path
+### Set the path to the Limine UEFI binary. Default: '/usr/share/limine/BOOTX64.EFI' (from the limine package on Arch Linux)
+### It will be copied to '$ESP_PATH/EFI/limine/limine_x64.efi' when running 'limine-install'.
+### Set SKIP_LIMINE_VERSION_CHECK=yes to always deploy the Limine binary regardless of version.
+#LIMINE_BINARY_PATH="/usr/share/limine/BOOTX64.EFI"
+#SKIP_LIMINE_VERSION_CHECK=no
+
+
+### Default Boot Fallback
+### Configure whether Limine should be installed as the default UEFI fallback loader. (yes|no|"")
+### This helps preserve bootability on UEFI systems where BIOS, firmware, or Windows updates may remove custom Linux UEFI entries.
+###
+### Options:
+### * "yes"               -> Always create, update, or overwrite the fallback on each limine-update.
+### * "no"                -> Do nothing.
+### * "" or commented out -> Create the fallback only if it is not present. If a fallback exists, leave it untouched.
+###
+### Note:
+### With Secure Boot enabled, the default fallback is not signed automatically by limine-update for some reason.
+### If you need to sign it, it is recommended to disable ENABLE_LIMINE_FALLBACK, run 'limine-install --fallback' once,
+### and then sign the fallback manually.
+###
+#ENABLE_LIMINE_FALLBACK=""
+
+
+### Find Bootloaders
+### Automatically add systemd-boot, rEFInd, or the default EFI loader to Limine if they are found in the ESP. (yes|no)
+FIND_BOOTLOADERS=yes
+
+
+### Authentication Method
+### Specify an authentication method: "sudo", "doas", "pkexec", "run0 --background=" or another method of your choice.
+#AUTH_METHOD=sudo
+
+
+### Quiet Mode
+### Set to "yes" to hide all success messages and avoid log spam. (yes|no)
+QUIET_MODE=yes
+
+
+### Enroll Limine Config
+### Automatically embeds a checksum of the Limine config into the Limine binary to protect it against unauthorized modifications.
+###
+### WARNING:
+### Enabling this will PREVENT booting if you modify limine.conf without re-enrolling it afterward.
+###
+### If you are unsure but want to try it, run 'limine-install --fallback' first.
+### This allows you to boot into the Limine fallback if a boot panic occurs due to a config checksum mismatch.
+###
+### IMPORTANT:
+### * After editing limine.conf, always run 'limine-enroll-config'
+### * Remove all other Limine configs from alternative locations to avoid boot failures.
+### * If using limine-snapper-sync, make sure you have:
+###   - /etc/boot/hooks/pre.d/ with a symlink 10-limine-reset-enroll -> /usr/bin/limine-reset-enroll
+###   - /etc/boot/hooks/post.d/ with a symlink 90-limine-enroll-config -> /usr/bin/limine-enroll-config
+### * If multiple systems share the same limine.conf, ensure each system handles enrollment automatically.
+###
+### To enable, copy this option to /etc/default/limine and set it to (yes|no)
+ENABLE_ENROLL_LIMINE_CONFIG=no
+
+
+### Custom UKI Name
+### Set a shorter, custom name for UKI files instead of the default machine-id.
+### This avoids issues when booting UKIs directly from some buggy UEFI firmware (e.g. Asus AMI BIOS)
+### that may crash or freeze with long UKI filenames.
+###
+### Rules:
+### * Custom name must be unique (like an ID) to avoid conflicts with other installations, otherwise UKIs will be overwritten.
+### * Use only lowercase letters (a–z) and digits (0–9) for maximum compatibility with UEFI firmware and devices.
+###
+### Example: ${CUSTOM_UKI_NAME}_${kernel_version}.efi -> arch_linux-lts.efi (when CUSTOM_UKI_NAME="arch" is set)
+### Default: The machine-id is used if the custom name is invalid or not set.
+###
+### Note:
+### Changing the name does not remove existing UKI files with the previous name or machine-id.
+### They remain unused on the ESP and can be removed manually to free up space.
+### UKI location: $ESP_PATH/EFI/Linux/{machine-id or old name}_{kernel_version}.efi
+#CUSTOM_UKI_NAME="arch"
+
+
+##########  The below options apply to Arch Linux when 'limine-dracut-support' or 'limine-mkinitcpio-hook' is installed ###########
+
+### UKI (Unified Kernel Image)
+### Automatically create UKIs in '$ESP_PATH/EFI/Linux/' for UEFI. (yes|no)
+###
+### Advantages:
+###  + UKIs can be detected and loaded by 'systemd-boot' or 'rEFInd'.
+###  + UKIs can boot directly from UEFI firmware when a fixed UKI filename is manually registered as a UEFI boot entry.
+### Disadvantage:
+###  - UKIs require more ESP space than separate 'initramfs' and 'vmlinuz' files, especially with multiple snapshots.
+###
+### Additional notes:
+###  * Duplicate 'initramfs' and 'vmlinuz' files are automatically removed after generating UKIs.
+###  * With Snapper and Secure Boot enabled, UKIs use the kernel cmdline from 'limine.conf' instead of an embedded cmdline.
+ENABLE_UKI=no
+
+
+### Initramfs Fallback
+### Automatically create a fallback initramfs or UKI. (yes|no|<kernel-name>)
+### Set to 'yes' to create fallback images for all kernels.
+### Set to a specific kernel name to create a fallback image only for that kernel.
+### Fallback images consume additional storage space, especially when keeping multiple snapshots.
+#MKINITCPIO_FALLBACK=linux-lts
+#DRACUT_FALLBACK=linux-lts
+
+
+### mkinitcpio UKI Build Options
+### Additional options for mkinitcpio UKI builds
+### See: https://man.archlinux.org/man/mkinitcpio.8.en#OPTIONS_FOR_UNIFIED_KERNEL_IMAGE
+### Example: Add a splash screen
+#MKINITCPIO_UKI_OPTIONS="--splash /usr/share/systemd/bootctl/splash-arch.bmp"
