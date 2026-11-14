@@ -35,7 +35,7 @@ echo "Setting up pacman mirror list:"
 mirrorTarget=arch
 $isArm && mirrorTarget=archarm
 mirrorTmp=$(mktemp)
-if rate-mirrors "$mirrorTarget" >"$mirrorTmp" && grep -q '^Server' "$mirrorTmp"; then
+if rate-mirrors "$mirrorTarget" | tee "$mirrorTmp" && grep -q '^Server' "$mirrorTmp"; then
 	sudo install -m644 "$mirrorTmp" /etc/pacman.d/mirrorlist
 else
 	echo "rate-mirrors failed, keeping existing mirrorlist"
