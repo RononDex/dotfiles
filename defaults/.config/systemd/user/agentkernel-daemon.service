@@ -1,0 +1,9 @@
+[Unit]
+Description=agentkernel VM pool daemon
+
+[Service]
+ExecStart=$ak daemon start
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
