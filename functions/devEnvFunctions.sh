@@ -109,12 +109,3 @@ InstallGoDev() {
 SetupWordpressDev() {
 	sudo npm -g install @wordpress/env
 }
-
-SetupAgentKernel() {
-	cargo install agentkernel
-
-	systemctl --user daemon-reload
-	systemctl --user enable --now agentkernel-serve agentkernel-daemon
-
-	agentkernel setup --runtimes node
-}

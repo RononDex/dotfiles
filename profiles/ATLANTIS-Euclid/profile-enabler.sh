@@ -54,7 +54,6 @@ SetupLatex
 InstallEruption
 InstallGoDev
 SetupWordpressDev
-SetupAgentKernel
 
 echo "Installing AUR packages..."
 InstallMpv
