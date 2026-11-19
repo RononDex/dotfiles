@@ -110,10 +110,6 @@ SetupWordpressDev() {
 	sudo npm -g install @wordpress/env
 }
 
-SetupClaudeVm() (
-	sudo pacman -S qemu-full virtiofsd cdrtools curl rsync jq --needed --noconfirm
-	CloneOrUpdateGitRepoToPackages "claude-vm" "https://github.com/shudza/claude-vm.git"
-	cd ~/packages/claude-vm
-	sudo make install
-
-)
+SetupAgentKernel() {
+	cargo install agentkernel
+}

@@ -1,0 +1,29 @@
+[sandbox]
+name = "opencode-ecc"
+base_image = "node:24-alpine3.24"
+init_script = """
+set -e
+apk add --no-cache git bash curl ripgrep fd jq maven gradle nodejs npm dotnet
+npm install -g opencode-ai@1.19.6 ecc-universal@2.2.3
+
+# ECC: agents, commands, instructions and skills into ~/.config/opencode
+ecc-install --target opencode --profile full
+
+# ponytail: add it to the opencode.json that ECC just wrote (OpenCode 1.x uses the "plugin" key)
+cfg="$HOME/.config/opencode/opencode.json"
+jq '.plugin = ((.plugin // []) + ["@dietrichgebert/ponytail"] | unique)' "$cfg" > "$cfg.tmp" && mv "$cfg.tmp" "$cfg"
+"""
+
+[agent]
+preferred = "opencode"
+
+[resources]
+vcpus = 4
+memory_mb = 4096
+
+[security]
+profile = "moderate"
+mount_cwd = true
+
+[security.domains]
+allow = ["api.anthropic.com", "api.openai.com", "registry.npmjs.org", "dl-cdn.alpinelinux.org"]
