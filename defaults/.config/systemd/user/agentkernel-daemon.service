@@ -2,7 +2,7 @@
 Description=agentkernel VM pool daemon
 
 [Service]
-ExecStart=$ak daemon start
+ExecStart=ExecStart=/home/cobra/.cargo/bin/agentkernel daemon start
 Restart=on-failure
 
 [Install]
