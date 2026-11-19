@@ -15,10 +15,12 @@ while sleep 60; do sudo -n true; kill -0 $$ 2>/dev/null || exit; done &
 . ./functions/devEnvFunctions.sh
 . ./functions/dockerFunctions.sh
 
-# Pause Hyprland's config autoreload while files are being copied; the reload on exit restores it from the config
+# Pause Hyprland's config autoreload while files are being copied (hyprland.lua checks this flag on reload)
 if [ -n "${HYPRLAND_INSTANCE_SIGNATURE:-}" ]; then
-	hyprctl eval 'hl.config({ misc = { disable_autoreload = true } })' >/dev/null
-	trap 'hyprctl reload >/dev/null' EXIT
+	noAutoreloadFlag="${XDG_RUNTIME_DIR:-/tmp}/hypr-no-autoreload"
+	touch "$noAutoreloadFlag"
+	hyprctl reload
+	trap 'rm -f "$noAutoreloadFlag"; hyprctl reload' EXIT
 fi
 
 # --------------------------------------------

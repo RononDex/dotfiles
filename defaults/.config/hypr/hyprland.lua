@@ -4,6 +4,10 @@ package.path = home .. "/.config/hypr/configs/?.lua;" .. package.path
 
 local status, module = pcall(require, "wallust-hyprland")
 
+-- profile-enabler.sh creates this flag to pause autoreload while it copies files
+local noAutoreloadFlag = io.open((os.getenv("XDG_RUNTIME_DIR") or "/tmp") .. "/hypr-no-autoreload")
+if noAutoreloadFlag then noAutoreloadFlag:close() end
+
 ------------------------------------------
 -- Variables
 ------------------------------------------
@@ -27,6 +31,7 @@ hl.config({
 	misc = {
 		disable_hyprland_logo = true,
 		disable_splash_rendering = true,
+		disable_autoreload = noAutoreloadFlag ~= nil,
 	},
 	decoration = {
 		rounding = 10,

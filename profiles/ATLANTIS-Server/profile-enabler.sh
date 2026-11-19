@@ -26,6 +26,7 @@ sudo cp ~/.files/restic/server-exclude-list /root/server-exclude-list
 if [ ! -f /etc/wireguard/ATLANTIS-Net.conf]; then
 	sudo cp $scriptDir/overrides/wireguard/ATLANTIS-Net.conf /etc/wireguard/ATLANTIS-Net.conf
 fi
+sudo cp $scriptDir/overrides/scripts/* /root/scripts/
 sudo chmod 700 /etc/wireguard/ATLANTIS-Net.conf
 sudo chmod -R +x /root/scripts/*
 sudo mkdir -p /etc/samba
