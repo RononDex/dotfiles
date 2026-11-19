@@ -6,7 +6,7 @@ set -euo pipefail
 
 name="${1:-$(basename "$PWD")}"
 name="${name//[^A-Za-z0-9-]/-}"
-cfg="${OC_CONFIG:-$HOME/.config/opencode-ecc.toml}"
+cfg="${OC_CONFIG:-$HOME/.config/agentkernel/opencode-ecc.toml}"
 
 if ! agentkernel sandbox info "$name" >/dev/null 2>&1; then
 	agentkernel sandbox create "$name" --config "$cfg" -B firecracker \
