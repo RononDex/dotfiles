@@ -2,7 +2,7 @@
 Description=agentkernel API server
 
 [Service]
-ExecStart=$ak serve --host 127.0.0.1 --port 18888
+ExecStart=/home/cobra/.cargo/bin/agentkernel serve --host 127.0.0.1 --port 18888
 Restart=on-failure
 
 [Install]
