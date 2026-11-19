@@ -62,10 +62,10 @@ SetupJavaDevEnv
 SetupPythonDev
 SetupDotnet
 SetupLatex
-InstallGrubTheme 
 InstallMpv
 InstallGoDev
 SetupWordpressDev
+SetupMicrosandbox
 
 echo "Installing AUR packages..."
 InstallAurPackage "visual-studio-code-bin"

@@ -51,9 +51,9 @@ SetupWireguardClient
 SetupJavaDevEnv
 SetupPythonDev
 SetupLatex
-InstallEruption
 InstallGoDev
 SetupWordpressDev
+SetupMicrosandbox
 
 echo "Installing AUR packages..."
 InstallMpv

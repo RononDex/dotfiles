@@ -86,10 +86,10 @@ SetupJavaDevEnv
 SetupJavaScriptDevEnv
 SetupPythonDev
 SetupLatex
-InstallGrubTheme -s 4k
 PreSteamSetupVivePro2
 PostSteamSetupVivePro2
 SetupWordpressDev
+SetupMicrosandbox
 
 echo "Enabling services ..."
 EnableService bluetooth

@@ -109,3 +109,7 @@ InstallGoDev() {
 SetupWordpressDev() {
 	sudo npm -g install @wordpress/env
 }
+
+SetupMicrosandbox() {
+	cargo install microsandbox
+}
