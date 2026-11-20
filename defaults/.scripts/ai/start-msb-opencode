@@ -82,6 +82,25 @@ echo '>> provisioning done'
 EOF
 )"
 
+# Refresh editable settings on every launch without replacing ECC's global config.
+CONFIG_DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
+for CONFIG_NAME in opencode.json cli.json; do
+	CONFIG_CONTENT="$(cat "$CONFIG_DIR/$CONFIG_NAME")"
+	CONFIG_TARGET="/etc/opencode/$CONFIG_NAME"
+	if [[ "$CONFIG_NAME" == "cli.json" ]]; then
+		CONFIG_TARGET="/root/.config/opencode/cli.json"
+	fi
+	msb exec -q "$NAME" -- node -e '
+  const fs = require("fs"), path = require("path");
+  const file = process.argv[1], content = process.argv[2];
+  const config = JSON.parse(content);
+  if (!config || typeof config !== "object" || Array.isArray(config))
+    throw new Error("OpenCode config must be a JSON object");
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, content + "\n");
+ ' "$CONFIG_TARGET" "$CONFIG_CONTENT"
+done
+
 if [[ "${1:-}" == "--shell" ]]; then
 	exec msb exec -t -w "$GUEST_DIR" "$NAME" -- bash -l
 fi

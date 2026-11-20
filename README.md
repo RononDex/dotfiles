@@ -32,6 +32,19 @@ To upgrade your system (including the AUR packages) just enter `up` in your term
 ## AstroPi
 See [AstroPi-README](AstroPi-README.md)
 
+## AI sandbox configuration
+
+Edit `defaults/.scripts/ai/opencode.json` to customize OpenCode in the `ai`
+microsandbox. After installing/updating these dotfiles, each `ai` launch (including
+`ai --shell`) copies the adjacent JSON file to `/etc/opencode/opencode.json`
+inside the sandbox, including existing sandboxes. Its settings override the
+installed ECC/Ponytail and project settings without replacing their config files.
+Keep credentials out of this repository.
+
+Terminal appearance is configured separately in `defaults/.scripts/ai/cli.json`.
+It defaults to the Tokyo Night theme with animations enabled and is copied to
+`/root/.config/opencode/cli.json` on each launch.
+
 # How it works
 
 1. Copies all files from the folder `defaults` to your home directory
