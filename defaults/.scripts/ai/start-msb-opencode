@@ -63,7 +63,7 @@ npm install -g "@opencode/cli@$OC_VERSION" >/dev/null
 git clone --depth 1 -b "$ECC_REF" https://github.com/affaan-m/ECC.git /opt/ECC
 cd /opt/ECC
 npm install --silent && npm run build:opencode
-./install.sh --profile full --target opencode --enable-hooks
+./install.sh --profile core --target opencode --no-hooks
 
 # Ponytail via 'plugin add'; if that fails, add it to the OpenCode 2 'plugins' key directly
 if ! opencode plugin add @dietrichgebert/ponytail 2>/dev/null; then
