@@ -112,4 +112,5 @@ SetupWordpressDev() {
 
 SetupMicrosandbox() {
 	cargo install microsandbox
+	sudo cp ~/.local/share/cargo/bin/microsandbox /usr/bin/msb
 }
