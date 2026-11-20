@@ -11,9 +11,13 @@ IMAGE="${OC_IMAGE:-node:22-bookworm}"
 CPUS="${OC_CPUS:-2}"
 MEM="${OC_MEM:-4G}"
 ECC_REF="${ECC_REF:-main}"
+OC_VERSION="${OC_VERSION:-2.3.2}" # OpenCode 2 (npm: @opencode/cli); "latest" also works
 GUEST_DIR="/workspace"
 
-command -v msb >/dev/null || { echo "msb not found: curl -fsSL https://install.microsandbox.dev | sh" >&2; exit 1; }
+command -v msb >/dev/null || {
+	echo "msb not found: curl -fsSL https://install.microsandbox.dev | sh" >&2
+	exit 1
+}
 
 # Name the sandbox after the directory: readable basename + short hash of the full path.
 WORKDIR="$(pwd -P)"
@@ -22,36 +26,38 @@ hash="$(printf '%s' "$WORKDIR" | sha256sum | cut -c1-8)"
 NAME="oc-${slug%-}-${hash}"
 
 if [[ "${1:-}" == "--rm" ]]; then
-  msb rm --force "$NAME"; exit 0
+	msb rm --force "$NAME"
+	exit 0
 fi
 
-exists()  { msb ls -q | grep -qxF "$NAME"; }
+exists() { msb ls -q | grep -qxF "$NAME"; }
 running() { msb ls --running -q | grep -qxF "$NAME"; }
 
 if ! exists; then
-  echo ">> creating sandbox $NAME for $WORKDIR"
-  # A named volume for the OpenCode config/data dirs keeps logins and plugins
-  # if the sandbox is ever recreated with --replace.
-  msb create "$IMAGE" --name "$NAME" -c "$CPUS" -m "$MEM" \
-    -v "$WORKDIR:$GUEST_DIR" \
-    --mount-named "${NAME}-home:/root/.local/share/opencode" \
-    -w "$GUEST_DIR" \
-    --label tool=opencode --label "hostdir=$hash"
+	echo ">> creating sandbox $NAME for $WORKDIR"
+	# A named volume for the OpenCode config/data dirs keeps logins and plugins
+	# if the sandbox is ever recreated with --replace.
+	msb create "$IMAGE" --name "$NAME" -c "$CPUS" -m "$MEM" \
+		-v "$WORKDIR:$GUEST_DIR" \
+		--mount-named "${NAME}-home:/root/.local/share/opencode" \
+		-w "$GUEST_DIR" \
+		--label tool=opencode --label "hostdir=$hash"
 elif ! running; then
-  echo ">> starting existing sandbox $NAME"
-  msb start -q "$NAME"
+	echo ">> starting existing sandbox $NAME"
+	msb start -q "$NAME"
 fi
 
 # One-time setup inside the guest. A marker file makes it idempotent.
-msb exec -q "$NAME" -- bash -lc "$(cat <<EOF
+msb exec -q "$NAME" -- bash -lc "$(
+	cat <<EOF
 set -euo pipefail
 [ -f /root/.oc-provisioned ] && exit 0
 echo '>> provisioning (first run only)...'
 export DEBIAN_FRONTEND=noninteractive
 apt-get update -qq && apt-get install -y -qq git curl ca-certificates ripgrep >/dev/null
 
-# OpenCode (the npm package is opencode-ai, not opencode)
-npm install -g opencode-ai@latest >/dev/null
+# OpenCode 2 ships as @opencode/cli; the old opencode-ai package is still 1.x
+npm install -g "@opencode/cli@$OC_VERSION" >/dev/null
 
 # ECC: build the OpenCode payload and install globally
 git clone --depth 1 -b "$ECC_REF" https://github.com/affaan-m/ECC.git /opt/ECC
@@ -59,14 +65,14 @@ cd /opt/ECC
 npm install --silent && npm run build:opencode
 ./install.sh --profile full --target opencode --enable-hooks
 
-# Ponytail: OpenCode 2 has 'plugin add'; OpenCode 1 needs the 'plugin' key in the global config
+# Ponytail via 'plugin add'; if that fails, add it to the OpenCode 2 'plugins' key directly
 if ! opencode plugin add @dietrichgebert/ponytail 2>/dev/null; then
   mkdir -p /root/.config/opencode
   cfg=/root/.config/opencode/opencode.json
   [ -f "\$cfg" ] || echo '{}' > "\$cfg"
   node -e '
     const fs=require("fs"),f=process.argv[1],c=JSON.parse(fs.readFileSync(f));
-    c.plugin=[...new Set([...(c.plugin||[]),"@dietrichgebert/ponytail","ecc-universal"])];
+    c.plugins=[...new Set([...(c.plugins||[]),"@dietrichgebert/ponytail","ecc-universal"])];
     fs.writeFileSync(f,JSON.stringify(c,null,2));' "\$cfg"
   npm install -g ecc-universal @dietrichgebert/ponytail >/dev/null
 fi
@@ -77,6 +83,6 @@ EOF
 )"
 
 if [[ "${1:-}" == "--shell" ]]; then
-  exec msb exec -t -w "$GUEST_DIR" "$NAME" -- bash -l
+	exec msb exec -t -w "$GUEST_DIR" "$NAME" -- bash -l
 fi
 exec msb exec -t -w "$GUEST_DIR" "$NAME" -- opencode "$@"
