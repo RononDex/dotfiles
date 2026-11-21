@@ -152,10 +152,9 @@ mounted separately at `/root/.local/share/opencode` using a named volume.
 Each launch, including `ai --shell`, copies both JSON files from beside the
 launcher into the guest—even for existing sandboxes. Invalid JSON stops launch.
 The guest `cli.json` is replaced by the supplied file. The launcher installs
-CC Safety Net and Oh My OpenAgent once per sandbox, including existing ones,
-using OpenCode's global plugin installer. Use `opencode plugin list` in
-`ai --shell` to check their status. On OpenCode 2, Oh My OpenAgent only shows a
-notice; its agents, tools, and hooks do not run.
+CC Safety Net once per sandbox, including existing ones, using OpenCode's
+global plugin installer. Use `opencode plugin list` in `ai --shell` to check
+its status.
 
 For an installed launcher, edit the repository files and reapply the dotfiles
 before the next `ai` launch, or edit the installed copies in `~/.scripts/ai/`.
