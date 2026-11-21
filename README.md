@@ -134,7 +134,7 @@ Aliases live in [defaults/.scripts/aliasrc](defaults/.scripts/aliasrc).
 
 The [`ai` launcher](defaults/.scripts/ai/start-msb-opencode) requires `msb` on the
 host. The Desktop, Laptop, and Euclid profiles call `SetupMicrosandbox` to install
-it. First launch also needs network access to install OpenCode, ECC, and Ponytail
+it. First launch also needs network access to install OpenCode and its plugins
 inside the guest.
 
 Run `ai` from a project directory. It creates or reuses a sandbox identified by
@@ -146,13 +146,16 @@ mounted separately at `/root/.local/share/opencode` using a named volume.
 
 | Repository file | Sandbox destination | Purpose |
 | --- | --- | --- |
-| [defaults/.scripts/ai/opencode.json](defaults/.scripts/ai/opencode.json) | `/etc/opencode/opencode.json` | OpenCode settings layered over ECC/Ponytail and project configuration |
+| [defaults/.scripts/ai/opencode.json](defaults/.scripts/ai/opencode.json) | `/etc/opencode/opencode.json` | Defaults to GPT-6.2 Sol with medium effort when OpenAI is connected |
 | [defaults/.scripts/ai/cli.json](defaults/.scripts/ai/cli.json) | `/root/.config/opencode/cli.json` | Terminal settings: One Dark theme and animations enabled by default |
 
 Each launch, including `ai --shell`, copies both JSON files from beside the
 launcher into the guest—even for existing sandboxes. Invalid JSON stops launch.
-The ECC global `opencode.json` is not overwritten; the guest `cli.json` is
-replaced by the supplied file.
+The guest `cli.json` is replaced by the supplied file. The launcher installs
+CC Safety Net and Oh My OpenAgent once per sandbox, including existing ones,
+using OpenCode's global plugin installer. Use `opencode plugin list` in
+`ai --shell` to check their status. On OpenCode 2, Oh My OpenAgent only shows a
+notice; its agents, tools, and hooks do not run.
 
 For an installed launcher, edit the repository files and reapply the dotfiles
 before the next `ai` launch, or edit the installed copies in `~/.scripts/ai/`.

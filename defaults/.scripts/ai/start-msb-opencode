@@ -82,6 +82,15 @@ echo '>> provisioning done'
 EOF
 )"
 
+# Install these in existing guests too, without repeating base provisioning.
+msb exec -q "$NAME" -- bash -lc '
+set -euo pipefail
+[ -f /root/.oc-default-plugins-installed ] && exit 0
+opencode plugin add cc-safety-net@2.8.1
+opencode plugin add oh-my-openagent@5.1.81
+touch /root/.oc-default-plugins-installed
+'
+
 # Refresh editable settings on every launch without replacing ECC's global config.
 CONFIG_DIR="$(dirname "$(readlink -f "${BASH_SOURCE[0]}")")"
 for CONFIG_NAME in opencode.json cli.json; do
