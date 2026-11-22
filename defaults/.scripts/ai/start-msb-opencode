@@ -85,9 +85,9 @@ EOF
 # Install CC Safety Net in existing guests too, without repeating base provisioning.
 msb exec -q "$NAME" -- bash -lc '
 set -euo pipefail
-[ -f /root/.oc-default-plugins-installed ] && exit 0
-opencode plugin add cc-safety-net@2.8.1
-touch /root/.oc-default-plugins-installed
+opencode plugin add cc-safety-net
+opencode plugin add @slkiser/opencode-quota
+opencode plugin update
 '
 
 # Refresh editable settings on every launch without replacing ECC's global config.
