@@ -8,6 +8,7 @@ scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ./functions/securityFunctions.sh
 . ./functions/runitFunctions.sh
 . ./functions/packageFunctions.sh
+. ./functions/devEnvFunctions.sh
 
 sudo xbps-install -Syu xbps
 sudo xbps-install -Syu

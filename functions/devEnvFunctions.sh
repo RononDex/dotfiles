@@ -51,7 +51,13 @@ SetupPythonDev() {
 BasicVimInstall() {
 
 	if command -v xbps-install &>/dev/null; then
-		sudo xbps-install -Sy the_silver_searcher python3-neovim tree-sitter
+		sudo xbps-install -Sy the_silver_searcher python3-neovim tree-sitter tree-sitter-cli
+		local version
+		version=$(tree-sitter --version 2>/dev/null) || version=
+		version=${version#tree-sitter }
+		if ! printf '%s\n' 0.26.1 "${version%% *}" | sort -VC; then
+			cargo install --locked --root "$HOME/.local" --version 0.26.1 tree-sitter-cli || return
+		fi
 	fi
 
 	if command -v pacman &>/dev/null; then
