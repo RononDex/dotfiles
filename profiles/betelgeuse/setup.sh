@@ -22,5 +22,18 @@ systemctl list-timers --all "dnf5-automatic.timer"
 
 sudo systemctl enable --now dnf-automatic.timer
 
-echo "Setting up starship"
-curl -sS https://starship.rs/install.sh | sh
+echo "Setting up starship / oh my zsh"
+zsh_path=$(command -v zsh) && { [[ $(getent passwd "$(id -un)" | cut -d: -f7) == */zsh ]] || chsh -s "$zsh_path"; }
+omz_dir=${ZSH:-$HOME/.config/oh-my-zsh}
+
+if [ -f "$omz_dir/tools/upgrade.sh" ]; then
+	ZSH="$omz_dir" zsh -f "$omz_dir/tools/upgrade.sh"
+else
+	installer=$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) &&
+		ZSH="$omz_dir" sh -c "$installer" -- --unattended --keep-zshrc
+fi
+
+cp ${scriptDir}/../../defaults/.config/zsh/.zshrc ~/.zshrc
+cp ${scriptDir}/../../defaults/.config/starship.toml ~/.config/starship.toml
+
+curl -sS https://starship.rs/install.sh | sh --yes
