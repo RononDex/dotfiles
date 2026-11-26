@@ -2,6 +2,7 @@
 set -euo pipefail
 
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+. ${scriptDir}/.scripts/aliasrc
 
 echo "Setting up basic packages"
 sudo dnf update --assumeyes
