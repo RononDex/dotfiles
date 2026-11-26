@@ -43,6 +43,8 @@ fi
 
 cp ${scriptDir}/../../defaults/.config/zsh/.zshrc ~/.zshrc
 cp ${scriptDir}/../../defaults/.config/starship.toml ~/.config/starship.toml
+cp ${scriptDir}/../../.bashrc ~/.bashrc
+cp -r ${scriptDir}/.scripts ~/.scripts
 
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
