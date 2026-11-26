@@ -1,3 +1,3 @@
 #!/bin/bash
 
-alias switch-to-podman-user="sudo -H -u podman-svc env XDG_RUNTIME_DIR=/run/user/$(id -u podman-svc) /usr/bin/zsh -i"
+alias switch-to-podman-user='/usr/bin/sudo -H -u podman-svc env XDG_RUNTIME_DIR="/run/user/$(id -u podman-svc)" /usr/bin/zsh -i'
