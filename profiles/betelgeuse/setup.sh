@@ -54,4 +54,4 @@ sudo cp ~/.config/starship.toml /home/podman-svc/.config/starship.toml
 sudo rm -rf /home/podman-svc/.config/oh-my-zsh
 sudo cp -r ~/.config/oh-my-zsh /home/podman-svc/.config/oh-my-zsh
 
-sudo chown -r podman-svc:podman-svc /home/podman-svc
+sudo chown -R podman-svc:podman-svc /home/podman-svc
