@@ -8,7 +8,7 @@ sudo dnf update --assumeyes
 sudo dnf upgrade --assumeyes
 sudo dnf install --assumeyes git neovim zsh zsh-autosuggestions zsh-syntax-highlighting thefuck htop
 sudo dnf install --assumeyes podman podman-compose
-sudo dnf install --assumeyes dnf5-plugin-automatic btrfs-progs
+sudo dnf install --assumeyes dnf5-plugin-automatic btrfs-progs shadow-utils-subid
 
 echo "Setting up configurations"
 sudo cp ${scriptDir}/sshd-config /etc/ssh/sshd_config
@@ -45,3 +45,13 @@ cp ${scriptDir}/../../defaults/.config/zsh/.zshrc ~/.zshrc
 cp ${scriptDir}/../../defaults/.config/starship.toml ~/.config/starship.toml
 
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
+
+echo "Setting up podman user"
+sudo bash ${scriptDir}/setup-podman-user.sh
+sudo cp ~/.zshrc /home/podman-svc/.zshrc
+sudo mkdir -p /home/podman-svc/.config
+sudo cp ~/.config/starship.toml /home/podman-svc/.config/starship.toml
+sudo rm -rf /home/podman-svc/.config/oh-my-zsh
+sudo cp -r ~/.config/oh-my.zsh /home/podman-svc/.config/oh-my-zsh
+
+sudo chown -r podman-svc:podman-svc /home/podman-svc
