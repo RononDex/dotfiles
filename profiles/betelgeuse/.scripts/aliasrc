@@ -1,7 +1,8 @@
 #!/bin/bash
 
-podman-svc() {
+podman-svc() (
+	cd / || return
 	/usr/bin/sudo -H -u podman-svc env \
 		XDG_RUNTIME_DIR="/run/user/$(id -u podman-svc)" \
 		/usr/bin/podman "$@"
-}
+)
