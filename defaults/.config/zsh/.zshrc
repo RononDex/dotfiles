@@ -1,5 +1,5 @@
 # Load all env variables
-export ZSH="$ZDOTDIR/ohmyzsh"
+export ZSH="$HOME/.config/oh-my-zsh"
 source ~/.zprofile
 
 # Set name of the theme to load --- if set to "random", it will
