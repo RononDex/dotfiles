@@ -1,6 +1,8 @@
 # Load all env variables
 export ZSH="$HOME/.config/oh-my-zsh"
-source ~/.zprofile
+if [[ ! -o login && -f "$HOME/.zprofile" ]]; then
+  source "$HOME/.zprofile"
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
