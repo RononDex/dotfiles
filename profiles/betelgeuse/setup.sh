@@ -58,15 +58,16 @@ sudo mkdir -p /srv/data/podman-volumes
 sudo chown -R podman-svc:podman-svc /srv/data/podman-volumes
 sudo chmod 0700 /srv/data/podman-volumes # Only top level should have 0700 permissions
 volpath=$(podman-svc info --format '{{.Store.VolumePath}}')
-target=/srv/data/podman-volumes
 printf 'Podman volume directory: %s\n' "$volpath"
-if [[ ! -L "$volpath" ]]; then
-	if ! mountpoint -q /srv/data || [[ ! -d "$target" ]]; then
+target=/srv/data/podman-volumes
+
+if ! sudo test -L "$volpath"; then
+	if ! mountpoint -q /srv/data || ! sudo test -d "$target"; then
 		echo "Mount /srv/data and create $target first." >&2
 		exit 1
 	fi
 
-	if [[ -e "$volpath" ]]; then
+	if sudo test -e "$volpath"; then
 		sudo rmdir -- "$volpath" || exit 1
 	fi
 
