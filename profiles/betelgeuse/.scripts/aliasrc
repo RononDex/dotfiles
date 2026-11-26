@@ -1,5 +1,7 @@
 #!/bin/bash
 
+alias vim=nvim
+
 podman-svc() (
 	cd / || return
 	/usr/bin/sudo -H -u podman-svc env \
