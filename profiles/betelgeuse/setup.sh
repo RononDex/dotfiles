@@ -22,15 +22,23 @@ systemctl list-timers --all "dnf5-automatic.timer"
 
 sudo systemctl enable --now dnf-automatic.timer
 
-echo "Setting up starship / oh my zsh"
-zsh_path=$(command -v zsh) && { [[ $(getent passwd "$(id -un)" | cut -d: -f7) == */zsh ]] || chsh -s "$zsh_path"; }
-omz_dir=${ZSH:-$HOME/.config/oh-my-zsh}
+echo "Setting up Oh My Zsh"
+zsh_path=$(command -v zsh) || {
+	echo 'Install zsh first.' >&2
+	exit 1
+}
 
+if [[ $(getent passwd "$(id -un)" | cut -d: -f7) != */zsh ]]; then
+	chsh -s "$zsh_path" || exit 1
+fi
+
+omz_dir="$HOME/.config/oh-my-zsh"
 if [ -f "$omz_dir/tools/upgrade.sh" ]; then
-	ZSH="$omz_dir" zsh -f "$omz_dir/tools/upgrade.sh"
+	ZSH="$omz_dir" "$zsh_path" -f "$omz_dir/tools/upgrade.sh"
 else
 	installer=$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh) &&
-		ZSH="$omz_dir" sh -c "$installer" -- --unattended --keep-zshrc
+		ZDOTDIR="$HOME/.config/zsh" ZSH="$omz_dir" \
+			sh -c "$installer" -- --unattended --keep-zshrc
 fi
 
 cp ${scriptDir}/../../defaults/.config/zsh/.zshrc ~/.zshrc
