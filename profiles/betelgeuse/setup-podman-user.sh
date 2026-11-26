@@ -8,7 +8,6 @@ if getent passwd "$user" >/dev/null; then
 	exit 0
 fi
 
-dnf install -y podman shadow-utils-subid
 useradd --system --user-group --create-home --home-dir "$home" \
 	--shell /usr/sbin/nologin --add-subids-for-system "$user"
 

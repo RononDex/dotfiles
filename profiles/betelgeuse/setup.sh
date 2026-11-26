@@ -4,6 +4,10 @@ set -euo pipefail
 scriptDir="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
 . ${scriptDir}/.scripts/aliasrc
 
+### ----------------------------------------------------
+### Install necessary packages
+### ----------------------------------------------------
+
 echo "Setting up basic packages"
 sudo dnf update --assumeyes
 sudo dnf upgrade --assumeyes
@@ -12,9 +16,17 @@ sudo dnf install --assumeyes podman podman-compose
 sudo dnf install --assumeyes dnf5-plugin-automatic btrfs-progs shadow-utils-subid
 sudo dnf install --assumeyes restic rclone
 
+### ----------------------------------------------------
+### Basic config setup
+### ----------------------------------------------------
+
 echo "Setting up configurations"
 sudo cp ${scriptDir}/sshd-config /etc/ssh/sshd_config
 sudo cp ${scriptDir}/dnf-automatic.conf /etc/dnf/automatic.conf
+
+### ----------------------------------------------------
+### Setup automatic updates every 6 hours
+### ----------------------------------------------------
 
 echo "Setting up auto-updates"
 sudo install -D -m 0644 -- "${scriptDir}/schedule-four-times-daily.conf" "/etc/systemd/system/dnf5-automatic.timer.d/schedule-four-times-daily.conf"
@@ -23,6 +35,10 @@ sudo systemctl try-restart "dnf5-automatic.timer"
 systemctl list-timers --all "dnf5-automatic.timer"
 
 sudo systemctl enable --now dnf-automatic.timer
+
+### ----------------------------------------------------
+### Setup zsh and starship
+### ----------------------------------------------------
 
 echo "Setting up Oh My Zsh"
 zsh_path=$(command -v zsh) || {
@@ -50,6 +66,10 @@ cp -r ${scriptDir}/.scripts/. ~/.scripts/
 
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
+### ----------------------------------------------------
+### Setup podman stuff
+### ----------------------------------------------------
+
 echo "Setting up podman user"
 sudo bash ${scriptDir}/setup-podman-user.sh
 
@@ -73,3 +93,9 @@ if ! sudo test -L "$volpath"; then
 
 	sudo ln -sT -- "$target" "$volpath"
 fi
+
+### ----------------------------------------------------
+### Setup backup stuff
+### ----------------------------------------------------
+echo "Setting up backup user"
+sudo bash ${scriptDir}/setup-backup-user.sh
