@@ -9,6 +9,7 @@ sudo dnf upgrade --assumeyes
 sudo dnf install --assumeyes git neovim zsh zsh-autosuggestions zsh-syntax-highlighting thefuck htop
 sudo dnf install --assumeyes podman podman-compose
 sudo dnf install --assumeyes dnf5-plugin-automatic btrfs-progs shadow-utils-subid
+sudo dnf install --assumeyes restic rclone
 
 echo "Setting up configurations"
 sudo cp ${scriptDir}/sshd-config /etc/ssh/sshd_config
@@ -50,3 +51,13 @@ curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
 echo "Setting up podman user"
 sudo bash ${scriptDir}/setup-podman-user.sh
+
+echo "Setting up podman config"
+sudo mkdir -p /srv/data/podman-volumes
+sudo chown -R podman-svc:podman-svc /srv/data/podman-volumes
+sudo chmod 0700 /srv/data/podman-volumes # Only top level should have 0700 permissions
+volpath=$(podman-svc info --format '{{.Store.VolumePath}}')
+printf 'Podman volume directory: %s\n' "$volpath"
+if [[ ! -e "$volpath" && ! -L "$volpath" ]]; then
+	sudo ln -sT -- /srv/data/podman-volumes "$volpath"
+fi
