@@ -8,7 +8,7 @@ sudo dnf update --assumeyes
 sudo dnf upgrade --assumeyes
 sudo dnf install --assumeyes git neovim zsh zsh-autosuggestions zsh-syntax-highlighting thefuck htop
 sudo dnf install --assumeyes podman podman-compose
-sudo dnf install --assumeyes dnf5-plugin-automatic
+sudo dnf install --assumeyes dnf5-plugin-automatic btrfs-progs
 
 echo "Setting up configurations"
 sudo cp ${scriptDir}/sshd-config /etc/ssh/sshd_config
