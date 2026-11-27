@@ -1,0 +1,21 @@
+[Unit]
+Description=Back up Podman volumes to kDrive
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor=/srv/data
+AssertPathIsMountPoint=/srv/data
+
+[Service]
+Type=oneshot
+User=backup-svc
+ExecStart=/usr/bin/bash /home/backups-svc/scripts/backup-server-restic.sh
+
+# Allow reading private files in rootless Podman volumes.
+AmbientCapabilities=CAP_DAC_READ_SEARCH
+CapabilityBoundingSet=CAP_DAC_READ_SEARCH
+NoNewPrivileges=yes
+ProtectSystem=strict
+PrivateTmp=yes
+CacheDirectory=restic-backup
+CacheDirectoryMode=0700
+Environment=RESTIC_CACHE_DIR=/var/cache/restic-backup

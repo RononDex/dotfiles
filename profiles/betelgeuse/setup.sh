@@ -99,3 +99,20 @@ fi
 ### ----------------------------------------------------
 echo "Setting up backup user"
 sudo bash ${scriptDir}/setup-backup-user.sh
+
+sudo mkdir -p /home/backup-svc/scripts
+sudo cp ${scriptDir}/bakcup/backupHostpointRestic.sh /home/backup-svc/scripts/backup-hotpoint-restic.sh
+sudo cp ${scriptDir}/bakcup/backupServerRestic.sh /home/backup-svc/scripts/backup-server-restic.sh
+sudo chown -R backup-svc:backup-svc /home/backup-svc/scripts
+
+echo "Setting up backup systemD services / triggers"
+sudo cp ${scriptDir}/backup/backup-server-restic.service /etc/systemd/system/restic-server-backup.service
+sudo cp ${scriptDir}/backup/backup-server-restic.timer /etc/systemd/system/restic-server-backup.timer
+sudo cp ${scriptDir}/backup/backup-hostpoint-restic.service /etc/systemd/system/restic-hostpoint-backup.service
+sudo cp ${scriptDir}/backup/backup-hostpoint-restic.timer /etc/systemd/system/restic-hostpoint-backup.timer
+
+sudo systemctl daemon-reload
+#sudo systemctl enable --now restic-server-backup.timer
+#sudo systemctl enable --now restic-hostpoint-backup.timer
+systemctl list-timers restic-server-backup.timer
+systemctl list-timers restic-hostpoint-backup.timer
