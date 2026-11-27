@@ -101,8 +101,8 @@ echo "Setting up backup user"
 sudo bash ${scriptDir}/setup-backup-user.sh
 
 sudo mkdir -p /home/backup-svc/scripts
-sudo cp ${scriptDir}/bakcup/backupHostpointRestic.sh /home/backup-svc/scripts/backup-hotpoint-restic.sh
-sudo cp ${scriptDir}/bakcup/backupServerRestic.sh /home/backup-svc/scripts/backup-server-restic.sh
+sudo cp ${scriptDir}/backup/backupHostpointRestic.sh /home/backup-svc/scripts/backup-hotpoint-restic.sh
+sudo cp ${scriptDir}/backup/backupServerRestic.sh /home/backup-svc/scripts/backup-server-restic.sh
 sudo chown -R backup-svc:backup-svc /home/backup-svc/scripts
 
 echo "Setting up backup systemD services / triggers"
