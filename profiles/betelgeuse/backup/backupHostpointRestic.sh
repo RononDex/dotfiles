@@ -23,6 +23,7 @@ echo "Mounting Hostpoint through sshfs..."
 sshfs -o ro,compression=yes hostpoint-sag: $HOSTPOINT_MOUNT
 trap 'fusermount3 -u -- "$HOSTPOINT_MOUNT"' EXIT
 
+export RCLONE_PASSWORD_COMMAND='/usr/bin/cat /home/backup-svc/crypt-store/rclone-pw'
 export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/hostpoint-backup"
 export RESTIC_PASSWORD_FILE=$RESTIC_PW_FILE
 export GOMAXPROCS=4

@@ -18,7 +18,8 @@ echo "--------------------------------"
 echo "Starting backup on $(date)"
 echo "--------------------------------"
 
-export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/pollux-server-backup"
+export RCLONE_PASSWORD_COMMAND='/usr/bin/cat /home/backup-svc/crypt-store/rclone-pw'
+export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/root-server"
 export RESTIC_PASSWORD_FILE=$RESTIC_PW_FILE
 export GOMAXPROCS=4
 
