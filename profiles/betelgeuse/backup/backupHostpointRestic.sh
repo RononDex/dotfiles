@@ -20,8 +20,8 @@ echo "Starting Hostpoint backup on $(date)"
 echo "--------------------------------"
 
 echo "Mounting Hostpoint through sshfs..."
-sshfs -o ro,compression=yes hostpoint-sag: $HOSTPOINT_MOUNT
-trap 'fusermount3 -u -- "$HOSTPOINT_MOUNT"' EXIT
+sshfs -o ro,compression=yes,transform_symlinks hostpoint-sag: $HOSTPOINT_MOUNT
+trap 'if mountpoint -q -- "$HOSTPOINT_MOUNT"; then fusermount3 -u -- "$HOSTPOINT_MOUNT"; fi' EXIT
 
 export RCLONE_PASSWORD_COMMAND='/usr/bin/cat /home/backup-svc/crypt-store/rclone-pw'
 export RESTIC_REPOSITORY="rclone:kDriveSAG:/backups/hostpoint-backup"
@@ -39,5 +39,5 @@ restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 2
 restic cache --cleanup
 
-PUSH_URL=$(cat /home/backups-svc/push-urls/hostpoint-backup)
+PUSH_URL=$(cat /home/backup-svc/push-urls/hostpoint-backup)
 curl -fsS --max-time 30 -o /dev/null -- "$PUSH_URL"
