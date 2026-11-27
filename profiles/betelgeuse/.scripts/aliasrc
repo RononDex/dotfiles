@@ -11,7 +11,6 @@ podman-svc() (
 
 as-backup-user() (
 	cd / || return
-	/usr/bin/sudo -H -u backup-svc env \
-		XDG_RUNTIME_DIR="/run/user/$(id -u backup-svc)" \
-		/usr/bin/sh -c "$@"
+	/usr/bin/sudo -H -u backup-svc /usr/bin/sh -c \
+		'cd "$HOME" && exec "$@"' sh "$@"
 )
