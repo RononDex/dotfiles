@@ -6,7 +6,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 User=backup-svc
-ExecStart=/usr/bin/bash /home/backups-svc/scripts/backup-hotpoint-restic.sh
+ExecStart=/usr/bin/bash /home/backup-svc/scripts/backup-hotpoint-restic.sh
 
 ProtectSystem=strict
 ReadWritePaths=/home/backup-svc/hostpoint-mnt

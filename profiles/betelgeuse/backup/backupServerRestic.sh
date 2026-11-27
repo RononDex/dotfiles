@@ -29,12 +29,8 @@ fi
 
 restic unlock
 restic backup --tag=automated --pack-size=128 --compression=auto \
-	/opt/sag/nextcloud \
-	/opt/sag/meteorastronomie.ch \
-	/opt/sag/reverse-proxy \
-	/opt/sag/uptime-kuma \
-	/opt/sag/authentik \
-	/var/lib/docker/volumes
+	/srv/data/podman-containers \
+	/srv/data/podman-volumes
 restic check --with-cache --read-data-subset=5G
 restic forget --prune --keep-daily 7 --keep-weekly 4 --keep-monthly 6 --keep-yearly 2
 restic cache --cleanup

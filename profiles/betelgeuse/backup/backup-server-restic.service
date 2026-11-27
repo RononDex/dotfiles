@@ -8,7 +8,7 @@ AssertPathIsMountPoint=/srv/data
 [Service]
 Type=oneshot
 User=backup-svc
-ExecStart=/usr/bin/bash /home/backups-svc/scripts/backup-server-restic.sh
+ExecStart=/usr/bin/bash /home/backup-svc/scripts/backup-server-restic.sh
 
 # Allow reading private files in rootless Podman volumes.
 AmbientCapabilities=CAP_DAC_READ_SEARCH
