@@ -32,7 +32,7 @@ echo "Setting up auto-updates"
 sudo install -D -m 0644 -- "${scriptDir}/schedule-four-times-daily.conf" "/etc/systemd/system/dnf5-automatic.timer.d/schedule-four-times-daily.conf"
 sudo systemctl daemon-reload
 sudo systemctl try-restart "dnf5-automatic.timer"
-systemctl list-timers --all "dnf5-automatic.timer"
+sudo systemctl list-timers --all "dnf5-automatic.timer"
 
 sudo systemctl enable --now dnf-automatic.timer
 
