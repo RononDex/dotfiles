@@ -14,7 +14,7 @@ sudo dnf upgrade --assumeyes
 sudo dnf install --assumeyes git neovim zsh zsh-autosuggestions zsh-syntax-highlighting thefuck htop
 sudo dnf install --assumeyes podman podman-compose
 sudo dnf install --assumeyes dnf5-plugin-automatic btrfs-progs shadow-utils-subid
-sudo dnf install --assumeyes restic rclone
+sudo dnf install --assumeyes restic rclone fuse-sshfs
 
 ### ----------------------------------------------------
 ### Basic config setup
