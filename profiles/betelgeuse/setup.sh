@@ -118,7 +118,7 @@ sudo cp ${scriptDir}/backup/backup-hostpoint-restic.service /etc/systemd/system/
 sudo cp ${scriptDir}/backup/backup-hostpoint-restic.timer /etc/systemd/system/restic-hostpoint-backup.timer
 
 sudo systemctl daemon-reload
-#sudo systemctl enable --now restic-server-backup.timer
-#sudo systemctl enable --now restic-hostpoint-backup.timer
+sudo systemctl enable --now restic-server-backup.timer
+sudo systemctl enable --now restic-hostpoint-backup.timer
 systemctl --no-pager list-timers restic-server-backup.timer
 systemctl --no-pager list-timers restic-hostpoint-backup.timer
