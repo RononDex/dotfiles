@@ -38,7 +38,7 @@ echo "Setting up auto-updates"
 sudo install -D -m 0644 -- "${scriptDir}/schedule-four-times-daily.conf" "/etc/systemd/system/dnf5-automatic.timer.d/schedule-four-times-daily.conf"
 sudo systemctl daemon-reload
 sudo systemctl try-restart "dnf5-automatic.timer"
-sudo systemctl list-timers --all "dnf5-automatic.timer"
+sudo systemctl --no-pager list-timers --all "dnf5-automatic.timer"
 
 sudo systemctl enable --now dnf-automatic.timer
 
@@ -120,5 +120,5 @@ sudo cp ${scriptDir}/backup/backup-hostpoint-restic.timer /etc/systemd/system/re
 sudo systemctl daemon-reload
 #sudo systemctl enable --now restic-server-backup.timer
 #sudo systemctl enable --now restic-hostpoint-backup.timer
-systemctl list-timers restic-server-backup.timer
-systemctl list-timers restic-hostpoint-backup.timer
+systemctl --no-pager list-timers restic-server-backup.timer
+systemctl --no-pager list-timers restic-hostpoint-backup.timer
