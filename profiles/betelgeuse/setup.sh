@@ -23,6 +23,7 @@ sudo dnf install --assumeyes restic rclone fuse-sshfs
 echo "Setting up configurations"
 sudo cp ${scriptDir}/sshd-config /etc/ssh/sshd_config
 sudo cp ${scriptDir}/dnf-automatic.conf /etc/dnf/automatic.conf
+sudo cp ${scriptDir}/motd.sh /etc/profile.d/motd.sh
 
 echo "Disabling fedora server cockpit (web-application)"
 sudo systemctl disable --now cockpit.socket
