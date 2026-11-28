@@ -24,6 +24,10 @@ echo "Setting up configurations"
 sudo cp ${scriptDir}/sshd-config /etc/ssh/sshd_config
 sudo cp ${scriptDir}/dnf-automatic.conf /etc/dnf/automatic.conf
 
+echo "Disabling fedora server cockpit (web-application)"
+sudo systemctl disable --now cockpit.socket
+sudo systemctl stop cockpit.service
+
 ### ----------------------------------------------------
 ### Setup automatic updates every 6 hours
 ### ----------------------------------------------------

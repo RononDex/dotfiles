@@ -104,7 +104,7 @@ PermitEmptyPasswords no
 #X11DisplayOffset 10
 #X11UseLocalhost yes
 #PermitTTY yes
-#PrintMotd yes
+PrintMotd yes
 #PrintLastLog yes
 #TCPKeepAlive yes
 #PermitUserEnvironment no
